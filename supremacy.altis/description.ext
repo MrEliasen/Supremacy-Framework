@@ -1,0 +1,32 @@
+onLoadName = "Supremacy";
+onLoadMission = "A Framework by Simply @ NBS-Gaming.com";
+author = "Simply";
+respawn="BASE";
+respawnDelay=5;
+disabledAI=1;
+disableChannels[] = {0,2,6};
+joinUnassigned = 0;
+saving = 0;
+respawnDialog = 0;
+loadScreen = "splash.jpg";
+
+corpseLimit = 20;
+corpseRemovalMinTime = 60;
+corpseRemovalMaxTime = 600;
+wreckLimit = 10;
+wreckRemovalMinTime = 120;
+wreckRemovalMaxTime = 600;
+
+class Header
+{
+	gameType=SC;
+	minPlayers=1;
+	maxPlayers=50;
+};
+
+#include "dialogs\_master.h"
+
+class CfgFunctions
+{
+    #include "Functions.h"
+};
