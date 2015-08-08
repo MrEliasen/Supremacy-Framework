@@ -14,11 +14,12 @@ There are many planned features, like persistent data (eg. character save/load) 
 
 ## Usage/Installation
 It uses strictly "vanilla" (including expansions) content. No client-side mods required.
-1) Upload the "@supremacy_server" to your ARMA 3 dedicated server root (where the arma3server.exe file is).
-2) Upload the "supremacy.altis.pdo" file to your server's "mpmissions" directory.
-3) Upload the "LaunchServer.bat" file your ARMA 3 dedicated server root.
-4) Edit the "LaunchServer.bat" files launch parameters to suit your needs.
-5) Run the "LaunchServer.bat" file.
+
+1. Upload the "@supremacy_server" to your ARMA 3 dedicated server root (where the arma3server.exe file is).
+2. Upload the "supremacy.altis.pdo" file to your server's "mpmissions" directory.
+3. Upload the "LaunchServer.bat" file your ARMA 3 dedicated server root.
+4. Edit the "LaunchServer.bat" files launch parameters to suit your needs.
+5. Run the "LaunchServer.bat" file.
 
 ## Copyright & License
 Code released under [CC BY-NC 3.0 License](https://creativecommons.org/licenses/by-nc/3.0/legalcode).  
