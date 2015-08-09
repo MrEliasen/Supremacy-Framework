@@ -21,7 +21,7 @@ class Header
 {
 	gameType=SC;
 	minPlayers=1;
-	maxPlayers=50;
+	maxPlayers=80;
 };
 
 #include "dialogs\_master.h"
@@ -29,4 +29,33 @@ class Header
 class CfgFunctions
 {
     #include "Functions.h"
+};
+
+class CfgSounds
+{
+    sounds[] = {};
+    class purchase
+    {
+        name = "purchase";
+        sound[] = {"\sounds\purchase.ogg", 1.0, 1};
+        titles[] = {};
+    };
+    class purchase_click
+    {
+        name = "purchase_click";
+        sound[] = {"\sounds\purchase_click.ogg", 1.0, 1};
+        titles[] = {};
+    };
+    class error
+    {
+        name = "error";
+        sound[] = {"\sounds\error.ogg", 1.0, 1};
+        titles[] = {};
+    };
+    class sold_item
+    {
+        name = "sold_item";
+        sound[] = {"\sounds\sold_item.ogg", 1.0, 1};
+        titles[] = {};
+    };
 };

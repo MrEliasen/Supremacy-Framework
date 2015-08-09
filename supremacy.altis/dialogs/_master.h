@@ -13,3 +13,7 @@
 #include "_defines.hpp"
 #include "SPMC_spawn_menu.hpp"
 #include "SPMC_admin_menu.hpp"
+ 
+// Shops
+#include "SPMC_shop_arms.hpp"
+#include "SPMC_shop_sell.hpp"

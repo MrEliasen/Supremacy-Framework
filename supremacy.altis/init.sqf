@@ -14,6 +14,7 @@ enableSaving [false, false];
 
 if(!isDedicated) then {
     waitUntil {!(isNull player)};
+    player enablesimulation false;
 
     _handle = [] execVM "compile\_master.sqf";
     waitUntil {scriptDone _handle};
@@ -25,8 +26,6 @@ if(!isDedicated) then {
     0 cutFadeOut 9999999;
 
     waitUntil {sleep 0.25; !(isNil "serverIsReady")};
-    waitUntil {!isNull player};
-    player enablesimulation false;
 
     [] spawn {
         while {!serverIsReady} do {
@@ -52,6 +51,7 @@ if(!isDedicated) then {
     _handle = [] spawn SPMC_fnc_playerSetup;
     waitUntil {sleep 0.1; scriptDone _handle};
 
-    0 cutText["","BLACK FADED"];
-    player enablesimulation true;
+    // Load the briefing
+    _handle = [] spawn SPMC_fnc_briefing;
+    waitUntil {sleep 0.1; scriptDone _handle};
 };

@@ -10,14 +10,21 @@
  * @license    MIT License
  * @link       https://github.com/MrEliasen/SupremacyFramework
  */
+
+_ch = [] execVM "compile\core.sqf";
+waitUntil {scriptDone _ch};
+
 _ch = [] execVM "compile\player.sqf";
 waitUntil {scriptDone _ch};
 
-_ch = [] execVM "compile\admin.sqf";
+_ch = [] execVM "compile\dialog_actions\admin_menu_actions.sqf";
 waitUntil {scriptDone _ch};
 
-_ch = [] execVM "compile\dialogs.sqf";
+_ch = [] execVM "compile\dialog_actions\spawn_menu_actions.sqf";
 waitUntil {scriptDone _ch};
 
-_ch = [] execVM "compile\core.sqf";
+_ch = [] execVM "compile\dialog_actions\shop_arms_actions.sqf";
+waitUntil {scriptDone _ch};
+
+_ch = [] execVM "compile\dialog_actions\shop_sell_actions.sqf";
 waitUntil {scriptDone _ch};

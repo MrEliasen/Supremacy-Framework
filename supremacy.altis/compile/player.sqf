@@ -49,12 +49,13 @@ _killer = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param;";
 SPMC_fnc_spawnPlayer = compileFinal "
 private[""_pos""];
 _pos = (_this select 0);
+player enablesimulation true;
 
 player setPos _pos;
 0 cutText ["""",""BLACK IN""];";
 
 SPMC_fnc_getPlayerSpawn = compileFinal "
-private [""_spawnZone""];
+private [""_spawnZone"",""_pos"",""_holder""];
 
 switch (([""spawn_type""] call SPMC_fnc_config)) do {
     case ""random"": {
@@ -67,7 +68,19 @@ switch (([""spawn_type""] call SPMC_fnc_config)) do {
     };
 
     case ""world"": {
-        [([""world_item_spawn"",0,([""spawn_excludes""] call SPMC_fnc_config),(getMarkerSize ""world_item_spawn"") select 0, (typeof player)] call SHK_pos)] call SPMC_fnc_spawnPlayer;
+        _pos = [""world_item_spawn"",0,([""spawn_excludes""] call SPMC_fnc_config),(getMarkerSize ""world_item_spawn"") select 0, (typeof player)] call SHK_pos;
+        _holder = createVehicle [""Land_Can_Dented_F"",[(_pos select 0),(_pos select 1),(_pos select 2)+0.1], [], 0, ""can_Collide""];
+        _holder allowDamage false;
+        _pos = [_holder,[0,500],random 360,0,[1,500],(typeof player)] call SHK_pos;
+        deleteVehicle _holder;
+
+        _pos = [
+            (_pos select 0) + random(20-150),
+            (_pos select 1) + random(20-150),
+            (_pos select 2)
+        ];
+
+        [_pos] call SPMC_fnc_spawnPlayer;
     };
 };";
 
@@ -75,6 +88,7 @@ SPMC_fnc_playerSetup = compileFinal "
 private[""_spawn_items""];
 
 enableSentences false;
+player enablesimulation false;
 player disableConversation true;
 player setVariable [""BIS_noCoreConversations"", true];
 player enablefatigue false;
