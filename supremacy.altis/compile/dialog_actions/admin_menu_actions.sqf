@@ -1,5 +1,5 @@
 /**
- * admin.sqf
+ * admin_menu_actions.sqf
  *
  * LICENSE: This file is subject to the terms and conditions defined in
  * file "LICENSE.md", which is part of this source code package.
@@ -10,6 +10,12 @@
  * @license    MIT License
  * @link       https://github.com/MrEliasen/SupremacyFramework
  */
+
+SPMC_fnc_showDevMenu = compileFinal "
+if (!alive player || dialog) exitWith {};
+createDialog ""SPMC_admin_menu"";
+disableSerialization;";
+
 SPMC_admin_teleport = compileFinal "
 if (!debugMode) exitWith {};
 

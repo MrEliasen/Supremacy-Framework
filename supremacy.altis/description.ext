@@ -1,5 +1,5 @@
 onLoadName = "Supremacy";
-onLoadMission = "A Framework by Simply @ NBS-Gaming.com";
+onLoadMission = "A Framework by Simply @ NBS-Gaming.com | www.SirMrE.com";
 author = "Simply";
 respawn="BASE";
 respawnDelay=5;
@@ -10,18 +10,18 @@ saving = 0;
 respawnDialog = 0;
 loadScreen = "splash.jpg";
 
-corpseLimit = 20;
-corpseRemovalMinTime = 60;
-corpseRemovalMaxTime = 600;
-wreckLimit = 10;
-wreckRemovalMinTime = 120;
-wreckRemovalMaxTime = 600;
+corpseLimit = 10;
+corpseRemovalMinTime = 30;
+corpseRemovalMaxTime = 120;
+wreckLimit = 5;
+wreckRemovalMinTime = 30;
+wreckRemovalMaxTime = 120;
 
 class Header
 {
 	gameType=SC;
 	minPlayers=1;
-	maxPlayers=50;
+	maxPlayers=80;
 };
 
 #include "dialogs\_master.h"
@@ -29,4 +29,33 @@ class Header
 class CfgFunctions
 {
     #include "Functions.h"
+};
+
+class CfgSounds
+{
+    sounds[] = {};
+    class purchase
+    {
+        name = "purchase";
+        sound[] = {"\sounds\purchase.ogg", 1.0, 1};
+        titles[] = {};
+    };
+    class purchase_click
+    {
+        name = "purchase_click";
+        sound[] = {"\sounds\purchase_click.ogg", 1.0, 1};
+        titles[] = {};
+    };
+    class error
+    {
+        name = "error";
+        sound[] = {"\sounds\error.ogg", 1.0, 1};
+        titles[] = {};
+    };
+    class sold_item
+    {
+        name = "sold_item";
+        sound[] = {"\sounds\sold_item.ogg", 1.0, 1};
+        titles[] = {};
+    };
 };

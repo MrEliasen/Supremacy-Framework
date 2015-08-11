@@ -32,7 +32,7 @@ _drop setDir random 360;
 _drop setPos [(_pos select 0), (_pos select 1), 500];
 _drop call KK_fnc_paraDrop;
 
-[[""TaskUpdated"",["""",""AIR DROP: New air drop incoming, check your maps!""]],""bis_fnc_showNotification"",false,true] spawn BIS_fnc_MP;";
+[[""TaskUpdated"",["""",""AIR DROP: New air drop incoming, check your maps!""]],""bis_fnc_showNotification"",true] spawn BIS_fnc_MP;";
 
 KK_fnc_FX = compileFinal "
 private ""_veh"";
@@ -99,7 +99,7 @@ _this attachTo [_para, [0,0,0]];
 0 = [_this, _paras] spawn {
     _veh = _this select 0;
 
-    if(!(isNull last_air_drop_marker)) then {
+    if(last_air_drop_marker != """") then {
         deleteMarker last_air_drop_marker;
     };
 
@@ -107,7 +107,7 @@ _this attachTo [_para, [0,0,0]];
     last_air_drop_marker setmarkerColor ""ColorUNKNOWN"";
     last_air_drop_marker setMarkerShape ""ELLIPSE"";
     last_air_drop_marker setMarkerBrush ""Solid"";
-    last_air_drop_marker setMarkerSize [200, 200];
+    last_air_drop_marker setMarkerSize [350, 350];
 
     while {getPos _veh select 2 > 100} do {
         last_air_drop_marker setMarkerPos (getPos _veh);
@@ -141,8 +141,8 @@ _this attachTo [_para, [0,0,0]];
     _veh setVariable[""airdrop"",FALSE, true];
 
     for ""_i"" from 1 to 10 do {
-        createvehicle[""SmokeShellRed"", (getPosATL _veh), [], 0, ""NONE""];
-        createvehicle[""SmokeShellOrange"", (getPosATL _veh), [], 0, ""NONE""];
+        createvehicle[""SmokeShellPurple"", (getPosATL _veh), [], 0, ""NONE""];
+        createvehicle[""SmokeShellBlue"", (getPosATL _veh), [], 0, ""NONE""];
         sleep 50
     };
 };";

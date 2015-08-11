@@ -75,14 +75,10 @@ for "_i" from 1 to _limit do
     private["_m","_pos","_holder","_vehicle","_r"];
     _r = random(100);
 
-    if (_r > 15) then {
-        _vehicle = (["loot_vehicles"] call SPMC_fnc_config) call bis_fnc_selectRandom;
+    if (_r > 10) then {
+        _vehicle = (["ground_vehicles"] call SPMC_fnc_config) call bis_fnc_selectRandom;
     } else {
-        if (_r > 5 && _r <= 15) then {
-            _vehicle = (["loot_rare_vehicles"] call SPMC_fnc_config) call bis_fnc_selectRandom;
-        } else {
-            _vehicle = (["loot_very_rare_vehicles"] call SPMC_fnc_config) call bis_fnc_selectRandom;
-        };
+        _vehicle = (["air_vehicles"] call SPMC_fnc_config) call bis_fnc_selectRandom;
     };
     
     _pos = ["world_item_spawn",0,["system_safezone"],450] call SHK_pos;
@@ -97,6 +93,7 @@ for "_i" from 1 to _limit do
 
     clearBackpackCargoGlobal _holder;
     clearWeaponCargoGlobal _holder;
+    clearMagazineCargoGlobal _holder;
     clearItemCargoGlobal _holder;
     [_holder] call SPMC_fnc_setupVehicleLoot;
 
@@ -117,6 +114,40 @@ for "_i" from 1 to _limit do
     };
 };
 
+
+// Spawn world stationaries
+_limit = (["loot_stationery_limit"] call SPMC_fnc_config);
+
+if (debugMode) then {
+    diag_log format["SERVER: Spawning %1 world stationery items", _limit];
+};
+
+for "_i" from 1 to _limit do
+{
+    private["_m","_pos","_holder","_vehicle"];
+    _vehicle = (["stationery_items"] call SPMC_fnc_config) call bis_fnc_selectRandom;
+    
+    _pos = ["world_item_spawn",0,["system_safezone"],450] call SHK_pos;
+    _holder = createVehicle [_vehicle,[(_pos select 0),(_pos select 1),(_pos select 2)], [], 0, "none"];
+    sleep 0.1;
+
+    if (debugMode) then {
+        _m = createMarker [format["mPos%1%2",(getPos _holder) select 0, (getPos _holder) select 1],(getPos _holder)];
+        _m setmarkerColor "ColorBlack";
+        _m setMarkerShape "Icon";
+        _m setMarkerType "mil_dot";
+    };
+
+    if (_i % 10 == 0) then {
+        serverStatus = format["SERVER: Spawned %1/%2 stationery items", _i, _limit];
+        publicVariable "serverStatus";
+
+        if (debugMode) then {
+            diag_log serverStatus;
+        };
+    };
+};
+
 serverStatus = "SERVER: Initiating air drop timer";
 publicVariable "serverStatus";
 
@@ -127,7 +158,7 @@ if (debugMode) then {
 // Init air drops
 [] spawn {
     private ["_airdropIntval"];
-    last_air_drop_marker = ObjNull;
+    last_air_drop_marker = "";
     _airdropIntval = (["airdrop_interval"] call SPMC_fnc_config);
 
     while{true} do {
