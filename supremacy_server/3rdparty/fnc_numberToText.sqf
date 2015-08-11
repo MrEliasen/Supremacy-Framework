@@ -28,3 +28,4 @@ _numberText = """";
 } foreach _digits;
 
 _numberText";
+publicVariable "fnc_numberToText";

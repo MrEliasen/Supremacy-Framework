@@ -28,7 +28,7 @@ player addEventHandler [""InventoryClosed"", {
 
 SPMC_fnc_playerActions = compileFinal "
 if (debugMode) then { 
-    player addAction[""<t color='#FF0000'>Dev Menu</t>"",SPMC_fnc_showDevMenu,player,0,false,false,"""",'!isNull player && player isKindOf ""Man"" && (alive player)'];
+    player addAction[""<t color='#f10000'>Dev Menu</t>"",SPMC_fnc_showDevMenu,player,0,false,false,"""",'!isNull player && (alive player)'];
 };";
 
 SPMC_fnc_playerRespawn = compileFinal "
@@ -38,7 +38,8 @@ _corpse = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param;
 
 0 cutText["""",""BLACK FADED""];
 0 cutFadeOut 9999999;
-[] spawn SPMC_fnc_playerSetup;";
+[] call SPMC_fnc_playerActions;
+[] call SPMC_fnc_playerSetup;";
 
 SPMC_fnc_playerKilled = compileFinal "
 private[""_player""];
@@ -58,16 +59,16 @@ SPMC_fnc_getPlayerSpawn = compileFinal "
 private [""_spawnZone"",""_pos"",""_holder""];
 
 switch (([""spawn_type""] call SPMC_fnc_config)) do {
-    case ""random"": {
+    case ""random_city"": {
         _spawnZone = (([""spawn_points""] call SPMC_fnc_config) call bis_fnc_selectRandom) select 0;
         [([_spawnZone,0,[],(getMarkerSize _spawnZone) select 0, (typeof player)] call SHK_pos)] call SPMC_fnc_spawnPlayer;
     };
 
-    case ""city"": {
+    case ""select_city"": {
         [] spawn SPMC_fnc_showSpawnMenu;
     };
 
-    case ""world"": {
+    case ""random_world"": {
         _pos = [""world_item_spawn"",0,([""spawn_excludes""] call SPMC_fnc_config),(getMarkerSize ""world_item_spawn"") select 0, (typeof player)] call SHK_pos;
         _holder = createVehicle [""Land_Can_Dented_F"",[(_pos select 0),(_pos select 1),(_pos select 2)+0.1], [], 0, ""can_Collide""];
         _holder allowDamage false;
@@ -148,4 +149,4 @@ if ((_spawn_items select 4) != """") then {
 
 player addrating 99999999;
 
-[] spawn SPMC_fnc_getPlayerSpawn;";
+[] call SPMC_fnc_getPlayerSpawn;";

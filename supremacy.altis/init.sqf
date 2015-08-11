@@ -39,6 +39,14 @@ if(!isDedicated) then {
     0 cutText["Client initiating, please wait..","BLACK FADED"];
     0 cutFadeOut 9999999;
 
+    // When looting clothes, we set this to the container the user is looting.
+    // This is needed so we can check if the container have the clothes they are tryinig to equip, and if something changed.
+    // 0: container, 1: current item array, 2: last changed
+    SPMC_gbl_container = [objNull, [], 0.0];
+    // Keeps track of the current vehicle shop
+    // 0: shop type (land, air, water), 1: spawn point marker names (array), 2: the list of supported vehicle types for this shop (array)
+    SPMC_gbl_vehicleShop = ["", [], []];
+
     // Set event handlers;
     _handle = [] spawn SPMC_fnc_playerEvents;
     waitUntil {sleep 0.1; scriptDone _handle};

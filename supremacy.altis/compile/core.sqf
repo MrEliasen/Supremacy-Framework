@@ -76,10 +76,38 @@ Killzone_Kid - Original Airdrop script""
 ]
 ];";
 
+/*
+    Index
+    0: class name
+    1: display name
+    2: description
+    3: picture
+    4: icon
+    5: type id
+    6: itemInfo type id
+    7: config name
+
+    Magazines
+    8: initSpeed
+
+    Weapons
+    8: Compatible magazines
+    9: Fire Modes
+    10: Compatible Items
+        0: scopes
+        1: pointers
+        2: muzzels
+        3: under barrel
+
+    Vehicles
+    8: armor
+    9: maxSpeed
+    10: enginePower
+    11: fuelCapacity
+*/
 SPMC_fnc_getItemCfgDetails = compileFinal "
-private[""_item"",""_type"",""_config""];
+private[""_item"",""_config""];
 _item = [_this,0,"""",[""""]] call BIS_fnc_param;
-_type = [_this,1,"""",[""""]] call BIS_fnc_param;
 _config = """";
 
 switch (true) do
@@ -101,7 +129,7 @@ switch (true) do
 _data =[
     _item,
     getText(configFile >> _config >> _item >> ""displayName""),
-    getText(configFile >> _config >> _item >> ""descriptionshort""),
+    """",
     getText(configFile >> _config >> _item >> ""picture""),
     getText(configFile >> _config >> _item >> ""icon""),
     getNumber(configFile >> _config >> _item >> ""type"")
@@ -118,12 +146,33 @@ _data set [count _data, _config];
 
 switch (_config) do {
     case ""CfgMagazines"": {
+        _data set [2, getText(configFile >> _config >> _item >> ""descriptionshort"")];
         _data set [count _data, getNumber(configFile >> _config >> _item >> ""initSpeed"")];
     };
 
     case ""CfgWeapons"": {
+        _data set [2, getText(configFile >> _config >> _item >> ""descriptionshort"")];
         _data set [count _data, getArray(configFile >> _config >> _item >> ""magazines"")];
         _data set [count _data, getArray(configFile >> _config >> _item >> ""modes"")];
+
+        private [""_misc""];
+        _misc = [];
+        if (isClass ((configFile >> _config >> _item >> ""WeaponSlotsInfo""))) then {
+            if (isClass((configFile >> _config >> _item >> ""WeaponSlotsInfo"" >> ""CowsSlot""))) then {
+                _misc set [count _misc, getArray(configFile >> _config >> _item >> ""WeaponSlotsInfo"" >> ""CowsSlot"" >> ""compatibleItems"")];
+            };
+            if (isClass((configFile >> _config >> _item >> ""WeaponSlotsInfo"" >> ""PointerSlot""))) then {
+                _misc set [count _misc, getArray(configFile >> _config >> _item >> ""WeaponSlotsInfo"" >> ""PointerSlot"" >> ""compatibleItems"")];
+            };
+            if (isClass((configFile >> _config >> _item >> ""WeaponSlotsInfo"" >> ""MuzzleSlot""))) then {
+                _misc set [count _misc, getArray(configFile >> _config >> _item >> ""WeaponSlotsInfo"" >> ""MuzzleSlot"" >> ""compatibleItems"")];
+            };
+            if (isClass((configFile >> _config >> _item >> ""WeaponSlotsInfo"" >> ""UnderBarrelSlot""))) then {
+                _misc set [count _misc, getArray(configFile >> _config >> _item >> ""WeaponSlotsInfo"" >> ""UnderBarrelSlot"" >> ""compatibleItems"")];
+            };
+        };
+        
+        _data set [count _data, _misc];
     };
 
     case ""CfgVehicles"": {
@@ -150,11 +199,15 @@ switch (_type) do {
 
 SPMC_fnc_findIndex  = compileFinal "
 private[""_item"",""_array""];
-_item = _this select 0;
-_array = _this select 1;
+_item = [_this,0,"""",[""""]] call BIS_fnc_param;
+_array = [_this,1,[],[[]]] call BIS_fnc_param;
 _index = -1;
 
 {
+    if (typeName _x != ""ARRAY"") then {
+        _x = [_x];
+    };
+
     if(_item in _x) exitWith {
         _index = _forEachIndex;
     };

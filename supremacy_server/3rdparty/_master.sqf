@@ -10,4 +10,7 @@
  * @license    MIT License
  * @link       https://github.com/MrEliasen/SupremacyFramework
  */
+_ch = [] execVM "\supremacy_server\3rdparty\fnc_numberToText.sqf";
+waitUntil {scriptDone _ch};
+
 call compile preprocessfile "\supremacy_server\3rdparty\SHK\shk_pos_init.sqf";
