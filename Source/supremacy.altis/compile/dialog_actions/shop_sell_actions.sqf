@@ -82,21 +82,26 @@ _pricelist = [""item_prices""] call SPMC_fnc_config;
 _errMsg = """";
 _price = -1;
 
-ctrlEnable[2402, false];
+if(!_silent) then {
+    ctrlEnable[2402, false];
+};
 
 if (_item == """" && !_silent) then {
     _item = lbData [2401, lbCurSel(2401)];
 };
 
 if (_item == """") exitWith {
-    ctrlEnable[2402, true];
+    if(!_silent) then {
+        ctrlEnable[2402, true];
+    };
+
     _price;
 };
 
 _index = [_item, _pricelist] call SPMC_fnc_findIndex;
 
 if (_index != -1) then {
-    _price = _pricelist select _index;
+    _price = (_pricelist select _index) select 1;
 } else {
     _price = 0;
 };
@@ -151,6 +156,9 @@ switch((_itemInfo select 7)) do {
                                 _sold = [_x, true] call SPMC_fnc_sellItem;
 
                                 if (_sold != -1) then {
+                                    if(!_silent) then {
+                                        lbDelete [2401, lbCurSel(2401)+1];
+                                    };
                                     _attchTotal = _attchTotal + _sold;
                                 };
                             };
@@ -174,6 +182,9 @@ switch((_itemInfo select 7)) do {
                                 _sold = [_x, true] call SPMC_fnc_sellItem;
 
                                 if (_sold != -1) then {
+                                    if(!_silent) then {
+                                        lbDelete [2401, lbCurSel(2401)+1];
+                                    };
                                     _attchTotal = _attchTotal + _sold;
                                 };
                             };
@@ -197,6 +208,9 @@ switch((_itemInfo select 7)) do {
                                 _sold = [_x, true] call SPMC_fnc_sellItem;
 
                                 if (_sold != -1) then {
+                                    if(!_silent) then {
+                                        lbDelete [2401, lbCurSel(2401)+1];
+                                    };
                                     _attchTotal = _attchTotal + _sold;
                                 };
                             };
@@ -280,10 +294,10 @@ switch((_itemInfo select 7)) do {
 if (!_sold) exitWith {
     if (!_silent) then {
         hint _errMsg;
+        ctrlEnable[2402, true];
     };
 
     player say3D ""error"";
-    ctrlEnable[2402, true];
 
     _price = -1;
     _price;
@@ -294,7 +308,9 @@ if (_silent && debugMode) then {
 };
 
 hint format[""You have sold a """"%1"""" for $%2%3!"", (_itemInfo select 1), _price, _soldAttachMsg];
-lbDelete [2401, lbCurSel(2401)];
+if(!_silent) then {
+    lbDelete [2401, lbCurSel(2401)];
+};
 
 [_silent] spawn {
     private [""_silent""];
@@ -304,7 +320,9 @@ lbDelete [2401, lbCurSel(2401)];
     };
 
     sleep 0.2;
-    ctrlEnable[2402, true];
+    if(!_silent) then {
+        ctrlEnable[2402, true];
+    };
 };
 
 _price";

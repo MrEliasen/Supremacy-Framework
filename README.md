@@ -9,6 +9,8 @@ I don't know much about "best practises" in this language yet, or how I should o
  * World vehicle spawns
  * Player spawn/respawn (cities, random, world)
  * Timed, random placement, airdrops
+ * Equipment Shops
+ * Vehicle Shops
 
 There are many planned features, like persistent data (eg. character save/load) and shop/economy system. But I want the core system to work really well before I move on to adding more stuff on top of it.
 

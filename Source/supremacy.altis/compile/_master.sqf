@@ -31,3 +31,6 @@ waitUntil {scriptDone _ch};
 
 _ch = [] execVM "compile\dialog_actions\shop_vehicle_actions.sqf";
 waitUntil {scriptDone _ch};
+
+_ch = [] execVM "compile\dialog_actions\shop_clothes_actions.sqf";
+waitUntil {scriptDone _ch};

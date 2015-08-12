@@ -166,7 +166,7 @@ _spawn = """";
 
 {
     private [""_units""];
-    _units = nearestObjects[(getMarkerPos _x),[],8];
+    _units = nearestObjects[(getMarkerPos _x),[""car"",""tank"",""armored"",""support"",""truck"",""air"",""ship"",""submarine"",""man""],8];
 
     if ((count _units) == 0) exitWith {
         _spawn = _x

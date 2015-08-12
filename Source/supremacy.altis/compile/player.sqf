@@ -83,6 +83,10 @@ switch (([""spawn_type""] call SPMC_fnc_config)) do {
 
         [_pos] call SPMC_fnc_spawnPlayer;
     };
+
+    default {
+        [] spawn SPMC_fnc_showSpawnMenu;
+    };
 };";
 
 SPMC_fnc_playerSetup = compileFinal "

@@ -98,12 +98,14 @@ Killzone_Kid - Original Airdrop script""
         1: pointers
         2: muzzels
         3: under barrel
+    11: armor
 
     Vehicles
     8: armor
     9: maxSpeed
     10: enginePower
     11: fuelCapacity
+    12: maximumLoad
 */
 SPMC_fnc_getItemCfgDetails = compileFinal "
 private[""_item"",""_config""];
@@ -143,7 +145,6 @@ if (isClass (configFile >> _config >> _item >> ""ItemInfo"")) then {
 
 _data set [count _data, _config];
 
-
 switch (_config) do {
     case ""CfgMagazines"": {
         _data set [2, getText(configFile >> _config >> _item >> ""descriptionshort"")];
@@ -173,6 +174,7 @@ switch (_config) do {
         };
         
         _data set [count _data, _misc];
+        _data set [count _data, (configFile >> _config >> _item >> ""ItemInfo"" >> ""armor"")];
     };
 
     case ""CfgVehicles"": {
@@ -180,6 +182,7 @@ switch (_config) do {
         _data set [count _data, getNumber(configFile >> _config >> _item >> ""maxSpeed"")];
         _data set [count _data, getNumber(configFile >> _config >> _item >> ""enginePower"")];
         _data set [count _data, getNumber(configFile >> _config >> _item >> ""fuelCapacity"")];
+        _data set [count _data, getNumber(configFile >> _config >> _item >> ""maximumLoad"")];
     };
 };
 

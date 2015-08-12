@@ -20,3 +20,4 @@
 #include "SPMC_shop_arms.hpp"
 #include "SPMC_shop_sell.hpp"
 #include "SPMC_shop_vehicle.hpp"
+#include "SPMC_shop_clothes.hpp"

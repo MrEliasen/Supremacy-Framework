@@ -10,6 +10,19 @@
  * @license    MIT License
  * @link       https://github.com/MrEliasen/SupremacyFramework
  */
+
+SPMC_fnc_initAirDropTimer = compileFinal "
+[] spawn {
+    private [""_airdropIntval""];
+    last_air_drop_marker = """";
+    _airdropIntval = ([""airdrop_interval""] call SPMC_fnc_config);
+
+    while{true} do {
+        sleep (60 * _airdropIntval);
+        [] call SPMC_fnc_callAirDrop;
+    };
+};";
+
 SPMC_fnc_callAirDrop = compileFinal "
 private[""_drop"",""_pos"",""_dropZones"",""_dropZoneArea"",""_inventory"",""_m""];
 
