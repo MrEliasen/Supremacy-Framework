@@ -198,6 +198,9 @@ switch (_type) do {
     case ""arms"": {
         [] call SPMC_fnc_showArmsShop;
     };
+    case ""clothes"": {
+        [] call SPMC_fnc_showClothesShop;
+    };
 };";
 
 SPMC_fnc_findIndex  = compileFinal "

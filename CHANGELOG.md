@@ -2,9 +2,11 @@
 
 Features/Changes:
 
-  - Added clothing shop.
+  - Added clothing shop (added to all arms shops on the map).
   - Added default sell prices to all items in the config.
   - Reduced server setup time by A LOT as each setup process now runs in its own thread.
+  - All shops now populate faster, as each list loop now runs in its own thread.
+  - The arms shop will now show a preview and more details about a selected item from any of the lists.
 
 Bugfixes:
 

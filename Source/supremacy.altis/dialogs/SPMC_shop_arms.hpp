@@ -136,6 +136,7 @@ class SPMC_shop_arms
             w = 0.0928125 * safezoneW;
             h = 0.242 * safezoneH;
             sizeEx = 0.022;
+            onLBSelChanged = "[""ammo""] call SPMC_fnc_armsShopItemSelected;";
         };
         class SPMC_shop_arms_attch_list: RscListbox
         {
@@ -145,6 +146,7 @@ class SPMC_shop_arms
             w = 0.0928125 * safezoneW;
             h = 0.242 * safezoneH;
             sizeEx = 0.022;
+            onLBSelChanged = "[""attach""] call SPMC_fnc_armsShopItemSelected;";
         };
         class SPMC_shop_arms_acc_list: RscListbox
         {
@@ -154,6 +156,7 @@ class SPMC_shop_arms
             w = 0.0928125 * safezoneW;
             h = 0.242 * safezoneH;
             sizeEx = 0.022;
+            onLBSelChanged = "[""acc""] call SPMC_fnc_armsShopItemSelected;";
         };
         class SPMC_shop_arms_sp_ammo_list: RscListbox
         {
@@ -163,6 +166,7 @@ class SPMC_shop_arms
             w = 0.113437 * safezoneW;
             h = 0.143 * safezoneH;
             sizeEx = 0.022;
+            onLBSelChanged = "[""spammo""] call SPMC_fnc_armsShopItemSelected;";
         };
         class SPMC_shop_arms_sp_attch_list: RscListbox
         {
@@ -172,6 +176,7 @@ class SPMC_shop_arms
             w = 0.118594 * safezoneW;
             h = 0.143 * safezoneH;
             sizeEx = 0.022;
+            onLBSelChanged = "[""spattach""] call SPMC_fnc_armsShopItemSelected;";
         };
         class SPMC_shop_arms_firearms_buy: RscButton
         {
@@ -247,7 +252,7 @@ class SPMC_shop_arms
         {
             idc = 2314;
             x = 0.298906 * safezoneW + safezoneX;
-            y = 0.545 * safezoneH + safezoneY;
+            y = 0.544 * safezoneH + safezoneY;
             w = 0.154687 * safezoneW;
             h = 0.219 * safezoneH;
             size = 0.03;

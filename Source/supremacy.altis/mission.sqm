@@ -1653,7 +1653,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="shop_arms_character_1";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[] call SPMC_fnc_showClothesShop;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
 				};
 			};
 		};
@@ -1673,7 +1673,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="shop_arms_character_2";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[] call SPMC_fnc_showClothesShop;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
 				};
 			};
 		};
@@ -1693,7 +1693,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="shop_arms_character_3";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[] call SPMC_fnc_showClothesShop;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
 				};
 			};
 		};
@@ -1713,7 +1713,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="shop_arms_character_4";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[] call SPMC_fnc_showClothesShop;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
 				};
 			};
 		};
@@ -1733,7 +1733,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="shop_arms_character_5";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[] call SPMC_fnc_showClothesShop;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
 				};
 			};
 		};
@@ -1753,7 +1753,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="shop_arms_character_6";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[] call SPMC_fnc_showClothesShop;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
 				};
 			};
 		};
@@ -1773,7 +1773,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="shop_arms_character_7";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[] call SPMC_fnc_showClothesShop;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
 				};
 			};
 		};
@@ -1793,7 +1793,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="shop_arms_character_8";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[] call SPMC_fnc_showClothesShop;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
 				};
 			};
 		};
@@ -1813,7 +1813,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="shop_arms_character_9";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[] call SPMC_fnc_showClothesShop;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
 				};
 			};
 		};
@@ -1833,7 +1833,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="shop_arms_character_10";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[] call SPMC_fnc_showClothesShop;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
 				};
 			};
 		};
@@ -1853,7 +1853,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="shop_arms_character_11";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[] call SPMC_fnc_showClothesShop;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
 				};
 			};
 		};
@@ -1873,7 +1873,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="shop_arms_character_12";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[] call SPMC_fnc_showClothesShop;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
 				};
 			};
 		};
@@ -1893,7 +1893,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="shop_arms_character_13";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[] call SPMC_fnc_showClothesShop;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
 				};
 			};
 		};
@@ -1913,7 +1913,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="shop_arms_character_14";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[] call SPMC_fnc_showClothesShop;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
 				};
 			};
 		};
@@ -1933,7 +1933,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="shop_arms_character_15";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[] call SPMC_fnc_showClothesShop;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
 				};
 			};
 		};
@@ -1953,7 +1953,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="shop_arms_character_16";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[] call SPMC_fnc_showClothesShop;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
 				};
 			};
 		};
@@ -1973,7 +1973,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="shop_arms_character_17";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[] call SPMC_fnc_showClothesShop;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
 				};
 			};
 		};
@@ -1993,7 +1993,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="shop_arms_character_18";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[] call SPMC_fnc_showClothesShop;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
 				};
 			};
 		};
@@ -2013,7 +2013,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="shop_arms_character_19";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[] call SPMC_fnc_showClothesShop;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
 				};
 			};
 		};
@@ -2033,7 +2033,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="shop_arms_character_20";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[] call SPMC_fnc_showClothesShop;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
 				};
 			};
 		};
@@ -2053,7 +2053,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="shop_arms_character_21";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[] call SPMC_fnc_showClothesShop;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
 				};
 			};
 		};
@@ -2073,7 +2073,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="shop_arms_character_22";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[] call SPMC_fnc_showClothesShop;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
 				};
 			};
 		};
@@ -2093,7 +2093,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="shop_arms_character_23";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[] call SPMC_fnc_showClothesShop;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
 				};
 			};
 		};
@@ -2113,7 +2113,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="shop_arms_character_24";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[] call SPMC_fnc_showClothesShop;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
 				};
 			};
 		};
@@ -2133,7 +2133,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="shop_arms_character_25";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[] call SPMC_fnc_showClothesShop;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
 				};
 			};
 		};
@@ -2153,7 +2153,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="shop_arms_character_26";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[] call SPMC_fnc_showClothesShop;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
 				};
 			};
 		};
@@ -2173,7 +2173,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="shop_arms_character_27";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[] call SPMC_fnc_showClothesShop;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
 				};
 			};
 		};
@@ -2193,7 +2193,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="shop_arms_character_28";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[] call SPMC_fnc_showClothesShop;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
 				};
 			};
 		};
@@ -2213,7 +2213,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="shop_arms_character_29";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[] call SPMC_fnc_showClothesShop;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
 				};
 			};
 		};
@@ -2233,7 +2233,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="shop_arms_character_30";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[] call SPMC_fnc_showClothesShop;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
 				};
 			};
 		};
@@ -2253,7 +2253,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="shop_arms_character_31";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[] call SPMC_fnc_showClothesShop;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
 				};
 			};
 		};
@@ -2273,7 +2273,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="shop_arms_character_32";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[] call SPMC_fnc_showClothesShop;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
 				};
 			};
 		};
@@ -2293,7 +2293,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="shop_arms_character_33";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[] call SPMC_fnc_showClothesShop;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
 				};
 			};
 		};
@@ -2313,7 +2313,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="shop_arms_character_34";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[] call SPMC_fnc_showClothesShop;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
 				};
 			};
 		};
@@ -2333,7 +2333,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="shop_arms_character_35";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[] call SPMC_fnc_showClothesShop;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
 				};
 			};
 		};
@@ -2353,7 +2353,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="shop_arms_character_36";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[] call SPMC_fnc_showClothesShop;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
 				};
 			};
 		};
@@ -2373,7 +2373,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="shop_arms_character_37";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[] call SPMC_fnc_showClothesShop;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
 				};
 			};
 		};
@@ -3293,7 +3293,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="shop_arms_character_38";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[] call SPMC_fnc_showClothesShop;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
 				};
 			};
 		};
@@ -3313,7 +3313,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="shop_arms_character_39";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[] call SPMC_fnc_showClothesShop;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
 				};
 			};
 		};
@@ -3333,7 +3333,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="shop_arms_character_40";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[] call SPMC_fnc_showClothesShop;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
 				};
 			};
 		};

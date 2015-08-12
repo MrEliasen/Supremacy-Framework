@@ -12,121 +12,148 @@
  */
 
 SPMC_fnc_showArmsShop = compileFinal "
-private[""_list"",""_temp"",""_ammoC"",""_type"",""_pricelist""];
-_type = [_this,0,"""",[""""]] call BIS_fnc_param;
-
+private[""_plist""];
 if (!alive player || dialog) exitWith {};
 
 createDialog ""SPMC_shop_arms"";
 disableSerialization;
 
 waitUntil {sleep 0.1; !isNull (findDisplay 2300)};
+_plist = [""item_prices""] call SPMC_fnc_config;
 
-_pricelist = [""item_prices""] call SPMC_fnc_config;
-_temp = (findDisplay 2300) displayCtrl 2302;
-lbClear _temp;
+[_plist] spawn {
+    private[""_pricelist"",""_list""];
+    _pricelist = [_this,0,[],[[]]] call BIS_fnc_param;
+    disableSerialization;
 
-{
-    private [""_ammoInfo"",""_value""];
-    _ammoInfo = [_x] call SPMC_fnc_getItemCfgDetails;
-    _index = [_x, _pricelist] call SPMC_fnc_findIndex;
-    _value = 0;
-
-    if (_index != -1) then {
-        _value = (_pricelist select _index) select 1;
-    };
-
-    _temp lbAdd format[""%1 ($%2)"",(_ammoInfo select 1),_value];
-    _temp lbSetData[(lbSize _temp) - 1, _x];
-    _temp lbSetValue[(lbSize _temp) - 1, _value];
-    _temp lbSetPicture[(lbSize _temp) - 1, (_ammoInfo select 3)];
-
-} foreach ([""equip_throwables""] call SPMC_fnc_config);
-
-_list = (findDisplay 2300) displayCtrl 2301;
-lbClear _list;
-
-_ammoC = [];
-
-{
-    private [""_itemInfo"",""_y"",""_value""];
-    _y = _x;
-    _itemInfo = [_y] call SPMC_fnc_getItemCfgDetails;
-    _index = [_y, _pricelist] call SPMC_fnc_findIndex;
-    _value = 0;
-
-    if (_index != -1) then {
-        _value = (_pricelist select _index) select 1;
-    };
-
-    _list lbAdd (_itemInfo select 1);
-    _list lbSetData[(lbSize _list) - 1, _y];
-    _list lbSetValue[(lbSize _list) - 1, _value];
-    _list lbSetPicture[(lbSize _list) - 1, (_itemInfo select 3)];
+    _list = (findDisplay 2300) displayCtrl 2302;
+    lbClear _list;
 
     {
         private [""_ammoInfo"",""_value""];
         _ammoInfo = [_x] call SPMC_fnc_getItemCfgDetails;
+        _index = [_x, _pricelist] call SPMC_fnc_findIndex;
         _value = 0;
 
-        if (!(_x in _ammoC)) then {
-            if (([_x, _pricelist] call SPMC_fnc_findIndex) != -1) then {
-                _value = (_pricelist select _index) select 1;
-            };
-
-            _ammoC = _ammoC + [_x];
-            _temp lbAdd format[""%1 ($%2)"",(_ammoInfo select 1),_value];
-            _temp lbSetData[(lbSize _temp) - 1, _x];
-            _temp lbSetValue[(lbSize _temp) - 1, _value];
-            _temp lbSetPicture[(lbSize _temp) - 1, (_ammoInfo select 3)];
+        if (_index != -1) then {
+            _value = (_pricelist select _index) select 1;
         };
-    } foreach (_itemInfo select 8);
 
-} foreach ([""equip_weapons""] call SPMC_fnc_config);
+        _list lbAdd (_ammoInfo select 1);
+        _list lbSetData[(lbSize _list) - 1, _x];
+        _list lbSetValue[(lbSize _list) - 1, _value];
+        _list lbSetPicture[(lbSize _list) - 1, (_ammoInfo select 3)];
 
-_temp = [""equip_attachments""] call SPMC_fnc_config;
-_list = (findDisplay 2300) displayCtrl 2303;
-lbClear _list;
+    } foreach ([""equip_throwables""] call SPMC_fnc_config);
+};
 
-{
-    private [""_itemInfo"",""_value""];
-    _itemInfo = [_x] call SPMC_fnc_getItemCfgDetails;
-    _index = [_x, _pricelist] call SPMC_fnc_findIndex;
-    _value = 0;
 
-    if (_index != -1) then {
-        _value = (_pricelist select _index) select 1;
-    };
+[_plist] spawn {
+    private[""_pricelist"",""_list"",""_ammoC"",""_temp""];
+    _pricelist = [_this,0,[],[[]]] call BIS_fnc_param;
+    disableSerialization;
 
-    _list lbAdd format[""%1 ($%2)"",(_itemInfo select 1),_value];
-    _list lbSetData[(lbSize _list) - 1, _x];
-    _list lbSetValue[(lbSize _list) - 1, _value];
-    _list lbSetPicture[(lbSize _list) - 1, (_itemInfo select 3)];
+    _list = (findDisplay 2300) displayCtrl 2301;
+    _temp = (findDisplay 2300) displayCtrl 2302;
+    lbClear _list;
+    _ammoC = [];
 
-} foreach ((_temp select 0) + (_temp select 1) + (_temp select 2) + (_temp select 3));
+    {
+        private [""_itemInfo"",""_y"",""_value""];
+        _y = _x;
+        _itemInfo = [_y] call SPMC_fnc_getItemCfgDetails;
+        _index = [_y, _pricelist] call SPMC_fnc_findIndex;
+        _value = 0;
 
-_list = (findDisplay 2300) displayCtrl 2304;
-lbClear _list;
+        if (_index != -1) then {
+            _value = (_pricelist select _index) select 1;
+        };
 
-{
-    private [""_itemInfo"",""_value""];
-    _itemInfo = [_x] call SPMC_fnc_getItemCfgDetails;
-    _index = [_x, _pricelist] call SPMC_fnc_findIndex;
-    _value = 0;
+        _list lbAdd (_itemInfo select 1);
+        _list lbSetData[(lbSize _list) - 1, _y];
+        _list lbSetValue[(lbSize _list) - 1, _value];
+        _list lbSetPicture[(lbSize _list) - 1, (_itemInfo select 3)];
 
-    if (_index != -1) then {
-        _value = (_pricelist select _index) select 1;
-    };
+        if ((_itemInfo select 0) == currentWeapon player) then {
+            lbSetCurSel[2301, (lbSize _list) - 1];
+        };
 
-    _list lbAdd format[""%1 ($%2)"",(_itemInfo select 1),_value];
-    _list lbSetData[(lbSize _list) - 1, _x];
-    _list lbSetValue[(lbSize _list) - 1, _value];
-    _list lbSetPicture[(lbSize _list) - 1, (_itemInfo select 3)];
+        {
+            private [""_ammoInfo"",""_value""];
+            _ammoInfo = [_x] call SPMC_fnc_getItemCfgDetails;
+            _value = 0;
 
-} foreach ([""equip_items""] call SPMC_fnc_config);";
+            if (!(_x in _ammoC)) then {
+                if (([_x, _pricelist] call SPMC_fnc_findIndex) != -1) then {
+                    _value = (_pricelist select _index) select 1;
+                };
+
+                _ammoC = _ammoC + [_x];
+                _temp lbAdd (_ammoInfo select 1);
+                _temp lbSetData[(lbSize _temp) - 1, _x];
+                _temp lbSetValue[(lbSize _temp) - 1, _value];
+                _temp lbSetPicture[(lbSize _temp) - 1, (_ammoInfo select 3)];
+            };
+        } foreach (_itemInfo select 8);
+
+    } foreach ([""equip_weapons""] call SPMC_fnc_config);
+};
+
+[_plist] spawn {
+    private[""_pricelist"",""_list"",""_temp""];
+    _pricelist = [_this,0,[],[[]]] call BIS_fnc_param;
+    _temp = [""equip_attachments""] call SPMC_fnc_config;
+    disableSerialization;
+
+    _list = (findDisplay 2300) displayCtrl 2303;
+    lbClear _list;
+
+    {
+        private [""_itemInfo"",""_value""];
+        _itemInfo = [_x] call SPMC_fnc_getItemCfgDetails;
+        _index = [_x, _pricelist] call SPMC_fnc_findIndex;
+        _value = 0;
+
+        if (_index != -1) then {
+            _value = (_pricelist select _index) select 1;
+        };
+
+        _list lbAdd (_itemInfo select 1);
+        _list lbSetData[(lbSize _list) - 1, _x];
+        _list lbSetValue[(lbSize _list) - 1, _value];
+        _list lbSetPicture[(lbSize _list) - 1, (_itemInfo select 3)];
+
+    } foreach ((_temp select 0) + (_temp select 1) + (_temp select 2) + (_temp select 3));
+};
+
+[_plist] spawn {
+    private[""_pricelist"",""_list""];
+    _pricelist = [_this,0,[],[[]]] call BIS_fnc_param;
+    disableSerialization;
+    
+    _list = (findDisplay 2300) displayCtrl 2304;
+    lbClear _list;
+
+    {
+        private [""_itemInfo"",""_value""];
+        _itemInfo = [_x] call SPMC_fnc_getItemCfgDetails;
+        _index = [_x, _pricelist] call SPMC_fnc_findIndex;
+        _value = 0;
+
+        if (_index != -1) then {
+            _value = (_pricelist select _index) select 1;
+        };
+
+        _list lbAdd (_itemInfo select 1);
+        _list lbSetData[(lbSize _list) - 1, _x];
+        _list lbSetValue[(lbSize _list) - 1, _value];
+        _list lbSetPicture[(lbSize _list) - 1, (_itemInfo select 3)];
+
+    } foreach ([""equip_items""] call SPMC_fnc_config);
+};";
 
 SPMC_fnc_armsShopWeaponSelected = compileFinal "
-private[""_item"",""_value"",""_list"",""_desc"",""_type"",""_caliber"",""_len"",""_pricelist""];
+private[""_item"",""_value"",""_list"",""_desc"",""_type"",""_caliber"",""_misc"",""_len"",""_pricelist""];
 disableSerialization;
 
 _item = [lbData [2301, lbCurSel(2301)]] call SPMC_fnc_getItemCfgDetails;
@@ -145,7 +172,7 @@ lbClear _list;
         _value = (_pricelist select _index) select 1;
     };
 
-    _list lbAdd format[""%1 (%2)"",(_itemInfo select 1),_value];
+    _list lbAdd (_itemInfo select 1);
     _list lbSetData[(lbSize _list) - 1, _x];
     _list lbSetValue[(lbSize _list) - 1, _value];
     _list lbSetPicture[(lbSize _list) - 1, (_itemInfo select 3)];
@@ -167,7 +194,7 @@ lbClear _list;
             _value = (_pricelist select _index) select 1;
         };
 
-        _list lbAdd format[""%1 (%2)"",(_itemInfo select 1),_value];
+        _list lbAdd (_itemInfo select 1);
         _list lbSetData[(lbSize _list) - 1, _x];
         _list lbSetValue[(lbSize _list) - 1, _value];
         _list lbSetPicture[(lbSize _list) - 1, (_itemInfo select 3)];
@@ -177,6 +204,7 @@ lbClear _list;
 _desc = [(_item select 2), "">""] call BIS_fnc_splitString;
 _type = (_desc select 0);
 _caliber = """";
+_misc = """";
 
 if (count _desc > 1) then {
     _len = count (toArray _type) - 1;
@@ -186,9 +214,28 @@ if (count _desc > 1) then {
     if (([_type, _len] call BIS_fnc_trimString) == ""<"") then {
         _type = [_type, 0, _len - 1] call BIS_fnc_trimString;
     };
+    
+    if (""Launcher"" in ([_type, "" ""] call BIS_fnc_splitString)) then {
+        _caliber = [(_desc select 1), 6] call BIS_fnc_trimString;
+    }else {
+        _caliber = [(_desc select 1), 9] call BIS_fnc_trimString;
+    };
 
-    _caliber = (_desc select 1);
-    _caliber = format[""<br/>Caliber: <t color='#ffae2b'>%1</t>"", [_caliber, 9] call BIS_fnc_trimString];
+    _len = count (toArray _caliber) - 1;
+
+    if (([_caliber, _len] call BIS_fnc_trimString) == ""/"") then {
+        _caliber = [_caliber, 0, _len - 5] call BIS_fnc_trimString;
+    };
+    
+    _caliber = format[""<br/>Caliber: <t color='#ffae2b'>%1</t>"", _caliber];
+
+    if (count _desc == 4) then {
+        _misc = [(_desc select 2), 0, count (toArray (_desc select 2)) - 6] call BIS_fnc_trimString;
+        if (_misc == ""Grenade Launcher"") then {
+            _misc = format["" <t color='#ffae2b' size='0.70'>(%1 %2)</t>"", [(_desc select 3), 9] call BIS_fnc_trimString, _misc];
+            _caliber = format[""%1%2"", _caliber, _misc];
+        };
+    };
 };
 
 _type = format[""<br/>Type: <t color='#ffae2b'>%1</t>"", _type];
@@ -199,6 +246,53 @@ _type = format[""<br/>Type: <t color='#ffae2b'>%1</t>"", _type];
 (_item select 1),
 _type,
 _caliber,
+[_value] call fnc_numberToText];";
+
+
+SPMC_fnc_armsShopItemSelected = compileFinal "
+private[""_item"",""_pricelist"",""_index"",""_value"",""_listNo"",""_section""];
+_section = [_this,0,"""",[""""]] call BIS_fnc_param;
+_listNo = 0;
+
+if(_section == """") exitWith {};
+
+switch (_section) do {
+    case ""ammo"": {
+        _listNo = 2302;
+    };
+    case ""attach"": {
+        _listNo = 2303;
+    };
+    case ""acc"": {
+        _listNo = 2304;
+    };
+    case ""spammo"": {
+        _listNo = 2305;
+    };
+    case ""spattach"": {
+        _listNo = 2306;
+    };
+};
+
+if(_listNo == 0) exitWith {};
+
+disableSerialization;
+
+_item = [lbData [_listNo, lbCurSel _listNo]] call SPMC_fnc_getItemCfgDetails;
+_pricelist = [""item_prices""] call SPMC_fnc_config;
+_index = [(_item select 0), _pricelist] call SPMC_fnc_findIndex;
+_value = 0;
+
+if (_index != -1) then {
+    _value = (_pricelist select _index) select 1;
+};
+
+((findDisplay 2300) displayCtrl 2314) ctrlSetStructuredText parseText format[
+""<img size='8' image='%1'/><br/>
+Name: <t color='#ffae2b'>%2</t><br/>
+Price: <t color='#27e640'>$%3</t>"",
+(_item select 3),
+(_item select 1),
 [_value] call fnc_numberToText];";
 
 SPMC_fnc_armsShopBuyWeapon = compileFinal "

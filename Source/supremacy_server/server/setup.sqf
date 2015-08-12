@@ -34,7 +34,7 @@ _spawnBlock allowDamage false;
     _complete = false;
 
     while {!_complete} do {
-        serverStatus = format["SERVER: Running setup. Vehicles: %1/100%2, Crates: %3/100%4, Stationeries: %5/100%6)", round serverStatusLootVehicle, "%", round serverStatusLootCrates, "%", round serverStatusLootStationery, "%"];
+        serverStatus = format["SERVER: Running setup - %1%2 Complete.", round ((serverStatusLootVehicle + serverStatusLootCrates + serverStatusLootStationery) / 3), "%"];
         publicVariable "serverStatus";
 
         if (serverStatusLootVehicle == 100 && serverStatusLootCrates == 100 && serverStatusLootStationery == 100) then {
