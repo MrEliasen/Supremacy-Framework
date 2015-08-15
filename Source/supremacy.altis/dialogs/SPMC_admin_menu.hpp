@@ -7,7 +7,7 @@
  * @package    Supremacy Framework
  * @author     Mark Eliasen <https://github.com/MrEliasen>
  * @copyright  2015 Mark Eliasen
- * @license    MIT License
+ * @license    CC BY-NC 3.0 License
  * @link       https://github.com/MrEliasen/SupremacyFramework
  */
 class SPMC_admin_menu
@@ -57,7 +57,7 @@ class SPMC_admin_menu
             y = 0.467 * safezoneH + safezoneY;
             w = 0.118594 * safezoneW;
             h = 0.055 * safezoneH;
-            onButtonClick = "closeDialog 0; [] call SPMC_admin_teleportMap; hint 'Select where you would like to teleport to';";
+            onButtonClick = "closeDialog 0; [] call SPMC_fnc_teleportMap;";
         };
     };
 };

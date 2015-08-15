@@ -7,7 +7,7 @@
  * @package    Supremacy Framework
  * @author     Mark Eliasen <https://github.com/MrEliasen>
  * @copyright  2015 Mark Eliasen
- * @license    MIT License
+ * @license    CC BY-NC 3.0 License
  * @link       https://github.com/MrEliasen/SupremacyFramework
  */
 
@@ -23,6 +23,8 @@ serverStatusLootCrates = 0;
 serverStatusLootVehicle = 0;
 // loot stationery spawn completion status (0-100%)
 serverStatusLootStationery = 0;
+// Keeps track of all the player's monneh!
+serverPlayerMoney = [];
 
 diag_log "SERVER: Compiling compile\_master.sqf";
 _handle = [] execVM "\supremacy_server\compile\_master.sqf";

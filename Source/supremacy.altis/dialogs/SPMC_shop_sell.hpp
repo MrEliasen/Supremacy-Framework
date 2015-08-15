@@ -7,7 +7,7 @@
  * @package    Supremacy Framework
  * @author     Mark Eliasen <https://github.com/MrEliasen>
  * @copyright  2015 Mark Eliasen
- * @license    MIT License
+ * @license    CC BY-NC 3.0 License
  * @link       https://github.com/MrEliasen/SupremacyFramework
  */
 class SPMC_shop_sell
@@ -38,7 +38,7 @@ class SPMC_shop_sell
         };
         class SPMC_shop_sell_inventorytitle: RscText
         {
-            idc = 1000;
+            idc = -1;
             text = "YOUR EQUIPMENT";
             x = 0.448438 * safezoneW + safezoneX;
             y = 0.269 * safezoneH + safezoneY;
@@ -47,7 +47,7 @@ class SPMC_shop_sell
         };
         class SPMC_shop_sell_title: RscText
         {
-            idc = 1001;
+            idc = -1;
             text = "SELL YOUR ITEMS";
             x = 0.412344 * safezoneW + safezoneX;
             y = 0.225 * safezoneH + safezoneY;
@@ -58,7 +58,7 @@ class SPMC_shop_sell
         };
         class SPMC_shop_sell_valuelbl: RscText
         {
-            idc = 1002;
+            idc = -1;
             text = "Item Value:";
             x = 0.4175 * safezoneW + safezoneX;
             y = 0.687 * safezoneH + safezoneY;

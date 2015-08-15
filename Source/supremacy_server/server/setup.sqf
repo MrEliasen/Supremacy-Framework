@@ -7,7 +7,7 @@
  * @package    Supremacy Framework
  * @author     Mark Eliasen <https://github.com/MrEliasen>
  * @copyright  2015 Mark Eliasen
- * @license    MIT License
+ * @license    CC BY-NC 3.0 License
  * @link       https://github.com/MrEliasen/SupremacyFramework
  */
 private ["_spawnBlock","_limit","_debug"];
@@ -53,7 +53,7 @@ _spawnBlock allowDamage false;
 
     // Init air drops
     [] call SPMC_fnc_initAirDropTimer;
-
+    
     diag_log "SERVER: Ready!";
     serverIsReady = true;
     publicVariable "serverIsReady";

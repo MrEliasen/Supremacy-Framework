@@ -26,9 +26,9 @@ class Header
 
 #include "dialogs\_master.h"
 
-class CfgFunctions
+class RscTitles
 {
-    #include "Functions.h"
+    #include "dialogs\SPMC_hud.hpp"
 };
 
 class CfgSounds

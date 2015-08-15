@@ -7,7 +7,7 @@
  * @package    Supremacy Framework
  * @author     Mark Eliasen <https://github.com/MrEliasen>
  * @copyright  2015 Mark Eliasen
- * @license    MIT License
+ * @license    CC BY-NC 3.0 License
  * @link       https://github.com/MrEliasen/SupremacyFramework
  */
 class SPMC_shop_vehicle
@@ -82,7 +82,7 @@ class SPMC_shop_vehicle
             w = 0.149531 * safezoneW;
             h = 0.22 * safezoneH;
             sizeEx = 0.022;
-            onLBSelChanged = "[] call SPMC_fnc_vehicleShopBuyVehicleSelected;";
+            onLBSelChanged = "[2601,2603] call SPMC_fnc_vehicleSelected;";
         };
         class SPMC_shop_vehicle_sell_list: RscListbox
         {
@@ -92,7 +92,7 @@ class SPMC_shop_vehicle
             w = 0.149531 * safezoneW;
             h = 0.22 * safezoneH;
             sizeEx = 0.022;
-            onLBSelChanged = "[] call SPMC_fnc_vehicleShopSellVehicleSelected;";
+            onLBSelChanged = "[2602,2604] call SPMC_fnc_vehicleSelected;";
         };
         class SPMC_shop_vehicle_buy_details: RscStructuredText
         {

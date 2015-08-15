@@ -7,10 +7,13 @@
  * @package    Supremacy Framework
  * @author     Mark Eliasen <https://github.com/MrEliasen>
  * @copyright  2015 Mark Eliasen
- * @license    MIT License
+ * @license    CC BY-NC 3.0 License
  * @link       https://github.com/MrEliasen/SupremacyFramework
  */
-_ch = [] execVM "\supremacy_server\3rdparty\fnc_numberToText.sqf";
-waitUntil {scriptDone _ch};
 
+// SHK_pos
 call compile preprocessfile "\supremacy_server\3rdparty\SHK\shk_pos_init.sqf";
+
+// Number to text conversion function
+fnc_numberToText = compileFinal preprocessfilelinenumbers "\supremacy_server\3rdparty\numberToText.sqf";
+publicVariable "fnc_numberToText";

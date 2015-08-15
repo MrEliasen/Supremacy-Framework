@@ -7,10 +7,10 @@
  * @package    Supremacy Framework
  * @author     Mark Eliasen <https://github.com/MrEliasen>
  * @copyright  2015 Mark Eliasen
- * @license    MIT License
+ * @license    CC BY-NC 3.0 License
  * @link       https://github.com/MrEliasen/SupremacyFramework
  */
-SPMC_fnc_showLootClothesMenu = compileFinal "
+SPMC_fnc_showLootClothesMenu = compileFinal preprocessfilelinenumbers  "
 private[""_container"",""_list"",""_items""];
 _container = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 
@@ -30,7 +30,7 @@ waitUntil {sleep 0.1; !isNull (findDisplay 2500)};
     sleep 1;
 }";
 
-SPMC_fnd_updateLootClothesList = compileFinal "
+SPMC_fnd_updateLootClothesList = compileFinal preprocessfilelinenumbers  "
 private[""_list"",""_items""];
 if (isNull (findDisplay 2500)) exitWith {};
 if (isNull (SPMC_gbl_container select 0)) exitWith {};
@@ -54,7 +54,7 @@ _items = (_items call BIS_fnc_sortAlphabetically);
 
 SPMC_gbl_container = [(SPMC_gbl_container select 0), _items, time];";
 
-SPMC_fnc_checkLootClothesChanges = compileFinal "
+SPMC_fnc_checkLootClothesChanges = compileFinal preprocessfilelinenumbers  "
 private [""_items""];
 _items = [];
 
@@ -78,7 +78,7 @@ if ((SPMC_gbl_container select 2) == 0.0) then {
     };
 };";
 
-SPMC_fnc_lootClothesEquip = compileFinal "
+SPMC_fnc_lootClothesEquip = compileFinal preprocessfilelinenumbers  "
 private [""_uniform"",""_oldUniform""];
 _uniform = lbData [2501, lbCurSel(2501)];
 _oldUniform = (uniform player);

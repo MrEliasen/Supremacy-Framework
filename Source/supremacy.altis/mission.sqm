@@ -4306,7 +4306,7 @@ class Mission
 			position[]={9014.667,17.739632,21386.4};
 			name="shop_vehicle_6_sp1";
 			type="Empty";
-			angle=-136.009;
+			angle=-303.49673;
 		};
 		class Item106
 		{
@@ -4321,7 +4321,7 @@ class Mission
 			position[]={23148.65,3.1900001,18409.875};
 			name="shop_vehicle_7_sp1";
 			type="Empty";
-			angle=-176.575;
+			angle=-357.16147;
 		};
 		class Item108
 		{
