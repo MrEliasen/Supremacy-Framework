@@ -1,0 +1,61 @@
+onLoadName = "Supremacy";
+onLoadMission = "A Framework by Simply @ NBS-Gaming.com | www.SirMrE.com";
+author = "Simply";
+respawn="BASE";
+respawnDelay=5;
+disabledAI=1;
+disableChannels[] = {0,2,6};
+joinUnassigned = 0;
+saving = 0;
+respawnDialog = 0;
+loadScreen = "splash.jpg";
+
+corpseLimit = 10;
+corpseRemovalMinTime = 30;
+corpseRemovalMaxTime = 120;
+wreckLimit = 5;
+wreckRemovalMinTime = 30;
+wreckRemovalMaxTime = 120;
+
+class Header
+{
+	gameType=SC;
+	minPlayers=1;
+	maxPlayers=80;
+};
+
+#include "dialogs\_master.h"
+
+class RscTitles
+{
+    #include "dialogs\SPMC_hud.hpp"
+};
+
+class CfgSounds
+{
+    sounds[] = {};
+    class purchase
+    {
+        name = "purchase";
+        sound[] = {"\3rdparty\sounds\purchase.ogg", 1.0, 1};
+        titles[] = {};
+    };
+    class purchase_click
+    {
+        name = "purchase_click";
+        sound[] = {"\3rdparty\sounds\purchase_click.ogg", 1.0, 1};
+        titles[] = {};
+    };
+    class error
+    {
+        name = "error";
+        sound[] = {"\3rdparty\sounds\error.ogg", 1.0, 1};
+        titles[] = {};
+    };
+    class sold_item
+    {
+        name = "sold_item";
+        sound[] = {"\3rdparty\sounds\sold_item.ogg", 1.0, 1};
+        titles[] = {};
+    };
+};

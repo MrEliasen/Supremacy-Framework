@@ -1,0 +1,5037 @@
+version=12;
+class Mission
+{
+	addOns[]=
+	{
+		"A3_Characters_F_INDEP",
+		"a3_characters_f",
+		"a3_map_altis",
+		"A3_Characters_F_EPC"
+	};
+	addOnsAuto[]=
+	{
+		"A3_Characters_F_INDEP",
+		"a3_characters_f",
+		"A3_Characters_F_EPC",
+		"a3_map_altis"
+	};
+	randomSeed=7067638;
+	class Intel
+	{
+		briefingName="SUPREMACY";
+		overviewText="By Simply @ NBS-Gaming.com | www.SiMrE.com";
+		resistanceWest=0;
+		startWeather=0.29999998;
+		startWind=0;
+		forecastWeather=0.29999998;
+		forecastWind=0;
+		forecastWaves=0;
+		year=2035;
+		month=6;
+		day=24;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+	class Groups
+	{
+		items=165;
+		class Item0
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8415.4941,109.7633,25086.07};
+					id=0;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAYER COMMANDER";
+					leader=1;
+					skill=0.60000002;
+					text="player_1";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item1
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8416.8193,109.68079,25085.926};
+					id=1;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_2";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item2
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8418.4385,109.62553,25085.891};
+					id=2;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_3";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item3
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8422.8311,109.43241,25085.855};
+					id=3;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_6";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item4
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8424.2568,109.22871,25085.785};
+					id=4;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_7";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item5
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8419.8506,109.5815,25085.813};
+					id=5;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_4";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item6
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8421.4092,109.52303,25085.84};
+					id=6;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_5";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item7
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8425.7158,109.17374,25085.766};
+					id=7;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_8";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item8
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8427.0928,109.12077,25085.707};
+					id=8;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_9";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item9
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8428.4893,109.06673,25085.637};
+					id=9;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_10";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item10
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8415.625,109.58844,25087.488};
+					id=10;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_11";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item11
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8417.0039,109.55276,25087.326};
+					id=11;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_12";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item12
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8418.543,109.51022,25087.178};
+					id=12;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_13";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item13
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8422.9727,109.31271,25087.139};
+					id=13;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_16";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item14
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8424.3633,109.25903,25087.072};
+					id=14;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_17";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item15
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8420.0352,109.45316,25087.217};
+					id=15;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_14";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item16
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8421.5918,109.40491,25087.127};
+					id=16;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_15";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item17
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8425.8203,109.20411,25087.053};
+					id=17;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_18";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item18
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8427.1992,109.15108,25086.994};
+					id=18;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_19";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item19
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8428.5938,109.09716,25086.924};
+					id=19;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_20";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item20
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8415.6631,109.58791,25088.85};
+					id=20;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_21";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item21
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8416.9658,109.54083,25088.725};
+					id=21;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_22";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item22
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8418.5049,109.48523,25088.576};
+					id=22;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_23";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item23
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8422.9346,109.31269,25088.537};
+					id=23;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_26";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item24
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8424.3232,109.26154,25088.471};
+					id=24;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_27";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item25
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8419.9951,109.43166,25088.615};
+					id=25;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_24";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item26
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8421.5518,109.37453,25088.525};
+					id=26;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_25";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item27
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8425.7822,109.20728,25088.451};
+					id=27;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_28";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item28
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8427.1592,109.15649,25088.393};
+					id=28;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_29";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item29
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8428.5557,109.10511,25088.322};
+					id=29;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_30";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item30
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8415.7793,109.58548,25090.17};
+					id=30;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_31";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item31
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8417.1582,109.53568,25090.045};
+					id=31;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_32";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item32
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8418.6992,109.48,25089.893};
+					id=32;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_33";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item33
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8423.1289,109.29136,25089.857};
+					id=33;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_36";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item34
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8424.5156,109.24028,25089.791};
+					id=34;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_37";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item35
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8420.1875,109.425,25089.932};
+					id=35;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_34";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item36
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8421.7461,109.35116,25089.842};
+					id=36;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_35";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item37
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8425.9766,109.18594,25089.771};
+					id=37;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_38";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item38
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8427.3516,109.13523,25089.713};
+					id=38;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_39";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item39
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8428.75,109.10164,25089.639};
+					id=39;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_40";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item40
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8415.8203,109.58584,25091.527};
+					id=40;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_41";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item41
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8417.2354,109.53467,25091.365};
+					id=41;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_42";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item42
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8418.7764,109.479,25091.213};
+					id=42;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_43";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item43
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8423.2061,109.27437,25091.178};
+					id=43;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_46";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item44
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8424.5947,109.22326,25091.111};
+					id=44;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_47";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item45
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8420.2666,109.40714,25091.252};
+					id=45;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_44";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item46
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8421.8252,109.33331,25091.162};
+					id=46;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_45";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item47
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8426.0537,109.169,25091.092};
+					id=47;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_48";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item48
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8427.4307,109.13751,25091.033};
+					id=48;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_49";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item49
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8428.8271,109.11263,25090.959};
+					id=49;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_50";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item50
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8415.959,109.5826,25092.848};
+					id=50;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_51";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item51
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8417.374,109.53068,25092.686};
+					id=51;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_52";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item52
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8418.915,109.45834,25092.533};
+					id=52;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_53";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item53
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8423.3447,109.25513,25092.498};
+					id=53;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_56";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item54
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8424.7334,109.20399,25092.432};
+					id=54;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_57";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item55
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8420.4053,109.38643,25092.572};
+					id=55;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_54";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item56
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8421.9639,109.31255,25092.482};
+					id=56;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_55";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item57
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8426.1924,109.17184,25092.412};
+					id=57;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_58";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item58
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8427.5693,109.14742,25092.354};
+					id=58;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_59";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item59
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8428.9277,109.12321,25092.279};
+					id=59;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_60";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item60
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8415.9971,109.58015,25094.244};
+					id=60;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_61";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item61
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8417.4121,109.51398,25094.082};
+					id=61;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_62";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item62
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8418.9531,109.44165,25093.93};
+					id=62;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_63";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item63
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8423.3828,109.2388,25093.895};
+					id=63;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_66";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item64
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8424.7715,109.20969,25093.828};
+					id=64;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_67";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item65
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8420.4434,109.36968,25093.969};
+					id=65;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_64";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item66
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8422.002,109.29586,25093.879};
+					id=66;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_65";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item67
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8426.2305,109.18423,25093.809};
+					id=67;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_68";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item68
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8427.6074,109.15981,25093.75};
+					id=68;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_69";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item69
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8428.9658,109.13557,25093.676};
+					id=69;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_70";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item70
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8416.1143,109.67973,25095.602};
+					id=70;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_71";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item71
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8417.5293,109.58154,25095.439};
+					id=71;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_72";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item72
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8419.0703,109.47901,25095.287};
+					id=72;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_73";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item73
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8423.5,109.27297,25095.252};
+					id=73;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_76";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item74
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8424.8887,109.241,25095.186};
+					id=74;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_77";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item75
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8420.5605,109.4147,25095.326};
+					id=75;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_74";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item76
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8422.1191,109.32304,25095.236};
+					id=76;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_75";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item77
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8426.3477,109.21329,25095.166};
+					id=77;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_78";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item78
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8427.7246,109.1824,25095.107};
+					id=78;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_79";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item79
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8429.083,109.15005,25095.033};
+					id=79;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="player_80";
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item80
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={26997.16,20.40811,23264.504};
+					azimut=171.222;
+					id=80;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_arms_character_1";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+				};
+			};
+		};
+		class Item81
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={25718.965,20.515192,21337.398};
+					azimut=171.222;
+					id=81;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_arms_character_2";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+				};
+			};
+		};
+		class Item82
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={23959.631,15.313528,20184.186};
+					azimut=224.245;
+					id=82;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_arms_character_3";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+				};
+			};
+		};
+		class Item83
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={23225.52,13.417654,19947.986};
+					azimut=40.001202;
+					id=83;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_arms_character_4";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+				};
+			};
+		};
+		class Item84
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={20997.949,38.372948,17042.992};
+					azimut=46.009998;
+					id=84;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_arms_character_5";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+				};
+			};
+		};
+		class Item85
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={21409.359,19.095301,16346.811};
+					azimut=-98.953796;
+					id=85;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_arms_character_6";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+				};
+			};
+		};
+		class Item86
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={18859.4,31.461992,16658.209};
+					azimut=232.008;
+					id=86;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_arms_character_7";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+				};
+			};
+		};
+		class Item87
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={18138.594,26.786474,15291.093};
+					azimut=406.37299;
+					id=87;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_arms_character_8";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+				};
+			};
+		};
+		class Item88
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={19429.99,41.392948,13220.904};
+					azimut=232.008;
+					id=88;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_arms_character_9";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+				};
+			};
+		};
+		class Item89
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={16832.336,21.916622,12732.45};
+					azimut=232.008;
+					id=89;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_arms_character_10";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+				};
+			};
+		};
+		class Item90
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={20237.121,56.159092,11629.774};
+					azimut=318.448;
+					id=90;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_arms_character_11";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+				};
+			};
+		};
+		class Item91
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={20506.248,34.145771,8849.7949};
+					azimut=418.077;
+					id=91;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_arms_character_12";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+				};
+			};
+		};
+		class Item92
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={21697.941,15.05025,7571.1558};
+					azimut=435.728;
+					id=92;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_arms_character_13";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+				};
+			};
+		};
+		class Item93
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={20823.107,34.848,6748.1621};
+					azimut=549.46979;
+					id=93;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_arms_character_14";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+				};
+			};
+		};
+		class Item94
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={16251.821,21.708609,17229.906};
+					azimut=68.378548;
+					id=94;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_arms_character_15";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+				};
+			};
+		};
+		class Item95
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={16650.143,17.309753,16129.04};
+					azimut=232.008;
+					id=95;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_arms_character_16";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+				};
+			};
+		};
+		class Item96
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={14471.18,20.984102,17615.531};
+					azimut=232.008;
+					id=96;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_arms_character_17";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+				};
+			};
+		};
+		class Item97
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={13984.906,25.662624,18741.318};
+					azimut=232.008;
+					id=97;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_arms_character_18";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+				};
+			};
+		};
+		class Item98
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={14556.06,45.745594,20779.643};
+					azimut=102.372;
+					id=98;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_arms_character_19";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+				};
+			};
+		};
+		class Item99
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={12843.797,42.65237,19637.229};
+					azimut=232.008;
+					id=99;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_arms_character_20";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+				};
+			};
+		};
+		class Item100
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10366.014,127.18443,19093.547};
+					azimut=373.47729;
+					id=100;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_arms_character_21";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+				};
+			};
+		};
+		class Item101
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={9448.5977,125.41131,20282.203};
+					azimut=244.65601;
+					id=101;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_arms_character_22";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+				};
+			};
+		};
+		class Item102
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8581.4551,179.73758,18261.482};
+					azimut=311.63901;
+					id=102;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_arms_character_23";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+				};
+			};
+		};
+		class Item103
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4606.4922,297.48917,21424.166};
+					azimut=212.634;
+					id=103;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_arms_character_24";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+				};
+			};
+		};
+		class Item104
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4934.5757,77.765945,16149.018};
+					azimut=208.10001;
+					id=104;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_arms_character_25";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+				};
+			};
+		};
+		class Item105
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={7161.4565,109.34621,16391.797};
+					azimut=342.92801;
+					id=105;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_arms_character_26";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+				};
+			};
+		};
+		class Item106
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={9367.5059,108.65349,16009.25};
+					azimut=127.338;
+					id=106;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_arms_character_27";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+				};
+			};
+		};
+		class Item107
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={12363.329,23.006666,15698.344};
+					azimut=208.10001;
+					id=107;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_arms_character_28";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+				};
+			};
+		};
+		class Item108
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={12935.542,29.354109,15070.988};
+					azimut=114.032;
+					id=108;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_arms_character_29";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+				};
+			};
+		};
+		class Item109
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={12454.226,16.346922,14491.182};
+					azimut=378.99356;
+					id=109;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_arms_character_30";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+				};
+			};
+		};
+		class Item110
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={11066.839,47.38102,14618.097};
+					azimut=323.19;
+					id=110;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_arms_character_31";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+				};
+			};
+		};
+		class Item111
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={11716.986,13.170014,13745.937};
+					azimut=208.10001;
+					id=111;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_arms_character_32";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+				};
+			};
+		};
+		class Item112
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={11012.26,28.196501,13517.272};
+					azimut=208.10001;
+					id=112;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_arms_character_33";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+				};
+			};
+		};
+		class Item113
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10640.84,15.552763,12320.928};
+					azimut=208.10001;
+					id=113;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_arms_character_34";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+				};
+			};
+		};
+		class Item114
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={9059.6992,22.113626,12039.341};
+					azimut=178.59399;
+					id=114;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_arms_character_35";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+				};
+			};
+		};
+		class Item115
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4117.1167,51.236279,11758.179};
+					azimut=-180.19485;
+					id=115;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_arms_character_36";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+				};
+			};
+		};
+		class Item116
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={5094.8481,50.423183,11266.973};
+					azimut=208.10001;
+					id=116;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_arms_character_37";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+				};
+			};
+		};
+		class Item117
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={14649.521,17.91,16755.385};
+					azimut=313.69849;
+					id=117;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_1";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_1_sp1"",""shop_vehicle_1_sp2"",""shop_vehicle_1_sp3""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item118
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={14273.15,17.85,15808.918};
+					azimut=230.33334;
+					id=118;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_2";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""air"",[""shop_vehicle_2_sp1"",""shop_vehicle_2_sp2""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item119
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15154.044,17.91,16873.199};
+					azimut=43.966499;
+					id=119;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_3";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""air"",[""shop_vehicle_3_sp1"",""shop_vehicle_3_sp2""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item120
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={26846.014,24.152149,24550.789};
+					azimut=-136.935;
+					id=120;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_4";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""air"",[""shop_vehicle_4_sp1""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item121
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={21155.467,18.863623,7541.2402};
+					azimut=43.966499;
+					id=121;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_5";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""air"",[""shop_vehicle_5_sp1"",""shop_vehicle_5_sp2""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item122
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={9003.1768,17.790997,21378.434};
+					azimut=220.95399;
+					id=122;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_6";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""air"",[""shop_vehicle_6_sp1""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item123
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={23147.33,3.1900001,18378.07};
+					azimut=43.966499;
+					id=123;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_7";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""air"",[""shop_vehicle_7_sp1""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item124
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={27026.795,21.626137,23305.33};
+					azimut=323.05701;
+					id=124;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_8";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_8_sp1""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item125
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={25633.549,19.851313,21318.416};
+					azimut=97.6278;
+					id=125;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_9";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_9_sp1""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item126
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={23561.018,13.073999,19900.311};
+					azimut=323.05701;
+					id=126;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_10";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_10_sp1""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item127
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={21285.314,21.335684,16322.011};
+					azimut=113.807;
+					id=127;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_11";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_11_sp1""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item128
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={20872.143,47.948822,16920.891};
+					azimut=113.807;
+					id=128;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_12";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_12_sp1""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item129
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={18812.873,31.731833,16637.428};
+					azimut=176.791;
+					id=129;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_13";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_13_sp1""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item130
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={18226.703,28.357885,15284.507};
+					azimut=113.807;
+					id=130;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_14";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_14_sp1"",""shop_vehicle_14_sp2"",""shop_vehicle_14_sp3""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item131
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={19401.49,39.017239,13239.404};
+					azimut=358.754;
+					id=131;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_15";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_15_sp1""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item132
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={16583.768,11,12738.215};
+					azimut=211.996;
+					id=132;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_16";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_16_sp1"",""shop_vehicle_16_sp2""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item133
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={20158.248,47.003212,11657.404};
+					azimut=358.754;
+					id=133;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_17";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_17_sp1""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item134
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={20513.553,36.894764,8926.6182};
+					azimut=358.754;
+					id=134;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_18";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_18_sp1""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item135
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={21670.467,16.201065,7488.0503};
+					azimut=241.29601;
+					id=135;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_19";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_19_sp1""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item136
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={20786.168,36.182232,6758.021};
+					azimut=466.44101;
+					id=136;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_20";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_20_sp1""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item137
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={16608.551,14.989326,16058.474};
+					azimut=532.24298;
+					id=137;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_21";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_21_sp1""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item138
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={16329.635,25.512459,17309.252};
+					azimut=502.86401;
+					id=138;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_22";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_22_sp1""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item139
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={14552.576,22.84166,17661.666};
+					azimut=502.86401;
+					id=139;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_23";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_23_sp1""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item140
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={14216.825,34.67411,18880.072};
+					azimut=524.41699;
+					id=140;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_24";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_24_sp1""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item141
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={14548.98,42.55777,20712.461};
+					azimut=581.46198;
+					id=141;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_25";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_25_sp1""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item142
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={12810.464,43.637417,19648.846};
+					azimut=548.68799;
+					id=142;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_26";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_26_sp1""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item143
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={12301.186,23.928062,15688.759};
+					azimut=548.68799;
+					id=143;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_27";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_27_sp1""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item144
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={12981.723,26.881674,15080.623};
+					azimut=666.77002;
+					id=144;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_28";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_28_sp1""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item145
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={12578.313,15.763251,14376.59};
+					azimut=556.55103;
+					id=145;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_29";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_29_sp1""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item146
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={11696.589,13.364291,13777.69};
+					azimut=556.55103;
+					id=146;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_30";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_30_sp1""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item147
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={11170.912,41.278957,14583.537};
+					azimut=682.005;
+					id=147;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_31";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_31_sp1""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item148
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={11071.882,25.795782,13496.141};
+					azimut=710.97101;
+					id=148;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_32";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_32_sp1""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item149
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10559.409,15.345364,12334.168};
+					azimut=752.46399;
+					id=149;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_33";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_33_sp1""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item150
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={9129.208,19.134689,12047.178};
+					azimut=815.495;
+					id=150;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_34";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_34_sp1""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item151
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={9747.6016,114,15867.322};
+					azimut=815.495;
+					id=151;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_35";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_35_sp1""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item152
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10305.028,129.59158,19110.824};
+					azimut=670.073;
+					id=152;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_36";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_36_sp1""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item153
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={9507.083,132.66229,20349.516};
+					azimut=786.73297;
+					id=153;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_37";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_37_sp1""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item154
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8653.7148,181.0703,18279.512};
+					azimut=692.85901;
+					id=154;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_38";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_38_sp1""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item155
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={7085.5181,108.63377,16407.762};
+					azimut=692.85901;
+					id=155;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_39";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_39_sp1""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item156
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4732.0737,79.780746,16160.222};
+					azimut=518;
+					id=156;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_40";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_40_sp1""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item157
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={5070.8145,52.548233,11292.384};
+					azimut=572.79102;
+					id=157;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_41";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_41_sp1""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item158
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4177.0864,52.402668,11803.96};
+					azimut=572.79102;
+					id=158;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_42";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_42_sp1""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item159
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4649.4023,293.33102,21403.48};
+					azimut=572.79102;
+					id=159;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_43";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_43_sp1""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item160
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6197.8511,26.855682,15071.391};
+					azimut=500.91501;
+					id=160;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_44";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_44_sp1""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item161
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3678.2693,8.5117378,13447.273};
+					azimut=674.89502;
+					id=161;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_vehicle_character_45";
+					init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_45_sp1""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];";
+				};
+			};
+		};
+		class Item162
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={5010.6147,17.428648,14418.218};
+					azimut=-33.456501;
+					id=162;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_arms_character_38";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+				};
+			};
+		};
+		class Item163
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={11200.315,182.41,8720.8691};
+					azimut=-153.25;
+					id=163;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_arms_character_39";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+				};
+			};
+		};
+		class Item164
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={28333.414,14.556357,25778.287};
+					azimut=-153.25;
+					id=164;
+					side="CIV";
+					vehicle="C_scientist_F";
+					leader=1;
+					skill=0.60000002;
+					text="shop_arms_character_40";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""<t color='#ff9e00'>Arms Dealer</t>"",{[""arms""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Sell Equipment</t>"",{[] call SPMC_fnc_showSellMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 3'];  this addAction[""<t color='#ff9e00'>Clothes Shop</t>"",{[""clothes""] call SPMC_fnc_showShopMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 8'];";
+				};
+			};
+		};
+	};
+	class Markers
+	{
+		items=191;
+		class Item0
+		{
+			position[]={8422.5146,109.30792,25090.453};
+			name="respawn_guerrila";
+			type="Empty";
+			colorName="ColorRed";
+		};
+		class Item1
+		{
+			position[]={8422.5039,109.30827,25090.457};
+			name="spawn_block_left";
+			type="Empty";
+		};
+		class Item2
+		{
+			position[]={8422.5049,109.30827,25090.453};
+			name="spawn_block_right";
+			type="Empty";
+			angle=180;
+		};
+		class Item3
+		{
+			position[]={27016.273,20.551992,23212.809};
+			name="spawn_1";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="SolidBorder";
+			a=350;
+			b=350;
+			drawBorder=1;
+		};
+		class Item4
+		{
+			position[]={25633.455,19.808455,21316.518};
+			name="spawn_2";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="SolidBorder";
+			a=350;
+			b=350;
+			drawBorder=1;
+		};
+		class Item5
+		{
+			position[]={21158.24,26.445696,16615.945};
+			name="spawn_3";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="SolidBorder";
+			a=700;
+			b=700;
+			drawBorder=1;
+		};
+		class Item6
+		{
+			position[]={18799.164,32.20063,16626.637};
+			name="spawn_4";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="SolidBorder";
+			a=350;
+			b=350;
+			drawBorder=1;
+		};
+		class Item7
+		{
+			position[]={18207.049,26.160477,15243.526};
+			name="spawn_5";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="SolidBorder";
+			a=550;
+			b=550;
+			drawBorder=1;
+		};
+		class Item8
+		{
+			position[]={17108.918,15.27511,12733.875};
+			name="spawn_6";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="SolidBorder";
+			a=550;
+			b=550;
+			drawBorder=1;
+		};
+		class Item9
+		{
+			position[]={20245.102,65.861076,11572.292};
+			name="spawn_7";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="SolidBorder";
+			a=350;
+			b=350;
+			drawBorder=1;
+		};
+		class Item10
+		{
+			position[]={20511.428,34.075199,8853.4336};
+			name="spawn_8";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="SolidBorder";
+			a=350;
+			b=350;
+			drawBorder=1;
+		};
+		class Item11
+		{
+			position[]={21710.619,15.043325,7577.5024};
+			name="spawn_9";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="SolidBorder";
+			a=350;
+			b=350;
+			drawBorder=1;
+		};
+		class Item12
+		{
+			position[]={20822.104,34.841351,6747.1133};
+			name="spawn_10";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="SolidBorder";
+			a=350;
+			b=350;
+			drawBorder=1;
+		};
+		class Item13
+		{
+			position[]={2470.873,-166.13593,15836.177};
+			name="OFF LIMITS";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="Cross";
+			a=20;
+			b=20;
+		};
+		class Item14
+		{
+			position[]={23653.797,13.618965,20033.979};
+			name="spawn_11";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="SolidBorder";
+			a=500;
+			b=500;
+			drawBorder=1;
+		};
+		class Item15
+		{
+			position[]={14007.978,26.151718,18687.984};
+			name="spawn_12";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="SolidBorder";
+			a=450;
+			b=450;
+			drawBorder=1;
+		};
+		class Item16
+		{
+			position[]={16297.161,22.257429,17231.953};
+			name="spawn_13";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="SolidBorder";
+			a=450;
+			b=450;
+			drawBorder=1;
+		};
+		class Item17
+		{
+			position[]={14626.054,45.234486,20750.43};
+			name="spawn_14";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="SolidBorder";
+			a=350;
+			b=350;
+			drawBorder=1;
+		};
+		class Item18
+		{
+			position[]={14487.829,21.89983,17619.432};
+			name="spawn_15";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="SolidBorder";
+			a=350;
+			b=350;
+			drawBorder=1;
+		};
+		class Item19
+		{
+			position[]={10347.303,125.87879,19061.053};
+			name="spawn_16";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="SolidBorder";
+			a=450;
+			b=450;
+			drawBorder=1;
+		};
+		class Item20
+		{
+			position[]={9437.4541,119.20452,15865.203};
+			name="spawn_17";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="SolidBorder";
+			a=450;
+			b=450;
+			drawBorder=1;
+		};
+		class Item21
+		{
+			position[]={12370.456,35.112823,14993.105};
+			name="spawn_18";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="SolidBorder";
+			a=850;
+			b=850;
+			drawBorder=1;
+		};
+		class Item22
+		{
+			position[]={11114.615,22.47525,13817.963};
+			name="spawn_19";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="SolidBorder";
+			a=850;
+			b=850;
+			drawBorder=1;
+		};
+		class Item23
+		{
+			position[]={10606.143,15.518972,12243.916};
+			name="spawn_20";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="SolidBorder";
+			a=450;
+			b=450;
+			drawBorder=1;
+		};
+		class Item24
+		{
+			position[]={9134.2432,18.369076,11950.331};
+			name="spawn_21";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="SolidBorder";
+			a=450;
+			b=450;
+			drawBorder=1;
+		};
+		class Item25
+		{
+			position[]={8611.6338,180.53883,18274.719};
+			name="spawn_22";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="SolidBorder";
+			a=350;
+			b=350;
+			drawBorder=1;
+		};
+		class Item26
+		{
+			position[]={7104.479,108.33599,16395.387};
+			name="spawn_23";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="SolidBorder";
+			a=400;
+			b=400;
+			drawBorder=1;
+		};
+		class Item27
+		{
+			position[]={4890.4932,67.136131,16212.072};
+			name="spawn_24";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="SolidBorder";
+			a=400;
+			b=400;
+			drawBorder=1;
+		};
+		class Item28
+		{
+			position[]={5077.5342,42.544205,11130.05};
+			name="spawn_25";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="SolidBorder";
+			a=400;
+			b=400;
+			drawBorder=1;
+		};
+		class Item29
+		{
+			position[]={4057.3796,42.124352,11695.229};
+			name="spawn_26";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="SolidBorder";
+			a=500;
+			b=500;
+			drawBorder=1;
+		};
+		class Item30
+		{
+			position[]={12846.688,42.931744,19641.383};
+			name="spawn_27";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="SolidBorder";
+			a=300;
+			b=300;
+			drawBorder=1;
+		};
+		class Item31
+		{
+			position[]={9477.6699,130.16339,20254.824};
+			name="spawn_28";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="SolidBorder";
+			a=300;
+			b=300;
+			drawBorder=1;
+		};
+		class Item32
+		{
+			position[]={19408.68,38.67881,13264.01};
+			name="spawn_29";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="SolidBorder";
+			a=300;
+			b=300;
+			drawBorder=1;
+		};
+		class Item33
+		{
+			position[]={4628.2554,297.26794,21385.314};
+			name="spawn_30";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="SolidBorder";
+			a=300;
+			b=300;
+			drawBorder=1;
+		};
+		class Item34
+		{
+			position[]={12955.973,28.823187,19110.172};
+			name="drop_zone_1";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorBlue";
+			fillName="DiagGrid";
+			a=3000;
+			b=3000;
+		};
+		class Item35
+		{
+			position[]={6952.9722,197.4388,19110.176};
+			name="drop_zone_2";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorBlue";
+			fillName="DiagGrid";
+			a=3000;
+			b=3000;
+		};
+		class Item36
+		{
+			position[]={6442.0791,91.227905,13639.352};
+			name="drop_zone_3";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorBlue";
+			fillName="DiagGrid";
+			a=2500;
+			b=2500;
+		};
+		class Item37
+		{
+			position[]={19767.891,16.549103,15831.954};
+			name="drop_zone_4";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorBlue";
+			fillName="DiagGrid";
+			a=2500;
+			b=2500;
+		};
+		class Item38
+		{
+			position[]={19044.123,90.999161,11127.476};
+			name="drop_zone_5";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorBlue";
+			fillName="DiagGrid";
+			a=2000;
+			b=2000;
+		};
+		class Item39
+		{
+			position[]={24557.514,40.925301,21473.074};
+			name="drop_zone_6";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorBlue";
+			fillName="DiagGrid";
+			a=1500;
+			b=1500;
+		};
+		class Item40
+		{
+			position[]={22854.535,3.1675196,18684.447};
+			name="drop_zone_7";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorBlue";
+			fillName="DiagGrid";
+			a=1500;
+			b=1500;
+		};
+		class Item41
+		{
+			position[]={10507.942,94.350182,15001.757};
+			name="drop_zone_8";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorBlue";
+			fillName="DiagGrid";
+			a=1800;
+			b=1800;
+		};
+		class Item42
+		{
+			position[]={11061.411,152.38606,8147.2656};
+			name="drop_zone_9";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorBlue";
+			fillName="DiagGrid";
+			a=1500;
+			b=1500;
+		};
+		class Item43
+		{
+			position[]={20449.08,27.255514,7721.5239};
+			name="drop_zone_10";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorBlue";
+			fillName="DiagGrid";
+			a=1400;
+			b=1400;
+		};
+		class Item44
+		{
+			position[]={16128.506,11.981441,15964.918};
+			name="world_item_spawn";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorWhite";
+			a=14500;
+			b=14500;
+		};
+		class Item45
+		{
+			position[]={8464.1504,101.95057,25155.887};
+			name="system_safezone";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorBlack";
+			a=1000;
+			b=1000;
+		};
+		class Item46
+		{
+			position[]={13813.911,0.035426602,11761.741};
+			name="spawn_exclude_1";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorBlack";
+			a=900;
+			b=900;
+		};
+		class Item47
+		{
+			position[]={14453.892,0.017246693,6061.7925};
+			name="spawn_exclude_2";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorBlack";
+			a=400;
+			b=400;
+		};
+		class Item48
+		{
+			position[]={14123.238,0.1009318,13504.252};
+			name="spawn_exclude_3";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorBlack";
+			a=400;
+			b=400;
+		};
+		class Item49
+		{
+			position[]={7854.2451,4.9497743,7621.7676};
+			name="spawn_exclude_4";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorBlack";
+			a=200;
+			b=200;
+		};
+		class Item50
+		{
+			position[]={4008.1045,0.87889755,9740.3506};
+			name="spawn_exclude_5";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorBlack";
+			a=200;
+			b=200;
+		};
+		class Item51
+		{
+			position[]={2288.4844,-0.19313492,11518.202};
+			name="spawn_exclude_6";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorBlack";
+			a=200;
+			b=200;
+		};
+		class Item52
+		{
+			position[]={26997.211,20.410578,23264.555};
+			name="shop_arms_marker_1";
+			text="ARMS DEALER";
+			type="n_unknown";
+		};
+		class Item53
+		{
+			position[]={25719.24,20.508429,21337.221};
+			name="shop_arms_marker_2";
+			text="ARMS DEALER";
+			type="n_unknown";
+		};
+		class Item54
+		{
+			position[]={23959.693,15.31617,20184.252};
+			name="shop_arms_marker_3";
+			text="ARMS DEALER";
+			type="n_unknown";
+			angle=0.41749701;
+		};
+		class Item55
+		{
+			position[]={23225.57,13.417449,19948.037};
+			name="shop_arms_marker_4";
+			text="ARMS DEALER";
+			type="n_unknown";
+		};
+		class Item56
+		{
+			position[]={20998,38.365295,17043.043};
+			name="shop_arms_marker_5";
+			text="ARMS DEALER";
+			type="n_unknown";
+		};
+		class Item57
+		{
+			position[]={21409.41,19.097082,16346.861};
+			name="shop_arms_marker_6";
+			text="ARMS DEALER";
+			type="n_unknown";
+		};
+		class Item58
+		{
+			position[]={18859.451,31.462784,16658.26};
+			name="shop_arms_marker_7";
+			text="ARMS DEALER";
+			type="n_unknown";
+		};
+		class Item59
+		{
+			position[]={18138.645,26.789251,15291.144};
+			name="shop_arms_marker_8";
+			text="ARMS DEALER";
+			type="n_unknown";
+		};
+		class Item60
+		{
+			position[]={19430.041,41.39679,13220.955};
+			name="shop_arms_marker_9";
+			text="ARMS DEALER";
+			type="n_unknown";
+		};
+		class Item61
+		{
+			position[]={16832.387,21.910133,12732.501};
+			name="shop_arms_marker_10";
+			text="ARMS DEALER";
+			type="n_unknown";
+		};
+		class Item62
+		{
+			position[]={20237.172,56.155819,11629.825};
+			name="shop_arms_marker_11";
+			text="ARMS DEALER";
+			type="n_unknown";
+		};
+		class Item63
+		{
+			position[]={20506.299,34.147026,8849.8457};
+			name="shop_arms_marker_12";
+			text="ARMS DEALER";
+			type="n_unknown";
+		};
+		class Item64
+		{
+			position[]={21697.992,15.050115,7571.2065};
+			name="shop_arms_marker_13";
+			text="ARMS DEALER";
+			type="n_unknown";
+		};
+		class Item65
+		{
+			position[]={20823.158,34.847374,6748.2129};
+			name="shop_arms_marker_14";
+			text="ARMS DEALER";
+			type="n_unknown";
+		};
+		class Item66
+		{
+			position[]={16251.872,21.713884,17229.957};
+			name="shop_arms_marker_15";
+			text="ARMS DEALER";
+			type="n_unknown";
+		};
+		class Item67
+		{
+			position[]={16650.193,17.311529,16129.091};
+			name="shop_arms_marker_16";
+			text="ARMS DEALER";
+			type="n_unknown";
+		};
+		class Item68
+		{
+			position[]={16351.852,14.015691,16185.766};
+			name="spawn_31";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="SolidBorder";
+			a=450;
+			b=450;
+			drawBorder=1;
+		};
+		class Item69
+		{
+			position[]={14471.23,20.988588,17615.582};
+			name="shop_arms_marker_17";
+			text="ARMS DEALER";
+			type="n_unknown";
+		};
+		class Item70
+		{
+			position[]={13984.957,25.663086,18741.369};
+			name="shop_arms_marker_18";
+			text="ARMS DEALER";
+			type="n_unknown";
+		};
+		class Item71
+		{
+			position[]={14555.979,45.74464,20779.646};
+			name="shop_arms_marker_19";
+			text="ARMS DEALER";
+			type="n_unknown";
+		};
+		class Item72
+		{
+			position[]={12843.848,42.653278,19637.279};
+			name="shop_arms_marker_20";
+			text="ARMS DEALER";
+			type="n_unknown";
+		};
+		class Item73
+		{
+			position[]={10366.078,127.1776,19093.516};
+			name="shop_arms_marker_21";
+			text="ARMS DEALER";
+			type="n_unknown";
+		};
+		class Item74
+		{
+			position[]={9448.6621,125.41866,20282.172};
+			name="shop_arms_marker_22";
+			text="ARMS DEALER";
+			type="n_unknown";
+		};
+		class Item75
+		{
+			position[]={8581.5195,179.7426,18261.451};
+			name="shop_arms_marker_23";
+			text="ARMS DEALER";
+			type="n_unknown";
+		};
+		class Item76
+		{
+			position[]={4606.5566,297.48221,21424.135};
+			name="shop_arms_marker_24";
+			text="ARMS DEALER";
+			type="n_unknown";
+		};
+		class Item77
+		{
+			position[]={4934.6401,77.766144,16148.986};
+			name="shop_arms_marker_25";
+			text="ARMS DEALER";
+			type="n_unknown";
+		};
+		class Item78
+		{
+			position[]={7161.521,109.34619,16391.766};
+			name="shop_arms_marker_26";
+			text="ARMS DEALER";
+			type="n_unknown";
+		};
+		class Item79
+		{
+			position[]={9367.5703,108.65688,16009.219};
+			name="shop_arms_marker_27";
+			text="ARMS DEALER";
+			type="n_unknown";
+		};
+		class Item80
+		{
+			position[]={12363.394,23.007957,15698.313};
+			name="shop_arms_marker_28";
+			text="ARMS DEALER";
+			type="n_unknown";
+		};
+		class Item81
+		{
+			position[]={12935.606,29.349281,15070.957};
+			name="shop_arms_marker_29";
+			text="ARMS DEALER";
+			type="n_unknown";
+		};
+		class Item82
+		{
+			position[]={12454.29,16.349314,14491.15};
+			name="shop_arms_marker_30";
+			text="ARMS DEALER";
+			type="n_unknown";
+		};
+		class Item83
+		{
+			position[]={11066.903,47.379139,14618.065};
+			name="shop_arms_marker_31";
+			text="ARMS DEALER";
+			type="n_unknown";
+		};
+		class Item84
+		{
+			position[]={11717.051,13.167651,13745.905};
+			name="shop_arms_marker_32";
+			text="ARMS DEALER";
+			type="n_unknown";
+		};
+		class Item85
+		{
+			position[]={11012.324,28.194359,13517.241};
+			name="shop_arms_marker_33";
+			text="ARMS DEALER";
+			type="n_unknown";
+		};
+		class Item86
+		{
+			position[]={10640.904,15.552944,12320.896};
+			name="shop_arms_marker_34";
+			text="ARMS DEALER";
+			type="n_unknown";
+		};
+		class Item87
+		{
+			position[]={9059.7637,22.103483,12039.31};
+			name="shop_arms_marker_35";
+			text="ARMS DEALER";
+			type="n_unknown";
+		};
+		class Item88
+		{
+			position[]={4117.1812,51.240158,11758.147};
+			name="shop_arms_marker_36";
+			text="ARMS DEALER";
+			type="n_unknown";
+		};
+		class Item89
+		{
+			position[]={5094.9126,50.420921,11266.941};
+			name="shop_arms_marker_37";
+			text="ARMS DEALER";
+			type="n_unknown";
+		};
+		class Item90
+		{
+			position[]={14668.578,17.91,16758.84};
+			name="shop_vehicle_1_sp1";
+			type="Empty";
+		};
+		class Item91
+		{
+			position[]={14659.38,17.91,16748.982};
+			name="shop_vehicle_1_sp2";
+			type="Empty";
+		};
+		class Item92
+		{
+			position[]={14650.955,17.91,16739.609};
+			name="shop_vehicle_1_sp3";
+			type="Empty";
+		};
+		class Item93
+		{
+			position[]={14649.505,17.91,16755.453};
+			name="shop_vehicle_marker_1";
+			text="GROUND VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorOrange";
+		};
+		class Item94
+		{
+			position[]={14285.539,17.85,15809.292};
+			name="shop_vehicle_2_sp2";
+			type="Empty";
+			angle=36.985298;
+		};
+		class Item95
+		{
+			position[]={14272.962,17.843731,15822.201};
+			name="shop_vehicle_2_sp1";
+			type="Empty";
+			angle=44.2197;
+		};
+		class Item96
+		{
+			position[]={14273.134,17.85,15808.986};
+			name="shop_vehicle_marker_2";
+			text="AIR VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorYellow";
+		};
+		class Item97
+		{
+			position[]={15163.33,17.91,16865.564};
+			name="shop_vehicle_3_sp2";
+			type="Empty";
+			angle=-141.827;
+		};
+		class Item98
+		{
+			position[]={15142.268,17.91,16864.195};
+			name="shop_vehicle_3_sp1";
+			type="Empty";
+			angle=-136.009;
+		};
+		class Item99
+		{
+			position[]={15154.027,17.91,16873.266};
+			name="shop_vehicle_marker_3";
+			text="AIR VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorYellow";
+		};
+		class Item100
+		{
+			position[]={26858.313,24.313564,24565.355};
+			name="shop_vehicle_4_sp1";
+			type="Empty";
+			angle=49.495098;
+		};
+		class Item101
+		{
+			position[]={26845.996,24.151911,24550.855};
+			name="shop_vehicle_marker_4";
+			text="AIR VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorYellow";
+		};
+		class Item102
+		{
+			position[]={21160.523,18.974987,7528.0098};
+			name="shop_vehicle_5_sp2";
+			type="Empty";
+			angle=-163.769;
+		};
+		class Item103
+		{
+			position[]={21139.004,19.148426,7536.2373};
+			name="shop_vehicle_5_sp1";
+			type="Empty";
+			angle=-136.009;
+		};
+		class Item104
+		{
+			position[]={21155.449,18.863203,7541.3066};
+			name="shop_vehicle_marker_5";
+			text="AIR VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorYellow";
+		};
+		class Item105
+		{
+			position[]={9014.667,17.739632,21386.4};
+			name="shop_vehicle_6_sp1";
+			type="Empty";
+			angle=-303.49673;
+		};
+		class Item106
+		{
+			position[]={9003.1592,17.790474,21378.5};
+			name="shop_vehicle_marker_6";
+			text="AIR VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorYellow";
+		};
+		class Item107
+		{
+			position[]={23148.65,3.1900001,18409.875};
+			name="shop_vehicle_7_sp1";
+			type="Empty";
+			angle=-357.16147;
+		};
+		class Item108
+		{
+			position[]={23147.313,3.1900001,18378.137};
+			name="shop_vehicle_marker_7";
+			text="AIR VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorYellow";
+		};
+		class Item109
+		{
+			position[]={27017.57,21.260191,23311.588};
+			name="shop_vehicle_8_sp1";
+			type="Empty";
+			angle=42.9436;
+		};
+		class Item110
+		{
+			position[]={27026.779,21.625389,23305.398};
+			name="shop_vehicle_marker_8";
+			text="GROUND VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorOrange";
+		};
+		class Item111
+		{
+			position[]={25637.336,19.67543,21311.059};
+			name="shop_vehicle_9_sp1";
+			type="Empty";
+			angle=124.444;
+		};
+		class Item112
+		{
+			position[]={25633.533,19.85293,21318.484};
+			name="shop_vehicle_marker_9";
+			text="GROUND VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorOrange";
+		};
+		class Item113
+		{
+			position[]={23566.678,12.843844,19894.309};
+			name="shop_vehicle_10_sp1";
+			type="Empty";
+			angle=34.506001;
+		};
+		class Item114
+		{
+			position[]={23561.002,13.075369,19900.379};
+			name="shop_vehicle_marker_10";
+			text="GROUND VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorOrange";
+		};
+		class Item115
+		{
+			position[]={21278.463,21.562706,16322.462};
+			name="shop_vehicle_11_sp1";
+			type="Empty";
+			angle=-153.395;
+		};
+		class Item116
+		{
+			position[]={21285.299,21.337862,16322.079};
+			name="shop_vehicle_marker_11";
+			text="GROUND VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorOrange";
+		};
+		class Item117
+		{
+			position[]={20865.404,47.95813,16914.84};
+			name="shop_vehicle_12_sp1";
+			type="Empty";
+			angle=-153.395;
+		};
+		class Item118
+		{
+			position[]={20872.127,47.948612,16920.961};
+			name="shop_vehicle_marker_12";
+			text="GROUND VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorOrange";
+		};
+		class Item119
+		{
+			position[]={18814.787,31.213827,16626.639};
+			name="shop_vehicle_13_sp1";
+			type="Empty";
+			angle=-153.395;
+		};
+		class Item120
+		{
+			position[]={18812.857,31.733759,16637.498};
+			name="shop_vehicle_marker_13";
+			text="GROUND VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorOrange";
+		};
+		class Item121
+		{
+			position[]={18218.74,28.193689,15291.132};
+			name="shop_vehicle_14_sp1";
+			type="Empty";
+			angle=-176.993;
+		};
+		class Item122
+		{
+			position[]={18226.688,28.35766,15284.577};
+			name="shop_vehicle_marker_14";
+			text="GROUND VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorOrange";
+		};
+		class Item123
+		{
+			position[]={18208.4,27.830647,15289.578};
+			name="shop_vehicle_14_sp2";
+			type="Empty";
+			angle=-176.993;
+		};
+		class Item124
+		{
+			position[]={18215.463,27.778908,15280.683};
+			name="shop_vehicle_14_sp3";
+			type="Empty";
+			angle=-176.993;
+		};
+		class Item125
+		{
+			position[]={19405.475,38.959953,13250.18};
+			name="shop_vehicle_15_sp1";
+			type="Empty";
+			angle=-125.372;
+		};
+		class Item126
+		{
+			position[]={19401.475,39.015129,13239.475};
+			name="shop_vehicle_marker_15";
+			text="GROUND VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorOrange";
+		};
+		class Item127
+		{
+			position[]={16567.24,11,12734.105};
+			name="shop_vehicle_16_sp1";
+			type="Empty";
+			angle=-314.04501;
+		};
+		class Item128
+		{
+			position[]={16583.752,11,12738.285};
+			name="shop_vehicle_marker_16";
+			text="GROUND VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorOrange";
+		};
+		class Item129
+		{
+			position[]={16583.789,11,12719.587};
+			name="shop_vehicle_16_sp2";
+			type="Empty";
+			angle=-315.10001;
+		};
+		class Item130
+		{
+			position[]={20158.652,46.139679,11664.111};
+			name="shop_vehicle_17_sp1";
+			type="Empty";
+			angle=90.365601;
+		};
+		class Item131
+		{
+			position[]={20158.232,46.995197,11657.475};
+			name="shop_vehicle_marker_17";
+			text="GROUND VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorOrange";
+		};
+		class Item132
+		{
+			position[]={20511.535,37.302898,8935.0596};
+			name="shop_vehicle_18_sp1";
+			type="Empty";
+			angle=-298.04999;
+		};
+		class Item133
+		{
+			position[]={20513.537,36.897133,8926.6885};
+			name="shop_vehicle_marker_18";
+			text="GROUND VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorOrange";
+		};
+		class Item134
+		{
+			position[]={21671.359,16.311214,7481.5537};
+			name="shop_vehicle_19_sp1";
+			type="Empty";
+			angle=-154.19868;
+		};
+		class Item135
+		{
+			position[]={21670.451,16.197416,7488.1206};
+			name="shop_vehicle_marker_19";
+			text="GROUND VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorOrange";
+		};
+		class Item136
+		{
+			position[]={20786.793,36.048042,6768.4155};
+			name="shop_vehicle_20_sp1";
+			type="Empty";
+			angle=-284.547;
+		};
+		class Item137
+		{
+			position[]={20786.152,36.186115,6758.0913};
+			name="shop_vehicle_marker_20";
+			text="GROUND VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorOrange";
+		};
+		class Item138
+		{
+			position[]={16600.506,14.833496,16057.081};
+			name="shop_vehicle_21_sp1";
+			type="Empty";
+			angle=-214.927;
+		};
+		class Item139
+		{
+			position[]={16608.535,14.989583,16058.544};
+			name="shop_vehicle_marker_21";
+			text="GROUND VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorOrange";
+		};
+		class Item140
+		{
+			position[]={16330.987,25.304579,17296.908};
+			name="shop_vehicle_22_sp1";
+			type="Empty";
+			angle=-151.231;
+		};
+		class Item141
+		{
+			position[]={16329.619,25.515331,17309.322};
+			name="shop_vehicle_marker_22";
+			text="GROUND VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorOrange";
+		};
+		class Item142
+		{
+			position[]={14561.02,23.558867,17655.838};
+			name="shop_vehicle_23_sp1";
+			type="Empty";
+			angle=-151.231;
+		};
+		class Item143
+		{
+			position[]={14552.561,22.83869,17661.736};
+			name="shop_vehicle_marker_23";
+			text="GROUND VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorOrange";
+		};
+		class Item144
+		{
+			position[]={14215.818,34.709476,18888.908};
+			name="shop_vehicle_24_sp1";
+			type="Empty";
+			angle=-204.597;
+		};
+		class Item145
+		{
+			position[]={14216.81,34.674023,18880.143};
+			name="shop_vehicle_marker_24";
+			text="GROUND VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorOrange";
+		};
+		class Item146
+		{
+			position[]={14542.584,42.194107,20705.211};
+			name="shop_vehicle_25_sp1";
+			type="Empty";
+			angle=-112.741;
+		};
+		class Item147
+		{
+			position[]={14548.965,42.560108,20712.531};
+			name="shop_vehicle_marker_25";
+			text="GROUND VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorOrange";
+		};
+		class Item148
+		{
+			position[]={12809.332,43.424286,19642.348};
+			name="shop_vehicle_26_sp1";
+			type="Empty";
+			angle=-249.159;
+		};
+		class Item149
+		{
+			position[]={12810.448,43.639557,19648.916};
+			name="shop_vehicle_marker_26";
+			text="GROUND VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorOrange";
+		};
+		class Item150
+		{
+			position[]={12311.838,24.264917,15685.645};
+			name="shop_vehicle_27_sp1";
+			type="Empty";
+			angle=-238.66901;
+		};
+		class Item151
+		{
+			position[]={12301.17,23.924929,15688.829};
+			name="shop_vehicle_marker_27";
+			text="GROUND VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorOrange";
+		};
+		class Item152
+		{
+			position[]={12988.929,26.886404,15083.841};
+			name="shop_vehicle_28_sp1";
+			type="Empty";
+			angle=-249.159;
+		};
+		class Item153
+		{
+			position[]={12981.707,26.881325,15080.693};
+			name="shop_vehicle_marker_28";
+			text="GROUND VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorOrange";
+		};
+		class Item154
+		{
+			position[]={12576.036,15.218498,14365.467};
+			name="shop_vehicle_29_sp1";
+			type="Empty";
+			angle=-249.159;
+		};
+		class Item155
+		{
+			position[]={12578.297,15.766251,14376.66};
+			name="shop_vehicle_marker_29";
+			text="GROUND VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorOrange";
+		};
+		class Item156
+		{
+			position[]={11697.447,13.3535,13782.489};
+			name="shop_vehicle_30_sp1";
+			type="Empty";
+			angle=-249.159;
+		};
+		class Item157
+		{
+			position[]={11696.573,13.364219,13777.761};
+			name="shop_vehicle_marker_30";
+			text="GROUND VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorOrange";
+		};
+		class Item158
+		{
+			position[]={11175.091,40.401737,14577.806};
+			name="shop_vehicle_31_sp1";
+			type="Empty";
+			angle=-218.929;
+		};
+		class Item159
+		{
+			position[]={11170.896,41.292225,14583.607};
+			name="shop_vehicle_marker_31";
+			text="GROUND VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorOrange";
+		};
+		class Item160
+		{
+			position[]={11063.199,26.091532,13494.51};
+			name="shop_vehicle_32_sp1";
+			type="Empty";
+			angle=-379.13199;
+		};
+		class Item161
+		{
+			position[]={11071.88,25.796423,13496.078};
+			name="shop_vehicle_marker_32";
+			text="GROUND VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorOrange";
+		};
+		class Item162
+		{
+			position[]={10566.524,15.339273,12331.727};
+			name="shop_vehicle_33_sp1";
+			type="Empty";
+			angle=-215.478;
+		};
+		class Item163
+		{
+			position[]={10559.47,15.347965,12334.229};
+			name="shop_vehicle_marker_33";
+			text="GROUND VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorOrange";
+		};
+		class Item164
+		{
+			position[]={9119.8555,19.714291,12049.753};
+			name="shop_vehicle_34_sp1";
+			type="Empty";
+			angle=-72.453201;
+		};
+		class Item165
+		{
+			position[]={9129.2686,19.133047,12047.239};
+			name="shop_vehicle_marker_34";
+			text="GROUND VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorOrange";
+		};
+		class Item166
+		{
+			position[]={9738.958,114,15873.442};
+			name="shop_vehicle_35_sp1";
+			type="Empty";
+			angle=61.9879;
+		};
+		class Item167
+		{
+			position[]={9747.6621,114,15867.384};
+			name="shop_vehicle_marker_35";
+			text="GROUND VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorOrange";
+		};
+		class Item168
+		{
+			position[]={10306.002,130.41312,19117.98};
+			name="shop_vehicle_36_sp1";
+			type="Empty";
+			angle=89.898003;
+		};
+		class Item169
+		{
+			position[]={10305.089,129.59888,19110.887};
+			name="shop_vehicle_marker_36";
+			text="GROUND VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorOrange";
+		};
+		class Item170
+		{
+			position[]={9514.2725,132.81439,20354.119};
+			name="shop_vehicle_37_sp1";
+			type="Empty";
+			angle=132.005;
+		};
+		class Item171
+		{
+			position[]={9507.1436,132.65395,20349.578};
+			name="shop_vehicle_marker_37";
+			text="GROUND VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorOrange";
+		};
+		class Item172
+		{
+			position[]={8644.9316,180.58121,18286.73};
+			name="shop_vehicle_38_sp1";
+			type="Empty";
+			angle=231.37;
+		};
+		class Item173
+		{
+			position[]={8653.7754,181.06467,18279.574};
+			name="shop_vehicle_marker_38";
+			text="GROUND VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorOrange";
+		};
+		class Item174
+		{
+			position[]={7091.9058,109.06129,16414.23};
+			name="shop_vehicle_39_sp1";
+			type="Empty";
+			angle=353.35599;
+		};
+		class Item175
+		{
+			position[]={7085.5786,108.64116,16407.824};
+			name="shop_vehicle_marker_39";
+			text="GROUND VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorOrange";
+		};
+		class Item176
+		{
+			position[]={4723.8784,79.860809,16156.447};
+			name="shop_vehicle_40_sp1";
+			type="Empty";
+			angle=520.38202;
+		};
+		class Item177
+		{
+			position[]={4732.1343,79.77951,16160.284};
+			name="shop_vehicle_marker_40";
+			text="GROUND VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorOrange";
+		};
+		class Item178
+		{
+			position[]={5068.0386,52.843105,11300.801};
+			name="shop_vehicle_41_sp1";
+			type="Empty";
+			angle=579.31;
+		};
+		class Item179
+		{
+			position[]={5070.875,52.54422,11292.446};
+			name="shop_vehicle_marker_41";
+			text="GROUND VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorOrange";
+		};
+		class Item180
+		{
+			position[]={4168.1665,51.56012,11807.551};
+			name="shop_vehicle_42_sp1";
+			type="Empty";
+			angle=208.681;
+		};
+		class Item181
+		{
+			position[]={4177.022,52.394165,11804.022};
+			name="shop_vehicle_marker_42";
+			text="GROUND VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorOrange";
+		};
+		class Item182
+		{
+			position[]={4651.3672,293.1293,21394.943};
+			name="shop_vehicle_43_sp1";
+			type="Empty";
+			angle=139.37;
+		};
+		class Item183
+		{
+			position[]={4649.3379,293.33578,21403.543};
+			name="shop_vehicle_marker_43";
+			text="GROUND VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorOrange";
+		};
+		class Item184
+		{
+			position[]={6190.0825,26.69606,15065.536};
+			name="shop_vehicle_44_sp1";
+			type="Empty";
+			angle=139.37;
+		};
+		class Item185
+		{
+			position[]={6197.7866,26.853363,15071.453};
+			name="shop_vehicle_marker_44";
+			text="GROUND VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorOrange";
+		};
+		class Item186
+		{
+			position[]={3672.3875,8.0955572,13441.42};
+			name="shop_vehicle_45_sp1";
+			type="Empty";
+			angle=312.44699;
+		};
+		class Item187
+		{
+			position[]={3678.2048,8.5116825,13447.336};
+			name="shop_vehicle_marker_45";
+			text="GROUND VEHICLE SHOP";
+			type="n_unknown";
+			colorName="ColorOrange";
+		};
+		class Item188
+		{
+			position[]={5010.6792,17.427702,14418.187};
+			name="shop_arms_marker_38";
+			text="ARMS DEALER";
+			type="n_unknown";
+		};
+		class Item189
+		{
+			position[]={11200.38,182.41,8720.8379};
+			name="shop_arms_marker_39";
+			text="ARMS DEALER";
+			type="n_unknown";
+		};
+		class Item190
+		{
+			position[]={28333.477,14.55532,25778.256};
+			name="shop_arms_marker_40";
+			text="ARMS DEALER";
+			type="n_unknown";
+		};
+	};
+};
+class Intro
+{
+	addOns[]=
+	{
+		"a3_map_altis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_altis"
+	};
+	randomSeed=1988356;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=6;
+		day=24;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
+class OutroWin
+{
+	addOns[]=
+	{
+		"a3_map_altis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_altis"
+	};
+	randomSeed=108861;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=6;
+		day=24;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
+class OutroLoose
+{
+	addOns[]=
+	{
+		"a3_map_altis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_altis"
+	};
+	randomSeed=13121717;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=6;
+		day=24;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
