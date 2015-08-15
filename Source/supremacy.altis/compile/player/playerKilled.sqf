@@ -14,3 +14,5 @@
 private["_player"];
 _player = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 _killer = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param;
+
+["stats"] call SPMC_fnc_syncPlayerData;

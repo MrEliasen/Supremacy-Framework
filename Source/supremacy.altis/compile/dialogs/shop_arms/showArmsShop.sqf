@@ -150,3 +150,19 @@ _plist = ["item_prices"] call SPMC_fnc_config;
 
     } foreach (["equip_items"] call SPMC_fnc_config);
 };
+
+// Sync the player gear when the shop window closes.
+[] spawn {
+    private ["_open"];
+    _open = true;
+
+    while {_open} do {
+        if (isNull (findDisplay 2300)) then {
+            _open = false;
+        };
+
+        sleep 1;
+    };
+
+    ["equipment", true] spawn SPMC_fnc_syncPlayerData;  
+};

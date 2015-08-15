@@ -104,4 +104,4 @@ _type = format["<br/>Type: <t color='#ffae2b'>%1</t>", _type];
 (_item select 1),
 _type,
 _caliber,
-[_value] call fnc_numberToText];
+[_value] call SPMC_fnc_numberToText];

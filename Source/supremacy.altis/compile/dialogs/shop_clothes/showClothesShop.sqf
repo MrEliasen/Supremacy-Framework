@@ -56,3 +56,19 @@ _shopLists = [
         } foreach (_y select 1);
     };
 } foreach _shopLists;
+
+// Sync the player gear when the shop window closes.
+[] spawn {
+    private ["_open"];
+    _open = true;
+
+    while {_open} do {
+        if (isNull (findDisplay 2700)) then {
+            _open = false;
+        };
+
+        sleep 1;
+    };
+
+    ["equipment", true] spawn SPMC_fnc_syncPlayerData;  
+};

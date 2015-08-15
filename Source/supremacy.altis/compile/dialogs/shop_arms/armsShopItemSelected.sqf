@@ -54,4 +54,4 @@ Name: <t color='#ffae2b'>%2</t><br/>
 Price: <t color='#27e640'>$%3</t>",
 (_item select 3),
 (_item select 1),
-[_value] call fnc_numberToText];
+[_value] call SPMC_fnc_numberToText];

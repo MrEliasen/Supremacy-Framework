@@ -18,5 +18,5 @@ _attachments = [_this,2,false,[false]] call BIS_fnc_param;
 
 if (_item == "") exitWith {};
 
-hint "Confirming purchase, please wait..";
-[[player,_item,_controller,_attachments],"SPMC_fnc_svrConfirmSale",false,false] call BIS_fnc_MP;
+hint "Confirming Sale, please wait..";
+[[player,_item,_controller,_attachments],"SPMC_fnc_svrSyncSale",false,false] call BIS_fnc_MP;

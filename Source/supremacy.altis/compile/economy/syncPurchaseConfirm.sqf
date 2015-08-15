@@ -16,6 +16,7 @@ _item = [_this,0,"",[""]] call BIS_fnc_param;
 _confirmed = [_this,1,false,[false]] call BIS_fnc_param;
 _money = [_this,2,0,[0]] call BIS_fnc_param;
 _controller = [_this,3,0,[0]] call BIS_fnc_param;
+_toBackpack = [_this,4,false,[false]] call BIS_fnc_param;
 _price = 0;
 
 if (_item != "") then {
@@ -33,10 +34,27 @@ if (_item != "") then {
         switch ((_item select 7)) do {
             case ("CfgWeapons"): {
                 switch ((_item select 5)) do {
-                    case 1;
-                    case 2;
+                    case 1: {
+                        if (!_toBackpack) then {
+                            player addWeapon (_item select 0);
+                            player selectWeapon (_item select 0);
+                        };
+                    };
+                    case 2: {
+                        if (!_toBackpack) then {
+                            player addWeapon (_item select 0);
+                            if ((currentWeapon player) == "") then {
+                                player selectWeapon (_item select 0);
+                            };
+                        };
+                    };
                     case 4: {
-                        player selectWeapon (_item select 0);
+                        if (!_toBackpack) then {
+                            player addWeapon (_item select 0);
+                            if ((currentWeapon player) == "") then {
+                                player selectWeapon (_item select 0);
+                            };
+                        };
                     };
                     default {
                         switch((_item select 6)) do {
@@ -44,13 +62,15 @@ if (_item != "") then {
                             case 201;
                             case 301;
                             case 302: {
-                                if ((primaryWeapon player) == (currentWeapon player)) then {
-                                    player addPrimaryWeaponItem (_item select 0);
-                                } else {
-                                    if ((secondaryWeapon player) == (currentWeapon player)) then {
-                                        player addSecondaryWeaponItem (_item select 0);
+                                if (!_toBackpack) then {
+                                    if ((primaryWeapon player) == (currentWeapon player)) then {
+                                        player addPrimaryWeaponItem (_item select 0);
                                     } else {
-                                        player addHandgunItem (_item select 0);
+                                        if ((secondaryWeapon player) == (currentWeapon player)) then {
+                                            player addSecondaryWeaponItem (_item select 0);
+                                        } else {
+                                            player addHandgunItem (_item select 0);
+                                        };
                                     };
                                 };
                             };
@@ -58,11 +78,6 @@ if (_item != "") then {
                     };
                 };
             };
-            /*
-            case ("CfgMagazines"): {
-                player addMagazine (_item select 0);
-            };
-            */
         };
 
         hint format["%1 purchased for $%2!", (_item select 1), _price];

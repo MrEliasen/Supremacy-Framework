@@ -21,6 +21,7 @@ _misc = [_this,4,"",[""]] call BIS_fnc_param;
 
 _pricelist = ["item_prices"] call SPMC_fnc_config;
 _confirmed = false;
+_toBackpack = false;
 _money = 0;
 _price = 0;
 
@@ -169,7 +170,7 @@ if (_money >= _price) then {
 
             if (_toBackpack) then {
                 if((_item select 7) == "CfgMagazines") then {
-                    _player addMagazine [(_item select 0), (_item select 9)];
+                    _player addMagazines [(_item select 0), 1];
                 } else {
                     private ["_added"];
                     _added = false;
@@ -215,15 +216,24 @@ if (_money >= _price) then {
                         switch ((_item select 5)) do
                         {
                             case 1: {
-                                _player removeWeaponGlobal (primaryWeapon _player);
+                                if ((primaryWeapon _player) != "") then { 
+                                    _player removeWeaponGlobal (primaryWeapon _player);
+                                };
+
                                 _player addWeaponGlobal (_item select 0);
                             };
                             case 2: {
-                                _player removeWeaponGlobal (handgunWeapon _player);
+                                if ((handgunWeapon _player) != "") then { 
+                                    _player removeWeaponGlobal (handgunWeapon _player);
+                                };
+
                                 _player addWeaponGlobal (_item select 0);
                             };
                             case 4: {
-                                _player removeWeaponGlobal (secondaryWeapon _player);
+                                if ((secondaryWeapon _player) != "") then { 
+                                    _player removeWeaponGlobal (secondaryWeapon _player);
+                                };
+
                                 _player addWeaponGlobal (_item select 0);
                             };
 
@@ -265,8 +275,14 @@ if (_money >= _price) then {
             _holder setDir (markerDir _misc);
             _holder setPos (getMarkerPos _misc);
             _holder allowDamage true;
+
+            clearBackpackCargoGlobal _holder;
+            clearWeaponCargoGlobal _holder;
+            clearMagazineCargoGlobal _holder;
+            clearItemCargoGlobal _holder;
         };
     };
 };
 
-[[(_item select 0),_confirmed,_money,_controller],"SPMC_fnc_syncPurchaseConfirm",(owner _player),false] spawn BIS_fnc_MP;
+[_player, true] call SPMC_fnc_svrSyncMoney;
+[[(_item select 0),_confirmed,_money,_controller,_toBackpack],"SPMC_fnc_syncPurchaseConfirm",(owner _player),false] spawn BIS_fnc_MP;

@@ -13,7 +13,6 @@
 private ["_spawnBlock","_limit","_debug"];
 serverStatus = "SERVER: Generating safe spawn area";
 publicVariable "serverStatus";
-
 if (debugMode) then {
     diag_log serverStatus;
 };

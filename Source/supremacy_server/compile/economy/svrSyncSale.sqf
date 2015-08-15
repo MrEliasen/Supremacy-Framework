@@ -12,11 +12,12 @@
  */
 
 
-private["_player","_wpitem","_moneyIndex","_priceIndex","_money","_price","_pricelist","_controller","_attachments"];
+private["_player","_wpitem","_moneyIndex","_priceIndex","_money","_price","_pricelist","_controller","_attachments","_confirm"];
 _player = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 _item = [_this,1,"",[""]] call BIS_fnc_param;
 _controller = [_this,2,0,[0]] call BIS_fnc_param;
 _attachments = [_this,3,false,[false]] call BIS_fnc_param;
+_confirm = false;
 
 _pricelist = ["item_prices"] call SPMC_fnc_config;
 _money = 0;
@@ -39,40 +40,47 @@ _itemInfo = [_item] call SPMC_fnc_getItemCfgDetails;
 
 switch((_itemInfo select 7)) do {
     case "CfgMagazines": {
-        player removeMagazineGlobal _item;
+        _confirm = true;
+        _player removeMagazineGlobal _item;
     };
 
     case "CfgGlasses": {
-        if (goggles player == _item) then {
-            removeGoggles player;
+        if (goggles _player == _item) then {
+            removeGoggles _player;
         }  else {
-            player removeItem _item;
+            _player removeItem _item;
         };
+
+        _confirm = true;
     };
 
     case "CfgVehicles": {
-        if (backpack player == _item) then {
-            removeBackpack player;
+        if (backpack _player == _item) then {
+            removeBackpack _player;
+            _confirm = true;
         };
     };
 
     case "CfgWeapons": {
         if ((_itemInfo select 5) in [1,2,4,5]) then {
             switch (true) do {
-                case (_item in (uniformItems player));
-                case (_item in (vestItems player));
-                case (_item in (backpackItems player)): {
-                    player removeItem _item;
+                case (_item in (uniformItems _player));
+                case (_item in (vestItems _player));
+                case (_item in (backpackItems _player)): {
+                    _player removeItem _item;
+                    _confirm = true;
                 };
 
-                case (handGunweapon player == _item);
-                case (secondaryWeapon player == _item);
-                case (primaryWeapon player == _item): {
-                    player removeWeaponGlobal _item;
+                case (handGunweapon _player == _item);
+                case (secondaryWeapon _player == _item);
+                case (primaryWeapon _player == _item): {
+                    _player removeWeaponGlobal _item;
+                    _confirm = true;
                 };
 
                 default {
-                    player removeWeaponGlobal _item;
+                    _player removeWeaponGlobal _item;
+                    _confirm = true;
                 };
             };
         } else {
@@ -80,43 +88,52 @@ switch((_itemInfo select 7)) do {
                 case 0;
                 case 616;
                 case 621: {
-                    player removeItem _item;
+                    _player removeItem _item;
+                    _confirm = true;
                 };
 
                 case 605: {
-                    if(headGear player == _item) then {
-                        removeHeadgear player
+                    if(headGear _player == _item) then {
+                        removeHeadgear _player
                     } else {
-                        player removeItem _item
+                        _player removeItem _item
                     };
+
+                    _confirm = true;
                 };
                 
                 case 701: {
-                    if(vest player == _item) then {
-                        removeVest player;
+                    if(vest _player == _item) then {
+                        removeVest _player;
                     } else {
-                        player removeItem _item
+                        _player removeItem _item
                     };
+
+                    _confirm = true;
                 };
 
                 case 801: {
-                    if(uniform player == _item) then {
-                        removeUniform player;
+                    if(uniform _player == _item) then {
+                        removeUniform _player;
                     } else {
-                        player removeItem _item
+                        _player removeItem _item
                     };
+
+                    _confirm = true;
                 };
 
                 default {
                     switch (true) do {
-                        case (_item in (handgunItems player));
-                        case (_item in (secondaryWeaponItems player));
-                        case (_item in (primaryWeaponItems player)): {
+                        case (_item in (handgunItems _player));
+                        case (_item in (secondaryWeaponItems _player));
+                        case (_item in (primaryWeaponItems _player)): {
                             _wpitem = true;
+                            _confirm = true;
                         };
 
                         default {
-                            player removeItem _item;
+                            _player removeItem _item;
+                            _confirm = true;
                         };
                     };
                 };
@@ -125,11 +142,15 @@ switch((_itemInfo select 7)) do {
     };
     
     default {
-        player removeItem _item;
+        _player removeItem _item;
     };
 };
 
-_money = _money + _price;
-serverPlayerMoney set [_moneyIndex, [(getPlayerUID _player), _money]];
+if (_confirm) then {
+    _money = _money + _price;
+    serverPlayerMoney set [_moneyIndex, [(getPlayerUID _player), _money]];
 
-[[(_item select 0),_money,_controller,_wpitem,_attachments],"SPMC_fnc_syncSaleConfirm",(owner _player),false] spawn BIS_fnc_MP;
+    [_player, true] call SPMC_fnc_svrSyncMoney;
+};
+
+[[_item,_money,_controller,_wpitem,_attachments,_confirm],"SPMC_fnc_syncSaleConfirm",(owner _player),false] spawn BIS_fnc_MP;

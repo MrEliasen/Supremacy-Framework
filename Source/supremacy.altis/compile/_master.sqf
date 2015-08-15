@@ -17,13 +17,18 @@ SPMC_fnc_showShopMenu = compileFinal preprocessfilelinenumbers "compile\core\sho
 SPMC_fnc_initHUD = compileFinal preprocessfilelinenumbers "compile\core\initHUD.sqf";
 
 // Player
-SPMC_fnc_playerEvents = compileFinal preprocessfilelinenumbers "compile\player\playerEvents.sqf";
-SPMC_fnc_playerActions = compileFinal preprocessfilelinenumbers "compile\player\playerActions.sqf";
-SPMC_fnc_playerRespawn = compileFinal preprocessfilelinenumbers "compile\player\playerRespawn.sqf";
-SPMC_fnc_playerKilled = compileFinal preprocessfilelinenumbers "compile\player\playerKilled.sqf";
-SPMC_fnc_spawnPlayer = compileFinal preprocessfilelinenumbers "compile\player\spawnPlayer.sqf";
 SPMC_fnc_getPlayerSpawn = compileFinal preprocessfilelinenumbers "compile\player\getPlayerSpawn.sqf";
+SPMC_fnc_playerActions = compileFinal preprocessfilelinenumbers "compile\player\playerActions.sqf";
+SPMC_fnc_playerEvents = compileFinal preprocessfilelinenumbers "compile\player\playerEvents.sqf";
+SPMC_fnc_playerKilled = compileFinal preprocessfilelinenumbers "compile\player\playerKilled.sqf";
+SPMC_fnc_playerDamaged = compileFinal preprocessfilelinenumbers "compile\player\playerDamaged.sqf";
+SPMC_fnc_playerRespawn = compileFinal preprocessfilelinenumbers "compile\player\playerRespawn.sqf";
 SPMC_fnc_playerSetup = compileFinal preprocessfilelinenumbers "compile\player\playerSetup.sqf";
+SPMC_fnc_playerSetupBambiGear = compileFinal preprocessfilelinenumbers "compile\player\playerSetupBambiGear.sqf";
+SPMC_fnc_processPlayerData = compileFinal preprocessfilelinenumbers "compile\player\processPlayerData.sqf";
+SPMC_fnc_spawnPlayer = compileFinal preprocessfilelinenumbers "compile\player\spawnPlayer.sqf";
+SPMC_fnc_syncPlayerData = compileFinal preprocessfilelinenumbers "compile\player\syncPlayerData.sqf";
+SPMC_fnc_syncPlayerDataConfirm = compileFinal preprocessfilelinenumbers "compile\player\syncPlayerDataConfirm.sqf";
 
 // Economy
 SPMC_fnc_syncSale = compileFinal preprocessfilelinenumbers "compile\economy\syncSale.sqf";

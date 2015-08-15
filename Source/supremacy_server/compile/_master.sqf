@@ -27,8 +27,12 @@ publicVariable "SPMC_fnc_findIndex";
 publicVariable "SPMC_fnc_getItemCfgDetails";
 publicVariable "SPMC_fnc_spawnBuildings";
 
+// Player
+SPMC_fnc_svrRequestPlayerData = compileFinal preprocessfilelinenumbers "\supremacy_server\compile\player\svrRequestPlayerData.sqf";
+SPMC_fnc_svrSyncPlayerData = compileFinal preprocessfilelinenumbers "\supremacy_server\compile\player\svrSyncPlayerData.sqf";
+
 // Economy
-SPMC_fnc_svrConfirmSale = compileFinal preprocessfilelinenumbers "\supremacy_server\compile\economy\svrConfirmSale.sqf";
+SPMC_fnc_svrSyncSale = compileFinal preprocessfilelinenumbers "\supremacy_server\compile\economy\svrSyncSale.sqf";
 SPMC_fnc_svrSyncPurchase = compileFinal preprocessfilelinenumbers "\supremacy_server\compile\economy\svrSyncPurchase.sqf";
 SPMC_fnc_svrSyncMoney = compileFinal preprocessfilelinenumbers "\supremacy_server\compile\economy\svrSyncMoney.sqf";
 

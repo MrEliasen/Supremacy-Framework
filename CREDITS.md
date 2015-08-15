@@ -1,7 +1,11 @@
 ###Code
 [Killzone_Kid](http://killzonekid.com/arma-scripting-tutorials-epic-armour-drop/) for the Original Airdrop script.  
 [Shuko](http://forums.bistudio.com/showthread.php?t=89376) for SHK_pos.
+[Bryan "Tonic" Boardwine](http://www.tonic.pw/) for inspiration and code snippets.
 Karel Moricky for the "numberToText" function.
+
+###Extensions
+[Torndeco](https://github.com/Torndeco/extDB2) for extDB2 (Arma3 Extension DB2).
 
 ###Sounds
 [pierrecartoons1979](https://www.freesound.org/people/pierrecartoons1979/sounds/90121/) for the "purchase" sound.

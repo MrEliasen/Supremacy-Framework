@@ -12,7 +12,7 @@
  */
 enableSaving [false, false];
 
-if(!isDedicated) then {
+if (!isDedicated) then {
     waitUntil {!(isNull player)};
     player enablesimulation false;
 
@@ -48,8 +48,13 @@ if(!isDedicated) then {
     // 0: shop type (land, air, water), 1: spawn point marker names (array), 2: the list of supported vehicle types for this shop (array)
     SPMC_gbl_vehicleShop = ["", [], []];
 
-    // Keeps track of the player's monneh!
-    SPMC_gbl_money = 0;
+    // Keeps track of the player's monneh! Do not change the initial value from -1.
+    // It's used to keep track of whether the play just joined or not.
+    SPMC_gbl_money = -1;
+
+    // When a player takes damage, instead of saving their new health status to the database for each damage hit,
+    // we keep track of any additional damage within a few seconds before saving. To avoid flooding the server with a lot of requests. 
+    SPMC_gbl_dmgTick = 0;
 
     if(debugMode) then {
         diag_log "Loading briefing";
@@ -75,7 +80,20 @@ if(!isDedicated) then {
     if(debugMode) then {
         diag_log "Setting up character and inventory";
     };
+
     // setup the player character + inventory
     _handle = [] spawn SPMC_fnc_playerSetup;
     waitUntil {sleep 0.1; scriptDone _handle};
+
+    if(debugMode) then {
+        diag_log "Initiating Sync timer";
+    };
+
+    // update the user data automatically every 10-15 minutes
+    [] spawn {
+        while {true} do {
+            sleep ((random 300) + 600);
+            ["everything"] call SPMC_fnc_syncPlayerData;
+        };
+    };
 };

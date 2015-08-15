@@ -19,7 +19,7 @@ disableSerialization;
 
 _vehicle = [lbData [_list, lbCurSel(_list)]] call SPMC_fnc_getItemCfgDetails;
 _pricelist = ["item_prices"] call SPMC_fnc_config;
-_index = [_x, _pricelist] call SPMC_fnc_findIndex;
+_index = [_vehicle, _pricelist] call SPMC_fnc_findIndex;
 _value = 0;
 
 if (_index != -1) then {
@@ -45,4 +45,4 @@ Price: <t color='#27e640'>$%7</t>",
 (_vehicle select 9),
 (_vehicle select 10),
 (_vehicle select 11),
-[_value] call fnc_numberToText];
+[_value] call SPMC_fnc_numberToText];

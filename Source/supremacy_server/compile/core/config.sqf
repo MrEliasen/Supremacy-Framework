@@ -15,6 +15,14 @@ switch (_this select 0) do {
     case "debug_mode": {
         true;
     };
+    
+    case "fatigue_enabled": {
+        true;
+    };
+    
+    case "communication_enabled": {
+        true;
+    };
 
     case "spawn_type": {
         "randomcity";

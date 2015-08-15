@@ -26,9 +26,6 @@ if ((backpack player) != "") then {
         case (player canAddItemToBackpack _item): {
             _bought = true;
         };
-        default {
-            _bought = false;
-        };
     };
 } else {
     _bought = true;

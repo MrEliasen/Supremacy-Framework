@@ -25,7 +25,7 @@ class SPMC_hud
         class SPMC_HUD_icon_fps : RscPicture 
         {
             idc = -1;
-            text = "icons\fps.paa";
+            text = "3rdparty\icons\fps.paa";
             x = safezoneX + safezoneW - 0.15;
             y = safezoneY + safezoneH - 0.50;
             w = 0.02;
@@ -36,7 +36,7 @@ class SPMC_hud
         {
             
             idc = -1;
-            text = "icons\health.paa";
+            text = "3rdparty\icons\health.paa";
             x = safezoneX + safezoneW - 0.15;
             y = safezoneY + safezoneH - 0.445;
             w = 0.02;
@@ -47,7 +47,7 @@ class SPMC_hud
         {
             
             idc = -1;
-            text = "icons\stamina.paa";
+            text = "3rdparty\icons\stamina.paa";
             x = safezoneX + safezoneW - 0.15;
             y = safezoneY + safezoneH - 0.397;
             w = 0.02;
@@ -58,7 +58,7 @@ class SPMC_hud
         {
             
             idc = -1;
-            text = "icons\money.paa";
+            text = "3rdparty\icons\money.paa";
             x = safezoneX + safezoneW - 0.15;
             y = safezoneY + safezoneH - 0.349;
             w = 0.02;

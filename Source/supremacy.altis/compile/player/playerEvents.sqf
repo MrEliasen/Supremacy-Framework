@@ -11,9 +11,6 @@
  * @link       https://github.com/MrEliasen/SupremacyFramework
  */
 
-player addEventHandler ["handleDamage", {
-    
-}];
 player addEventHandler ["Respawn", {
     [_this] call SPMC_fnc_playerRespawn;
 }];
@@ -31,4 +28,7 @@ player addEventHandler ["InventoryClosed", {
     if (_this select 1 isKindOf "Bag_Base") then {
         playSound3D ["a3\sounds_f\characters\stances\concrete_adjust_prone_right.wss",objNull, false, _this select 1 modelToWorld [0,0,0]];
     };
+}];
+player addEventHandler ["handleDamage", {
+    [_this] call SPMC_fnc_playerDamaged;
 }];

@@ -186,6 +186,16 @@ switch((_itemInfo select 7)) do {
             };
         };
     };
+
+    case "CfgMagazines": {
+        switch (true) do {
+            case (_item in (uniformItems player) );
+            case (_item in (vestItems player));
+            case (_item in (backpackItems player)): {
+                _sold = true;
+            };
+        };
+    };
 };
 
 if (!_sold) exitWith {

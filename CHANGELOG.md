@@ -10,6 +10,7 @@ Features/Changes:
   - Made all scripts compileFinal with preprocessfilelinenumbers.
   - Added health, stamina, money and fps HUD elements.
   - Added "economy". Money is now stored and purchases and sales are comfirmed by the server.
+  - Initial persistent data support (health, fatigue, equipment and money).
 
 Bugfixes:
 

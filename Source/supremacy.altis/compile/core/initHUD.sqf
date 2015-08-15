@@ -24,7 +24,7 @@
         (_display displayCtrl 2001) ctrlSetText format["%1", (round diag_fps)];
         (_display displayCtrl 2002) ctrlSetText format["%1", (round((1 - (damage player)) * 100))];
         (_display displayCtrl 2003) ctrlSetText format["%1", (100 - ((round ((getFatigue player) * 3) / (10 ^ 3)) * 100))];
-        (_display displayCtrl 2004) ctrlSetText format["%1", ([SPMC_gbl_money] call fnc_numberToText)];
+        (_display displayCtrl 2004) ctrlSetText format["%1", ([SPMC_gbl_money] call SPMC_fnc_numberToText)];
         sleep 0.25;
     };
 };

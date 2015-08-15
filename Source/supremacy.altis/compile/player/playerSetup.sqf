@@ -14,10 +14,15 @@
 private["_spawn_items"];
 enableSentences false;
 player enablesimulation false;
-player disableConversation true;
-player setVariable ["BIS_noCoreConversations", true];
-player enablefatigue false;
 
+if (!(["communication_enabled"] call SPMC_fnc_config)) then {
+    player disableConversation true;
+    player setVariable ["BIS_noCoreConversations", true];
+};
+
+player enablefatigue (["fatigue_enabled"] call SPMC_fnc_config);
+
+removeAllAssignedItems player;
 removeAllWeapons player;
 removeUniform player;
 removeVest player;
@@ -25,51 +30,18 @@ removeBackpack player;
 removeGoggles player;
 removeHeadGear player;
 removeAllItems player;
+{player removeMagazine _x;} foreach (magazines player);
 
-{
-	player removeMagazine _x;
-} foreach (magazines player);
+if (SPMC_gbl_money == -1) then {
+    [[player,profileName],"SPMC_fnc_svrRequestPlayerData",false,false] spawn BIS_fnc_MP;
 
-{
-	player unassignItem _x;
-	player removeItem _x;
-} foreach (assignedItems player);
-
-_spawn_items = (["spawn_items"] call SPMC_fnc_config);
-
-if ((_spawn_items select 0) != "") then {
-    player forceAddUniform (_spawn_items select 0);
+    // wait until the player data has been received and loaded.
+    while {SPMC_gbl_money == -1} do {
+        sleep 0.5;
+    };
+} else {
+    [] call SPMC_fnc_playerSetupBambiGear;
+    [] call SPMC_fnc_syncMoney;
 };
 
-if ((_spawn_items select 1) != "") then {
-    player addVest (_spawn_items select 1);
-};
-
-if ((_spawn_items select 2) != "") then {
-    player addBackpack (_spawn_items select 2);
-};
-
-if ((_spawn_items select 3) != "") then {
-    player addHeadgear (_spawn_items select 3);
-};
-
-{
-    player addMagazine _x;
-} foreach (_spawn_items select 5);
-
-if ((_spawn_items select 4) != "") then {
-    player addWeapon (_spawn_items select 4);
-    player selectWeapon (_spawn_items select 4);
-};
-
-{
-    player addItem _x;
-} foreach (_spawn_items select 6);
-
-{
-    player addItem _x;
-    player assignItem _x;
-} foreach (_spawn_items select 7);
-
-[] call SPMC_fnc_syncMoney;
 [] call SPMC_fnc_getPlayerSpawn;
