@@ -1,6 +1,6 @@
 Supremacy Framework
 ========
-I wanted to learn more about how ARMA 3 modding worked, and there is really no better way than "code to learn". Everything is coded from the groud up, except for the below mentioned 3rd part scripts.
+I wanted to learn more about how ARMA 3 modding worked, and there is really no better way than "code to learn". Everything is coded from the ground up, except for the below mentioned 3rd part scripts.
 
 I don't know much about "best practises" in this language yet, or how I should or shouldn't code things, so feedback is absolutely more than welcome (feedback is still more than welcome even if I did/do know :))!
 
@@ -25,6 +25,9 @@ It uses strictly "vanilla" (including expansions) content. No client-side mods r
 4. Import the "@extDB2\spmc_server.sql" to your database.
 5. Run the "LaunchServer.bat" file.
 
+You can modify the "\Source\supremacy_server\compile\core\config.sqf" to make changes to a lot of the elements in the framework.
+There is no wiki yet, but I hope to get working on that soon(tm).
+
 ## Copyright & License
 Code released under [CC BY-NC 3.0 License](https://creativecommons.org/licenses/by-nc/3.0/legalcode).  
 To read thehuman-readable summary of the CC BY-NC 3.0 License, [click here](https://creativecommons.org/licenses/by-nc/3.0/).  
@@ -36,11 +39,13 @@ I did not create or own any of the 3rd party material. Please see their credits 
 Copyright (c) 2015 Mark Eliasen - 3rd party material are copyrighted by their respective owners.
 
 ## 3rd Party Credits
+A big thanks to the following people for their scripts, icons, sounds and extensions which are required to make the SPMC framework tick.
+A special thanks to Kilzone_Kid and Tonic for inspiration and code/resources which I have learn a lot from by reading.
 
 ####Code
  * [Killzone_Kid](http://killzonekid.com/arma-scripting-tutorials-epic-armour-drop/) for the Original Airdrop script.  
  * [Shuko](http://forums.bistudio.com/showthread.php?t=89376) for SHK_pos.
- * [Bryan "Tonic" Boardwine](http://www.tonic.pw/) for code snippets and MRES functions.
+ * [Bryan "Tonic" Boardwine](http://www.tonic.pw/) for the MRES functions and async extDB2 script.
  * Karel Moricky for the "numberToText" function.
 
 ###Extensions
