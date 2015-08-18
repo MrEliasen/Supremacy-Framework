@@ -76,3 +76,7 @@ SPMC_fnc_pointSelected = compileFinal preprocessfilelinenumbers "compile\dialogs
 SPMC_fnc_showSellMenu = compileFinal preprocessfilelinenumbers "compile\dialogs\shop_sell\showSellMenu.sqf";
 SPMC_fnc_showSellValue = compileFinal preprocessfilelinenumbers "compile\dialogs\shop_sell\showSellValue.sqf";
 SPMC_fnc_sellItem = compileFinal preprocessfilelinenumbers "compile\dialogs\shop_sell\sellItem.sqf";
+
+// Dialog: Player Menu
+SPMC_fnc_showPlayerMenu = compileFinal preprocessfilelinenumbers "compile\dialogs\player_menu\showPlayerMenu.sqf";
+SPMC_fnc_playerMenuUpdateStats = compileFinal preprocessfilelinenumbers "compile\dialogs\player_menu\playerMenuUpdateStats.sqf";

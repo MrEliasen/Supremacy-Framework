@@ -56,6 +56,12 @@ if (!isDedicated) then {
     // we keep track of any additional damage within a few seconds before saving. To avoid flooding the server with a lot of requests. 
     SPMC_gbl_dmgTick = 0;
 
+    // Keep track of when the last sync happened (in seconds).
+    SPMC_gbl_lastSync = 0;
+
+    // Keep track of when the next automatic sync is happening (in seconds).
+    SPMC_gbl_nextSync = (random 300) + 600; // between 10 and 15 mins
+
     if(debugMode) then {
         diag_log "Loading briefing";
     };
@@ -91,9 +97,16 @@ if (!isDedicated) then {
 
     // update the user data automatically every 10-15 minutes
     [] spawn {
+        private ["_nextSync"];
+        _nextSync = 0;
+
         while {true} do {
-            sleep ((random 300) + 600);
-            ["everything"] call SPMC_fnc_syncPlayerData;
+            sleep 1;
+            SPMC_gbl_lastSync = SPMC_gbl_lastSync + 1;
+
+            if (SPMC_gbl_nextSync == 0) then {
+                ["everything"] call SPMC_fnc_syncPlayerData;
+            };
         };
     };
 };

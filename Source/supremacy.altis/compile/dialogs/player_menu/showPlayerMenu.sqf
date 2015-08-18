@@ -1,5 +1,5 @@
 /**
- * playerDamaged.sqf
+ * showPlayerMenu.sqf
  *
  * LICENSE: This file is subject to the terms and conditions defined in
  * file "LICENSE.md", which is part of this source code package.
@@ -10,20 +10,9 @@
  * @license    CC BY-NC 3.0 License
  * @link       https://github.com/MrEliasen/SupremacyFramework
  */
+if (!alive player || dialog) exitWith {};
+createDialog "SPMC_player_menu";
+disableSerialization;
 
-_unit = _this select 0;
-_part = _this select 1;
-
-if (SPMC_gbl_dmgTick == -1) then {
-    [] spawn {
-        SPMC_gbl_dmgTick = 2;
-        while {SPMC_gbl_dmgTick >= 0} do {
-            SPMC_gbl_dmgTick = SPMC_gbl_dmgTick - 1;
-            sleep 1;
-        };
-
-        ["stats"] call SPMC_fnc_syncPlayerData;
-    };
-};
-
-_damage;
+waitUntil {sleep 0.1; !isNull (findDisplay 1900)};
+[] call SPMC_fnc_playerMenuUpdateStats;
