@@ -41,7 +41,6 @@ if (SPMC_gbl_money == -1) then {
     };
 } else {
     [] call SPMC_fnc_playerSetupBambiGear;
-    [] call SPMC_fnc_syncMoney;
 };
 
 [] call SPMC_fnc_getPlayerSpawn;

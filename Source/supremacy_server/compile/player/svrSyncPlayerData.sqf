@@ -21,8 +21,6 @@ _success = false;
 
 if (isNull _player || _type == "" || count _data == 0) exitWith {};
 
-_data = [_data];
-
 _call = switch (_type) do {
     case "stats": {
         "savePlayerStats";
@@ -30,6 +28,10 @@ _call = switch (_type) do {
 
     case "equipment": {
         "savePlayerEquipment";
+    };
+
+    case "money" : {
+        "savemoney";
     };
 
     case "everything": {

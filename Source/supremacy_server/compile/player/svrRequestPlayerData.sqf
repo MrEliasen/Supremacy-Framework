@@ -28,8 +28,8 @@ if (count _playerData == 0) then {
 } else {
     ["updatePlayerName",[_name, (getPlayerUID _player)]] call SPMC_fnc_dbCall;
     _money = (_playerData select 0);
-    _stats = [(_playerData select 1)] call SPMC_fnc_mresToArray;
-    _equipment = [(_playerData select 2)] call SPMC_fnc_mresToArray;
+    _stats = (_playerData select 1);
+    _equipment = (_playerData select 2);
 };
 
 _index = [(getPlayerUID _player),serverPlayerMoney] call SPMC_fnc_findIndex;

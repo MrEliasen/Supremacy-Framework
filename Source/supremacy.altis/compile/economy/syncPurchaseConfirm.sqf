@@ -29,8 +29,7 @@ if (_item != "") then {
     };
 
     if (_confirmed) then {
-
-        // Because these actions cannot be executed from the server, we have to do it here.. sadly.
+        // Because these actions cannot be executed (at time of writing) from the server properly, we have to do it here.. sadly.
         switch ((_item select 7)) do {
             case ("CfgWeapons"): {
                 switch ((_item select 5)) do {

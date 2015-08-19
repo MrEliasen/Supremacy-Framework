@@ -23,14 +23,14 @@ if (!isNull (findDisplay 1900)) then {
 
 switch (_type) do {
     case "stats": {
-        _data = [
+        _data = [[
             damage player,
             getFatigue player
-        ];
+        ]];
     };
 
     case "equipment": {
-        _data = [
+        _data = [[
             [primaryWeapon player, (primaryWeaponItems player)],
             [secondaryWeapon player, (secondaryWeaponItems player)],
             [handgunWeapon player, (handgunItems player)],
@@ -39,7 +39,7 @@ switch (_type) do {
             [(vest player), (vestItems player)],
             [(backpack player), (backPackItems player)],
             (assignedItems player)
-        ];
+        ]];
     };
 
     case "everything": {

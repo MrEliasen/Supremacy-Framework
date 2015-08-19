@@ -149,7 +149,6 @@ switch((_itemInfo select 7)) do {
 if (_confirm) then {
     _money = _money + _price;
     serverPlayerMoney set [_moneyIndex, [(getPlayerUID _player), _money]];
-
     [_player, true] call SPMC_fnc_svrSyncMoney;
 };
 
