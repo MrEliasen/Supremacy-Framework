@@ -28,6 +28,19 @@ It uses strictly "vanilla" (including expansions) content. No client-side mods r
 You can modify the "\Source\supremacy_server\compile\core\config.sqf" to make changes to a lot of the elements in the framework.
 There is no wiki yet, but I hope to get working on that soon(tm).
 
+## 0.3.2 (19-08-2015)
+Features/Changes:
+
+ * Removed the MRES functions, turns out they are not needed.
+ * Every "Update" query to the database will now update the "last active" field for the player.
+ * Moved the money sync query to the "svrSyncPlayerData" function.
+
+Bugfixes:
+
+ * (Thanks B4ngB4ng) Fixed an issue with extDB2 not picking up the .ini file.
+ * (Thanks B4ngB4ng) Fixed an issue which would prevent saving of player data.
+ * Fixed an issue were ammunition bought for a gun before the gun itself, would remove the ammunition from the player.
+
 ## Copyright & License
 Code released under [CC BY-NC 3.0 License](https://creativecommons.org/licenses/by-nc/3.0/legalcode).  
 To read thehuman-readable summary of the CC BY-NC 3.0 License, [click here](https://creativecommons.org/licenses/by-nc/3.0/).  
@@ -45,7 +58,7 @@ A special thanks to Kilzone_Kid and Tonic for inspiration and code/resources whi
 ####Code
  * [Killzone_Kid](http://killzonekid.com/arma-scripting-tutorials-epic-armour-drop/) for the Original Airdrop script.  
  * [Shuko](http://forums.bistudio.com/showthread.php?t=89376) for SHK_pos.
- * [Bryan "Tonic" Boardwine](http://www.tonic.pw/) for the MRES functions and async extDB2 script.
+ * [Bryan "Tonic" Boardwine](http://www.tonic.pw/) for the async extDB2 script.
  * Karel Moricky for the "numberToText" function.
 
 ###Extensions

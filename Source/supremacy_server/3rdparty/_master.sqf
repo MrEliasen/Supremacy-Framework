@@ -22,6 +22,4 @@ call compile preprocessfile "\supremacy_server\3rdparty\SHK\shk_pos_init.sqf";
 SPMC_fnc_dbCall = compileFinal preprocessFileLineNumbers "\supremacy_server\3rdparty\extDB2\dbCall.sqf";
 
 // MRES functions
-SPMC_fnc_mresArray = compileFinal preprocessFileLineNumbers "\supremacy_server\3rdparty\mres\mresArray.sqf";
 SPMC_fnc_mresString = compileFinal preprocessFileLineNumbers "\supremacy_server\3rdparty\mres\mresString.sqf";
-SPMC_fnc_mresToArray = compileFinal preprocessFileLineNumbers "\supremacy_server\3rdparty\mres\mresToArray.sqf";

@@ -164,5 +164,5 @@ _plist = ["item_prices"] call SPMC_fnc_config;
         sleep 1;
     };
 
-    ["equipment", true] spawn SPMC_fnc_syncPlayerData;  
+    ["equipment", true] spawn SPMC_fnc_syncPlayerData; 
 };

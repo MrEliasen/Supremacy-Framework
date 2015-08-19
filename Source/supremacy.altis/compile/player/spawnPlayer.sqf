@@ -19,4 +19,4 @@ player setPos _pos;
 0 cutText ["","BLACK IN"];
 
 [] call SPMC_fnc_initHUD;
-["stats"] call SPMC_fnc_syncPlayerData;
+["everything"] call SPMC_fnc_syncPlayerData;

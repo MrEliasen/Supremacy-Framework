@@ -170,7 +170,7 @@ if (_money >= _price) then {
 
             if (_toBackpack) then {
                 if((_item select 7) == "CfgMagazines") then {
-                    _player addMagazines [(_item select 0), 1];
+                    _player addMagazine [(_item select 0), (_item select 9)];
                 } else {
                     private ["_added"];
                     _added = false;
@@ -213,7 +213,7 @@ if (_money >= _price) then {
                 {
                     case "CfgWeapons":
                     {
-                        switch ((_item select 5)) do
+                        /*switch ((_item select 5)) do
                         {
                             case 1: {
                                 if ((primaryWeapon _player) != "") then { 
@@ -237,7 +237,7 @@ if (_money >= _price) then {
                                 _player addWeaponGlobal (_item select 0);
                             };
 
-                            default {
+                            default {*/
                                 switch((_item select 6)) do {
                                     case 605: {
                                         _player addHeadgear (_item select 0);
@@ -251,8 +251,8 @@ if (_money >= _price) then {
                                         _player addUniform (_item select 0)
                                     };
                                 };
-                            };
-                        };
+                            /*};
+                        };*/
                     };
 
                     case "CfgVehicles":
@@ -284,5 +284,8 @@ if (_money >= _price) then {
     };
 };
 
-[_player, true] call SPMC_fnc_svrSyncMoney;
+if (_confirmed) then {
+    [_player, true] call SPMC_fnc_svrSyncMoney;
+};
+
 [[(_item select 0),_confirmed,_money,_controller,_toBackpack],"SPMC_fnc_syncPurchaseConfirm",(owner _player),false] spawn BIS_fnc_MP;

@@ -16,10 +16,6 @@ _money = [_this,0,0,[0]] call BIS_fnc_param;
 _stats = [_this,1,[],[[]]] call BIS_fnc_param;
 _equipment = [_this,2,[],[[]]] call BIS_fnc_param;
 
-diag_log str _money;
-diag_log str _stats;
-diag_log str _equipment;
-
 SPMC_gbl_money = _money;
 
 if (count _stats != 2) exitwith {

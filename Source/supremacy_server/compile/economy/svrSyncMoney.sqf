@@ -23,7 +23,7 @@ if (_index != -1) then {
     _money = ((serverPlayerMoney select _index) select 1);
 };
 
-["savemoney",[_money, (getPlayerUID _player)]] call SPMC_fnc_dbCall;
+[_player, "money", [_money], true] call SPMC_fnc_svrSyncPlayerData;
 
 if (!_silent) then {
     [[_money],"SPMC_fnc_syncMoneyConfirm",(owner _player),false] spawn BIS_fnc_MP;
