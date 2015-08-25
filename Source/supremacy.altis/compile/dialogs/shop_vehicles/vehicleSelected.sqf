@@ -11,7 +11,7 @@
  * @link       https://github.com/MrEliasen/SupremacyFramework
  */
 
-private["_vehicle","_pricelist","_index","_value","_list","_display"];
+private["_vehicle","_pricelist","_sellPercentage","_index","_value","_list","_display"];
 _list = [_this,0,0,[0]] call BIS_fnc_param;
 _display  = [_this,1,0,[0]] call BIS_fnc_param;
 
@@ -26,7 +26,8 @@ if (_index != -1) then {
     _value = (_pricelist select _index) select 1;
 
     if (_list == 2602) then {
-        _value = (_value / 2);
+        _sellPercentage = ["sell_percentage"] call SPMC_fnc_config;
+        _value = floor(_value / (_sellPercentage/100));
     };
 };
 

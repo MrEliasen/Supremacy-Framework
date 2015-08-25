@@ -11,12 +11,10 @@
  * @link       https://github.com/MrEliasen/SupremacyFramework
  */
 
-private ["_item","_silent","_soldAttachMsg","_errMsg","_pricelist","_sold"];
+private ["_item","_silent","_soldAttachMsg","_errMsg","_sold"];
 _item = [_this,0,"",[""]] call BIS_fnc_param;
 _silent = [_this,1,false,[false]] call BIS_fnc_param;
-_pricelist = ["item_prices"] call SPMC_fnc_config;
 _errMsg = "";
-_price = -1;
 
 if(!_silent) then {
     ctrlEnable[2402, false];
@@ -30,18 +28,7 @@ if (_item == "") exitWith {
     if(!_silent) then {
         ctrlEnable[2402, true];
     };
-
-    _price;
 };
-
-_index = [_item, _pricelist] call SPMC_fnc_findIndex;
-
-if (_index != -1) then {
-    _price = (_pricelist select _index) select 1;
-} else {
-    _price = 0;
-};
-
 
 _itemInfo = [_item] call SPMC_fnc_getItemCfgDetails;
 _sold = false;

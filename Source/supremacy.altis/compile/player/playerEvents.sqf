@@ -12,10 +12,10 @@
  */
 
 player addEventHandler ["Respawn", {
-    [_this] call SPMC_fnc_playerRespawn;
+    _this call SPMC_fnc_playerRespawn;
 }];
 player addEventHandler ["Killed", {
-    [_this] call SPMC_fnc_playerKilled;
+    _this call SPMC_fnc_playerKilled;
 }];
 
 // Thanks to Killzone_Kid for the inventory sound "hack";
@@ -30,5 +30,5 @@ player addEventHandler ["InventoryClosed", {
     };
 }];
 player addEventHandler ["handleDamage", {
-    [_this] call SPMC_fnc_playerDamaged;
+    _this call SPMC_fnc_playerDamaged;
 }];

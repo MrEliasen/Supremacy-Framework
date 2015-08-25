@@ -5,6 +5,8 @@ CREATE TABLE IF NOT EXISTS `spmc_players` (
   `p_money` int(10) unsigned NOT NULL,
   `p_stats` varchar(20) NOT NULL,
   `p_equipment` text NOT NULL,
+  `p_skills` text NOT NULL,
+  `p_experience` int(10) unsigned NOT NULL,
   `p_joindate` timestamp NOT NULL,
   `p_lastactive` timestamp NOT NULL,
   PRIMARY KEY (`p_id`),

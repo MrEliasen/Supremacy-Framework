@@ -178,6 +178,8 @@ class SPMC_shop_arms
             sizeEx = 0.022;
             onLBSelChanged = "[""spattach""] call SPMC_fnc_armsShopItemSelected;";
         };
+
+        
         class SPMC_shop_arms_firearms_buy: RscButton
         {
             idc = 2307;
@@ -186,6 +188,8 @@ class SPMC_shop_arms
             y = 0.511 * safezoneH + safezoneY;
             w = 0.108281 * safezoneW;
             h = 0.033 * safezoneH;
+            colorBackground[] = {0.75,0.75,0.75,1};
+            colorFocused[] = {0.75,0.75,0.75,1};
             onButtonClick = "[] call SPMC_fnc_armsShopBuyWeapon;";
         };
         class SPMC_shop_arms_ammo_buy: RscButton
@@ -196,6 +200,8 @@ class SPMC_shop_arms
             y = 0.511 * safezoneH + safezoneY;
             w = 0.0928125 * safezoneW;
             h = 0.033 * safezoneH;
+            colorBackground[] = {0.75,0.75,0.75,1};
+            colorFocused[] = {0.75,0.75,0.75,1};
             onButtonClick = "[] call SPMC_fnc_armsShopBuyAmmo;";
         };
         class SPMC_shop_arms_attch_buy: RscButton
@@ -206,6 +212,8 @@ class SPMC_shop_arms
             y = 0.511 * safezoneH + safezoneY;
             w = 0.0928125 * safezoneW;
             h = 0.033 * safezoneH;
+            colorBackground[] = {0.75,0.75,0.75,1};
+            colorFocused[] = {0.75,0.75,0.75,1};
             onButtonClick = "[] call SPMC_fnc_armsShopBuyAttachment;";
         };
         class SPMC_shop_arms_acc_buy: RscButton
@@ -216,6 +224,8 @@ class SPMC_shop_arms
             y = 0.511 * safezoneH + safezoneY;
             w = 0.0928125 * safezoneW;
             h = 0.033 * safezoneH;
+            colorBackground[] = {0.75,0.75,0.75,1};
+            colorFocused[] = {0.75,0.75,0.75,1};
             onButtonClick = "[] call SPMC_fnc_armsShopBuyAccessory;";
         };
         class SPMC_shop_arms_close: RscButton
@@ -226,6 +236,8 @@ class SPMC_shop_arms
             y = 0.192 * safezoneH + safezoneY;
             w = 0.0464063 * safezoneW;
             h = 0.033 * safezoneH;
+            colorBackground[] = {0.75,0.75,0.75,1};
+            colorFocused[] = {0.75,0.75,0.75,1};
             onButtonClick = "closeDialog 0;";
         };
         class SPMC_shop_arms_sp_ammo_buy: RscButton
@@ -236,6 +248,8 @@ class SPMC_shop_arms
             y = 0.731 * safezoneH + safezoneY;
             w = 0.113437 * safezoneW;
             h = 0.033 * safezoneH;
+            colorBackground[] = {0.75,0.75,0.75,1};
+            colorFocused[] = {0.75,0.75,0.75,1};
             onButtonClick = "[true] call SPMC_fnc_armsShopBuyAmmo;";
         };
         class SPMC_shop_arms_sp_attch_buy: RscButton
@@ -246,6 +260,8 @@ class SPMC_shop_arms
             y = 0.731 * safezoneH + safezoneY;
             w = 0.118594 * safezoneW;
             h = 0.033 * safezoneH;
+            colorBackground[] = {0.75,0.75,0.75,1};
+            colorFocused[] = {0.75,0.75,0.75,1};
             onButtonClick = "[true] call SPMC_fnc_armsShopBuyAttachment;";
         };
         class SPMC_shop_arms_details: RscStructuredText

@@ -15,7 +15,11 @@ private["_money","_stats","_equipment"];
 _money = [_this,0,0,[0]] call BIS_fnc_param;
 _stats = [_this,1,[],[[]]] call BIS_fnc_param;
 _equipment = [_this,2,[],[[]]] call BIS_fnc_param;
+_experience = [_this,3,0,[0]] call BIS_fnc_param;
+_skills = [_this,4,[],[[]]] call BIS_fnc_param;
 
+SPMC_gbl_experience = _experience;
+SPMC_gbl_learnedSkills = _skills;
 SPMC_gbl_money = _money;
 
 if (count _stats != 2) exitwith {
@@ -115,8 +119,8 @@ if (count _equipment > 0) then {
     if (((_equipment select 2) select 0) != "") then {
         player addWeapon ((_equipment select 2) select 0);
         
-        if ((_equipment select 0) != "") then {
-            player selectWeapon (_equipment select 2);
+        if (((_equipment select 0) select 0) == "") then {
+            player selectWeapon ((_equipment select 2) select 0);
         };
         
         {

@@ -28,6 +28,10 @@ if (!isDedicated) then {
     waitUntil {sleep 0.25; !(isNil "serverIsReady")};
 
     [] spawn {
+        if (serverStatusLootBuildings == -1) then {
+            [] call SPMC_fnc_playerJoined;
+        };
+
         while {!serverIsReady} do {
             0 cutText [serverStatus,"BLACK FADED"];
             sleep 0.25;
@@ -62,6 +66,15 @@ if (!isDedicated) then {
     // Keep track of when the next automatic sync is happening (in seconds).
     SPMC_gbl_nextSync = (random 300) + 600; // between 10 and 15 mins
 
+    // Keep track of how many experience points the player have.
+    SPMC_gbl_experience = 0;
+
+    // Keep track of the skills the player have learned.
+    SPMC_gbl_learnedSkills = [];
+
+    // keeps track of cams we setup
+    SPMC_gbl_camera = objNull;
+
     if(debugMode) then {
         diag_log "Loading briefing";
     };
@@ -89,6 +102,10 @@ if (!isDedicated) then {
 
     // setup the player character + inventory
     _handle = [] spawn SPMC_fnc_playerSetup;
+    waitUntil {sleep 0.1; scriptDone _handle};
+
+    // initiate the passive skills.
+    _handle = [] spawn SPMC_fnc_initPassiveSkills;
     waitUntil {sleep 0.1; scriptDone _handle};
 
     if(debugMode) then {

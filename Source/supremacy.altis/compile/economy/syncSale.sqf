@@ -16,6 +16,14 @@ _item = [_this,0,"",[""]] call BIS_fnc_param;
 _controller = [_this,1,0,[0]] call BIS_fnc_param;
 _attachments = [_this,2,false,[false]] call BIS_fnc_param;
 
+if (_item == "") then {
+    _item = [_this,0,objNull,[objNull]] call BIS_fnc_param;
+
+    if (isNull _item) then {
+        _item = "";
+    };
+};
+
 if (_item == "") exitWith {};
 
 hint "Confirming Sale, please wait..";

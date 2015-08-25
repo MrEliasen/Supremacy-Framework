@@ -12,42 +12,110 @@
  */
 
 switch (_this select 0) do {
+    /**
+     * Toggle "debug mode" on  or off. When enabled, loot makers will be visible on the map, and the dev menu will be available.
+     * @return boolean
+     */
     case "debug_mode": {
         true;
     };
-    
+
+    /**
+     * Toggle the arma 3 fatigue system on/off.
+     * @return boolean
+     */
     case "fatigue_enabled": {
         true;
     };
     
+    /**
+     * Toggle player communication on/off
+     * @return boolean
+     */
     case "communication_enabled": {
         true;
     };
+    
+    /**
+     * the % chance of loot spawning in a given building. 8 = ~1450 buildings.
+     * @return integer
+     */
+    case "house_loot_percent": {
+        1;
+    };
 
+    /**
+     * Choose the spawn method. If the option is invalid, the game will default to "select_city".
+     * "random_city" = spawn the play in a random city.
+     * "select_city" = The player can choose which city to spawn in.
+     * "random_world" = spawn the play in a random spot throughout the whole island, within 200 meters of a road if possible.
+     * 
+     * @return string
+     */
     case "spawn_type": {
-        "randomcity";
+        "random_city";
     };
 
+    /**
+     * The start money for new players.
+     * @return integer
+     */
     case "start_money": {
-        10000;
+        100000;
+    };
+    
+    /**
+     * The percentage of the purchase price an item will sell for.
+     * @return integer
+     */
+    case "sell_percentage": {
+        50;
     };
 
+    /**
+     * How mant loot create to spawn on the island during startup. 
+     * @return integer
+     */
     case "loot_crate_limit": {
         10;
     };
 
+    /**
+     * How mant vehicles to spawn on the island during startup. 
+     * @return integer
+     */
     case "loot_vehicle_limit": {
         10;
     };
 
+    /**
+     * How mant stationery weapons to spawn on the island during startup. 
+     * @return integer
+     */
     case "loot_stationery_limit": {
         10;
     };
 
+    /**
+     * How long (in minutes) between Air Drops.
+     * @return integer
+     */
     case "airdrop_interval": {
-        5;
+        20;
     };
 
+    /**
+     * The maximum number of skills a player can learn.
+     * @return integer
+     */
+    case "max_learned_skills": {
+        18;
+    };
+
+    /**
+     * Markers (must be circle markers) in which players will not be able to spawn when "random_world" spawn type is selected
+     * @return array
+     */
     case "spawn_excludes": {
         [
             "system_safezone",
@@ -60,6 +128,14 @@ switch (_this select 0) do {
         ];
     };
 
+    /**
+     * List of available spawn points (must be circles) and their name.
+        [
+           "marker_name",
+           "Spawn Point Name the player will see"
+        ]
+     * @return array
+     */
     case "spawn_points": {
         [
             [
@@ -189,6 +265,10 @@ switch (_this select 0) do {
         ];
     };
 
+    /**
+     * Markers (must be circle markers) where the airdrop with spawn within.
+     * @return array
+     */
     case "drop_zones": {
         [
             "drop_zone_1",
@@ -204,6 +284,10 @@ switch (_this select 0) do {
         ];
     };
 
+    /**
+     * The default loadout for respawns and new players.
+     * @return array
+     */
     case "spawn_items": {
         [
             "U_IG_Guerilla1_1",
@@ -230,6 +314,10 @@ switch (_this select 0) do {
         ];
     };
 
+    /**
+     * General items available in the game shops and loot.
+     * @return array
+     */
     case "equip_items": {
         [
             "Binocular",
@@ -246,6 +334,10 @@ switch (_this select 0) do {
         ];
     };
 
+    /**
+     * The weapons available in the game shops and loot.
+     * @return array
+     */
     case "airdrop_weapons";
     case "equip_weapons": {
         [
@@ -321,6 +413,10 @@ switch (_this select 0) do {
         ];
     };
 
+    /**
+     * Throwable objects available in the shops and loot.
+     * @return array
+     */
     case "equip_throwables": {
         [
             "HandGrenade",
@@ -339,6 +435,11 @@ switch (_this select 0) do {
             "I_IR_Grenade"
         ];
     };
+
+    /**
+     * Uniforms available in the shops and loot.
+     * @return array
+     */
     case "equip_clothes": {
         [
             "U_I_CombatUniform",
@@ -368,6 +469,11 @@ switch (_this select 0) do {
         ];
     };
 
+
+    /**
+     * Hats available in the shops and loot.
+     * @return array
+     */
     case "equip_hats": {
         [
             "H_HelmetB",
@@ -498,6 +604,10 @@ switch (_this select 0) do {
         ];
     };
 
+    /**
+     * Glasses available in the shops and loot.
+     * @return array
+     */
     case "equip_glasses": {
         [
             "G_Spectacles",
@@ -542,6 +652,10 @@ switch (_this select 0) do {
         ];
     };
 
+    /**
+     * Vests available in the shops and loot.
+     * @return array
+     */
     case "equip_vests": {
         [
             "V_Rangemaster_belt",
@@ -591,6 +705,10 @@ switch (_this select 0) do {
         ];
     };
 
+    /**
+     * Backpacks available in the shops and loot.
+     * @return array
+     */
     case "equip_backpacks": {
         [
             "B_AssaultPack_khk",
@@ -628,11 +746,20 @@ switch (_this select 0) do {
             "B_OutdoorPack_blk",
             "B_OutdoorPack_tan",
             "B_OutdoorPack_blu",
-            "B_HuntingBackpack",
-            "B_Parachute"
+            "B_HuntingBackpack"
         ];
     };
 
+    /**
+     * Attachments available in the shops and loot.
+     * indexes:
+     * 0: optics
+     * 1: Bipods
+     * 2: Muzzles
+     * 3: accesories
+     *
+     * @return array
+     */
     case "equip_attachments": {
         [
             [
@@ -692,6 +819,10 @@ switch (_this select 0) do {
         ];
     };
 
+    /**
+     * Ground vehicles available in the shops and loot.
+     * @return array
+     */
     case "ground_vehicles": {
         [
             "B_APC_Tracked_01_rcws_F",
@@ -740,6 +871,10 @@ switch (_this select 0) do {
         ];
     };
 
+    /**
+     * Air vehicles available in the shops and loot.
+     * @return array
+     */
     case "air_vehicles": {
         [
             "B_Heli_Light_01_F",
@@ -761,6 +896,10 @@ switch (_this select 0) do {
         ];
     };
 
+    /**
+     * Water vehicles available in the shops and loot.
+     * @return array
+     */
     case "water_vehicles": {
         [
             "C_Boat_Civil_01_F",
@@ -776,6 +915,10 @@ switch (_this select 0) do {
         ];
     };
 
+    /**
+     * Stationary weapons which will spawn in the world.
+     * @return array
+     */
     case "stationery_items": {
         [
             "O_static_AA_F",
@@ -785,6 +928,14 @@ switch (_this select 0) do {
         ];
     };
 
+    /**
+     * List of all the items in this config, with their purchase price.
+     * Sell price is defined in the "sell_percentage" config entry further up.
+     *
+     * ["class_name", price]
+     *
+     * @return array
+     */
     case "item_prices": {
         [
             ["Binocular", 1000],
@@ -1266,5 +1417,9 @@ switch (_this select 0) do {
             ["I_Boat_Transport_01_F", 1000],
             ["I_G_Boat_Transport_01_F", 1000]
         ];
+    };
+
+    default {
+        "INVALID";
     };
 };

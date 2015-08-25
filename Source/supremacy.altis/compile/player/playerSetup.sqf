@@ -12,10 +12,10 @@
  */
 
 private["_spawn_items"];
-enableSentences false;
 player enablesimulation false;
 
 if (!(["communication_enabled"] call SPMC_fnc_config)) then {
+    enableSentences false;
     player disableConversation true;
     player setVariable ["BIS_noCoreConversations", true];
 };

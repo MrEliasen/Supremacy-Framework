@@ -11,11 +11,16 @@
  * @link       https://github.com/MrEliasen/SupremacyFramework
  */
 
-private["_vehicle","_spawn"];
+private["_vehicle","_price","_spawn"];
 disableSerialization;
 ctrlEnable[2605, false];
 _vehicle = [lbData [2601, lbCurSel(2601)]] call SPMC_fnc_getItemCfgDetails;
+_price = lbValue [2601, lbCurSel(2601)];
 _spawn = "";
+
+if (SPMC_gbl_money < _price) exitWith {
+    hint "You do not have enough money to buy this vehicle.";
+};
 
 {
     private ["_units"];

@@ -12,6 +12,7 @@ Karel Moricky for the "numberToText" function.
 [escortmarius](https://www.freesound.org/people/escortmarius/sounds/138096/) for the "purchase_click" sound.
 [qubodup](https://www.freesound.org/people/qubodup/sounds/140773/) for the original "error" sound.
 [GameAudio](https://www.freesound.org/people/GameAudio/sounds/220176/) for the original "sold_item" sound.
+[Gitietor](https://www.freesound.org/people/Gitietor/sounds/275335/) for the original "skill_learned" sound.
 
 ###Icons
 [Paomedia](https://www.iconfinder.com/icons/299107/money_icon) for the "money" icon.

@@ -15,6 +15,11 @@ private["_pos"];
 _pos = (_this select 0);
 player enablesimulation true;
 
+if (!(isNull SPMC_gbl_camera)) then {
+    SPMC_gbl_camera cameraEffect ["TERMINATE","BACK"];
+    camDestroy SPMC_gbl_camera;
+};
+
 player setPos _pos;
 0 cutText ["","BLACK IN"];
 

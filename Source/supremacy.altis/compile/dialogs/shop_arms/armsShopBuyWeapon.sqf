@@ -23,6 +23,11 @@ _price = lbValue [2301, lbCurSel(2301)];
 _slot = (_weapon select 5);
 _bought = false;
 
+if (SPMC_gbl_money < _price) exitWith {
+    hint "You do not have enough money to buy this weapon.";
+    ctrlEnable[2307, true];
+};
+
 if ((_weapon select 7) != "CfgWeapons") exitWith {
     ctrlEnable[2307, true];
 };

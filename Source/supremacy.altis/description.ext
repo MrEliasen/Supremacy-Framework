@@ -19,7 +19,7 @@ wreckRemovalMaxTime = 120;
 
 class Header
 {
-	gameType=SC;
+	gameType=Sandbox;
 	minPlayers=1;
 	maxPlayers=80;
 };
@@ -57,5 +57,24 @@ class CfgSounds
         name = "sold_item";
         sound[] = {"\3rdparty\sounds\sold_item.ogg", 1.0, 1};
         titles[] = {};
+    };
+    class skill_learned
+    {
+        name = "skill_learned";
+        sound[] = {"\3rdparty\sounds\skill_learned.ogg", 1.0, 1};
+        titles[] = {};
+    };
+};
+
+
+class CfgNotifications
+{
+    class airdropProxyWarning
+    {
+        title = "DANGER!!";
+        iconPicture = "\A3\ui_f\data\map\mapcontrol\taskiconfailed_ca.paa";
+        description = "%1";
+        duration = 4;
+        priority = 7;
     };
 };
