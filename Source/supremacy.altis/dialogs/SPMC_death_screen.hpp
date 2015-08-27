@@ -51,7 +51,7 @@ class SPMC_death_screen
             h = 0.044 * safezoneH;
             colorBackground[] = {0.75,0.75,0.75,1};
             colorFocused[] = {0.75,0.75,0.75,1};
-            onButtonClick="player setVariable [""respawning"", TRUE];"
+            onButtonClick = "player setVariable [""respawning"", TRUE];";
         };
         class SPMC_death_screen_revivestatus: RscStructuredText
         {

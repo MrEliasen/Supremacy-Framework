@@ -1,13 +1,15 @@
 onLoadName = "Supremacy";
 onLoadMission = "A Framework by Simply @ NBS-Gaming.com | www.SirMrE.com";
 author = "Simply";
-respawn="BASE";
+respawn=3;
 respawnDelay=5;
-disabledAI=1;
+respawnDialog = 0;
+respawnButton = 0;
+respawnOnStart = 0;
 disableChannels[] = {0,2,6};
 joinUnassigned = 0;
 saving = 0;
-respawnDialog = 0;
+disabledAI = true;
 loadScreen = "splash.jpg";
 
 corpseLimit = 10;
@@ -65,7 +67,6 @@ class CfgSounds
         titles[] = {};
     };
 };
-
 
 class CfgNotifications
 {

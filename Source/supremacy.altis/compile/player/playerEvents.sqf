@@ -29,6 +29,6 @@ player addEventHandler ["InventoryClosed", {
         playSound3D ["a3\sounds_f\characters\stances\concrete_adjust_prone_right.wss",objNull, false, _this select 1 modelToWorld [0,0,0]];
     };
 }];
-player addEventHandler ["handleDamage", {
+player addEventHandler ["HandleDamage", {
     _this call SPMC_fnc_playerDamaged;
 }];

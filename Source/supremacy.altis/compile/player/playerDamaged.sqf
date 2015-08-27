@@ -10,9 +10,12 @@
  * @license    CC BY-NC 3.0 License
  * @link       https://github.com/MrEliasen/SupremacyFramework
  */
-
+private ["_unit","_part","_source","_projectile"];
 _unit = _this select 0;
 _part = _this select 1;
+_damage = _this select 2;
+_source = _this select 3;
+_projectile = _this select 4;
 
 if (SPMC_gbl_dmgTick == -1) then {
     [] spawn {
@@ -24,6 +27,12 @@ if (SPMC_gbl_dmgTick == -1) then {
 
         ["stats"] call SPMC_fnc_syncPlayerData;
     };
+};
+
+if (((damage _unit) + _damage) >= 1) then {
+    //_unit setDamage 0.95;
+    _unit setUnconscious true;
+    //_damage = 0.0001;
 };
 
 _damage;

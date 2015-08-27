@@ -25,12 +25,6 @@ if (isPlayer _killer && !(_player getVariable ["recentlyRevived", false])) then 
 disableSerialization;
 createDialog "SPMC_death_screen";
 
-while {isNull (findDisplay 3100)} do {
-    sleep 0.1;
-};
-
-(findDisplay 3100) displayAddEventHandler ["KeyDown", "if ((_this select 1) == 1) then { true }"]; 
-
 // Create death cam
 SPMC_gbl_camera  = "CAMERA" camCreate (getPosATL _player);
 showCinemaBorder true;
