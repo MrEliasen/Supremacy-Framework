@@ -1,8 +1,9 @@
 ###Code
-[Killzone_Kid](http://killzonekid.com/arma-scripting-tutorials-epic-armour-drop/) for the Original Airdrop script.  
+[Killzone_Kid](http://killzonekid.com/arma-scripting-tutorials-epic-armour-drop/) for the original Airdrop script.  
 [Shuko](http://forums.bistudio.com/showthread.php?t=89376) for SHK_pos.
 [Bryan "Tonic" Boardwine](http://www.tonic.pw/) for the async extDB2 script.
 Karel Moricky for the "numberToText" function.
+[HallyG](https://forums.bistudio.com/topic/184551-simple-animation-with-progressbar-and-handling/) for the original progress bar script.
 
 ###Extensions
 [Torndeco](https://github.com/Torndeco/extDB2) for extDB2 (Arma3 Extension DB2).

@@ -63,7 +63,11 @@ if (!isDedicated) then {
     // Keep track of when the last sync happened (in seconds).
     SPMC_gbl_lastSync = 0;
 
+    // Keep track of whether the player is trying to interrupt an action or not.
+    SPMC_gbl_interrupt = false;
+
     // Keep track of when the next automatic sync is happening (in seconds).
+    // to aboiv all players syncing at same time when everyone joins, we spread it over 5 minutes.
     SPMC_gbl_nextSync = (random 300) + 600; // between 10 and 15 mins
 
     // Keep track of how many experience points the player have.
@@ -74,6 +78,12 @@ if (!isDedicated) then {
 
     // keeps track of cams we setup
     SPMC_gbl_camera = objNull;
+
+    // Keeps track of the player corpse state (revival and respawn)
+    SPMC_gbl_corpse = objNull;
+
+    // Keeps track of when the player should respawn, in case they get executed.
+    SPMC_gbl_respawnTimer = 0;
 
     if(debugMode) then {
         diag_log "Loading briefing";
@@ -97,6 +107,19 @@ if (!isDedicated) then {
     waitUntil {sleep 0.1; scriptDone _handle};
 
     if(debugMode) then {
+        diag_log "Setting up key handlers";
+    };
+    waitUntil {!(isNull (findDisplay 46))};
+    (findDisplay 46) displayAddEventHandler ["KeyDown", "_this call SPMC_fnc_keyHandler;"];
+
+    if(debugMode) then {
+        diag_log "Resetting character variabels and stats.";
+    };
+    // Set player actions;
+    _handle = [] spawn SPMC_fnc_resetMedicalVars;
+    waitUntil {sleep 0.1; scriptDone _handle};
+
+    if(debugMode) then {
         diag_log "Setting up character and inventory";
     };
 
@@ -108,7 +131,7 @@ if (!isDedicated) then {
     _handle = [] spawn SPMC_fnc_initPassiveSkills;
     waitUntil {sleep 0.1; scriptDone _handle};
 
-    if(debugMode) then {
+    if (debugMode) then {
         diag_log "Initiating Sync timer";
     };
 

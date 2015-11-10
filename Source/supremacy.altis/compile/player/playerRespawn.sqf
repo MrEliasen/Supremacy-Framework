@@ -18,5 +18,6 @@ _corpse = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param;
 0 cutText["","BLACK FADED"];
 0 cutFadeOut 9999999;
 
+[] call SPMC_fnc_resetMedicalVars;
 [] call SPMC_fnc_playerActions;
 [] call SPMC_fnc_playerSetup;

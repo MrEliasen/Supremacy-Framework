@@ -11,9 +11,10 @@
  * @link       https://github.com/MrEliasen/SupremacyFramework
  */
 
-private["_vehicle","_pricelist","_sellPercentage","_index","_value","_list","_display"];
+private["_vehicle","_pricelist","_sellPercentage","_index","_value","_list","_display","_skillDiscount"];
 _list = [_this,0,0,[0]] call BIS_fnc_param;
 _display  = [_this,1,0,[0]] call BIS_fnc_param;
+_skillDiscount = 1.0;
 
 disableSerialization;
 
@@ -31,6 +32,19 @@ if (_index != -1) then {
     };
 };
 
+// Only alter the price if they are buying
+if (_display == 2603) then {
+    // Update the price if the player have the Silver Tongue skill line
+    if (("silver-1" in SPMC_gbl_learnedSkills)) then {
+        for "_i" from 2 to 50 do {
+            if (!(format ["silver-%1", _i] in SPMC_gbl_learnedSkills)) exitWith {
+                _skillDiscount = ([format["silver-%1", (_i - 1)]] call SPMC_fnc_getSkillDetails select 5) select 0;
+            };
+        };
+    };
+
+    _skillDiscount = (1.0 - _skillDiscount / 100);
+};
 
 ((findDisplay 2600) displayCtrl _display) ctrlSetStructuredText parseText format[
 "<img size='9' image='%1'/><br/>
@@ -46,4 +60,4 @@ Price: <t color='#27e640'>$%7</t>",
 (_vehicle select 9),
 (_vehicle select 10),
 (_vehicle select 11),
-[_value] call SPMC_fnc_numberToText];
+[(_value * _skillDiscount)] call SPMC_fnc_numberToText];

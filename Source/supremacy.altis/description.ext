@@ -12,6 +12,8 @@ saving = 0;
 disabledAI = true;
 loadScreen = "splash.jpg";
 
+enableDebugConsole = 1;
+
 corpseLimit = 10;
 corpseRemovalMinTime = 30;
 corpseRemovalMaxTime = 120;
@@ -31,6 +33,7 @@ class Header
 class RscTitles
 {
     #include "dialogs\SPMC_hud.hpp"
+    #include "3rdparty\HGF_progressbar\RscTitles.hpp"
 };
 
 class CfgSounds
@@ -79,3 +82,13 @@ class CfgNotifications
         priority = 7;
     };
 };
+
+class CfgRespawnTemplates
+{
+    class SPMC_Death
+    {
+        onPlayerKilled = SPMC_fnc_playerKilled;
+    };
+};
+
+respawnTemplates[] = {"SPMC_Death"};

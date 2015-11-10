@@ -12,7 +12,7 @@
  */
 
 
-private["_player","_misc","_moneyIndex","_priceIndex","_purchaseType","_money","_price","_pricelist","_controller","_toBackpack","_currentWeapon","_assesories","_holder"];
+private["_player","_misc","_moneyIndex","_priceIndex","_purchaseType","_money","_price","_pricelist","_controller","_toBackpack","_currentWeapon","_assesories","_holder","_skillDetails","_skillIndex"];
 _player = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 _item = [_this,1,"",[""]] call BIS_fnc_param;
 _controller = [_this,2,0,[0]] call BIS_fnc_param;
@@ -35,6 +35,23 @@ if (_moneyIndex != -1) then {
 _priceIndex = [_item, _pricelist] call SPMC_fnc_findIndex;
 if (_priceIndex != -1) then {
     _price = (_pricelist select _priceIndex) select 1;
+};
+
+// Update the price if the player have the Silver Tongue skill line
+_skillIndex = [getPlayerUID _player, serverPlayerSkills] call SPMC_fnc_findIndex;
+
+if (_skillIndex != -1) then {
+    _playerSkills = (((serverPlayerSkills select _skillIndex) select 1) select 1);
+
+    if (("silver-1" in _playerSkills)) then {
+        for "_i" from 2 to 50 do {
+            if (!(format ["silver-%1", _i] in _playerSkills)) exitWith {
+                _skillDetails = [format["silver-%1", (_i - 1)]] call SPMC_fnc_getSkillDetails;
+            };
+        };
+
+        _price = _price * (1.0 - ((_skillDetails select 5) select 0) / 100);
+    };
 };
 
 _item = [_item] call SPMC_fnc_getItemCfgDetails;

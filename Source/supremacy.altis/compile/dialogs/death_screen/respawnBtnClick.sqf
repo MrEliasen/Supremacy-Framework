@@ -1,5 +1,5 @@
 /**
- * showSkillsMenu.sqf
+ * respawnbtnClick.sqf
  *
  * LICENSE: This file is subject to the terms and conditions defined in
  * file "LICENSE.md", which is part of this source code package.
@@ -10,14 +10,10 @@
  * @license    CC BY-NC 3.0 License
  * @link       https://github.com/MrEliasen/SupremacyFramework
  */
+private [];
 
-private ["_list","_learnedSkills"];
-closeDialog 0;
-
-if (!alive player) exitWith {};
-
-disableSerialization;
-createDialog "SPMC_skills_menu";
-waitUntil {sleep 0.1; !isNull (findDisplay 2800)};
-
-[] call SPMC_fnc_updateSkillsMenu;
+if (!(isNull (findDisplay 3100))) then {
+    ((findDisplay 3100) displayCtrl 3101) ctrlEnable false;
+    
+    player setVariable ["respawning", TRUE, true];
+};

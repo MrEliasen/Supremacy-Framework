@@ -43,6 +43,14 @@ switch (_this select 0) do {
     case "house_loot_percent": {
         1;
     };
+    
+    /**
+     * the % chance to go unconscious when you would otherwise die.
+     * @return integer
+     */
+    case "unconscious_chance": {
+        15;
+    };
 
     /**
      * Choose the spawn method. If the option is invalid, the game will default to "select_city".
@@ -62,6 +70,14 @@ switch (_this select 0) do {
      */
     case "start_money": {
         100000;
+    };
+    
+    /**
+     * The number of seconds from when the player clicks respawn til they respawn.
+     * @return integer
+     */
+    case "respawn_time": {
+        30;
     };
     
     /**
@@ -109,7 +125,7 @@ switch (_this select 0) do {
      * @return integer
      */
     case "max_learned_skills": {
-        18;
+        10;
     };
 
     /**
@@ -1393,17 +1409,17 @@ switch (_this select 0) do {
             ["B_Heli_Light_01_F", 1000],
             ["B_Heli_Light_01_armed_F", 1000],
             ["O_Heli_Light_02_F", 1000],
-            ["O_Heli_Light_02_unarmed_F", 1000], [  
-            "B_Heli_Attack_01_F", 1000], [  
-            "O_Heli_Attack_02_F", 1000],
+            ["O_Heli_Light_02_unarmed_F", 1000],
+            ["B_Heli_Attack_01_F", 1000],
+            ["O_Heli_Attack_02_F", 1000],
             ["O_Heli_Attack_02_black_F", 1000],
             ["B_Heli_Transport_01_F", 1000],
             ["B_Heli_Transport_01_camo_F", 1000],
-            ["I_Heli_Transport_02_F", 1000], [
-            "I_Heli_light_03_unarmed_F", 1000],
+            ["I_Heli_Transport_02_F", 1000],
+            ["I_Heli_light_03_unarmed_F", 1000],
             ["I_Heli_light_03_F", 1000],
-            ["B_Plane_CAS_01_F", 1000], [ 
-            "O_Plane_CAS_02_F", 1000],
+            ["B_Plane_CAS_01_F", 1000],
+            ["O_Plane_CAS_02_F", 1000],
             ["I_Plane_Fighter_03_CAS_F", 1000],
             ["I_Plane_Fighter_03_AA_F", 1000],
             ["C_Boat_Civil_01_F", 1000],
@@ -1415,7 +1431,55 @@ switch (_this select 0) do {
             ["B_Boat_Transport_01_F", 1000],
             ["I_Boat_Armed_01_minigun_F", 1000],
             ["I_Boat_Transport_01_F", 1000],
-            ["I_G_Boat_Transport_01_F", 1000]
+            ["I_G_Boat_Transport_01_F", 1000],
+            ["30Rnd_65x39_caseless_green", 100],
+            ["30Rnd_65x39_caseless_green_mag_Tracer", 100],
+            ["30Rnd_556x45_Stanag", 100],
+            ["30Rnd_556x45_Stanag_Tracer_Red", 100],
+            ["30Rnd_556x45_Stanag_Tracer_Green", 100],
+            ["30Rnd_556x45_Stanag_Tracer_Yellow", 100],
+            ["30Rnd_556x45_Stanag_red", 100],
+            ["30Rnd_556x45_Stanag_green", 100],
+            ["30Rnd_65x39_caseless_mag", 100],
+            ["30Rnd_65x39_caseless_mag_Tracer", 100],
+            ["20Rnd_556x45_UW_mag", 100],
+            ["9Rnd_45ACP_Mag", 100],
+            ["16Rnd_9x21_Mag", 100],
+            ["30Rnd_9x21_Mag", 100],
+            ["30Rnd_9x21_Red_Mag", 100],
+            ["30Rnd_9x21_Yellow_Mag", 100],
+            ["30Rnd_9x21_Green_Mag", 100],
+            ["16Rnd_9x21_red_Mag", 100],
+            ["16Rnd_9x21_green_Mag", 100],
+            ["16Rnd_9x21_yellow_Mag", 100],
+            ["11Rnd_45ACP_Mag", 100],
+            ["6Rnd_45ACP_Cylinder", 100],
+            ["6Rnd_GreenSignal_F", 100],
+            ["6Rnd_RedSignal_F", 100],
+            ["Titan_AA", 100],
+            ["Titan_AT", 100],
+            ["Titan_AP", 100],
+            ["NLAW_F", 100],
+            ["RPG32_F", 100],
+            ["RPG32_HE_F", 100],
+            ["200Rnd_65x39_cased_Box", 100],
+            ["200Rnd_65x39_cased_Box_Tracer", 100],
+            ["150Rnd_762x54_Box", 100],
+            ["150Rnd_762x54_Box_Tracer", 100],
+            ["150Rnd_93x64_Mag", 100],
+            ["130Rnd_338_Mag", 100],
+            ["30Rnd_45ACP_Mag_SMG_01", 100],
+            ["30Rnd_45ACP_Mag_SMG_01_tracer_green", 100],
+            ["30Rnd_45ACP_Mag_SMG_01_Tracer_Red", 100],
+            ["30Rnd_45ACP_Mag_SMG_01_Tracer_Yellow", 100],
+            ["10Rnd_762x54_Mag", 100],
+            ["10Rnd_338_Mag", 100],
+            ["20Rnd_762x51_Mag", 100],
+            ["10Rnd_127x54_Mag", 100],
+            ["10Rnd_93x64_DMR_05_Mag", 100],
+            ["5Rnd_127x108_Mag", 100],
+            ["5Rnd_127x108_APDS_Mag", 100],
+            ["7Rnd_408_Mag", 100]
         ];
     };
 

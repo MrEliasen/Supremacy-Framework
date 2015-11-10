@@ -11,21 +11,21 @@
  * @link       https://github.com/MrEliasen/SupremacyFramework
  */
 /*
-    Each skill need a unique "ID". If you change the ID of a skills, people who have bought that skill will loose it.
+    Each skill need a unique "KEY". If you change the KEY of a skills, people who have bought that skill will loose it.
 
     A skill consists of the following:
     [
-        "Skill-ID",
+        "Skill-KEY",
         "Skill-Name",
         "Skill-Description",
         [
-            "Skill-ID of required skill before you can purchase this skill",
-            "Skill-ID of required skill before you can purchase this skill",
-            "Skill-ID of required skill before you can purchase this skill"
+            "Skill-KEY of required skill before you can purchase this skill",
+            "Skill-KEY of required skill before you can purchase this skill",
+            "Skill-KEY of required skill before you can purchase this skill"
         ],
         "Experience Cost",
         [
-            "Skill-Modifiers | how you use this modifier is up to you."
+            "Skill-Modifiers | how you use this/these modifier is up to you."
         ]
     ]
 
@@ -79,39 +79,36 @@ _skills = _skills + [[
     [
         "silver-1",
         "Silver Tongue (1)",
-        "Reduce the prices of items and vehicles in shops by %1 percent.<br/>Increase the sell value of items and vehicles by %2 percent.",
+        "Reduces the price of everything you buy, by %1 percent.",
         [],
         10,
         [
-            3,
-            5
+            3
         ]
     ],
     [
         "silver-2",
         "Silver Tongue (2)",
-        "Reduce the prices of items and vehicles in shops by %1 percent.<br/>Increase the sell value of items and vehicles by %2 percent.",
+        "Reduces the price of everything you buy, by %1 percent.",
         [
             "silver-1"
         ],
         20,
         [
-            6,
-            10
+            6
         ]
     ],
     [
         "silver-3",
         "Silver Tongue (3)",
-        "Reduce the prices of items and vehicles in shops by %1 percent.<br/>Increase the sell value of items and vehicles by %2 percent.",
+        "Reduces the price of everything you buy, by %1 percent.",
         [
             "silver-1",
             "silver-2"
         ],
         30,
         [
-            10,
-            15
+            10
         ]
     ]
 ]];
@@ -121,36 +118,36 @@ _skills = _skills + [[
     [
         "mechanic-1",
         "Mechanic (1)",
-        "You will be able to repair a vehicle in %1 seconds.",
+        "You will be able to repair vehicles (takes %1 seconds).",
         [],
         10,
         [
-            60
+            35
         ]
     ],
     [
         "mechanic-2",
         "Mechanic (2)",
-        "You will be able to repair a vehicle in %1 seconds.",
+        "You will be able to repair vehicles (takes %1 seconds).",
         [
             "mechanic-1"
         ],
         20,
         [
-            40
+            25
         ]
     ],
     [
         "mechanic-3",
         "Mechanic (3)",
-        "You will be able to repair a vehicle in %1 seconds.<br>You are able to repair vehicles without a repair kit.",
+        "You will be able to repair vehicles (takes %1 seconds).<br>You are able to repair vehicles without a repair kit.",
         [
             "mechanic-1",
             "mechanic-2"
         ],
         30,
         [
-            20
+            15
         ]
     ]
 ]];
@@ -209,7 +206,7 @@ _skills = _skills + [[
         [],
         10,
         [
-            25
+            20
         ]
     ],
     [
@@ -221,7 +218,7 @@ _skills = _skills + [[
         ],
         20,
         [
-            18,
+            15,
             30
         ]
     ],
@@ -237,6 +234,48 @@ _skills = _skills + [[
         [
             10,
             15
+        ]
+    ]
+]];
+
+// FIGHTER SKILL LINE
+_skills = _skills + [[
+    [
+        "fighter-1",
+        "Fighter (1)",
+        "You have %1 percent chance of becoming unconscious when you would otherwise die (default chance: %2 percent).",
+        [],
+        10,
+        [
+            30,
+            (["unconscious_chance"] call SPMC_fnc_config)
+        ]
+    ],
+    [
+        "fighter-2",
+        "Fighter (2)",
+        "You have %1 percent chance of becoming unconscious when you would otherwise die (default chance: %2 percent).",
+        [
+            "fighter-1"
+        ],
+        20,
+        [
+            50,
+            (["unconscious_chance"] call SPMC_fnc_config)
+        ]
+    ],
+    [
+        "fighter-3",
+        "Fighter (3)",
+        "You have %1 percent chance of becoming unconscious when you would otherwise die (default chance: %2 percent).",
+        [
+            "fighter-1",
+            "fighter-2"
+        ],
+        30,
+        [
+            70,
+            (["unconscious_chance"] call SPMC_fnc_config)
         ]
     ]
 ]];

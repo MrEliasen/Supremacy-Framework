@@ -51,30 +51,33 @@ class SPMC_death_screen
             h = 0.044 * safezoneH;
             colorBackground[] = {0.75,0.75,0.75,1};
             colorFocused[] = {0.75,0.75,0.75,1};
-            onButtonClick = "player setVariable [""respawning"", TRUE];";
+            colorDisabled[] = {0,0,0,0};
+            colorBackgroundDisabled[] = {0,0.0,0};
+            onButtonClick = "[] call SPMC_fnc_playerWantToRespawn;";
         };
         class SPMC_death_screen_revivestatus: RscStructuredText
         {
             idc = 3102;
             text = "";
             x = 0.298906 * safezoneW + safezoneX;
-            y = 0.247 * safezoneH + safezoneY;
+            y = 0.302 * safezoneH + safezoneY;
             w = 0.314531 * safezoneW;
             h = 0.022 * safezoneH;
             colorText[] = {1,1,1,1};
-            colorBackground[] = {-1,-1,-1,0};
+            colorBackground[] = {1,1,1,0};
         };
 
         class SPMC_death_screen_counter: RscText
         {
             idc = 3103;
-            text = "00:00.00";
-            x = 0.448438 * safezoneW + safezoneX;
-            y = 0.445 * safezoneH + safezoneY;
-            w = 0.0928125 * safezoneW;
-            h = 0.055 * safezoneH;
-            colorText[] = {1,1,1,0};
-            sizeEx = 0.88;
+            text = "";
+            x = 0.448238 * safezoneW + safezoneX;
+            y = 0.2355 * safezoneH + safezoneY;
+            w = 0.0955 * safezoneW;
+            h = 0.044 * safezoneH;
+            colorText[] = {1,1,1,1};
+            colorBackground[] = {1,1,1,0};
+            sizeEx = 0.088;
         };
     };
 };

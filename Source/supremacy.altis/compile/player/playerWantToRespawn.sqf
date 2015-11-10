@@ -1,5 +1,5 @@
 /**
- * showSkillsMenu.sqf
+ * playerWantToRespawn.sqf
  *
  * LICENSE: This file is subject to the terms and conditions defined in
  * file "LICENSE.md", which is part of this source code package.
@@ -11,13 +11,5 @@
  * @link       https://github.com/MrEliasen/SupremacyFramework
  */
 
-private ["_list","_learnedSkills"];
-closeDialog 0;
-
-if (!alive player) exitWith {};
-
-disableSerialization;
-createDialog "SPMC_skills_menu";
-waitUntil {sleep 0.1; !isNull (findDisplay 2800)};
-
-[] call SPMC_fnc_updateSkillsMenu;
+player setDamage 1.0;
+ctrlShow [3101,false];

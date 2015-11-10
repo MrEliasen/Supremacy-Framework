@@ -25,7 +25,7 @@
         _curLevel = "";
         _c = 0;
 
-        if ((alive player)) then {
+        if ((alive player) && !(player getVariable["revivable", false])) then {
             while {_c != -1} do {
                 _c = _c + 1;
                 if (!(format["survival-%1", _c] in SPMC_gbl_learnedSkills)) then {
@@ -50,8 +50,6 @@
 
             // I know we could run this every 1 seconds, but heck, for performance lets just keep it at 2 eh?
             if (_regen > 0) then {
-                sleep 2;
-
                 _seconds = _seconds + 2;
                 if (_seconds >= _duration) then {
                     _seconds = 0;
@@ -59,12 +57,10 @@
                         player setDamage ((damage player) - (_regen / 100));
                     };
                 };
-            } else {
-                sleep 3;
             };
-        } else {
-            sleep 3;
         };
+
+        sleep 2;
     };
 };
 
@@ -79,7 +75,7 @@
         _curLevel = "";
         _c = 0;
 
-        if (alive player) then { 
+        if (alive player && !(player getVariable["revivable", false])) then { 
             while {_c != -1} do {
                 _c = _c + 1;
 
@@ -108,28 +104,6 @@
     };
 };
 
-// Medic skill line. 
-[] spawn {
-    while {true} do {
-        if (alive player) then {
-            if ("medic-1" in SPMC_gbl_learnedSkills) then {
-                player setVariable ["ismedic",TRUE];
-
-                if ("medic-2" in SPMC_gbl_learnedSkills) then {
-                    player setVariable ["canrevive",TRUE];
-                } else {
-                    player setVariable ["canrevive",FALSE];
-                };
-            } else {
-                player setVariable ["ismedic",FALSE];
-                player setVariable ["canrevive",FALSE];
-            };
-        };
-
-        sleep 2.8;
-    };
-};
-
 // Pilot skills. Kick people out who do not have the skill
 [] spawn {
     private["_veh","_vehClass","_vehType"];
@@ -150,8 +124,9 @@
             _vehClass = (typeOf _veh);
             _vehType = (getText(configFile >> "CfgVehicles" >> _vehClass >> "vehicleClass"));
 
-            if (_vehType in ["Armored","Tank"] && !(_vehClass in _allowedLand)) then {
+            if (_vehType == "Armored" && !(_vehClass in _allowedLand)) then {
                 if (!("tank-crew" in SPMC_gbl_learnedSkills) && ((driver _veh) == player OR (gunner _veh) == player)) then {
+                    unassignVehicle player;
                     player action["getOut", _veh];
                     player action["eject", _veh];
                     hint "You do not have the required skill to man this vehicle position.";
@@ -159,6 +134,7 @@
             } else {
                  if (_vehType == "Air" && !(_vehClass in _allowedAir)) then {
                     if (!("pilot" in SPMC_gbl_learnedSkills) && ((driver _veh) == player OR (gunner _veh) == player)) then {
+                        unassignVehicle player;
                         player action["getOut", _veh];
                         player action["eject", _veh];
                         hint "You do not have the required skill to man this vehicle position.";
@@ -166,6 +142,7 @@
                 } else {
                     if (_vehType in ["Ship","Submarine"] && !(_vehClass in _allowedWater)) then {
                         if (!("boat-captain" in SPMC_gbl_learnedSkills) && (driver _veh) == player) then {
+                            unassignVehicle player;
                             player action["getOut", _veh];
                             player action["eject", _veh];
                             hint "You do not have the required skill to man this boat position.";
@@ -175,7 +152,7 @@
             };
         };
         
-        sleep 2.6;
+        sleep 2.5;
     };
 };
 
@@ -196,6 +173,6 @@
             };
         };
         
-        sleep 2.5;
+        sleep 2.25;
     };
 };
