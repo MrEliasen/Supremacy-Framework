@@ -68,7 +68,7 @@ lbClear _list;
     };
 
     _list lbAdd (_vehInfo select 1);
-    _list lbSetData[(lbSize _list) - 1, _x];
+    _list lbSetData[(lbSize _list) - 1, (_vehInfo select 0)];
     _list lbSetValue[(lbSize _list) - 1, _value];
     _list lbSetPicture[(lbSize _list) - 1, (_vehInfo select 3)];
 

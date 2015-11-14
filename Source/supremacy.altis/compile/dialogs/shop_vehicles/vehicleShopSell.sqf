@@ -40,7 +40,4 @@ if (!_empty) exitWith {
     hint "You cannot sell a vehicle while its occupied.";
 };
 
-lbDelete [2602, lbCurSel(2602)];
-deleteVehicle _veh;
-
 [_veh, 2606] call SPMC_fnc_syncSale;

@@ -59,12 +59,13 @@ class SPMC_death_screen
         {
             idc = 3102;
             text = "";
-            x = 0.298906 * safezoneW + safezoneX;
-            y = 0.302 * safezoneH + safezoneY;
-            w = 0.314531 * safezoneW;
-            h = 0.022 * safezoneH;
+            x = 0.29400 * safezoneW + safezoneX;
+            y = 0.2355 * safezoneH + safezoneY;
+            w = 0.3300 * safezoneW;
+            h = 0.044 * safezoneH;
             colorText[] = {1,1,1,1};
             colorBackground[] = {1,1,1,0};
+            sizeEx = 0.080;
         };
 
         class SPMC_death_screen_counter: RscText
@@ -77,7 +78,7 @@ class SPMC_death_screen
             h = 0.044 * safezoneH;
             colorText[] = {1,1,1,1};
             colorBackground[] = {1,1,1,0};
-            sizeEx = 0.088;
+            sizeEx = 0.085;
         };
     };
 };

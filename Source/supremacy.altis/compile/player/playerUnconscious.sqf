@@ -10,49 +10,59 @@
  * @license    CC BY-NC 3.0 License
  * @link       https://github.com/MrEliasen/SupremacyFramework
  */
-_unit setDamage 0;
-_unit setCaptive true;
-_unit setUnconscious true;
-_unit allowDamage false;
+private ["_unit"];
+_unit = _this;
 
-// Close map and dialog if open.
-if (visibleMap) then {
-    openMap false
-};
-closeDialog 0;
+if (!(isPlayer _unit)) exitWith {diag_log "NOT PLAYER!";};
 
-_unit setVariable ["beingRevived", "", true];
-_unit setVariable ["revived", false, true];
-_unit setVariable ["revivable", true, true];
+if (alive _unit) then {
+    _unit setDamage 0;
+    _unit setCaptive true;
+    _unit setUnconscious true;
+    _unit allowDamage false;
 
-// if the player is in a vehicle, eject them
-if ((vehicle _unit) != _unit) then {
-    unassignVehicle _unit;
-    _unit action ["eject", (vehicle _unit)];
+    // Close map and dialog if open.
+    if (visibleMap) then {
+        openMap false
+    };
+    closeDialog 0;
 
-    waitUntil{((vehicle _unit) == _unit)};
-    sleep 0.5;
-};
+    _unit setVariable ["beingRevived", "", true];
+    _unit setVariable ["revived", false, true];
+    _unit setVariable ["revivable", true, true];
 
-_unit spawn {
-    [[_this, "AinjPpneMstpSnonWnonDnon_rolltoback", "switchMove"],"SPMC_fnc_syncAnimation",true] call BIS_fnc_MP;
-    //[[_this, "AinjPpneMstpSnonWnonDnon", "switchMove"],"SPMC_fnc_syncAnimation",true] call BIS_fnc_MP;
-    sleep 5;
-    _this allowDamage true;
-    _this setVariable["executable", true];
+    // if the player is in a vehicle, eject them
+    if ((vehicle _unit) != _unit) then {
+        unassignVehicle _unit;
+        _unit action ["eject", (vehicle _unit)];
+
+        waitUntil{((vehicle _unit) == _unit)};
+        sleep 0.5;
+    };
+
+    _unit spawn {
+        [[_this, "AinjPpneMstpSnonWnonDnon", "switchMove"],"SPMC_fnc_syncAnimation",true] call BIS_fnc_MP;
+        sleep 3;
+        _this allowDamage true;
+        _this setVariable["executable", true];
+    };
 };
 
 ["stats"] call SPMC_fnc_syncPlayerData;
 
-// only grant the killer experience if its a player and if the player killed was not recently revived (within the past 2 minutes).
-if (isPlayer _killer && ((_unit getVariable ["recentlyRevived", 0]) == 0 OR (time - (_unit getVariable ["recentlyRevived", 0]) >= 120))) then {
-    [[_killer, "kill", _unit],"SPMC_fnc_svrGrantExperience",false,false] spawn BIS_fnc_MP;
+if (alive _unit) then {
+    // only grant the killer experience if its a player and if the player killed was not recently revived (within the past 2 minutes).
+    if (isPlayer _killer && ((_unit getVariable ["recentlyRevived", 0]) == 0 OR (time - (_unit getVariable ["recentlyRevived", 0]) >= 120))) then {
+        [[_killer, "kill", _unit],"SPMC_fnc_svrGrantExperience",false,false] spawn BIS_fnc_MP;
+    };
+} else {
+    if (isPlayer _killer) then {
+        [[_killer, "kill", _unit],"SPMC_fnc_svrGrantExperience",false,false] spawn BIS_fnc_MP;
+    };
 };
 
-if ((alive _unit)) then {
-    disableSerialization;
-    createDialog "SPMC_death_screen";
-};
+disableSerialization;
+createDialog "SPMC_death_screen";
 
 // Create death cam
 SPMC_gbl_camera  = "CAMERA" camCreate (getPosATL _unit);
@@ -65,11 +75,9 @@ SPMC_gbl_camera camSetFocus [50,0];
 SPMC_gbl_camera camCommit 0;
 
 _unit spawn {
-    if ((alive _this)) then {
-        waitUntil {sleep 0.1; !isNull (findDisplay 3100)};
-        // disable "esc" key.
-        (findDisplay 3100) displayAddEventHandler ["KeyDown", "if ((_this select 1) == 1) then { true }"];
-    };
+    waitUntil {sleep 0.1; !isNull (findDisplay 3100)};
+    // disable "esc" key.
+    (findDisplay 3100) displayAddEventHandler ["KeyDown", "if ((_this select 1) == 1) then { true }"];
 
     while {(alive _this)} do {
         // If the player was revived, end the loop.
@@ -132,9 +140,6 @@ _unit spawn {
         [[_this, "amovppnemstpsraswrfldnon", "switchMove"],"SPMC_fnc_syncAnimation",true] call BIS_fnc_MP;
     };
 
-    if ((alive _this)) then {
-        (findDisplay 3100) displayRemoveAllEventHandlers "KeyDown";
-    };
-
+    (findDisplay 3100) displayRemoveAllEventHandlers "KeyDown";
     closeDialog 0;
 };

@@ -39,7 +39,7 @@ if ((_unit getVariable ["revivable", FALSE]) && (_unit getVariable ["executable"
     _damage = 1.0;
 } else {
     if (_damage > 0.89 && (alive _unit)) then  {
-        _unconsciousChance = 25;
+        _unconsciousChance = (["unconscious_chance"] call SPMC_fnc_config);
 
         // If they have the figher skill line, they have a better chance of not dying out right,
         // but go into unconscious mode instead where they can be revived.
@@ -53,10 +53,7 @@ if ((_unit getVariable ["revivable", FALSE]) && (_unit getVariable ["executable"
 
         if ((random 100) <= _unconsciousChance) then {
             _damage = 0.89;
-
-            if (!(player getVariable["revivable", false])) then {
-                _unit call SPMC_fnc_playerUnconscious;
-            };
+            _unit call SPMC_fnc_playerUnconscious;
         };
     };
 };

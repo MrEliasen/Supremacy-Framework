@@ -1,5 +1,5 @@
 onLoadName = "Supremacy";
-onLoadMission = "A Framework by Simply @ NBS-Gaming.com | www.SirMrE.com";
+onLoadMission = "By Simply (SirMrE) | www.SirMrE.com";
 author = "Simply";
 respawn=3;
 respawnDelay=5;
@@ -12,7 +12,7 @@ saving = 0;
 disabledAI = true;
 loadScreen = "splash.jpg";
 
-enableDebugConsole = 1;
+enableDebugConsole = 2;
 
 corpseLimit = 10;
 corpseRemovalMinTime = 30;

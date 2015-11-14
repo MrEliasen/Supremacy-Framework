@@ -19,7 +19,7 @@ class Mission
 	class Intel
 	{
 		briefingName="SUPREMACY";
-		overviewText="By Simply @ NBS-Gaming.com | www.SiMrE.com";
+		overviewText="By Simply (SirMrE) | www.SirMrE.com";
 		resistanceWest=0;
 		startWeather=0.29999998;
 		startWind=0;

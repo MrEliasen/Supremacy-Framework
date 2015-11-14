@@ -14,42 +14,23 @@
  // Survival skill line
 [] spawn 
 {
-    private["_regen","_duration","_belowHp","_curLevel","_seconds","_lastLevel","_c","_skillDetails"];
-    _lastLevel = "";
-    _regen = 0;
-    _duration = 0;
-    _belowHp = 0;
+    private["_regen","_duration","_belowHp","_seconds","_skillDetails"];
     _seconds = 0;
 
     while {true} do {
-        _curLevel = "";
-        _c = 0;
-
         if ((alive player) && !(player getVariable["revivable", false])) then {
-            while {_c != -1} do {
-                _c = _c + 1;
-                if (!(format["survival-%1", _c] in SPMC_gbl_learnedSkills)) then {
-                    _c = -1
-                } else {
-                    _curLevel = format["survival-%1", _c];
+            if ("survival-1" in SPMC_gbl_learnedSkills) then {
+                for "_i" from 2 to 50 do {
+                    if (!(format ["survival-%1", _i] in SPMC_gbl_learnedSkills)) exitWith {
+                         _skillDetails = [format["survival-%1", (_i - 1)]] call SPMC_fnc_getSkillDetails;
+                    };
                 };
-            };
 
-            if(_curLevel != _lastLevel) then {
-                if (_curLevel != "") then {
-                    _skillDetails = [_curLevel] call SPMC_fnc_getSkillDetails;
-                    _regen = ((_skillDetails select 5) select 0);
-                    _duration = ((_skillDetails select 5) select 1);
-                    _belowHp = ((_skillDetails select 5) select 2);
-                } else {
-                    _regen = 0;
-                    _duration = 0;
-                    _belowHp = 0;
-                };
-            };
+                _regen = ((_skillDetails select 5) select 0);
+                _duration = ((_skillDetails select 5) select 1);
+                _belowHp = ((_skillDetails select 5) select 2);
 
-            // I know we could run this every 1 seconds, but heck, for performance lets just keep it at 2 eh?
-            if (_regen > 0) then {
+                // I know we could run this every 1 seconds, but heck, for performance lets just keep it at 2 eh?
                 _seconds = _seconds + 2;
                 if (_seconds >= _duration) then {
                     _seconds = 0;
@@ -67,36 +48,20 @@
 //Athlete skill line 
 [] spawn
 {
-    private["_modifier","_curLevel","_lastLevel","_c","_skillDetails"];
-    _lastLevel = "";
-    _modifier = 0;
+    private["_curLevel","_skillDetails"];
 
     while {true} do {
         _curLevel = "";
-        _c = 0;
 
         if (alive player && !(player getVariable["revivable", false])) then { 
-            while {_c != -1} do {
-                _c = _c + 1;
-
-                if (!(format["athlete-%1", _c] in SPMC_gbl_learnedSkills)) then {
-                    _c = -1
-                } else {
-                    _curLevel = format["athlete-%1", _c];
+            if ("athlete-1" in SPMC_gbl_learnedSkills) then {
+                for "_i" from 2 to 50 do {
+                    if (!(format ["athlete-%1", _i] in SPMC_gbl_learnedSkills)) exitWith {
+                         _skillDetails = [format["athlete-%1", (_i - 1)]] call SPMC_fnc_getSkillDetails;
+                    };
                 };
-            };
 
-            if(_curLevel != _lastLevel) then {
-                if (_curLevel != "") then {
-                    _skillDetails = [_curLevel] call SPMC_fnc_getSkillDetails;
-                    _modifier = ((_skillDetails select 5) select 1);
-                } else {
-                    _modifier = 0;
-                };
-            };
-
-            if (_modifier > 0) then {
-                player setFatigue ((getFatigue player) - (_modifier / 100));
+                player setFatigue ((getFatigue player) - (((_skillDetails select 5) select 0) / 100));
             };
         };
 

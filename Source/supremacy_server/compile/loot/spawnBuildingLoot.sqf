@@ -28,11 +28,11 @@ if (count _lootList > 0) then {
 } else {
     if (random 100 > 50) then {
         // Spawn Vests
-        _loot = ((["equip_vests"] call SPMC_fnc_config) call bis_fnc_selectRandom);
+        _loot = (((["equip_vests"] call SPMC_fnc_config) call BIS_fnc_arrayShuffle) call bis_fnc_selectRandom);
         _item addItemCargoGlobal [_loot, 1];
     } else {
         // Spawn Backpacks
-        _loot = ((["equip_backpacks"] call SPMC_fnc_config) call bis_fnc_selectRandom);
+        _loot = (((["equip_backpacks"] call SPMC_fnc_config) call BIS_fnc_arrayShuffle) call bis_fnc_selectRandom);
         _item addBackpackCargoGlobal [_loot, 1];
     };
 };

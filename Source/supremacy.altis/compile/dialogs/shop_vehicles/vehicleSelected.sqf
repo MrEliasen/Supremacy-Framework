@@ -20,7 +20,7 @@ disableSerialization;
 
 _vehicle = [lbData [_list, lbCurSel(_list)]] call SPMC_fnc_getItemCfgDetails;
 _pricelist = ["item_prices"] call SPMC_fnc_config;
-_index = [_vehicle, _pricelist] call SPMC_fnc_findIndex;
+_index = [_vehicle select 0, _pricelist] call SPMC_fnc_findIndex;
 _value = 0;
 
 if (_index != -1) then {
@@ -28,12 +28,12 @@ if (_index != -1) then {
 
     if (_list == 2602) then {
         _sellPercentage = ["sell_percentage"] call SPMC_fnc_config;
-        _value = floor(_value / (_sellPercentage/100));
+        _value = floor(_value * (_sellPercentage / 100));
     };
 };
 
 // Only alter the price if they are buying
-if (_display == 2603) then {
+if (_list == 2601) then {
     // Update the price if the player have the Silver Tongue skill line
     if (("silver-1" in SPMC_gbl_learnedSkills)) then {
         for "_i" from 2 to 50 do {
@@ -41,9 +41,8 @@ if (_display == 2603) then {
                 _skillDiscount = ([format["silver-%1", (_i - 1)]] call SPMC_fnc_getSkillDetails select 5) select 0;
             };
         };
+        _skillDiscount = (1.0 - _skillDiscount / 100);
     };
-
-    _skillDiscount = (1.0 - _skillDiscount / 100);
 };
 
 ((findDisplay 2600) displayCtrl _display) ctrlSetStructuredText parseText format[

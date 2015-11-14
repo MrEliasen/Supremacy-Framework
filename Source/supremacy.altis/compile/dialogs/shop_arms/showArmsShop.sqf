@@ -101,8 +101,6 @@ _skillDiscount = (1.0 - _skillDiscount / 100);
                     _value = ((_pricelist select _index) select 1) * _skillDiscount;
                 };
 
-                diag_log format["%1", _x];
-
                 _ammoC = _ammoC + [_x];
                 _temp lbAdd (_ammoInfo select 1);
                 _temp lbSetData[(lbSize _temp) - 1, _x];

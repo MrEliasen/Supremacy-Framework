@@ -32,8 +32,8 @@ SPMC_fnc_svrSyncPurchase = compileFinal preprocessfilelinenumbers "\supremacy_se
 SPMC_fnc_svrSyncMoney = compileFinal preprocessfilelinenumbers "\supremacy_server\compile\economy\svrSyncMoney.sqf";
 
 // Loot creates
-SPMC_fnc_setupWorldLootCrate = compileFinal preprocessfilelinenumbers "\supremacy_server\compile\loot\setupVehicleLoot.sqf";
-SPMC_fnc_setupVehicleLoot = compileFinal preprocessfilelinenumbers "\supremacy_server\compile\loot\setupWorldLootCrate.sqf";
+SPMC_fnc_setupWorldLootCrate = compileFinal preprocessfilelinenumbers "\supremacy_server\compile\loot\setupWorldLootCrate.sqf";
+SPMC_fnc_setupVehicleLoot = compileFinal preprocessfilelinenumbers "\supremacy_server\compile\loot\setupVehicleLoot.sqf";
 SPMC_fnc_setupAirDropLoot = compileFinal preprocessfilelinenumbers "\supremacy_server\compile\loot\setupAirDropLoot.sqf";
 SPMC_fnc_spawnBuildingLoot = compileFinal preprocessfilelinenumbers "\supremacy_server\compile\loot\spawnBuildingLoot.sqf";
 

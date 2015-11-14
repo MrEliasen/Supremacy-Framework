@@ -2,7 +2,7 @@ Supremacy Framework
 ========
 I wanted to learn more about how ARMA 3 modding worked, and there is really no better way than "code to learn". Everything is coded from the ground up, except for the below mentioned 3rd part scripts.
 
-I don't know much about "best practises" in this language yet, or how I should or shouldn't code things, so feedback is absolutely more than welcome (feedback is still more than welcome even if I did/do know :))!
+I don't know much about "best practises" in this language yet, or how I should or shouldn't code things, so feedback is absolutely more than welcome (constructive feedback please, thanks!).
 
 ## Current Features
  * World loot spawns
@@ -23,14 +23,15 @@ It uses strictly "vanilla" (including expansions) content. No client-side mods r
 
 1. Upload the content of the "Dist" folder to your ARMA 3 dedicated server root (where the arma3server.exe file is).
 2. Edit the "LaunchServer.bat" files launch parameters to suit your needs.
-3. Edit the "@extDB2\extdb-conf.ini" file your database details.
+3. Edit the "@extDB2\extdb-conf.ini" file, adding your database connection details.
 4. Import the "@extDB2\spmc_server.sql" to your database.
+4.5 Import any "spmc_server - x.x.x to x.x.X update.sql" files in the correct order (by version).
 5. Run the "LaunchServer.bat" file.
 
 You can modify the "\Source\supremacy_server\compile\core\config.sqf" to make changes to a lot of the elements in the framework.
 There is no wiki yet, but I hope to get working on that soon(tm).
 
-## 0.4.0 (10-11-2015)
+## 0.4.0 (14-11-2015 GMT)
 
 Features/Changes:
 
@@ -56,13 +57,21 @@ Bugfixes:
  * Fixed an issue where the handgun items would not load from the databse.
  * Fixed an issue where the hangun would not equip if you didn't have a primary weapon.
  * Fixed a bug while loading the players money from the database.
- * Fixed an issue where pricing where not checked client side, protentially saving a large number of requests from having to be sent to the server.
+ * Fixed an issue where pricing where not checked client side (protentially saving a large number of requests).
  * Fixed an issue in the extdb-conf.ini file not loading the correct database details.
  * Fixed an issue where you would not respawn propperly if deconnecting and rejoining the server.
+ * Fixed sell prices for vehicles and items being calculated wrong.
+ * Fixed the purchase price not being calculated correctly.
+ * Fixed the issue with vehicle sales not being done properly and validated.
+ * Fixed an issue where vehicle loot and supply crate loot tables where switched.
+
+## Support / Feedback / Issues
+If you need help, have feedback, requests or like, please visit [The Forums](https://www.sirmre.com/forums/).   
+I will be happy to help and teach, however you need to make an effort yourself. When it comes to code help, I won't just code stuff for you - try yourself first, show me what you got and I'll be happy to assits to the best of my ability. 
 
 ## Copyright & License
 Code released under [CC BY-NC 3.0 License](https://creativecommons.org/licenses/by-nc/3.0/legalcode).  
-To read thehuman-readable summary of the CC BY-NC 3.0 License, [click here](https://creativecommons.org/licenses/by-nc/3.0/).  
+To read the human-readable summary of the CC BY-NC 3.0 License, [click here](https://creativecommons.org/licenses/by-nc/3.0/).  
 
 The license does NOT apply to or included any of the 3rd party material (sounds, code, icons etc). All 3rd party material can be found in the "\3rdparty" directory in the client and server source code.
 

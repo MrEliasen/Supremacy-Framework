@@ -91,7 +91,8 @@ _spawnBlock allowDamage false;
 
         if(_i == _limit) exitWith {
             serverStatusLootCrates = 100;
-        }
+        };
+        
     };
 };
 
@@ -144,7 +145,8 @@ _spawnBlock allowDamage false;
 
         if(_i == _limit) exitWith {
             serverStatusLootVehicle = 100;
-        }
+        };
+        
     };
 };
 
@@ -179,7 +181,8 @@ _spawnBlock allowDamage false;
 
         if(_i == _limit) exitWith {
             serverStatusLootStationery = 100;
-        }
+        };
+        
     };
 };
 
@@ -212,5 +215,6 @@ _spawnBlock allowDamage false;
         if(_forEachIndex == _limit) exitWith {
             serverStatusLootBuildings = 100;
         };
+        
     } foreach _buildings;
 };

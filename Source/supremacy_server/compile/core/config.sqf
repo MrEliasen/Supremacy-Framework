@@ -69,7 +69,7 @@ switch (_this select 0) do {
      * @return integer
      */
     case "start_money": {
-        100000;
+        5000;
     };
     
     /**
@@ -282,7 +282,7 @@ switch (_this select 0) do {
     };
 
     /**
-     * Markers (must be circle markers) where the airdrop with spawn within.
+     * Markers (must be circle markers) where the airdrop can spawn within.
      * @return array
      */
     case "drop_zones": {
