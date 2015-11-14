@@ -17,13 +17,24 @@ _controller = 0;
 
 if (_sp) then {
     _ammo = lbData [2305, lbCurSel(2305)];
+    _price = lbValue [2305, lbCurSel(2305)];
     ctrlEnable[2312, false];
 } else {
     _ammo = lbData [2302, lbCurSel(2302)];
+    _price = lbValue [2302, lbCurSel(2302)];
     ctrlEnable[2308, false];
 };
 
 if (_ammo == "") exitWith {
+    if (_sp) then {
+        ctrlEnable[2312, true];
+    } else {
+        ctrlEnable[2308, true];
+    };
+};
+
+if (SPMC_gbl_money < _price) exitWith {
+    hint "You do not have enough money to buy this ammunition.";
     if (_sp) then {
         ctrlEnable[2312, true];
     } else {

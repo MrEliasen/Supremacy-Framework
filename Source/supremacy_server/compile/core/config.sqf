@@ -12,42 +12,126 @@
  */
 
 switch (_this select 0) do {
+    /**
+     * Toggle "debug mode" on  or off. When enabled, loot makers will be visible on the map, and the dev menu will be available.
+     * @return boolean
+     */
     case "debug_mode": {
         true;
     };
-    
+
+    /**
+     * Toggle the arma 3 fatigue system on/off.
+     * @return boolean
+     */
     case "fatigue_enabled": {
         true;
     };
     
+    /**
+     * Toggle player communication on/off
+     * @return boolean
+     */
     case "communication_enabled": {
         true;
     };
+    
+    /**
+     * the % chance of loot spawning in a given building. 8 = ~1450 buildings.
+     * @return integer
+     */
+    case "house_loot_percent": {
+        1;
+    };
+    
+    /**
+     * the % chance to go unconscious when you would otherwise die.
+     * @return integer
+     */
+    case "unconscious_chance": {
+        15;
+    };
 
+    /**
+     * Choose the spawn method. If the option is invalid, the game will default to "select_city".
+     * "random_city" = spawn the play in a random city.
+     * "select_city" = The player can choose which city to spawn in.
+     * "random_world" = spawn the play in a random spot throughout the whole island, within 200 meters of a road if possible.
+     * 
+     * @return string
+     */
     case "spawn_type": {
-        "randomcity";
+        "random_city";
     };
 
+    /**
+     * The start money for new players.
+     * @return integer
+     */
     case "start_money": {
-        10000;
+        5000;
+    };
+    
+    /**
+     * The number of seconds from when the player clicks respawn til they respawn.
+     * @return integer
+     */
+    case "respawn_time": {
+        30;
+    };
+    
+    /**
+     * The percentage of the purchase price an item will sell for.
+     * @return integer
+     */
+    case "sell_percentage": {
+        50;
     };
 
+    /**
+     * How mant loot create to spawn on the island during startup. 
+     * @return integer
+     */
     case "loot_crate_limit": {
         10;
     };
 
+    /**
+     * How mant vehicles to spawn on the island during startup. 
+     * @return integer
+     */
     case "loot_vehicle_limit": {
         10;
     };
 
+    /**
+     * How mant stationery weapons to spawn on the island during startup. 
+     * @return integer
+     */
     case "loot_stationery_limit": {
         10;
     };
 
+    /**
+     * How long (in minutes) between Air Drops.
+     * @return integer
+     */
     case "airdrop_interval": {
-        5;
+        20;
     };
 
+    /**
+     * The maximum number of skills a player can learn.
+     * @return integer
+     */
+    case "max_learned_skills": {
+        10;
+    };
+
+    /**
+     * Markers (must be circle markers) in which players will not be able to spawn when "random_world" spawn type is selected
+     * @return array
+     */
     case "spawn_excludes": {
         [
             "system_safezone",
@@ -60,6 +144,14 @@ switch (_this select 0) do {
         ];
     };
 
+    /**
+     * List of available spawn points (must be circles) and their name.
+        [
+           "marker_name",
+           "Spawn Point Name the player will see"
+        ]
+     * @return array
+     */
     case "spawn_points": {
         [
             [
@@ -189,6 +281,10 @@ switch (_this select 0) do {
         ];
     };
 
+    /**
+     * Markers (must be circle markers) where the airdrop can spawn within.
+     * @return array
+     */
     case "drop_zones": {
         [
             "drop_zone_1",
@@ -204,6 +300,10 @@ switch (_this select 0) do {
         ];
     };
 
+    /**
+     * The default loadout for respawns and new players.
+     * @return array
+     */
     case "spawn_items": {
         [
             "U_IG_Guerilla1_1",
@@ -230,6 +330,10 @@ switch (_this select 0) do {
         ];
     };
 
+    /**
+     * General items available in the game shops and loot.
+     * @return array
+     */
     case "equip_items": {
         [
             "Binocular",
@@ -246,6 +350,10 @@ switch (_this select 0) do {
         ];
     };
 
+    /**
+     * The weapons available in the game shops and loot.
+     * @return array
+     */
     case "airdrop_weapons";
     case "equip_weapons": {
         [
@@ -321,6 +429,10 @@ switch (_this select 0) do {
         ];
     };
 
+    /**
+     * Throwable objects available in the shops and loot.
+     * @return array
+     */
     case "equip_throwables": {
         [
             "HandGrenade",
@@ -339,6 +451,11 @@ switch (_this select 0) do {
             "I_IR_Grenade"
         ];
     };
+
+    /**
+     * Uniforms available in the shops and loot.
+     * @return array
+     */
     case "equip_clothes": {
         [
             "U_I_CombatUniform",
@@ -368,6 +485,11 @@ switch (_this select 0) do {
         ];
     };
 
+
+    /**
+     * Hats available in the shops and loot.
+     * @return array
+     */
     case "equip_hats": {
         [
             "H_HelmetB",
@@ -498,6 +620,10 @@ switch (_this select 0) do {
         ];
     };
 
+    /**
+     * Glasses available in the shops and loot.
+     * @return array
+     */
     case "equip_glasses": {
         [
             "G_Spectacles",
@@ -542,6 +668,10 @@ switch (_this select 0) do {
         ];
     };
 
+    /**
+     * Vests available in the shops and loot.
+     * @return array
+     */
     case "equip_vests": {
         [
             "V_Rangemaster_belt",
@@ -591,6 +721,10 @@ switch (_this select 0) do {
         ];
     };
 
+    /**
+     * Backpacks available in the shops and loot.
+     * @return array
+     */
     case "equip_backpacks": {
         [
             "B_AssaultPack_khk",
@@ -628,11 +762,20 @@ switch (_this select 0) do {
             "B_OutdoorPack_blk",
             "B_OutdoorPack_tan",
             "B_OutdoorPack_blu",
-            "B_HuntingBackpack",
-            "B_Parachute"
+            "B_HuntingBackpack"
         ];
     };
 
+    /**
+     * Attachments available in the shops and loot.
+     * indexes:
+     * 0: optics
+     * 1: Bipods
+     * 2: Muzzles
+     * 3: accesories
+     *
+     * @return array
+     */
     case "equip_attachments": {
         [
             [
@@ -692,6 +835,10 @@ switch (_this select 0) do {
         ];
     };
 
+    /**
+     * Ground vehicles available in the shops and loot.
+     * @return array
+     */
     case "ground_vehicles": {
         [
             "B_APC_Tracked_01_rcws_F",
@@ -740,6 +887,10 @@ switch (_this select 0) do {
         ];
     };
 
+    /**
+     * Air vehicles available in the shops and loot.
+     * @return array
+     */
     case "air_vehicles": {
         [
             "B_Heli_Light_01_F",
@@ -761,6 +912,10 @@ switch (_this select 0) do {
         ];
     };
 
+    /**
+     * Water vehicles available in the shops and loot.
+     * @return array
+     */
     case "water_vehicles": {
         [
             "C_Boat_Civil_01_F",
@@ -776,6 +931,10 @@ switch (_this select 0) do {
         ];
     };
 
+    /**
+     * Stationary weapons which will spawn in the world.
+     * @return array
+     */
     case "stationery_items": {
         [
             "O_static_AA_F",
@@ -785,6 +944,14 @@ switch (_this select 0) do {
         ];
     };
 
+    /**
+     * List of all the items in this config, with their purchase price.
+     * Sell price is defined in the "sell_percentage" config entry further up.
+     *
+     * ["class_name", price]
+     *
+     * @return array
+     */
     case "item_prices": {
         [
             ["Binocular", 1000],
@@ -1242,17 +1409,17 @@ switch (_this select 0) do {
             ["B_Heli_Light_01_F", 1000],
             ["B_Heli_Light_01_armed_F", 1000],
             ["O_Heli_Light_02_F", 1000],
-            ["O_Heli_Light_02_unarmed_F", 1000], [  
-            "B_Heli_Attack_01_F", 1000], [  
-            "O_Heli_Attack_02_F", 1000],
+            ["O_Heli_Light_02_unarmed_F", 1000],
+            ["B_Heli_Attack_01_F", 1000],
+            ["O_Heli_Attack_02_F", 1000],
             ["O_Heli_Attack_02_black_F", 1000],
             ["B_Heli_Transport_01_F", 1000],
             ["B_Heli_Transport_01_camo_F", 1000],
-            ["I_Heli_Transport_02_F", 1000], [
-            "I_Heli_light_03_unarmed_F", 1000],
+            ["I_Heli_Transport_02_F", 1000],
+            ["I_Heli_light_03_unarmed_F", 1000],
             ["I_Heli_light_03_F", 1000],
-            ["B_Plane_CAS_01_F", 1000], [ 
-            "O_Plane_CAS_02_F", 1000],
+            ["B_Plane_CAS_01_F", 1000],
+            ["O_Plane_CAS_02_F", 1000],
             ["I_Plane_Fighter_03_CAS_F", 1000],
             ["I_Plane_Fighter_03_AA_F", 1000],
             ["C_Boat_Civil_01_F", 1000],
@@ -1264,7 +1431,59 @@ switch (_this select 0) do {
             ["B_Boat_Transport_01_F", 1000],
             ["I_Boat_Armed_01_minigun_F", 1000],
             ["I_Boat_Transport_01_F", 1000],
-            ["I_G_Boat_Transport_01_F", 1000]
+            ["I_G_Boat_Transport_01_F", 1000],
+            ["30Rnd_65x39_caseless_green", 100],
+            ["30Rnd_65x39_caseless_green_mag_Tracer", 100],
+            ["30Rnd_556x45_Stanag", 100],
+            ["30Rnd_556x45_Stanag_Tracer_Red", 100],
+            ["30Rnd_556x45_Stanag_Tracer_Green", 100],
+            ["30Rnd_556x45_Stanag_Tracer_Yellow", 100],
+            ["30Rnd_556x45_Stanag_red", 100],
+            ["30Rnd_556x45_Stanag_green", 100],
+            ["30Rnd_65x39_caseless_mag", 100],
+            ["30Rnd_65x39_caseless_mag_Tracer", 100],
+            ["20Rnd_556x45_UW_mag", 100],
+            ["9Rnd_45ACP_Mag", 100],
+            ["16Rnd_9x21_Mag", 100],
+            ["30Rnd_9x21_Mag", 100],
+            ["30Rnd_9x21_Red_Mag", 100],
+            ["30Rnd_9x21_Yellow_Mag", 100],
+            ["30Rnd_9x21_Green_Mag", 100],
+            ["16Rnd_9x21_red_Mag", 100],
+            ["16Rnd_9x21_green_Mag", 100],
+            ["16Rnd_9x21_yellow_Mag", 100],
+            ["11Rnd_45ACP_Mag", 100],
+            ["6Rnd_45ACP_Cylinder", 100],
+            ["6Rnd_GreenSignal_F", 100],
+            ["6Rnd_RedSignal_F", 100],
+            ["Titan_AA", 100],
+            ["Titan_AT", 100],
+            ["Titan_AP", 100],
+            ["NLAW_F", 100],
+            ["RPG32_F", 100],
+            ["RPG32_HE_F", 100],
+            ["200Rnd_65x39_cased_Box", 100],
+            ["200Rnd_65x39_cased_Box_Tracer", 100],
+            ["150Rnd_762x54_Box", 100],
+            ["150Rnd_762x54_Box_Tracer", 100],
+            ["150Rnd_93x64_Mag", 100],
+            ["130Rnd_338_Mag", 100],
+            ["30Rnd_45ACP_Mag_SMG_01", 100],
+            ["30Rnd_45ACP_Mag_SMG_01_tracer_green", 100],
+            ["30Rnd_45ACP_Mag_SMG_01_Tracer_Red", 100],
+            ["30Rnd_45ACP_Mag_SMG_01_Tracer_Yellow", 100],
+            ["10Rnd_762x54_Mag", 100],
+            ["10Rnd_338_Mag", 100],
+            ["20Rnd_762x51_Mag", 100],
+            ["10Rnd_127x54_Mag", 100],
+            ["10Rnd_93x64_DMR_05_Mag", 100],
+            ["5Rnd_127x108_Mag", 100],
+            ["5Rnd_127x108_APDS_Mag", 100],
+            ["7Rnd_408_Mag", 100]
         ];
+    };
+
+    default {
+        "INVALID";
     };
 };

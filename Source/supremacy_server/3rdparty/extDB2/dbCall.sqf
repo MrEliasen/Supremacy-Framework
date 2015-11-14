@@ -33,9 +33,6 @@ if (count _params > 0) then {
             case "ARRAY": {
                 _x = str _x;
             };
-            /*case "STRING": {
-                _x = [_x] call SPMC_fnc_mresString;
-            };*/
             case "SCALAR": {
                 _x = [_x] call SPMC_fnc_numberToText;
             };
@@ -51,7 +48,7 @@ if (count _params > 0) then {
 
 _key = switch (toLower(_call)) do {
     case "newplayer": {
-        call compile ("extDB2" callExtension format["1:%1:newPlayer:%2:%3:%4:%5:%6", (call extDB_SQL_CUSTOM_ID), (_params select 0), (_params select 1),(_params select 2),"""[]""","""[]"""]);
+        call compile ("extDB2" callExtension format["1:%1:newPlayer:%2:%3:%4:%5:%6:%7:%8", (call extDB_SQL_CUSTOM_ID), (_params select 0), (_params select 1),(_params select 2),"""[]""","""[]""","""[]""",0]);
     };
     case "loadplayer": {
         _return = true;
@@ -59,6 +56,12 @@ _key = switch (toLower(_call)) do {
     };
     case "savemoney": {
         call compile ("extDB2" callExtension format["1:%1:saveMoney:%2:%3", (call extDB_SQL_CUSTOM_ID), (_params select 0), (_params select 1)]);
+    };
+    case "saveexperience": {
+        call compile ("extDB2" callExtension format["1:%1:saveExperience:%2:%3", (call extDB_SQL_CUSTOM_ID), (_params select 0), (_params select 1)]);
+    };
+    case "saveskills": {
+        call compile ("extDB2" callExtension format["1:%1:saveSkills:%2:%3:%4", (call extDB_SQL_CUSTOM_ID), (_params select 0), (_params select 1), (_params select 2)]);
     };
     case "updateplayername": {
         call compile ("extDB2" callExtension format["1:%1:updatePlayerName:%2:%3", (call extDB_SQL_CUSTOM_ID), (_params select 0), (_params select 1)]);
@@ -70,7 +73,7 @@ _key = switch (toLower(_call)) do {
         call compile ("extDB2" callExtension format["1:%1:savePlayerEquipment:%2:%3", (call extDB_SQL_CUSTOM_ID), (_params select 0), (_params select 1)]);
     };
     case "saveplayerfull": {
-        call compile ("extDB2" callExtension format["1:%1:savePlayerFull:%2:%3:%4:%5:%6", (call extDB_SQL_CUSTOM_ID), (_params select 0), (_params select 1), (_params select 2), (_params select 3), (_params select 4)]);
+        call compile ("extDB2" callExtension format["1:%1:savePlayerFull:%2:%3:%4:%5:%6:%7:%8", (call extDB_SQL_CUSTOM_ID), (_params select 0), (_params select 1), (_params select 2), (_params select 3), (_params select 4), (_params select 5), (_params select 6)]);
     };
 
     default {

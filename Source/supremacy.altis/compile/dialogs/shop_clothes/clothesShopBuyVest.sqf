@@ -13,8 +13,13 @@
 
 private ["_item","_bought"];
 _item = lbData [2704, lbCurSel(2704)];
+_price = lbValue [2704, lbCurSel(2704)];
 
 if(_item == "") exitWith {};
+
+if (SPMC_gbl_money < _price) exitWith {
+    hint "You do not have enough money to buy this Vest.";
+};
 
 ctrlEnable[2714, false];
 

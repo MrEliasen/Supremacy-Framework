@@ -13,8 +13,13 @@
 
 private ["_item","_bought"];
 _item = lbData [2703, lbCurSel(2703)];
+_price = lbValue [2703, lbCurSel(2703)];
 
 if(_item == "") exitWith {};
+
+if (SPMC_gbl_money < _price) exitWith {
+    hint "You do not have enough money to buy these glasses.";
+};
 
 ctrlEnable[2713, false];
 

@@ -95,7 +95,21 @@ class SPMC_shop_sell
             y = 0.72 * safezoneH + safezoneY;
             w = 0.139219 * safezoneW;
             h = 0.044 * safezoneH;
+            colorBackground[] = {0.75,0.75,0.75,1};
+            colorFocused[] = {0.75,0.75,0.75,1};
             onButtonClick = "[] call SPMC_fnc_sellItem;";
+        };
+        class SPMC_shop_sell_close: RscButton
+        {
+            idc = -1;
+            text = "CLOSE";
+            x = 0.5154687 * safezoneW + safezoneX;
+            y = 0.225 * safezoneH + safezoneY;
+            w = 0.0464063 * safezoneW;
+            h = 0.033 * safezoneH;
+            colorBackground[] = {0.75,0.75,0.75,1};
+            colorFocused[] = {0.75,0.75,0.75,1};
+            onButtonClick = "closeDialog 0;";
         };
     };
 };

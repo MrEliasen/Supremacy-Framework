@@ -11,11 +11,30 @@
  * @link       https://github.com/MrEliasen/SupremacyFramework
  */
 
-private["_vehicle","_spawn"];
+private["_vehicle","_price","_spawn","_skillDiscount"];
 disableSerialization;
 ctrlEnable[2605, false];
 _vehicle = [lbData [2601, lbCurSel(2601)]] call SPMC_fnc_getItemCfgDetails;
+_price = lbValue [2601, lbCurSel(2601)];
 _spawn = "";
+_skillDiscount = 1.0;
+
+// Update the price if the player have the Silver Tongue skill line
+if (("silver-1" in SPMC_gbl_learnedSkills)) then {
+    for "_i" from 2 to 50 do {
+        if (!(format ["silver-%1", _i] in SPMC_gbl_learnedSkills)) exitWith {
+            _skillDiscount = ([format["silver-%1", (_i - 1)]] call SPMC_fnc_getSkillDetails select 5) select 0;
+        };
+    };
+
+    _skillDiscount = (1.0 - _skillDiscount / 100);
+};
+
+_price = _price * _skillDiscount;
+
+if (SPMC_gbl_money < _price) exitWith {
+    hint "You do not have enough money to buy this vehicle.";
+};
 
 {
     private ["_units"];

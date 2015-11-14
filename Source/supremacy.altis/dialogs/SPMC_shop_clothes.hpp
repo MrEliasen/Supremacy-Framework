@@ -206,6 +206,8 @@ class SPMC_shop_clothes
             y = 0.478 * safezoneH + safezoneY;
             w = 0.134062 * safezoneW;
             h = 0.033 * safezoneH;
+            colorBackground[] = {0.75,0.75,0.75,1};
+            colorFocused[] = {0.75,0.75,0.75,1};
             onButtonClick = "[] call SPMC_fnc_clothesShopBuyUniform;";
         };
         class SPMC_shop_clothes_hats_buy: RscButton
@@ -216,6 +218,8 @@ class SPMC_shop_clothes
             y = 0.478 * safezoneH + safezoneY;
             w = 0.128906 * safezoneW;
             h = 0.033 * safezoneH;
+            colorBackground[] = {0.75,0.75,0.75,1};
+            colorFocused[] = {0.75,0.75,0.75,1};
             onButtonClick = "[] call SPMC_fnc_clothesShopBuyHat;";
         };
         class SPMC_shop_clothes_glasses_buy: RscButton
@@ -226,6 +230,8 @@ class SPMC_shop_clothes
             y = 0.478 * safezoneH + safezoneY;
             w = 0.128906 * safezoneW;
             h = 0.033 * safezoneH;
+            colorBackground[] = {0.75,0.75,0.75,1};
+            colorFocused[] = {0.75,0.75,0.75,1};
             onButtonClick = "[] call SPMC_fnc_clothesShopBuyGlasses;";
         };
         class SPMC_shop_clothes_vests_buy: RscButton
@@ -236,6 +242,8 @@ class SPMC_shop_clothes
             y = 0.731 * safezoneH + safezoneY;
             w = 0.134062 * safezoneW;
             h = 0.033 * safezoneH;
+            colorBackground[] = {0.75,0.75,0.75,1};
+            colorFocused[] = {0.75,0.75,0.75,1};
             onButtonClick = "[] call SPMC_fnc_clothesShopBuyVest;";
         };
         class SPMC_shop_clothes_backpacks_buy: RscButton
@@ -246,6 +254,8 @@ class SPMC_shop_clothes
             y = 0.731 * safezoneH + safezoneY;
             w = 0.128906 * safezoneW;
             h = 0.033 * safezoneH;
+            colorBackground[] = {0.75,0.75,0.75,1};
+            colorFocused[] = {0.75,0.75,0.75,1};
             onButtonClick = "[] call SPMC_fnc_clothesShopBuyBackpack;";
         };
 
@@ -308,6 +318,8 @@ class SPMC_shop_clothes
             y = 0.192 * safezoneH + safezoneY;
             w = 0.061875 * safezoneW;
             h = 0.033 * safezoneH;
+            colorBackground[] = {0.75,0.75,0.75,1};
+            colorFocused[] = {0.75,0.75,0.75,1};
             onButtonClick = "closeDialog 0;";
         };
 

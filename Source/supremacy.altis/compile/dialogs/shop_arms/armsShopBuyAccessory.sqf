@@ -11,11 +11,17 @@
  * @link       https://github.com/MrEliasen/SupremacyFramework
  */
 
-private ["_item","_bought"];
+private ["_item","_price","_bought"];
 _item = lbData [2304, lbCurSel(2304)];
+_price = lbValue [2304, lbCurSel(2304)];
 ctrlEnable[2310, false];
 
 if (_item == "") exitWith {
+    ctrlEnable[2310, true];
+};
+
+if (SPMC_gbl_money < _price) exitWith {
+    hint "You do not have enough money to buy this item.";
     ctrlEnable[2310, true];
 };
 

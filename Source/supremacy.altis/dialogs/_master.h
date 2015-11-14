@@ -16,6 +16,8 @@
 #include "SPMC_spawn_menu.hpp"
 #include "SPMC_admin_menu.hpp"
 #include "SPMC_player_menu.hpp"
+#include "SPMC_skills_menu.hpp"
+#include "SPMC_death_screen.hpp"
 
 // Shops
 #include "SPMC_shop_arms.hpp"

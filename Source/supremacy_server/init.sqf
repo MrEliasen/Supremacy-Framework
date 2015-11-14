@@ -17,14 +17,51 @@ publicVariable "serverIsReady";
 serverStatus = "";
 publicVariable "serverStatus";
 
+// Keeps track of all the player's monneh!
+// Index:
+// 0: Arma PlayerUID
+// 1: The money value
+serverPlayerMoney = [];
+// Keeps track of all the player's skills
+// Index:
+// 0: Arma PlayerUID
+// 1: Array
+//   0: Available experience points
+//   1: The array of known skills
+serverPlayerSkills = [];
 // loot crate spawn completion status (0-100%)
 serverStatusLootCrates = 0;
 // loot vehicle spawn completion status (0-100%)
 serverStatusLootVehicle = 0;
 // loot stationery spawn completion status (0-100%)
 serverStatusLootStationery = 0;
-// Keeps track of all the player's monneh!
-serverPlayerMoney = [];
+// loot in buildings spawn completion status (0-100%)
+serverStatusLootBuildings = -1;
+publicVariable "serverStatusLootBuildings";
+
+// delete player bodies when they disconnect to attempt to make it harder to dupe items.
+/*["onPlayerDisconnected", {
+   private ["_body"];
+   _body = missionNamespace getVariable [_uid, objNull];
+   
+   if (!isNull _body) then 
+   {
+        deleteVehicle _body;
+        missionNamespace setVariable[_uid, nil];
+   };
+       
+}] call BIS_fnc_addStackedEventHandler;*/
+
+addMissionEventHandler ["HandleDisconnect", {
+    _this spawn {
+        sleep 2;
+
+        if (!alive (_this select 0)) then {
+            deleteVehicle (_this select 0);
+        };
+    };
+    false
+}];
 
 diag_log "SERVER: Compiling compile\_master.sqf";
 _handle = [] execVM "\supremacy_server\compile\_master.sqf";

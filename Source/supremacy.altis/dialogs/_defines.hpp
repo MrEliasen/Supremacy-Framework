@@ -107,7 +107,8 @@ class RscText
     text = "";
     shadow = 0;
     font = "puristaMedium";
-    SizeEx = 0.03;
+    //SizeEx = 0.03;
+    sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)* 1)";
     fixedWidth = 0;
     x = 0;
     y = 0;
@@ -140,13 +141,13 @@ class RscButton
     access = 0;
     type = CT_BUTTON;
     text = "";
-    colorText[] = {1,1,1,.9};
-    colorDisabled[] = {0.4,0.4,0.4,0};
-    colorBackground[] = {0.75,0.75,0.75,0.8};
+    colorText[] = {1,1,1,1};
+    colorDisabled[] = {0,0,0,0.25};
+    colorBackground[] = {0,0,0,0.85};
     colorBackgroundDisabled[] = {0,0.0,0};
     colorBackgroundActive[] = {0.75,0.75,0.75,1};
-    colorFocused[] = {0.75,0.75,0.75,.5};
-    colorShadow[] = {0.023529,0,0.0313725,1};
+    colorFocused[] = {0,0,0,0.85};
+    colorShadow[] = {0.023529,0,0.0313725,0};
     colorBorder[] = {0.023529,0,0.0313725,1};
     soundEnter[] = {"\ca\ui\data\sound\onover",0.09,1};
     soundPush[] = {"\ca\ui\data\sound\new1",0,0};
@@ -165,6 +166,35 @@ class RscButton
     offsetPressedX = 0.002;
     offsetPressedY = 0.002;
     borderSize = 0;
+};
+
+class IGUIBack
+{
+    type = 0;
+    idc = -1;
+    style = 128;
+    text = "";
+    colorText[] = 
+    {
+        0,
+        0,
+        0,
+        0
+    };
+    font = "PuristaMedium";
+    sizeEx = 0;
+    shadow = 0;
+    x = 0.1;
+    y = 0.1;
+    w = 0.1;
+    h = 0.1;
+    colorbackground[] = 
+    {
+        "(profilenamespace getvariable ['IGUI_BCG_RGB_R',0])",
+        "(profilenamespace getvariable ['IGUI_BCG_RGB_G',1])",
+        "(profilenamespace getvariable ['IGUI_BCG_RGB_B',1])",
+        "(profilenamespace getvariable ['IGUI_BCG_RGB_A',1])"
+    };
 };
 
 class RscFrame
@@ -619,4 +649,19 @@ class RscMap
         coefMax = 1;
         color[] = {1,1,1,1};
     };
+};
+
+class RscProgress {
+    type = 8;
+    style = 0;
+    colorFrame[] = {1,1,1,0.7};
+    // colorBar[] = {1,1,1,0.7};
+    colorBar[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.69])","(profilenamespace getvariable ['GUI_BCG_RGB_G',0.75])","(profilenamespace getvariable ['GUI_BCG_RGB_B',0.5])","(profilenamespace getvariable ['GUI_BCG_RGB_A',0.8])"};
+
+    shadow=2;
+    texture = "#(argb,8,8,3)color(1,1,1,0.7)";
+    x = "1 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
+    y = "10 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
+    w = "38 * (((safezoneW / safezoneH) min 1.2) / 40)";
+    h = "0.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 };

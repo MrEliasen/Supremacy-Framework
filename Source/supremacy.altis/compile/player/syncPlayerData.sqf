@@ -27,6 +27,13 @@ switch (_type) do {
             damage player,
             getFatigue player
         ]];
+        
+        if (captive player) then {
+            _data = [[
+                1.0,
+                getFatigue player
+            ]];
+        };
     };
 
     case "equipment": {

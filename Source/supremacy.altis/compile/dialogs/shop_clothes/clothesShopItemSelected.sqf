@@ -11,10 +11,11 @@
  * @link       https://github.com/MrEliasen/SupremacyFramework
  */
 
-private["_item","_pricelist","_index","_value","_listNo","_section","_infoText"];
+private["_item","_pricelist","_index","_value","_listNo","_section","_infoText","_skillDiscount"];
 _section = [_this,0,"",[""]] call BIS_fnc_param;
 _listNo = [];
 _infoText = ["",""];
+_skillDiscount = 1.0;
 
 if(_section == "") exitWith {};
 
@@ -40,13 +41,24 @@ if(count _listNo == 0) exitWith {};
 
 disableSerialization;
 
+// Update the price if the player have the Silver Tongue skill line
+if (("silver-1" in SPMC_gbl_learnedSkills)) then {
+    for "_i" from 2 to 50 do {
+        if (!(format ["silver-%1", _i] in SPMC_gbl_learnedSkills)) exitWith {
+            _skillDiscount = ([format["silver-%1", (_i - 1)]] call SPMC_fnc_getSkillDetails select 5) select 0;
+        };
+    };
+};
+
+_skillDiscount = (1.0 - _skillDiscount / 100);
+
 _item = [lbData [(_listNo select 0), lbCurSel(_listNo select 0)]] call SPMC_fnc_getItemCfgDetails;
 _pricelist = ["item_prices"] call SPMC_fnc_config;
 _index = [(_item select 0), _pricelist] call SPMC_fnc_findIndex;
 _value = 0;
 
 if (_index != -1) then {
-    _value = (_pricelist select _index) select 1;
+    _value = ((_pricelist select _index) select 1) * _skillDiscount;
 };
 
 ctrlSetText[(_listNo select 1), format["$%1", [_value] call SPMC_fnc_numberToText]];

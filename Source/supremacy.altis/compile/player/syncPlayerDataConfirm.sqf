@@ -11,14 +11,11 @@
  * @link       https://github.com/MrEliasen/SupremacyFramework
  */
 
-private["_success","_silent"];
+private["_success"];
 _success = [_this,0,false,[false]] call BIS_fnc_param;
-_silent = [_this,1,false,[false]] call BIS_fnc_param;
 
-if (!_silent) then {
-    if (_success) then {
-        hint "Player data saved.";
-    } else {
-        hint "Saving of player data failed.";
-    };
+if (_success) then {
+    hint "Player data saved.";
+} else {
+    hint "Saving of player data failed.";
 };

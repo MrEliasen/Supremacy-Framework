@@ -118,6 +118,8 @@ class SPMC_shop_vehicle
             y = 0.489 * safezoneH + safezoneY;
             w = 0.149531 * safezoneW;
             h = 0.044 * safezoneH;
+            colorBackground[] = {0.75,0.75,0.75,1};
+            colorFocused[] = {0.75,0.75,0.75,1};
             onButtonClick = "[] call SPMC_fnc_vehicleShopBuy;";
         };
         class SPMC_shop_vehicle_sell_confirm: RscButton
@@ -128,6 +130,8 @@ class SPMC_shop_vehicle
             y = 0.489 * safezoneH + safezoneY;
             w = 0.149531 * safezoneW;
             h = 0.044 * safezoneH;
+            colorBackground[] = {0.75,0.75,0.75,1};
+            colorFocused[] = {0.75,0.75,0.75,1};
             onButtonClick = "[] call SPMC_fnc_vehicleShopSell;";
         };
         class SPMC_shop_vehicle_close: RscButton
@@ -138,6 +142,8 @@ class SPMC_shop_vehicle
             y = 0.192 * safezoneH + safezoneY;
             w = 0.061875 * safezoneW;
             h = 0.033 * safezoneH;
+            colorBackground[] = {0.75,0.75,0.75,1};
+            colorFocused[] = {0.75,0.75,0.75,1};
             onButtonClick = "closeDialog 0;";
         };
     };

@@ -10,4 +10,6 @@
  * @license    CC BY-NC 3.0 License
  * @link       https://github.com/MrEliasen/SupremacyFramework
  */
+
 call compile preprocessfile "3rdparty\SHK\shk_pos_init.sqf";
+HGF_progressbar = compileFinal preprocessfilelinenumbers "3rdparty\HGF_progressbar\fnc_progressbar.sqf";

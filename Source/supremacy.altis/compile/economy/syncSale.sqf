@@ -11,12 +11,28 @@
  * @link       https://github.com/MrEliasen/SupremacyFramework
  */
 
-private["_item","_controller"];
-_item = [_this,0,"",[""]] call BIS_fnc_param;
+private["_item","_controller","_sale"];
+_item = _this select 0;
 _controller = [_this,1,0,[0]] call BIS_fnc_param;
 _attachments = [_this,2,false,[false]] call BIS_fnc_param;
+_sale = false;
 
-if (_item == "") exitWith {};
+switch (typeName _item) do {
+    case "STRING": {
+        if (_item != "") then {
+            _sale = true;
+        };
+    };
+    case "OBJECT": {
+        if (!(isNull _item)) then {
+            _sale = true;
+        };
+    };
+};
+
+if (!_sale) exitWith {
+    hint "Invalid item/object you are trying to sell.";
+};
 
 hint "Confirming Sale, please wait..";
 [[player,_item,_controller,_attachments],"SPMC_fnc_svrSyncSale",false,false] call BIS_fnc_MP;

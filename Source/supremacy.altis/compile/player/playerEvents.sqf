@@ -12,10 +12,10 @@
  */
 
 player addEventHandler ["Respawn", {
-    [_this] call SPMC_fnc_playerRespawn;
+    _this call SPMC_fnc_playerRespawn;
 }];
 player addEventHandler ["Killed", {
-    [_this] call SPMC_fnc_playerKilled;
+    _this call SPMC_fnc_playerKilled;
 }];
 
 // Thanks to Killzone_Kid for the inventory sound "hack";
@@ -29,6 +29,6 @@ player addEventHandler ["InventoryClosed", {
         playSound3D ["a3\sounds_f\characters\stances\concrete_adjust_prone_right.wss",objNull, false, _this select 1 modelToWorld [0,0,0]];
     };
 }];
-player addEventHandler ["handleDamage", {
-    [_this] call SPMC_fnc_playerDamaged;
+player addEventHandler ["HandleDamage", {
+    _this call SPMC_fnc_playerDamaged;
 }];

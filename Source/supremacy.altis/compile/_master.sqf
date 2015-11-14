@@ -15,6 +15,9 @@
 SPMC_fnc_briefing = compileFinal preprocessfilelinenumbers "compile\core\briefing.sqf";
 SPMC_fnc_showShopMenu = compileFinal preprocessfilelinenumbers "compile\core\showShopMenu.sqf";
 SPMC_fnc_initHUD = compileFinal preprocessfilelinenumbers "compile\core\initHUD.sqf";
+SPMC_fnc_playerJoined = compileFinal preprocessfilelinenumbers "compile\core\playerJoined.sqf";
+SPMC_fnc_syncAnimation = compileFinal preprocessFileLineNumbers "compile\core\syncAnimation.sqf";
+SPMC_fnc_keyHandler = compileFinal preprocessFileLineNumbers "compile\core\keyHandler.sqf";
 
 // Player
 SPMC_fnc_getPlayerSpawn = compileFinal preprocessfilelinenumbers "compile\player\getPlayerSpawn.sqf";
@@ -29,6 +32,9 @@ SPMC_fnc_processPlayerData = compileFinal preprocessfilelinenumbers "compile\pla
 SPMC_fnc_spawnPlayer = compileFinal preprocessfilelinenumbers "compile\player\spawnPlayer.sqf";
 SPMC_fnc_syncPlayerData = compileFinal preprocessfilelinenumbers "compile\player\syncPlayerData.sqf";
 SPMC_fnc_syncPlayerDataConfirm = compileFinal preprocessfilelinenumbers "compile\player\syncPlayerDataConfirm.sqf";
+SPMC_fnc_resetMedicalVars = compileFinal preprocessfilelinenumbers "compile\player\resetMedicalVars.sqf";
+SPMC_fnc_playerUnconscious = compileFinal preprocessfilelinenumbers "compile\player\playerUnconscious.sqf";
+SPMC_fnc_playerWantToRespawn = compileFinal preprocessFileLineNumbers "compile\player\playerWantToRespawn.sqf";
 
 // Economy
 SPMC_fnc_syncSale = compileFinal preprocessfilelinenumbers "compile\economy\syncSale.sqf";
@@ -80,3 +86,19 @@ SPMC_fnc_sellItem = compileFinal preprocessfilelinenumbers "compile\dialogs\shop
 // Dialog: Player Menu
 SPMC_fnc_showPlayerMenu = compileFinal preprocessfilelinenumbers "compile\dialogs\player_menu\showPlayerMenu.sqf";
 SPMC_fnc_playerMenuUpdateStats = compileFinal preprocessfilelinenumbers "compile\dialogs\player_menu\playerMenuUpdateStats.sqf";
+
+// Dialog: Skills Menu
+SPMC_fnc_showSkillsMenu = compileFinal preprocessfilelinenumbers "compile\dialogs\skills_menu\showSkillsMenu.sqf";
+SPMC_fnc_learnSkill = compileFinal preprocessfilelinenumbers "compile\dialogs\skills_menu\learnSkill.sqf";
+SPMC_fnc_resetSkills = compileFinal preprocessfilelinenumbers "compile\dialogs\skills_menu\resetSkills.sqf";
+SPMC_fnc_selectSkill = compileFinal preprocessfilelinenumbers "compile\dialogs\skills_menu\selectSkill.sqf";
+SPMC_fnc_updateSkillsMenu = compileFinal preprocessfilelinenumbers "compile\dialogs\skills_menu\updateSkillsMenu.sqf";
+
+// Skills
+SPMC_fnc_learnSkillConfirm = compileFinal preprocessfilelinenumbers "compile\skills\learnSkillConfirm.sqf";
+SPMC_fnc_resetSkillsConfirm = compileFinal preprocessfilelinenumbers "compile\skills\resetSkillsConfirm.sqf";
+SPMC_fnc_initPassiveSkills = compileFinal preprocessfilelinenumbers "compile\skills\initPassiveSkills.sqf";
+SPMC_fnc_syncExperienceConfirm = compileFinal preprocessfilelinenumbers "compile\skills\syncExperienceConfirm.sqf";
+SPMC_fnc_skillRepairVehicle = compileFinal preprocessfilelinenumbers "compile\skills\skillRepairVehicle.sqf";
+SPMC_fnc_skillRevivePlayer = compileFinal preprocessfilelinenumbers "compile\skills\skillRevivePlayer.sqf";
+SPMC_fnc_skillHealPlayer = compileFinal preprocessfilelinenumbers "compile\skills\skillHealPlayer.sqf";

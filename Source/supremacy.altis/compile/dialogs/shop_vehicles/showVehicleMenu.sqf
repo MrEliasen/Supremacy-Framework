@@ -11,11 +11,12 @@
  * @link       https://github.com/MrEliasen/SupremacyFramework
  */
 
-private["_type","_spawns","_pricelist","_typeList"];
+private["_type","_spawns","_pricelist","_typeList","_skillDiscount"];
 _type = [_this,0,"",[""]] call BIS_fnc_param;
 _spawns = [_this,1,[],[[]]] call BIS_fnc_param;
 _pricelist = ["item_prices"] call SPMC_fnc_config;
 _typeList = [];
+_skillDiscount = 1.0;
 
 if (!(alive player) || _type == "" || (count _spawns) == 0) exitWith {};
 
@@ -23,6 +24,17 @@ createDialog "SPMC_shop_vehicle";
 disableSerialization;
 
 waitUntil {sleep 0.1; !isNull (findDisplay 2600)};
+
+// Update the price if the player have the Silver Tongue skill line
+if (("silver-1" in SPMC_gbl_learnedSkills)) then {
+    for "_i" from 2 to 50 do {
+        if (!(format ["silver-%1", _i] in SPMC_gbl_learnedSkills)) exitWith {
+            _skillDiscount = ([format["silver-%1", (_i - 1)]] call SPMC_fnc_getSkillDetails select 5) select 0;
+        };
+    };
+};
+
+_skillDiscount = (1.0 - _skillDiscount / 100);
 
 switch (_type) do {
     case "land";
@@ -52,11 +64,11 @@ lbClear _list;
     _value = 0;
 
     if (_index != -1) then {
-        _value = (_pricelist select _index) select 1;
+        _value = ((_pricelist select _index) select 1) * _skillDiscount;
     };
 
     _list lbAdd (_vehInfo select 1);
-    _list lbSetData[(lbSize _list) - 1, _x];
+    _list lbSetData[(lbSize _list) - 1, (_vehInfo select 0)];
     _list lbSetValue[(lbSize _list) - 1, _value];
     _list lbSetPicture[(lbSize _list) - 1, (_vehInfo select 3)];
 
@@ -81,7 +93,7 @@ lbClear _list;
         _value = 0;
 
         if (_index != -1) then {
-            _value = (_pricelist select _index) select 1;
+            _value = ((_pricelist select _index) select 1) * _skillDiscount;
         };
 
         _list lbAdd (_vehInfo select 1);

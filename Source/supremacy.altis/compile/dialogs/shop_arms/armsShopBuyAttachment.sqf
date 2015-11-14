@@ -17,13 +17,24 @@ _controller = 0;
 
 if (_sp) then {
     _item = lbData [2306, lbCurSel(2306)];
+    _price = lbValue [2306, lbCurSel(2306)];
     ctrlEnable[2313, false];
 } else {
     _item = lbData [2303, lbCurSel(2303)];
+    _price = lbValue [2303, lbCurSel(2303)];
     ctrlEnable[2309, false];
 };
 
 if (_item == "") exitWith {
+    if (_sp) then {
+        ctrlEnable[2313, true];
+    } else {
+        ctrlEnable[2309, true];
+    };
+};
+
+if (SPMC_gbl_money < _price) exitWith {
+    hint "You do not have enough money to buy this attachment.";
     if (_sp) then {
         ctrlEnable[2313, true];
     } else {

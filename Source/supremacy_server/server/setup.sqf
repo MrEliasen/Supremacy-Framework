@@ -33,13 +33,13 @@ _spawnBlock allowDamage false;
     _complete = false;
 
     while {!_complete} do {
-        serverStatus = format["SERVER: Running setup - %1%2 Complete.", round ((serverStatusLootVehicle + serverStatusLootCrates + serverStatusLootStationery) / 3), "%"];
+        serverStatus = format["SERVER: Running setup - %1%2 Complete.", round ((serverStatusLootVehicle + serverStatusLootCrates + serverStatusLootStationery + serverStatusLootBuildings) / 4), "%"];
         publicVariable "serverStatus";
 
-        if (serverStatusLootVehicle == 100 && serverStatusLootCrates == 100 && serverStatusLootStationery == 100) then {
+        if (serverStatusLootVehicle == 100 && serverStatusLootCrates == 100 && serverStatusLootStationery == 100 && serverStatusLootBuildings == 100) then {
             _complete = true;
         } else {
-            sleep 1;
+            sleep 1.5;
         };
     };
 
@@ -84,13 +84,15 @@ _spawnBlock allowDamage false;
             _m setmarkerColor "ColorRed";
             _m setMarkerShape "Icon";
             _m setMarkerType "mil_dot";
+            _m setMarkerText "Supply Crate";
         };
 
         serverStatusLootCrates = _percent * _i;
 
-        if(_i == _limit) then {
+        if(_i == _limit) exitWith {
             serverStatusLootCrates = 100;
-        }
+        };
+        
     };
 };
 
@@ -136,13 +138,15 @@ _spawnBlock allowDamage false;
             _m setmarkerColor "ColorBlue";
             _m setMarkerShape "Icon";
             _m setMarkerType "mil_dot";
+            _m setMarkerText _vehicle;
         };
 
         serverStatusLootVehicle = _percent * _i;
 
-        if(_i == _limit) then {
+        if(_i == _limit) exitWith {
             serverStatusLootVehicle = 100;
-        }
+        };
+        
     };
 };
 
@@ -170,12 +174,47 @@ _spawnBlock allowDamage false;
             _m setmarkerColor "ColorBlack";
             _m setMarkerShape "Icon";
             _m setMarkerType "mil_dot";
+            _m setMarkerText _vehicle;
         };
 
         serverStatusLootStationery = _percent * _i;
 
-        if(_i == _limit) then {
+        if(_i == _limit) exitWith {
             serverStatusLootStationery = 100;
-        }
+        };
+        
     };
+};
+
+[] spawn {
+    private ["_buildings","_limit","_percent","_chance"];
+    // Spawn loot in buildings
+
+    _buildings = ((getMarkerPos "world_item_spawn") nearObjects ["House",((getMarkerSize "world_item_spawn") select 0)]);
+    _limit = (count _buildings) - 1;
+    _percent = (100/_limit);
+    _chance = ["house_loot_percent"] call SPMC_fnc_config;
+
+    if (debugMode) then {
+        diag_log format["SERVER: Spawning loot in ~%1 buildings.", ((_limit + 1) * (_chance/100))];
+    };
+
+    // wait for the first player to join in - else the items won't be visible to the players for some reason?
+    while {serverStatusLootBuildings == -1} do {
+        sleep 1.5;
+    };
+
+    {
+        // n% chance of gear spawning in that building.
+        if (random 100 <= _chance) then {
+            [_x] spawn SPMC_fnc_spawnBuildingLoot;
+        };
+
+        serverStatusLootBuildings = _percent * _forEachIndex;
+
+        if(_forEachIndex == _limit) exitWith {
+            serverStatusLootBuildings = 100;
+        };
+        
+    } foreach _buildings;
 };
