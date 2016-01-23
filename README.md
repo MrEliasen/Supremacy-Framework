@@ -9,14 +9,15 @@ I don't know much about "best practises" in this language yet, or how I should o
  * World vehicle spawns
  * World stationery spawns
  * Player spawn/respawn (cities, random, world)
- * Skill & Experience system
- * Revival, heal, repair and other skills.
  * Timed, random placement, airdrops
  * Equipment Shops
  * Vehicle Shops
  * Clothes Shops
  * Simple HUD (fps, health, fatigue and money)
  * Persistent player data (MySQL)
+ * Loot spawn in buildings
+ * Skill & Experience system
+ * Revival, heal, repair and other skills.
 
 ## Usage/Installation
 It uses strictly "vanilla" (including expansions) content. No client-side mods required.
@@ -31,39 +32,17 @@ It uses strictly "vanilla" (including expansions) content. No client-side mods r
 You can modify the "\Source\supremacy_server\compile\core\config.sqf" to make changes to a lot of the elements in the framework.
 There is no wiki yet, but I hope to get working on that soon(tm).
 
-## 0.4.0 (14-11-2015 GMT)
+## 0.4.1 (23-01-2016 GMT)
 
 Features/Changes:
 
- * Added item spawn in buildings (careful, can take a long time to init server if you increase % too much).
- * Added comments to each value in the config.
- * Added more configurable options, like sell percentage, to the config.
- * Added skill and experience system.
- * Added names to the loot markers which are visible in debug mode.
- * Added progress bars.
- * Added revival and healing system.
- * Added vehicle repair
- * Added many other passive abilities and functions as part of the skill/experience system.
- * Added ammo to price list.
- * Added ability to synchronise animations.
- * Network optimisations when selling items and vehicles.
- * Network optimisations to saving player data.
- * Updated ExtDB2 to the latest (66) version.
- * Selling vehicles now confirmes server side like equipment (so money saves).
+ * Added the ability to update the currency symbol used throughout the framework, via the config.
 
 Bugfixes:
 
- * Fixed some minor issues where final compiled scripts where defined twice, server side.
- * Fixed an issue where the handgun items would not load from the databse.
- * Fixed an issue where the hangun would not equip if you didn't have a primary weapon.
- * Fixed a bug while loading the players money from the database.
- * Fixed an issue where pricing where not checked client side (protentially saving a large number of requests).
- * Fixed an issue in the extdb-conf.ini file not loading the correct database details.
- * Fixed an issue where you would not respawn propperly if deconnecting and rejoining the server.
- * Fixed sell prices for vehicles and items being calculated wrong.
- * Fixed the purchase price not being calculated correctly.
- * Fixed the issue with vehicle sales not being done properly and validated.
- * Fixed an issue where vehicle loot and supply crate loot tables where switched.
+ * Fixed the issue with sell prices now showing the currect amount.
+ * Fixed experience output data from displaying without debug enabled.
+ * Fixed issue with vehicles sales not confirming.
 
 ## Support / Feedback / Issues
 If you need help, have feedback, requests or like, please visit [The Forums](https://www.sirmre.com/forums/).   

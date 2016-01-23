@@ -41,9 +41,11 @@ serverPlayerSkills set [_index, [
     ]
 ]];
 
-diag_log "------------ player skill array full (EXP) ------------";
-diag_log str serverPlayerSkills;
-diag_log "-------------------------------------------------------";
+if(debugMode) then {
+    diag_log "------------ player skill array full (EXP) ------------";
+    diag_log str serverPlayerSkills;
+    diag_log "-------------------------------------------------------";
+};
 
 [_player, "experience", [(_playerExp + _expReward)], true] call SPMC_fnc_svrSyncPlayerData;
 [[(_playerExp + _expReward), _playerSkills],"SPMC_fnc_syncExperienceConfirm",(owner _player),false] spawn BIS_fnc_MP;

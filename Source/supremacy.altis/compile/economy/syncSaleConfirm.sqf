@@ -32,7 +32,7 @@ if (_confirmed) then {
         _priceIndex = [_item, _pricelist] call SPMC_fnc_findIndex;
         if (_priceIndex != -1) then {
             _sellPercentage = ["sell_percentage"] call SPMC_fnc_config;
-            _price = floor(((_pricelist select _priceIndex) select 1) / (_sellPercentage/100));
+            _price = floor(((_pricelist select _priceIndex) select 1) * (_sellPercentage/100));
         };
 
         if (_wpitem) then {
@@ -63,9 +63,9 @@ if (_confirmed) then {
     };
 
     if (_attachments) then {
-        hint format["%1%2 sold for $%3!", (_itemdetails select 1), " (the attachment(s) where sold in the background)", _price];
+        hint format["%1%2 sold for %3%4!", (_itemdetails select 1), " (the attachment(s) where sold in the background)", ['currency_symbol'] call SPMC_fnc_config, _price];
     } else {
-        hint format["%1 sold for $%2!", (_itemdetails select 1), _price];
+        hint format["%1 sold for %2%3!", (_itemdetails select 1), ['currency_symbol'] call SPMC_fnc_config, _price];
     };
 
     player say3D "sold_item";

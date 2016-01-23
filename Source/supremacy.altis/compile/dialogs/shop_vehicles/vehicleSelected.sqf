@@ -52,11 +52,12 @@ Armor: <t color='#ffae2b'>%3</t><br/>
 Max Speed: <t color='#ffae2b'>%4</t><br/>
 Fuel Capacity: <t color='#ffae2b'>%5</t><br/>
 Engine Power: <t color='#ffae2b'>%6</t><br/>
-Price: <t color='#27e640'>$%7</t>",
+Price: <t color='#27e640'>%7%8</t>",
 (_vehicle select 3),
 (_vehicle select 1),
 (_vehicle select 8),
 (_vehicle select 9),
 (_vehicle select 10),
 (_vehicle select 11),
+['currency_symbol'] call SPMC_fnc_config,
 [(_value * _skillDiscount)] call SPMC_fnc_numberToText];

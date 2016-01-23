@@ -51,7 +51,8 @@ if (_index != -1) then {
 ((findDisplay 2300) displayCtrl 2314) ctrlSetStructuredText parseText format[
 "<img size='8' image='%1'/><br/>
 Name: <t color='#ffae2b'>%2</t><br/>
-Price: <t color='#27e640'>$%3</t>",
+Price: <t color='#27e640'>%3%4</t>",
 (_item select 3),
 (_item select 1),
+['currency_symbol'] call SPMC_fnc_config, 
 [_value] call SPMC_fnc_numberToText];

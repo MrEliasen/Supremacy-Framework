@@ -79,7 +79,7 @@ if (_item != "") then {
             };
         };
 
-        hint format["%1 purchased for $%2!", (_item select 1), _price];
+        hint format["%1 purchased for %2%3!", (_item select 1), ['currency_symbol'] call SPMC_fnc_config, _price];
         player say3D "purchase";
         sleep 0.73;
     } else {

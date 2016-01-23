@@ -79,8 +79,10 @@ serverPlayerSkills set [_index, [
 
 [_player, "skills", [(_playerSkills + [_skill])], true] call SPMC_fnc_svrSyncPlayerData;
 
-diag_log "------------ player skill array full (LEARN) ------------";
-diag_log format["%1", serverPlayerSkills];
-diag_log "---------------------------------------------------------";
+if(debugMode) then {
+    diag_log "------------ player skill array full (LEARN) ------------";
+    diag_log format["%1", serverPlayerSkills];
+    diag_log "---------------------------------------------------------";
+};
 
 [[_skill,"success",(_playerExp - (_skillDetails select 4)),(_playerSkills + [_skill])],"SPMC_fnc_learnSkillConfirm",(owner _player),false] spawn BIS_fnc_MP;
