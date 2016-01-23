@@ -111,9 +111,10 @@ if (count _desc > 1) then {
 _type = format["<br/>Type: <t color='#ffae2b'>%1</t>", _type];
 
 ((findDisplay 2300) displayCtrl 2314) ctrlSetStructuredText parseText format[
-"<img size='8' image='%1'/><br/>Name: <t color='#ffae2b'>%2</t>%3%4<br/>Price: <t color='#27e640'>$%5</t>",
+"<img size='8' image='%1'/><br/>Name: <t color='#ffae2b'>%2</t>%3%4<br/>Price: <t color='#27e640'>%5%6</t>",
 (_item select 3),
 (_item select 1),
 _type,
 _caliber,
+['currency_symbol'] call SPMC_fnc_config,
 [_value] call SPMC_fnc_numberToText];

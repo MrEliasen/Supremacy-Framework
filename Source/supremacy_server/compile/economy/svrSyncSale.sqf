@@ -174,8 +174,9 @@ if (!_isVehicle) then {
     };
 
     _confirm = true;
-    _item = (_itemInfo select 0);
     deleteVehicle _item;
+    
+    _item = (_itemInfo select 0);
 };
 
 if (_confirm) then {

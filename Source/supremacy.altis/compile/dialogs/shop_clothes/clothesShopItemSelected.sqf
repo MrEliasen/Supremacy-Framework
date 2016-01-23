@@ -61,7 +61,7 @@ if (_index != -1) then {
     _value = ((_pricelist select _index) select 1) * _skillDiscount;
 };
 
-ctrlSetText[(_listNo select 1), format["$%1", [_value] call SPMC_fnc_numberToText]];
+ctrlSetText[(_listNo select 1), format["%1%2", ['currency_symbol'] call SPMC_fnc_config, [_value] call SPMC_fnc_numberToText]];
 
 switch (_section) do {
     case "uniform": {

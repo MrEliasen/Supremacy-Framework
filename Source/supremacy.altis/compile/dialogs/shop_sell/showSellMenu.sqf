@@ -54,7 +54,7 @@ lbClear _list;
         _value = 0;
 
         if (_index != -1) then {
-            _value = floor(((_pricelist select _index) select 1) / (_sellPercentage/100));
+            _value = floor(((_pricelist select _index) select 1) * (_sellPercentage/100));
         };
 
         _list lbAdd (_itemInfo select 1);

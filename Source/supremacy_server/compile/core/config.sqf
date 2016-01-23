@@ -21,6 +21,14 @@ switch (_this select 0) do {
     };
 
     /**
+     * The currency symbol to use throughout the framework
+     * @return boolean
+     */
+    case "currency_symbol": {
+        "£";
+    };
+
+    /**
      * Toggle the arma 3 fatigue system on/off.
      * @return boolean
      */

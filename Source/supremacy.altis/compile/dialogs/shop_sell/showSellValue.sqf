@@ -15,4 +15,4 @@ private ["_item","_price"];
 _price = lbValue [2401, lbCurSel(2401)];
 disableSerialization;
 
-ctrlSetText[2403, format["$%1", _price]];
+ctrlSetText[2403, format["%1%2", ['currency_symbol'] call SPMC_fnc_config, _price]];
