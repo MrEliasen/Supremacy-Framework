@@ -8,14 +8,15 @@ I don't know much about "best practises" in this language yet, or how I should o
  * World loot spawns
  * World vehicle spawns
  * World stationery spawns
+ * Dynamic Groups
  * Player spawn/respawn (cities, random, world)
  * Timed, random placement, airdrops
  * Equipment Shops
  * Vehicle Shops
  * Clothes Shops
- * Simple HUD (fps, health, fatigue and money)
+ * Simple HUD (fps, health and money)
  * Persistent player data (MySQL)
- * Loot spawn in buildings
+ * Loot spawn in buildings and world loot spawn (vehicles, crates and stationary)
  * Skill & Experience system
  * Revival, heal, repair and other skills.
 
@@ -29,24 +30,18 @@ It uses strictly "vanilla" (including expansions) content. No client-side mods r
 4.5 Import any "spmc_server - x.x.x to x.x.X update.sql" files in the correct order (by version).
 5. Run the "LaunchServer.bat" file.
 
-You can modify the "\Source\supremacy_server\compile\core\config.sqf" to make changes to a lot of the elements in the framework.
+You can modify the "\Source\supremacy_server\compile\core\config*.sqf" to make changes to a lot of the elements in the framework.
 There is no wiki yet, but I hope to get working on that soon(tm).
 
-## 0.4.1 (23-01-2016 GMT)
+## 0.5.0 (00-00-2016 GMT)
 
-Features/Changes:
 
- * Added the ability to update the currency symbol used throughout the framework, via the config.
 
-Bugfixes:
 
- * Fixed the issue with sell prices now showing the currect amount.
- * Fixed experience output data from displaying without debug enabled.
- * Fixed issue with vehicles sales not confirming.
+
 
 ## Support / Feedback / Issues
-If you need help, have feedback, requests or like, please visit [The Forums](https://www.sirmre.com/forums/).   
-I will be happy to help and teach, however you need to make an effort yourself. When it comes to code help, I won't just code stuff for you - try yourself first, show me what you got and I'll be happy to assits to the best of my ability. 
+If you need help, have feedback, requests or like, please post it here (or via GitHub) [The Forums](https://forums.bistudio.com/topic/184027-spmc-supremacy-framework-multiplayer-sandbox-framework/).   
 
 ## Copyright & License
 Code released under [CC BY-NC 3.0 License](https://creativecommons.org/licenses/by-nc/3.0/legalcode).  
@@ -56,11 +51,11 @@ The license does NOT apply to or included any of the 3rd party material (sounds,
 
 I did not create or own any of the 3rd party material. Please see their credits below and in their files were applicable.
 
-Copyright (c) 2015 Mark Eliasen - 3rd party material are copyrighted by their respective owners.
+Copyright (c) 2016 Mark Eliasen - 3rd party material are copyrighted by their respective owners.
 
 ## 3rd Party Credits
 A big thanks to the following people for their scripts, icons, sounds and extensions which are required to make the SPMC framework tick.
-A special thanks to Kilzone_Kid and Tonic for inspiration and code/resources which I have learn a lot from by reading.
+A special thanks to Kilzone_Kid and Tonic for inspiration and code/resources which I have learn a lot from.
 
 ####Code
  * [Killzone_Kid](http://killzonekid.com/arma-scripting-tutorials-epic-armour-drop/) for the Original Airdrop script.  

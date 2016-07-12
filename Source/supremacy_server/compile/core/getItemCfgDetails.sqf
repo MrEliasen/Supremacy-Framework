@@ -6,7 +6,7 @@
  *
  * @package    Supremacy Framework
  * @author     Mark Eliasen <https://github.com/MrEliasen>
- * @copyright  2015 Mark Eliasen
+ * @copyright  2016 Mark Eliasen
  * @license    CC BY-NC 3.0 License
  * @link       https://github.com/MrEliasen/SupremacyFramework
  */
@@ -44,7 +44,7 @@
     12: maximumLoad
 */
 
-private["_item","_config","_misc"];
+private["_item","_config","_misc","_mags"];
 _item = [_this,0,"",[""]] call BIS_fnc_param;
 _config = "";
 _data = [];
@@ -95,7 +95,28 @@ switch (_config) do {
 
     case "CfgWeapons": {
         _data set [2, getText(configFile >> _config >> _item >> "descriptionshort")];
-        _data set [count _data, getArray(configFile >> _config >> _item >> "magazines")];
+        _mags = getArray(configFile >> _config >> _item >> "magazines");
+
+        // If the weapon has a GL, add the GL rounds to the ammo array
+        /*if ((["_GL_", _item, true] call BIS_fnc_inString)) then {
+            _mags = _mags + [
+                "Rnd_HE_Grenade_shell",
+                "UGL_FlareWhite_F",
+                "UGL_FlareGreen_F",
+                "UGL_FlareRed_F",
+                "UGL_FlareYellow_F",
+                "UGL_FlareCIR_F",
+                "Rnd_Smoke_Grenade_shell",
+                "Rnd_SmokeRed_Grenade_shell",
+                "Rnd_SmokeGreen_Grenade_shell",
+                "Rnd_SmokeYellow_Grenade_shell",
+                "Rnd_SmokePurple_Grenade_shell",
+                "Rnd_SmokeBlue_Grenade_shell",
+                "Rnd_SmokeOrange_Grenade_shell"
+            ];
+        };*/
+
+        _data set [count _data, _mags];
         _data set [count _data, getArray(configFile >> _config >> _item >> "modes")];
 
         _misc = [[],[],[],[]];
