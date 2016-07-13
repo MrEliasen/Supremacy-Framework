@@ -9,7 +9,7 @@
  * @package    Supremacy Framework
  * @author     Mark Eliasen <https://github.com/MrEliasen>
  * @author     Bryan "Tonic" Boardwine <http://www.tonic.pw/>
- * @copyright  2015 Mark Eliasen
+ * @copyright  2016 Mark Eliasen
  * @license    CC BY-NC 3.0 License
  * @link       https://github.com/MrEliasen/SupremacyFramework
  */
@@ -48,7 +48,7 @@ if (count _params > 0) then {
 
 _key = switch (toLower(_call)) do {
     case "newplayer": {
-        call compile ("extDB2" callExtension format["1:%1:newPlayer:%2:%3:%4:%5:%6:%7:%8", (call extDB_SQL_CUSTOM_ID), (_params select 0), (_params select 1),(_params select 2),"""[]""","""[]""","""[]""",0]);
+        call compile ("extDB2" callExtension format["1:%1:newPlayer:%2:%3:%4:%5:%6:%7:%8", (call extDB_SQL_CUSTOM_ID), (_params select 0), (_params select 1),(_params select 2),[],[],[],0]);
     };
     case "loadplayer": {
         _return = true;

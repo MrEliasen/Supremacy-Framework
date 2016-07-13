@@ -8,14 +8,15 @@ I don't know much about "best practises" in this language yet, or how I should o
  * World loot spawns
  * World vehicle spawns
  * World stationery spawns
+ * Dynamic Groups
  * Player spawn/respawn (cities, random, world)
  * Timed, random placement, airdrops
  * Equipment Shops
  * Vehicle Shops
  * Clothes Shops
- * Simple HUD (fps, health, fatigue and money)
+ * Simple HUD (fps, health and money)
  * Persistent player data (MySQL)
- * Loot spawn in buildings
+ * Loot spawn in buildings and world loot spawn (vehicles, crates and stationary)
  * Skill & Experience system
  * Revival, heal, repair and other skills.
 
@@ -29,24 +30,37 @@ It uses strictly "vanilla" (including expansions) content. No client-side mods r
 4.5 Import any "spmc_server - x.x.x to x.x.X update.sql" files in the correct order (by version).
 5. Run the "LaunchServer.bat" file.
 
-You can modify the "\Source\supremacy_server\compile\core\config.sqf" to make changes to a lot of the elements in the framework.
+You can modify the "\Source\supremacy_server\compile\core\config*.sqf" to make changes to a lot of the elements in the framework.
 There is no wiki yet, but I hope to get working on that soon(tm).
 
-## 0.4.1 (23-01-2016 GMT)
-
+## 0.5.0 (13-07-2016)
 Features/Changes:
 
- * Added the ability to update the currency symbol used throughout the framework, via the config.
+ * Tanoa map compatibility added.
+ * Added the BIS group system (https://community.bistudio.com/wiki/Dynamic_Groups). Can be accessed by pressin U or via the player menu.
+ * Shops updated (map file)
+ * Only X number of each shop type will spawn (config setting). Which once are determined by random on server init.
+ * Added starter gear setting for GUER, WEST, EAST and default.
+ * Added the ability to add both sidearm, launcher and primary starter weapons.
+ * Removed stamina indicator since the game now have its own way of showing it.
+ * Added option to place puchased equipment and items in a box next to shops.
 
 Bugfixes:
 
- * Fixed the issue with sell prices now showing the currect amount.
- * Fixed experience output data from displaying without debug enabled.
- * Fixed issue with vehicles sales not confirming.
+ * Fixed issue with player body is removed when logging out after being killed.
+ * Fixed starter gear not being added properly on spawn.
+ * Fixed issue with saving gear not including ammo and inventory items.
+
+Known Issues:
+
+ * The new shop system with equipment crates is not implemented on the Altis map yet.
+
+Thanks
+
+ * [das attorney](https://forums.bistudio.com/user/762874-das-attorney/) on the BIS forums for help with this release.
 
 ## Support / Feedback / Issues
-If you need help, have feedback, requests or like, please visit [The Forums](https://www.sirmre.com/forums/).   
-I will be happy to help and teach, however you need to make an effort yourself. When it comes to code help, I won't just code stuff for you - try yourself first, show me what you got and I'll be happy to assits to the best of my ability. 
+If you need help, have feedback, requests or like, please post it here (or via GitHub) [The Forums](https://forums.bistudio.com/topic/184027-spmc-supremacy-framework-multiplayer-sandbox-framework/).   
 
 ## Copyright & License
 Code released under [CC BY-NC 3.0 License](https://creativecommons.org/licenses/by-nc/3.0/legalcode).  
@@ -56,11 +70,18 @@ The license does NOT apply to or included any of the 3rd party material (sounds,
 
 I did not create or own any of the 3rd party material. Please see their credits below and in their files were applicable.
 
-Copyright (c) 2015 Mark Eliasen - 3rd party material are copyrighted by their respective owners.
+Copyright (c) 2016 Mark Eliasen - 3rd party material are copyrighted by their respective owners.
+
+## Arma Server Monetization
+You have permission to use "Supremacy Framework" on a monetised arma server(s).
+
+Please remember to share by donating to various authors that create content / tools that you are using.
+
+**IMPORTANT NOTE:** This does NOT apply to any of the 3rd party material (sounds, code, icons etc). All 3rd party material can be found in the "\3rdparty" directory in the client and server source code.
 
 ## 3rd Party Credits
 A big thanks to the following people for their scripts, icons, sounds and extensions which are required to make the SPMC framework tick.
-A special thanks to Kilzone_Kid and Tonic for inspiration and code/resources which I have learn a lot from by reading.
+A special thanks to Kilzone_Kid and Tonic for inspiration and code/resources which I have learn a lot from.
 
 ####Code
  * [Killzone_Kid](http://killzonekid.com/arma-scripting-tutorials-epic-armour-drop/) for the Original Airdrop script.  
@@ -70,7 +91,7 @@ A special thanks to Kilzone_Kid and Tonic for inspiration and code/resources whi
  * [HallyG](https://forums.bistudio.com/topic/184551-simple-animation-with-progressbar-and-handling/) for the original progress bar script.
 
 ###Extensions
- * [Torndeco](https://github.com/Torndeco/extDB2) for extDB2 (Arma3 Extension DB2).
+ * [Torndeco](https://bitbucket.org/torndeco/extdb3) for extDB3 (Arma3 Extension DB3).
  
 ####Sounds
  * [pierrecartoons1979](https://www.freesound.org/people/pierrecartoons1979/sounds/90121/) for the "purchase" sound.
