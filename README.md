@@ -78,9 +78,7 @@ I did not create or own any of the 3rd party material. Please see their credits 
 Copyright (c) 2016 Mark Eliasen - 3rd party material are copyrighted by their respective owners.
 
 ## Arma Server Monetization
-You have permission to use "Supremacy Framework" on a monetised arma server(s).
-
-Please remember to share by donating to various authors that create content / tools that you are using.
+You have permission to use this framework on a monetised arma server(s).
 
 **IMPORTANT NOTE:** This does NOT apply to any of the 3rd party material (sounds, code, icons etc). All 3rd party material can be found in the "\3rdparty" directory in the client and server source code.
 
