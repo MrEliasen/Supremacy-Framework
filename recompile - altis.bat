@@ -2,9 +2,9 @@
 
 taskkill /im arma3server.exe
 
-xcopy /y "C:\Users\Simply\Documents\Arma 3\missions\supremacy.altis\mission.sqm" "D:\Dropbox\Github Repositories\SupremacyFramework\Source\supremacy.altis\mission.sqm"
-xcopy /y "C:\Users\Simply\Documents\Arma 3\missions\supremacy.altis\mission.sqm" "D:\Dropbox\Github Repositories\SupremacyFramework\Source\supremacy_client\mission.sqm"
-xcopy /y "D:\Dropbox\Github Repositories\SupremacyFramework\Source\supremacy_server\compile\core\config (altis).sqf" "D:\Dropbox\Github Repositories\SupremacyFramework\Source\supremacy_server\compile\core\config.sqf"
+copy /y "C:\Users\Simply\Documents\Arma 3\missions\supremacy.altis\mission.sqm" "D:\Dropbox\Github Repositories\SupremacyFramework\Source\supremacy.altis\mission.sqm"
+copy /y "C:\Users\Simply\Documents\Arma 3\missions\supremacy.altis\mission.sqm" "D:\Dropbox\Github Repositories\SupremacyFramework\Source\supremacy_client\mission.sqm"
+copy /y "D:\Dropbox\Github Repositories\SupremacyFramework\Source\supremacy_server\compile\core\config (altis).sqf" "D:\Dropbox\Github Repositories\SupremacyFramework\Source\supremacy_server\compile\core\config.sqf"
 
 ping 127.0.0.1 -n 2 > nul
 ping 127.0.0.1 -n 2 > nul

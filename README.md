@@ -33,12 +33,31 @@ It uses strictly "vanilla" (including expansions) content. No client-side mods r
 You can modify the "\Source\supremacy_server\compile\core\config*.sqf" to make changes to a lot of the elements in the framework.
 There is no wiki yet, but I hope to get working on that soon(tm).
 
-## 0.5.0 (00-00-2016 GMT)
+## 0.5.0 (13-07-2016)
+Features/Changes:
 
+ * Tanoa map compatibility added.
+ * Added the BIS group system (https://community.bistudio.com/wiki/Dynamic_Groups). Can be accessed by pressin U or via the player menu.
+ * Shops updated (map file)
+ * Only X number of each shop type will spawn (config setting). Which once are determined by random on server init.
+ * Added starter gear setting for GUER, WEST, EAST and default.
+ * Added the ability to add both sidearm, launcher and primary starter weapons.
+ * Removed stamina indicator since the game now have its own way of showing it.
+ * Added option to place puchased equipment and items in a box next to shops.
 
+Bugfixes:
 
+ * Fixed issue with player body is removed when logging out after being killed.
+ * Fixed starter gear not being added properly on spawn.
+ * Fixed issue with saving gear not including ammo and inventory items.
 
+Known Issues:
 
+ * The new shop system with equipment crates is not implemented on the Altis map yet.
+
+Thanks
+
+ * [das attorney](https://forums.bistudio.com/user/762874-das-attorney/) on the BIS forums for help with this release.
 
 ## Support / Feedback / Issues
 If you need help, have feedback, requests or like, please post it here (or via GitHub) [The Forums](https://forums.bistudio.com/topic/184027-spmc-supremacy-framework-multiplayer-sandbox-framework/).   
@@ -53,6 +72,13 @@ I did not create or own any of the 3rd party material. Please see their credits 
 
 Copyright (c) 2016 Mark Eliasen - 3rd party material are copyrighted by their respective owners.
 
+## Arma Server Monetization
+You have permission to use "Supremacy Framework" on a monetised arma server(s).
+
+Please remember to share by donating to various authors that create content / tools that you are using.
+
+**IMPORTANT NOTE:** This does NOT apply to any of the 3rd party material (sounds, code, icons etc). All 3rd party material can be found in the "\3rdparty" directory in the client and server source code.
+
 ## 3rd Party Credits
 A big thanks to the following people for their scripts, icons, sounds and extensions which are required to make the SPMC framework tick.
 A special thanks to Kilzone_Kid and Tonic for inspiration and code/resources which I have learn a lot from.
@@ -65,7 +91,7 @@ A special thanks to Kilzone_Kid and Tonic for inspiration and code/resources whi
  * [HallyG](https://forums.bistudio.com/topic/184551-simple-animation-with-progressbar-and-handling/) for the original progress bar script.
 
 ###Extensions
- * [Torndeco](https://github.com/Torndeco/extDB2) for extDB2 (Arma3 Extension DB2).
+ * [Torndeco](https://bitbucket.org/torndeco/extdb3) for extDB3 (Arma3 Extension DB3).
  
 ####Sounds
  * [pierrecartoons1979](https://www.freesound.org/people/pierrecartoons1979/sounds/90121/) for the "purchase" sound.

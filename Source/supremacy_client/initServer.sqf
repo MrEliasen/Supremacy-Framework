@@ -11,14 +11,19 @@
  * @link       https://github.com/MrEliasen/SupremacyFramework
  */
 if (isDedicated) then {
+    private["_boxLogic","_logicCenter","_logicGroup"];
+
     [] call compile PreprocessFileLineNumbers "\supremacy_server\init.sqf";
 
     // Initializes the Dynamic Groups framework
     ["Initialize"] call BIS_fnc_dynamicGroups;
 
+    // Apply game logic to lock down the equipment box. This is basically a small "hack" for
+    // keeping the equipment boxes in place while still being interactable.
+    _logicCenter = createCenter sideLogic;
+    _logicGroup = createGroup _logicCenter;
     {
         if (!isNil {missionNamespace getVariable _x}) then {
-            // Apply game logic to lock down the equipment box
             _house = (_x splitString "_");
             _house set [1, "arms_house"];
             _house = missionNamespace getVariable (_house joinString "_");
@@ -27,7 +32,10 @@ if (isDedicated) then {
             _box set [1, "arms_crate"];
             _box = missionNamespace getVariable (_box joinString "_");
 
-            _box attachTo [_house,[0,1,0.4]];
+            _boxLogic = _logicGroup createUnit ["Logic", getPos _box, [], 0, "NONE"];
+            _boxLogic setDir (getDir _box);
+
+            _box attachTo [_boxLogic,[-1,0.7,1.13]];
             _box allowDamage false;
             clearItemCargoGlobal _box;
         };

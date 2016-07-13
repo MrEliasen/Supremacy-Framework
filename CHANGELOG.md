@@ -1,4 +1,4 @@
-## 0.5.0 (xx-xx-xxxx)
+## 0.5.0 (13-07-2016)
 
 Features/Changes:
 
@@ -16,6 +16,14 @@ Bugfixes:
  * Fixed issue with player body is removed when logging out after being killed.
  * Fixed starter gear not being added properly on spawn.
  * Fixed issue with saving gear not including ammo and inventory items.
+
+Known Issues:
+
+ * The new shop system with equipment crates is not implemented on the Altis map yet.
+
+Thanks
+
+ * "das attorney" on the BIS forums for help with the 0.5.0 release.
 
 
 ## 0.4.1 (23-01-2016)
