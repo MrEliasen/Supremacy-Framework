@@ -1,4 +1,4 @@
-private ["_building","_lootList","_positions","_pos","_item","_holder","_m","_buildingPos","_loot"];
+private ["_building","_lootList","_positions","_pos","_item","_holder","_m","_buildingPos","_ammo","_loot","_rand","_magazines"];
 _building = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 _lootList = [_this,1,[],[[]]] call BIS_fnc_param;
 _positions = [];
@@ -26,14 +26,46 @@ if (count _lootList > 0) then {
     _loot = ([_lootList] call bis_fnc_selectRandom);
     _item addItemCargoGlobal [_loot, 1];
 } else {
-    if (random 100 > 50) then {
-        // Spawn Vests
-        _loot = (((["equip_vests"] call SPMC_fnc_config) call BIS_fnc_arrayShuffle) call bis_fnc_selectRandom);
-        _item addItemCargoGlobal [_loot, 1];
-    } else {
-        // Spawn Backpacks
-        _loot = (((["equip_backpacks"] call SPMC_fnc_config) call BIS_fnc_arrayShuffle) call bis_fnc_selectRandom);
-        _item addBackpackCargoGlobal [_loot, 1];
+    _rand = (random 100);
+
+    switch (true) do { 
+        case (_rand >= 80) : {
+            // Spawn Vests
+            _loot = (((["equip_vests"] call SPMC_fnc_config) call BIS_fnc_arrayShuffle) call bis_fnc_selectRandom);
+            _item addItemCargoGlobal [_loot, 1];
+        };
+
+        case (_rand < 80 && _rand >= 60) : {
+            // Spawn Backpacks
+            _loot = (((["equip_backpacks"] call SPMC_fnc_config) call BIS_fnc_arrayShuffle) call bis_fnc_selectRandom);
+            _item addBackpackCargoGlobal [_loot, 1];
+        };
+
+        case (_rand < 60 && _rand >= 40) : {
+            // Spawn Helmet/hat
+            _loot = (((["equip_hats"] call SPMC_fnc_config) call BIS_fnc_arrayShuffle) call bis_fnc_selectRandom);
+            _item addItemCargoGlobal [_loot, 1];
+        };
+
+        case (_rand < 40 && _rand >= 20) : {
+            // Spawn Weapon
+            _loot = (((["equip_weapons"] call SPMC_fnc_config) call BIS_fnc_arrayShuffle) call bis_fnc_selectRandom);
+            _item addItemCargoGlobal [_loot, 1];
+
+            // spawn some mags for the weapon as well
+            _magazines = getArray (configFile / "CfgWeapons" / _loot / "magazines");
+
+            if(count _magazines > 0) then 
+            {
+                _ammo = createVehicle ["groundweaponholder",[(_pos select 0),(_pos select 1),(getposATL _item select 2)], [], 0, "can_Collide"];
+                _ammo addMagazineCargoGlobal [(_magazines call bis_fnc_selectRandom), floor(random 3)+1];
+            };
+        };
+        case (_rand < 20) : {
+            // Spawn Attachment
+            _loot = (((["equip_attachments"] call SPMC_fnc_config) call BIS_fnc_arrayShuffle) call bis_fnc_selectRandom);
+            _item addItemCargoGlobal [_loot, 1];
+        };
     };
 };
 

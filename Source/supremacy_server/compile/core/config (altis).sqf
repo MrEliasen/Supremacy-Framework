@@ -41,7 +41,7 @@ switch (_this select 0) do {
      * @return boolean
      */
     case "fatigue_enabled": {
-        true;
+        false;
     };
     
     /**
@@ -101,7 +101,7 @@ switch (_this select 0) do {
      * @return integer
      */
     case "spawn_arms_shops": {
-        15;
+        4;
     };
     
     /**
@@ -109,7 +109,7 @@ switch (_this select 0) do {
      * @return integer
      */
     case "spawn_ground_shops": {
-        10;
+        4;
     };
 
     /**
@@ -117,7 +117,7 @@ switch (_this select 0) do {
      * @return integer
      */
     case "spawn_air_shops": {
-        3;
+        1;
     };
     
     /**
@@ -190,46 +190,39 @@ switch (_this select 0) do {
      */
     case "shop_arms_npc_list": {
         [
-            "shop_arms_character_1",
-            "shop_arms_character_2",
-            "shop_arms_character_3",
-            "shop_arms_character_4",
-            "shop_arms_character_5",
-            "shop_arms_character_6",
-            "shop_arms_character_7",
-            "shop_arms_character_8",
-            "shop_arms_character_9",
-            "shop_arms_character_10",
-            "shop_arms_character_11",
-            "shop_arms_character_12",
-            "shop_arms_character_13",
-            "shop_arms_character_14",
-            "shop_arms_character_15",
-            "shop_arms_character_16",
-            "shop_arms_character_17",
-            "shop_arms_character_18",
-            "shop_arms_character_19",
-            "shop_arms_character_20",
-            "shop_arms_character_21",
-            "shop_arms_character_22",
-            "shop_arms_character_23",
-            "shop_arms_character_24",
-            "shop_arms_character_25",
-            "shop_arms_character_26",
-            "shop_arms_character_27",
-            "shop_arms_character_28",
-            "shop_arms_character_29",
-            "shop_arms_character_30",
-            "shop_arms_character_31",
-            "shop_arms_character_32",
-            "shop_arms_character_33",
-            "shop_arms_character_34",
-            "shop_arms_character_35",
-            "shop_arms_character_36",
-            "shop_arms_character_37",
-            "shop_arms_character_38",
-            "shop_arms_character_39",
-            "shop_arms_character_40"
+            "shop_arms_1",
+            "shop_arms_2",
+            "shop_arms_3",
+            "shop_arms_4",
+            "shop_arms_5",
+            "shop_arms_6",
+            "shop_arms_7",
+            "shop_arms_8",
+            "shop_arms_9",
+            "shop_arms_10",
+            "shop_arms_11",
+            "shop_arms_12",
+            "shop_arms_13",
+            "shop_arms_14",
+            "shop_arms_15",
+            "shop_arms_16",
+            "shop_arms_17",
+            "shop_arms_18",
+            "shop_arms_19",
+            "shop_arms_20",
+            "shop_arms_21",
+            "shop_arms_22",
+            "shop_arms_23",
+            "shop_arms_24",
+            "shop_arms_25",
+            "shop_arms_26",
+            "shop_arms_27",
+            "shop_arms_28",
+            "shop_arms_29",
+            "shop_arms_30",
+            "shop_arms_31",
+            "shop_arms_32",
+            "shop_arms_33"
         ];
     };
 
@@ -239,45 +232,30 @@ switch (_this select 0) do {
      */
     case "shop_ground_vehicle_npc_list": {
         [
-            "shop_vehicle_character_1",
-            "shop_vehicle_character_8",
-            "shop_vehicle_character_9",
-            "shop_vehicle_character_10",
-            "shop_vehicle_character_11",
-            "shop_vehicle_character_12",
-            "shop_vehicle_character_13",
-            "shop_vehicle_character_14",
-            "shop_vehicle_character_15",
-            "shop_vehicle_character_16",
-            "shop_vehicle_character_17",
-            "shop_vehicle_character_18",
-            "shop_vehicle_character_19",
-            "shop_vehicle_character_20",
-            "shop_vehicle_character_21",
-            "shop_vehicle_character_22",
-            "shop_vehicle_character_23",
-            "shop_vehicle_character_24",
-            "shop_vehicle_character_25",
-            "shop_vehicle_character_26",
-            "shop_vehicle_character_27",
-            "shop_vehicle_character_28",
-            "shop_vehicle_character_29",
-            "shop_vehicle_character_30",
-            "shop_vehicle_character_31",
-            "shop_vehicle_character_32",
-            "shop_vehicle_character_33",
-            "shop_vehicle_character_34",
-            "shop_vehicle_character_35",
-            "shop_vehicle_character_36",
-            "shop_vehicle_character_37",
-            "shop_vehicle_character_38",
-            "shop_vehicle_character_39",
-            "shop_vehicle_character_40",
-            "shop_vehicle_character_41",
-            "shop_vehicle_character_42",
-            "shop_vehicle_character_43",
-            "shop_vehicle_character_44",
-            "shop_vehicle_character_45"
+            "shop_vehicle_1",
+            "shop_vehicle_8",
+            "shop_vehicle_9",
+            "shop_vehicle_10",
+            "shop_vehicle_11",
+            "shop_vehicle_12",
+            "shop_vehicle_13",
+            "shop_vehicle_14",
+            "shop_vehicle_15",
+            "shop_vehicle_16",
+            "shop_vehicle_17",
+            "shop_vehicle_18",
+            "shop_vehicle_19",
+            "shop_vehicle_20",
+            "shop_vehicle_21",
+            "shop_vehicle_22",
+            "shop_vehicle_23",
+            "shop_vehicle_24",
+            "shop_vehicle_25",
+            "shop_vehicle_26",
+            "shop_vehicle_27",
+            "shop_vehicle_28",
+            "shop_vehicle_29",
+            "shop_vehicle_30"
         ];
     };
 
@@ -287,12 +265,12 @@ switch (_this select 0) do {
      */
     case "shop_air_vehicle_npc_list": {
         [
-            "shop_vehicle_character_6",
-            "shop_vehicle_character_2",
-            "shop_vehicle_character_3",
-            "shop_vehicle_character_4",
-            "shop_vehicle_character_5",
-            "shop_vehicle_character_7"
+            "shop_vehicle_31",
+            "shop_vehicle_32",
+            "shop_vehicle_33",
+            "shop_vehicle_34",
+            "shop_vehicle_35",
+            "shop_vehicle_36"
         ];
     };
 

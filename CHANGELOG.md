@@ -1,3 +1,15 @@
+## 0.5.1 (17-08-2016)
+
+Features/Changes:
+
+ * Changed building spawn to include weapons, helmets and attachments.
+
+Bugfixes:
+
+ * Fixed Altis map. Should now work exactly like Tanoa (shops etc.).
+ * Fixed issue in initShops.sqf (altis), preventing server from loading.
+
+
 ## 0.5.0 (13-07-2016)
 
 Features/Changes:

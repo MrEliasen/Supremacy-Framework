@@ -41,7 +41,7 @@ switch (_this select 0) do {
      * @return boolean
      */
     case "fatigue_enabled": {
-        true;
+        false;
     };
     
     /**
