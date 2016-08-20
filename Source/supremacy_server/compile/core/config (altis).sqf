@@ -119,6 +119,14 @@ switch (_this select 0) do {
     case "spawn_air_shops": {
         1;
     };
+
+    /**
+     * The number of air vehicle shops to have in the map (cannot exceed the number of shops placed in the map).
+     * @return integer
+     */
+    case "spawn_water_shops": {
+        2;
+    };
     
     /**
      * The percentage of the purchase price an item will sell for.
@@ -133,7 +141,7 @@ switch (_this select 0) do {
      * @return integer
      */
     case "loot_crate_limit": {
-        10;
+        80;
     };
 
     /**
@@ -141,7 +149,7 @@ switch (_this select 0) do {
      * @return integer
      */
     case "loot_vehicle_limit": {
-        10;
+        80;
     };
 
     /**
@@ -149,7 +157,7 @@ switch (_this select 0) do {
      * @return integer
      */
     case "loot_stationery_limit": {
-        10;
+        30;
     };
 
     /**
@@ -271,6 +279,19 @@ switch (_this select 0) do {
             "shop_vehicle_34",
             "shop_vehicle_35",
             "shop_vehicle_36"
+        ];
+    };
+
+    /**
+     * Water vehicle shop NPC list
+     * @return array
+     */
+    case "shop_water_vehicle_npc_list": {
+        [
+            "shop_vehicle_37",
+            "shop_vehicle_38",
+            "shop_vehicle_39",
+            "shop_vehicle_40"
         ];
     };
 

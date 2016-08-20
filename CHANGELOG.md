@@ -1,3 +1,23 @@
+## 0.5.2 (20-08-2016)
+
+Features/Changes:
+
+ * Added Water vehicle shops (new configuration options).
+ * Updated drop zone layout on Tanoa (config updated).
+ * Updated ExtDB2 to extDB3-1010 (new ExtDB ini files).
+
+Bugfixes:
+
+ * Fixed map not completing the load when building loot is set to 0.
+ * Fixed vehicles shop dialog not showing.
+ * Fixed shops not removing the cash desk and NATO box.
+ * Fixed attachements not spawning in world loot.
+
+Known Issues:
+
+ * None.
+
+
 ## 0.5.1 (17-08-2016)
 
 Features/Changes:

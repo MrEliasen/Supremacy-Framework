@@ -6,7 +6,7 @@
  * [HallyG](https://forums.bistudio.com/topic/184551-simple-animation-with-progressbar-and-handling/) for the original progress bar script.
 
 ###Extensions
- * [Torndeco](https://bitbucket.org/torndeco/extdb3) for extDB2 (Arma3 Extension DB2).
+ * [Torndeco](https://bitbucket.org/torndeco/extdb3) for ExtDB3.
  
 ####Sounds
  * [pierrecartoons1979](https://www.freesound.org/people/pierrecartoons1979/sounds/90121/) for the "purchase" sound.

@@ -97,7 +97,7 @@ _handle = [] execVM "\supremacy_server\3rdparty\_master.sqf";
 waitUntil {scriptDone _handle};
 
 diag_log "SERVER: Establishing database connection.";
-_handle = ["spmc","SQL_CUSTOM_V2","spmc"] execVM "\supremacy_server\3rdparty\extDB2\dbInit.sqf";
+_handle = ["spmc","SQL_CUSTOM","spmc.ini"] execVM "\supremacy_server\3rdparty\extDB3\dbInit.sqf";
 waitUntil {scriptDone _handle};
 
 diag_log "SERVER: Running server setup.";

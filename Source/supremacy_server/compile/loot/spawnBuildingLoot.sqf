@@ -64,6 +64,7 @@ if (count _lootList > 0) then {
         case (_rand < 20) : {
             // Spawn Attachment
             _loot = (((["equip_attachments"] call SPMC_fnc_config) call BIS_fnc_arrayShuffle) call bis_fnc_selectRandom);
+            _loot = ((_loot call BIS_fnc_arrayShuffle) call bis_fnc_selectRandom);
             _item addItemCargoGlobal [_loot, 1];
         };
     };

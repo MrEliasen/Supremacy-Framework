@@ -24,5 +24,5 @@ ping 127.0.0.1 -n 2 > nul
 del "C:\Arma_3_Server\mpmissions\supremacy.Tanoa.pbo.bak"
 del "C:\Arma_3_Server\@supremacy_server\addons\supremacy_server.pbo.bak"
 
-start C:\Arma_3_Server\arma3server -port=2302 "-config=C:\Arma_3_Server\TADST\supremacy\TADST_config.cfg" "-cfg=C:\Arma_3_Server\TADST\supremacy\TADST_basic.cfg" "-profiles=C:\Arma_3_Server\TADST\supremacy" -name=supremacy "-mod=heli;mark;@extDB2;@supremacy_server" -enableHT
+start C:\Arma_3_Server\arma3server -port=2302 "-config=C:\Arma_3_Server\TADST\supremacy\TADST_config.cfg" "-cfg=C:\Arma_3_Server\TADST\supremacy\TADST_basic.cfg" "-profiles=C:\Arma_3_Server\TADST\supremacy" -name=supremacy "-mod=heli;mark;@extDB3;@supremacy_server" -enableHT
 @exit

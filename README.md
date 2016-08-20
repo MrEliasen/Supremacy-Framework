@@ -2,8 +2,6 @@ Supremacy Framework
 ========
 I wanted to learn more about how ARMA 3 modding worked, and there is really no better way than "code to learn". Everything is coded from the ground up, except for the below mentioned 3rd part scripts.
 
-I don't know much about "best practises" in this language yet, or how I should or shouldn't code things, so feedback is absolutely more than welcome (constructive feedback please, thanks!).
-
 ## Current Features
  * World loot spawns
  * World vehicle spawns
@@ -38,16 +36,24 @@ It uses strictly "vanilla" (including expansions) content. No client-side mods r
 You can modify the "\Source\supremacy_server\compile\core\config*.sqf" to make changes to a lot of the elements in the framework.
 There is no wiki yet, but I hope to get working on that soon(tm).
 
-## 0.5.1 (17-08-2016)
+## 0.5.2 (20-08-2016)
 
 Features/Changes:
 
- * Changed building spawn to include weapons, helmets and attachments.
+ * Added Water vehicle shops (new configuration options).
+ * Updated drop zone layout on Tanoa (config updated).
+ * Updated ExtDB2 to extDB3-1010 (new ExtDB ini files).
 
 Bugfixes:
 
- * Fixed Altis map. Should now work exactly like Tanoa (shops etc.).
- * Fixed issue in initShops.sqf (altis), preventing server from loading.
+ * Fixed map not completing the load when building loot is set to 0.
+ * Fixed vehicles shop dialog not showing.
+ * Fixed shops not removing the cash desk and NATO box.
+ * Fixed attachements not spawning in world loot.
+
+Known Issues:
+
+ * None.
 
 ## Support / Feedback / Issues
 If you need help, have feedback, requests or like, please post it here (or via GitHub) [The Forums](https://forums.bistudio.com/topic/184027-spmc-supremacy-framework-multiplayer-sandbox-framework/).   
@@ -79,7 +85,7 @@ A special thanks to Kilzone_Kid and Tonic for inspiration and code/resources whi
  * [HallyG](https://forums.bistudio.com/topic/184551-simple-animation-with-progressbar-and-handling/) for the original progress bar script.
 
 ###Extensions
- * [Torndeco](https://bitbucket.org/torndeco/extdb3) for extDB2 (Arma3 Extension DB2).
+ * [Torndeco](https://bitbucket.org/torndeco/extdb3) for ExtDB3.
  
 ####Sounds
  * [pierrecartoons1979](https://www.freesound.org/people/pierrecartoons1979/sounds/90121/) for the "purchase" sound.
