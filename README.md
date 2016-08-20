@@ -2,8 +2,6 @@ Supremacy Framework
 ========
 I wanted to learn more about how ARMA 3 modding worked, and there is really no better way than "code to learn". Everything is coded from the ground up, except for the below mentioned 3rd part scripts.
 
-I don't know much about "best practises" in this language yet, or how I should or shouldn't code things, so feedback is absolutely more than welcome (constructive feedback please, thanks!).
-
 ## Current Features
  * World loot spawns
  * World vehicle spawns
@@ -19,6 +17,11 @@ I don't know much about "best practises" in this language yet, or how I should o
  * Loot spawn in buildings and world loot spawn (vehicles, crates and stationary)
  * Skill & Experience system
  * Revival, heal, repair and other skills.
+ * BIS Dynamic Groups
+
+## Maps
+ * Altis
+ * Tanoa
 
 ## Usage/Installation
 It uses strictly "vanilla" (including expansions) content. No client-side mods required.
@@ -27,37 +30,30 @@ It uses strictly "vanilla" (including expansions) content. No client-side mods r
 2. Edit the "LaunchServer.bat" files launch parameters to suit your needs.
 3. Edit the "@extDB2\extdb-conf.ini" file, adding your database connection details.
 4. Import the "@extDB2\spmc_server.sql" to your database.
-4.5 Import any "spmc_server - x.x.x to x.x.X update.sql" files in the correct order (by version).
+    * If upgrading, import any "spmc_server - x.x.x to x.x.X update.sql" files in the correct order (by version).
 5. Run the "LaunchServer.bat" file.
 
 You can modify the "\Source\supremacy_server\compile\core\config*.sqf" to make changes to a lot of the elements in the framework.
 There is no wiki yet, but I hope to get working on that soon(tm).
 
-## 0.5.0 (13-07-2016)
+## 0.5.2 (20-08-2016)
+
 Features/Changes:
 
- * Tanoa map compatibility added.
- * Added the BIS group system (https://community.bistudio.com/wiki/Dynamic_Groups). Can be accessed by pressin U or via the player menu.
- * Shops updated (map file)
- * Only X number of each shop type will spawn (config setting). Which once are determined by random on server init.
- * Added starter gear setting for GUER, WEST, EAST and default.
- * Added the ability to add both sidearm, launcher and primary starter weapons.
- * Removed stamina indicator since the game now have its own way of showing it.
- * Added option to place puchased equipment and items in a box next to shops.
+ * Added Water vehicle shops (new configuration options).
+ * Updated drop zone layout on Tanoa (config updated).
+ * Updated ExtDB2 to extDB3-1010 (new ExtDB ini files).
 
 Bugfixes:
 
- * Fixed issue with player body is removed when logging out after being killed.
- * Fixed starter gear not being added properly on spawn.
- * Fixed issue with saving gear not including ammo and inventory items.
+ * Fixed map not completing the load when building loot is set to 0.
+ * Fixed vehicles shop dialog not showing.
+ * Fixed shops not removing the cash desk and NATO box.
+ * Fixed attachements not spawning in world loot.
 
 Known Issues:
 
- * The new shop system with equipment crates is not implemented on the Altis map yet.
-
-Thanks
-
- * [das attorney](https://forums.bistudio.com/user/762874-das-attorney/) on the BIS forums for help with this release.
+ * None.
 
 ## Support / Feedback / Issues
 If you need help, have feedback, requests or like, please post it here (or via GitHub) [The Forums](https://forums.bistudio.com/topic/184027-spmc-supremacy-framework-multiplayer-sandbox-framework/).   
@@ -73,9 +69,7 @@ I did not create or own any of the 3rd party material. Please see their credits 
 Copyright (c) 2016 Mark Eliasen - 3rd party material are copyrighted by their respective owners.
 
 ## Arma Server Monetization
-You have permission to use "Supremacy Framework" on a monetised arma server(s).
-
-Please remember to share by donating to various authors that create content / tools that you are using.
+You have permission to use this framework on a monetised arma server(s).
 
 **IMPORTANT NOTE:** This does NOT apply to any of the 3rd party material (sounds, code, icons etc). All 3rd party material can be found in the "\3rdparty" directory in the client and server source code.
 
@@ -91,7 +85,7 @@ A special thanks to Kilzone_Kid and Tonic for inspiration and code/resources whi
  * [HallyG](https://forums.bistudio.com/topic/184551-simple-animation-with-progressbar-and-handling/) for the original progress bar script.
 
 ###Extensions
- * [Torndeco](https://bitbucket.org/torndeco/extdb3) for extDB3 (Arma3 Extension DB3).
+ * [Torndeco](https://bitbucket.org/torndeco/extdb3) for ExtDB3.
  
 ####Sounds
  * [pierrecartoons1979](https://www.freesound.org/people/pierrecartoons1979/sounds/90121/) for the "purchase" sound.

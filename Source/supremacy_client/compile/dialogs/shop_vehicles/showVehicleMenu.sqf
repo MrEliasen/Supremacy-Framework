@@ -52,7 +52,7 @@ switch (_type) do {
     };
 };
 
-if ((count _typeList) == 0) exitWith {closeDialog 0;};
+if ((count _typeList) <= 1) exitWith {closeDialog 0;};
 
 _list = (findDisplay 2600) displayCtrl 2601;
 lbClear _list;

@@ -189,32 +189,40 @@ _spawnBlock allowDamage false;
 [] spawn {
     private ["_buildings","_limit","_percent","_chance"];
     // Spawn loot in buildings
-
-    _buildings = ((getMarkerPos "world_item_spawn") nearObjects ["House",((getMarkerSize "world_item_spawn") select 0)]);
-    _limit = (count _buildings) - 1;
-    _percent = (100/_limit);
     _chance = ["house_loot_percent"] call SPMC_fnc_config;
 
-    if (debugMode) then {
-        diag_log format["SERVER: Spawning loot in ~%1 buildings.", ((_limit + 1) * (_chance/100))];
-    };
+    if (_chance > 0) then { 
+        _buildings = ((getMarkerPos "world_item_spawn") nearObjects ["House",((getMarkerSize "world_item_spawn") select 0)]);
+        _limit = (count _buildings) - 1;
+        _percent = (100/_limit);
 
-    // wait for the first player to join in - else the items won't be visible to the players for some reason?
-    while {serverStatusLootBuildings == -1} do {
-        sleep 1.5;
-    };
-
-    {
-        // n% chance of gear spawning in that building.
-        if (random 100 <= _chance) then {
-            [_x] spawn SPMC_fnc_spawnBuildingLoot;
+        if (debugMode) then {
+            diag_log format["SERVER: Spawning loot in ~%1 buildings.", ((_limit + 1) * (_chance/100))];
         };
 
-        serverStatusLootBuildings = _percent * _forEachIndex;
-
-        if(_forEachIndex == _limit) exitWith {
-            serverStatusLootBuildings = 100;
+        // wait for the first player to join in - else the items won't be visible to the players for some reason?
+        while {serverStatusLootBuildings == -1} do {
+            sleep 1.5;
         };
+
+        {
+            // n% chance of gear spawning in that building.
+            if (random 100 <= _chance) then {
+                [_x] spawn SPMC_fnc_spawnBuildingLoot;
+            };
+
+            serverStatusLootBuildings = _percent * _forEachIndex;
+
+            if(_forEachIndex == _limit) exitWith {
+                serverStatusLootBuildings = 100;
+            };
+            
+        } foreach _buildings;
+    } else {
+        serverStatusLootBuildings = 100;
         
-    } foreach _buildings;
+        if (debugMode) then {
+            diag_log format["SERVER: Loot spawn chance: %1, skipping.", _chance];
+        };
+    };
 };

@@ -55,6 +55,8 @@ for "_i" from 1 to (["spawn_ground_shops"] call SPMC_fnc_config) do {
 {
     _y = (missionNamespace getVariable _x);
     deleteVehicle (nearestObject [_y, "Land_Research_house_V1_F"]);
+    deleteVehicle (nearestObject [_y, "Land_CashDesk_F"]);
+    deleteVehicle (nearestObject [_y, "Box_NATO_Equip_F"]);
     { deleteVehicle _x; } forEach (nearestObjects [_y, ["Land_JumpTarget_F"], 125]);
     deleteVehicle _y;
 } forEach _list;
@@ -71,7 +73,7 @@ for "_i" from 1 to (["spawn_air_shops"] call SPMC_fnc_config) do {
     _pos = getPos (missionNamespace getVariable _selection);
 
     _m = createMarker [format["arms%1%2", _pos select 0, _pos select 1], _pos];
-    _m setmarkerColor "ColorBlue";
+    _m setmarkerColor "ColorRed";
     _m setMarkerShape "Icon";
     _m setMarkerType "c_air";
     _m setMarkerText "AIR VEHICLE SHOP"
@@ -80,6 +82,33 @@ for "_i" from 1 to (["spawn_air_shops"] call SPMC_fnc_config) do {
 {
     _y = (missionNamespace getVariable _x);
     deleteVehicle (nearestObject [_y, "Land_Research_house_V1_F"]);
+    deleteVehicle (nearestObject [_y, "Land_CashDesk_F"]);
+    { deleteVehicle _x; } forEach (nearestObjects [_y, ["Land_JumpTarget_F"], 125]);
+    deleteVehicle _y;
+} forEach _list;
+
+
+
+// AIR VEHICLE SHOPS
+_list = ["shop_water_vehicle_npc_list"] call SPMC_fnc_config;
+
+for "_i" from 1 to (["spawn_water_shops"] call SPMC_fnc_config) do {
+    private["_selection"];
+    _selection = (_list call bis_fnc_selectRandom);
+    _list = _list - [_selection];
+    _pos = getPos (missionNamespace getVariable _selection);
+
+    _m = createMarker [format["arms%1%2", _pos select 0, _pos select 1], _pos];
+    _m setmarkerColor "ColorBlue";
+    _m setMarkerShape "Icon";
+    _m setMarkerType "c_ship";
+    _m setMarkerText "WATER VEHICLE SHOP"
+};
+
+{
+    _y = (missionNamespace getVariable _x);
+    deleteVehicle (nearestObject [_y, "Land_Research_house_V1_F"]);
+    deleteVehicle (nearestObject [_y, "Land_CashDesk_F"]);
     { deleteVehicle _x; } forEach (nearestObjects [_y, ["Land_JumpTarget_F"], 125]);
     deleteVehicle _y;
 } forEach _list;

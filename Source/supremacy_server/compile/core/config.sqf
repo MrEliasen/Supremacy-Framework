@@ -41,7 +41,7 @@ switch (_this select 0) do {
      * @return boolean
      */
     case "fatigue_enabled": {
-        true;
+        false;
     };
     
     /**
@@ -53,11 +53,11 @@ switch (_this select 0) do {
     };
     
     /**
-     * the % chance of loot spawning in a given building. 8 = ~1450 buildings.
+     * the % chance of loot spawning in a given building. 8 = ~1450 buildings on altis.
      * @return integer
      */
     case "house_loot_percent": {
-        1;
+        0;
     };
     
     /**
@@ -109,7 +109,7 @@ switch (_this select 0) do {
      * @return integer
      */
     case "spawn_ground_shops": {
-        10;
+        4;
     };
 
     /**
@@ -117,7 +117,15 @@ switch (_this select 0) do {
      * @return integer
      */
     case "spawn_air_shops": {
-        3;
+        2;
+    };
+
+    /**
+     * The number of water vehicle shops to have in the map (cannot exceed the number of shops placed in the map).
+     * @return integer
+     */
+    case "spawn_water_shops": {
+        2;
     };
     
     /**
@@ -129,11 +137,11 @@ switch (_this select 0) do {
     };
 
     /**
-     * How mant loot create to spawn on the island during startup. 
+     * How mant loot create to spawn during startup. 
      * @return integer
      */
     case "loot_crate_limit": {
-        10;
+        100;
     };
 
     /**
@@ -141,7 +149,7 @@ switch (_this select 0) do {
      * @return integer
      */
     case "loot_vehicle_limit": {
-        10;
+        80;
     };
 
     /**
@@ -149,7 +157,7 @@ switch (_this select 0) do {
      * @return integer
      */
     case "loot_stationery_limit": {
-        10;
+        30;
     };
 
     /**
@@ -157,7 +165,7 @@ switch (_this select 0) do {
      * @return integer
      */
     case "airdrop_interval": {
-        20;
+        10;
     };
 
     /**
@@ -180,7 +188,29 @@ switch (_this select 0) do {
             "spawn_exclude_3",
             "spawn_exclude_4",
             "spawn_exclude_5",
-            "spawn_exclude_6"
+            "spawn_exclude_6",
+            "spawn_exclude_7",
+            "spawn_exclude_8",
+            "spawn_exclude_9",
+            "spawn_exclude_10",
+            "spawn_exclude_11",
+            "spawn_exclude_12",
+            "spawn_exclude_13",
+            "spawn_exclude_14",
+            "spawn_exclude_15",
+            "spawn_exclude_16",
+            "spawn_exclude_17",
+            "spawn_exclude_18",
+            "spawn_exclude_19",
+            "spawn_exclude_20",
+            "spawn_exclude_21",
+            "spawn_exclude_22",
+            "spawn_exclude_23",
+            "spawn_exclude_24",
+            "spawn_exclude_25",
+            "spawn_exclude_26",
+            "spawn_exclude_27",
+            "spawn_exclude_28"
         ];
     };
 
@@ -190,46 +220,57 @@ switch (_this select 0) do {
      */
     case "shop_arms_npc_list": {
         [
-            "shop_arms_character_1",
-            "shop_arms_character_2",
-            "shop_arms_character_3",
-            "shop_arms_character_4",
-            "shop_arms_character_5",
-            "shop_arms_character_6",
-            "shop_arms_character_7",
-            "shop_arms_character_8",
-            "shop_arms_character_9",
-            "shop_arms_character_10",
-            "shop_arms_character_11",
-            "shop_arms_character_12",
-            "shop_arms_character_13",
-            "shop_arms_character_14",
-            "shop_arms_character_15",
-            "shop_arms_character_16",
-            "shop_arms_character_17",
-            "shop_arms_character_18",
-            "shop_arms_character_19",
-            "shop_arms_character_20",
-            "shop_arms_character_21",
-            "shop_arms_character_22",
-            "shop_arms_character_23",
-            "shop_arms_character_24",
-            "shop_arms_character_25",
-            "shop_arms_character_26",
-            "shop_arms_character_27",
-            "shop_arms_character_28",
-            "shop_arms_character_29",
-            "shop_arms_character_30",
-            "shop_arms_character_31",
-            "shop_arms_character_32",
-            "shop_arms_character_33",
-            "shop_arms_character_34",
-            "shop_arms_character_35",
-            "shop_arms_character_36",
-            "shop_arms_character_37",
-            "shop_arms_character_38",
-            "shop_arms_character_39",
-            "shop_arms_character_40"
+            "shop_arms_1",
+            "shop_arms_2",
+            "shop_arms_3",
+            "shop_arms_4",
+            "shop_arms_5",
+            "shop_arms_6",
+            "shop_arms_7",
+            "shop_arms_8",
+            "shop_arms_9",
+            "shop_arms_10",
+            "shop_arms_11",
+            "shop_arms_12",
+            "shop_arms_13",
+            "shop_arms_14",
+            "shop_arms_15",
+            "shop_arms_16",
+            "shop_arms_17",
+            "shop_arms_18",
+            "shop_arms_19",
+            "shop_arms_20",
+            "shop_arms_21",
+            "shop_arms_22",
+            "shop_arms_23",
+            "shop_arms_24",
+            "shop_arms_25",
+            "shop_arms_26",
+            "shop_arms_27",
+            "shop_arms_28",
+            "shop_arms_29",
+            "shop_arms_30",
+            "shop_arms_31",
+            "shop_arms_32",
+            "shop_arms_33",
+            "shop_arms_34",
+            "shop_arms_35",
+            "shop_arms_36",
+            "shop_arms_37",
+            "shop_arms_38",
+            "shop_arms_39",
+            "shop_arms_40",
+            "shop_arms_41",
+            "shop_arms_42",
+            "shop_arms_43",
+            "shop_arms_44",
+            "shop_arms_45",
+            "shop_arms_46",
+            "shop_arms_47",
+            "shop_arms_48",
+            "shop_arms_49",
+            "shop_arms_50",
+            "shop_arms_51"
         ];
     };
 
@@ -239,45 +280,23 @@ switch (_this select 0) do {
      */
     case "shop_ground_vehicle_npc_list": {
         [
-            "shop_vehicle_character_1",
-            "shop_vehicle_character_8",
-            "shop_vehicle_character_9",
-            "shop_vehicle_character_10",
-            "shop_vehicle_character_11",
-            "shop_vehicle_character_12",
-            "shop_vehicle_character_13",
-            "shop_vehicle_character_14",
-            "shop_vehicle_character_15",
-            "shop_vehicle_character_16",
-            "shop_vehicle_character_17",
-            "shop_vehicle_character_18",
-            "shop_vehicle_character_19",
-            "shop_vehicle_character_20",
-            "shop_vehicle_character_21",
-            "shop_vehicle_character_22",
-            "shop_vehicle_character_23",
-            "shop_vehicle_character_24",
-            "shop_vehicle_character_25",
-            "shop_vehicle_character_26",
-            "shop_vehicle_character_27",
-            "shop_vehicle_character_28",
-            "shop_vehicle_character_29",
-            "shop_vehicle_character_30",
-            "shop_vehicle_character_31",
-            "shop_vehicle_character_32",
-            "shop_vehicle_character_33",
-            "shop_vehicle_character_34",
-            "shop_vehicle_character_35",
-            "shop_vehicle_character_36",
-            "shop_vehicle_character_37",
-            "shop_vehicle_character_38",
-            "shop_vehicle_character_39",
-            "shop_vehicle_character_40",
-            "shop_vehicle_character_41",
-            "shop_vehicle_character_42",
-            "shop_vehicle_character_43",
-            "shop_vehicle_character_44",
-            "shop_vehicle_character_45"
+            "shop_vehicle_7",
+            "shop_vehicle_8",
+            "shop_vehicle_9",
+            "shop_vehicle_10",
+            "shop_vehicle_11",
+            "shop_vehicle_12",
+            "shop_vehicle_13",
+            "shop_vehicle_14",
+            "shop_vehicle_15",
+            "shop_vehicle_16",
+            "shop_vehicle_17",
+            "shop_vehicle_18",
+            "shop_vehicle_19",
+            "shop_vehicle_20",
+            "shop_vehicle_21",
+            "shop_vehicle_22",
+            "shop_vehicle_23"
         ];
     };
 
@@ -287,12 +306,29 @@ switch (_this select 0) do {
      */
     case "shop_air_vehicle_npc_list": {
         [
-            "shop_vehicle_character_6",
-            "shop_vehicle_character_2",
-            "shop_vehicle_character_3",
-            "shop_vehicle_character_4",
-            "shop_vehicle_character_5",
-            "shop_vehicle_character_7"
+            "shop_vehicle_1",
+            "shop_vehicle_2",
+            "shop_vehicle_3",
+            "shop_vehicle_4",
+            "shop_vehicle_5",
+            "shop_vehicle_6"
+        ];
+    };
+
+    /**
+     * Water vehicle shop NPC list
+     * @return array
+     */
+    case "shop_water_vehicle_npc_list": {
+        [
+            "shop_vehicle_24",
+            "shop_vehicle_25",
+            "shop_vehicle_26",
+            "shop_vehicle_27",
+            "shop_vehicle_28",
+            "shop_vehicle_29",
+            "shop_vehicle_30",
+            "shop_vehicle_31"
         ];
     };
 
@@ -308,127 +344,207 @@ switch (_this select 0) do {
         [
             [
                 "spawn_1",
-                "Molos"
+                "Tuvanaka"
             ],
             [
                 "spawn_2",
-                "Sofia"
+                "Belfort"
             ],
             [
                 "spawn_3",
-                "Paros/Kalochori"
+                "Nani"
             ],
             [
                 "spawn_4",
-                "Rodopoli"
+                "Tavu"
             ],
             [
                 "spawn_5",
-                "Charkia"
+                "Balavu"
             ],
             [
                 "spawn_6",
-                "Pyrgos"
+                "Laikoro"
             ],
             [
                 "spawn_7",
-                "Chalkela"
+                "Rautake"
             ],
             [
                 "spawn_8",
-                "Panagia"
+                "Namuvaka"
             ],
             [
                 "spawn_9",
-                "Feres"
+                "Cerebu"
             ],
             [
                 "spawn_10",
-                "Selakano"
+                "Yanukka"
             ],
             [
                 "spawn_11",
-                "Loannia/Delfinaki"
+                "Koumac"
             ],
             [
                 "spawn_12",
-                "Athira"
+                "Lailai"
             ],
             [
                 "spawn_13",
-                "Telos"
+                "Katkoula"
             ],
             [
                 "spawn_14",
-                "Frini"
+                "Savaka"
             ],
             [
                 "spawn_15",
-                "Gravia"
+                "Tobakoro"
             ],
             [
                 "spawn_16",
-                "Galati"
+                "Moddergat"
             ],
             [
                 "spawn_17",
-                "Agios Dionysios"
+                "La Foa"
             ],
             [
                 "spawn_18",
-                "Lakka/Stavros/Neochori"
+                "Lösi"
             ],
             [
                 "spawn_19",
-                "Alikampos/Poliakko/Katalaki"
+                "Harcourt"
             ],
             [
                 "spawn_20",
-                "Therisa"
+                "Doodstil"
             ],
             [
                 "spawn_21",
-                "Zaros"
+                "Port-Boisé"
             ],
             [
                 "spawn_22",
-                "Syrta"
+                "Bua Bua"
             ],
             [
                 "spawn_23",
-                "Kore"
+                "Rereki"
             ],
             [
                 "spawn_24",
-                "Negades"
+                "Taga"
             ],
             [
                 "spawn_25",
-                "Panochori"
+                "Lijnhaven"
             ],
             [
                 "spawn_26",
-                "Neri"
+                "Blerick"
             ],
             [
                 "spawn_27",
-                "Ifestiona"
+                "Regina"
             ],
             [
                 "spawn_28",
-                "Abdera"
+                "Lobaka"
             ],
             [
                 "spawn_29",
-                "Dorlda"
+                "Lifou"
             ],
             [
                 "spawn_30",
-                "Oreokastro"
+                "Lami"
             ],
             [
                 "spawn_31",
-                "Anthrakia"
+                "Kotomo"
+            ],
+            [
+                "spawn_32",
+                "Ouméré"
+            ],
+            [
+                "spawn_33",
+                "Luganville"
+            ],
+            [
+                "spawn_34",
+                "Nandai"
+            ],
+            [
+                "spawn_35",
+                "Blue Perl Industrial Port"
+            ],
+            [
+                "spawn_36",
+                "Ovau"
+            ],
+            [
+                "spawn_37",
+                "Pénélo"
+            ],
+            [
+                "spawn_38",
+                "La Rochelle"
+            ],
+            [
+                "spawn_39",
+                "Saint-Paul"
+            ],
+            [
+                "spawn_40",
+                "Petit Nicolet"
+            ],
+            [
+                "spawn_41",
+                "Nicolet"
+            ],
+            [
+                "spawn_42",
+                "Georgetown"
+            ],
+            [
+                "spawn_43",
+                "Nasua"
+            ],
+            [
+                "spawn_44",
+                "Vagalala"
+            ],
+            [
+                "spawn_45",
+                "Lakatoro"
+            ],
+            [
+                "spawn_46",
+                "Tanouka"
+            ],
+            [
+                "spawn_47",
+                "Galili"
+            ],
+            [
+                "spawn_48",
+                "Imone"
+            ],
+            [
+                "spawn_49",
+                "Vatukouloulo"
+            ],
+            [
+                "spawn_50",
+                "Ipota"
+            ],
+            [
+                "spawn_51",
+                "Sosovu"
             ]
         ];
     };
@@ -448,7 +564,40 @@ switch (_this select 0) do {
             "drop_zone_7",
             "drop_zone_8",
             "drop_zone_9",
-            "drop_zone_10"
+            "drop_zone_10",
+            "drop_zone_11",
+            "drop_zone_12",
+            "drop_zone_13",
+            "drop_zone_14",
+            "drop_zone_15",
+            "drop_zone_16",
+            "drop_zone_17",
+            "drop_zone_18",
+            "drop_zone_19",
+            "drop_zone_20",
+            "drop_zone_21",
+            "drop_zone_22",
+            "drop_zone_23",
+            "drop_zone_24",
+            "drop_zone_25",
+            "drop_zone_26",
+            "drop_zone_27",
+            "drop_zone_28",
+            "drop_zone_29",
+            "drop_zone_30",
+            "drop_zone_31",
+            "drop_zone_32",
+            "drop_zone_33",
+            "drop_zone_34",
+            "drop_zone_35",
+            "drop_zone_36",
+            "drop_zone_37",
+            "drop_zone_38",
+            "drop_zone_39",
+            "drop_zone_40",
+            "drop_zone_41",
+            "drop_zone_42",
+            "drop_zone_43"
         ];
     };
 
@@ -575,10 +724,87 @@ switch (_this select 0) do {
     };
 
     /**
+     * The weapons available in the game air drops
+     * @return array
+     */
+    case "airdrop_weapons": {
+        [
+            "arifle_Katiba_C_F",
+            "arifle_Katiba_F",
+            "arifle_Katiba_GL_F",
+            "arifle_Mk20C_F",
+            "arifle_Mk20C_plain_F",
+            "arifle_Mk20_F",
+            "arifle_Mk20_GL_F",
+            "arifle_Mk20_GL_plain_F",
+            "arifle_Mk20_plain_F",
+            "arifle_MXC_Black_F",
+            "arifle_MXC_F",
+            "arifle_MXM_Black_F",
+            "arifle_MXM_F",
+            "arifle_MX_Black_F",
+            "arifle_MX_F",
+            "arifle_MX_GL_Black_F",
+            "arifle_MX_GL_F",
+            "arifle_SDAR_F",
+            "arifle_TRG20_F",
+            "arifle_TRG21_F",
+            "arifle_TRG21_GL_F",
+            "hgun_ACPC2_F",
+            "hgun_P07_F",
+            "hgun_PDW2000_F",
+            "hgun_Pistol_heavy_01_F",
+            "hgun_Pistol_heavy_02_F",
+            "hgun_Pistol_Signal_F",
+            "hgun_Rook40_F",
+            "launch_B_Titan_F",
+            "launch_B_Titan_short_F",
+            "launch_I_Titan_F",
+            "launch_I_Titan_short_F",
+            "launch_NLAW_F",
+            "launch_O_Titan_F",
+            "launch_O_Titan_short_F",
+            "launch_RPG32_F",
+            "launch_Titan_F",
+            "launch_Titan_short_F",
+            "LMG_Mk200_F",
+            "LMG_Zafir_F",
+            "MMG_01_hex_F",
+            "MMG_01_tan_F",
+            "MMG_02_black_F",
+            "MMG_02_camo_F",
+            "MMG_02_sand_F",
+            "SMG_01_F",
+            "SMG_02_F",
+            "srifle_DMR_01_F",
+            "srifle_DMR_02_camo_F",
+            "srifle_DMR_02_F",
+            "srifle_DMR_02_sniper_F",
+            "srifle_DMR_03_F",
+            "srifle_DMR_03_khaki_F",
+            "srifle_DMR_03_multicam_F",
+            "srifle_DMR_03_tan_F",
+            "srifle_DMR_03_woodland_F",
+            "srifle_DMR_04_F",
+            "srifle_DMR_04_Tan_F",
+            "srifle_DMR_05_blk_F",
+            "srifle_DMR_05_hex_F",
+            "srifle_DMR_05_tan_f",
+            "srifle_DMR_06_camo_F",
+            "srifle_DMR_06_camo_khs_F",
+            "srifle_DMR_06_olive_F",
+            "srifle_EBR_F",
+            "srifle_GM6_camo_F",
+            "srifle_GM6_F",
+            "srifle_LRR_camo_F",
+            "srifle_LRR_F"
+        ];
+    };
+
+    /**
      * The weapons available in the game shops and loot.
      * @return array
      */
-    case "airdrop_weapons";
     case "equip_weapons": {
         [
             "arifle_Katiba_C_F",

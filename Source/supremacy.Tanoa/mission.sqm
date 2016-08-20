@@ -8,14 +8,14 @@ class EditorData
 	toggles=33;
 	class ItemIDProvider
 	{
-		nextID=877;
+		nextID=989;
 	};
 	class Camera
 	{
-		pos[]={1826.2417,43.821331,11869.39};
-		dir[]={-0.24420393,-0.70551687,0.66529};
-		up[]={-0.24310935,0.70869327,0.66230792};
-		aside[]={0.93875575,-1.641456e-008,0.34458342};
+		pos[]={5397.2744,37.506561,10122.201};
+		dir[]={0.047173161,-0.9236145,0.38041511};
+		up[]={0.11366333,0.38329241,0.91660672};
+		aside[]={0.99240112,-5.2968971e-009,-0.12306217};
 	};
 };
 binarizationWanted=0;
@@ -99,7 +99,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=621;
+		items=669;
 		class Item0
 		{
 			dataType="Marker";
@@ -117,15 +117,16 @@ class Mission
 		class Item1
 		{
 			dataType="Marker";
-			position[]={11375.7,146.06529,9942.5957};
+			position[]={11690.026,9.223055e+035,12064.303};
 			name="drop_zone_1";
 			markerType="ELLIPSE";
 			type="Empty";
 			colorName="ColorBlue";
 			fillName="DiagGrid";
-			a=3000;
-			b=3000;
+			a=1000;
+			b=1000;
 			id=1;
+			atlOffset=9.223055e+035;
 		};
 		class Item2
 		{
@@ -9875,43 +9876,17 @@ class Mission
 		class Item295
 		{
 			dataType="Marker";
-			position[]={10574.202,172.25323,8234.4521};
-			name="drop_zone_31";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorBlue";
-			fillName="DiagGrid";
-			a=2000;
-			b=2000;
-			id=474;
-		};
-		class Item296
-		{
-			dataType="Marker";
-			position[]={8383.5947,110.61467,8657.7227};
-			name="drop_zone_32";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorBlue";
-			fillName="DiagGrid";
-			a=2000;
-			b=2000;
-			id=475;
-		};
-		class Item297
-		{
-			dataType="Marker";
-			position[]={7180.6123,81.822395,9014.1602};
+			position[]={5753.0439,38.724365,9197.5176};
 			name="drop_zone_33";
 			markerType="ELLIPSE";
 			type="Empty";
 			colorName="ColorBlue";
 			fillName="DiagGrid";
-			a=2000;
-			b=2000;
+			a=1000;
+			b=1000;
 			id=476;
 		};
-		class Item298
+		class Item296
 		{
 			dataType="Marker";
 			position[]={12378.53,39.385101,14179.928};
@@ -9925,7 +9900,7 @@ class Mission
 			id=477;
 			atlOffset=3.8146973e-006;
 		};
-		class Item299
+		class Item297
 		{
 			dataType="Marker";
 			position[]={12871.649,89.719963,14053.594};
@@ -9938,7 +9913,7 @@ class Mission
 			b=250;
 			id=478;
 		};
-		class Item300
+		class Item298
 		{
 			dataType="Group";
 			side="Civilian";
@@ -10052,7 +10027,7 @@ class Mission
 			id=479;
 			atlOffset=0.64134622;
 		};
-		class Item301
+		class Item299
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10070,7 +10045,7 @@ class Mission
 			id=481;
 			type="Land_CashDesk_F";
 		};
-		class Item302
+		class Item300
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10087,7 +10062,7 @@ class Mission
 			type="Box_NATO_Equip_F";
 			atlOffset=0.69613862;
 		};
-		class Item303
+		class Item301
 		{
 			dataType="Group";
 			side="Independent";
@@ -10144,7 +10119,7 @@ class Mission
 			id=483;
 			atlOffset=0.77256727;
 		};
-		class Item304
+		class Item302
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10163,7 +10138,7 @@ class Mission
 			type="Land_Research_house_V1_F";
 			atlOffset=-4.7683716e-007;
 		};
-		class Item305
+		class Item303
 		{
 			dataType="Group";
 			side="Civilian";
@@ -10275,7 +10250,7 @@ class Mission
 			};
 			id=486;
 		};
-		class Item306
+		class Item304
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10293,7 +10268,7 @@ class Mission
 			id=488;
 			type="Land_CashDesk_F";
 		};
-		class Item307
+		class Item305
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10310,7 +10285,7 @@ class Mission
 			id=489;
 			type="Box_NATO_Equip_F";
 		};
-		class Item308
+		class Item306
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10328,7 +10303,7 @@ class Mission
 			id=490;
 			type="Land_Research_house_V1_F";
 		};
-		class Item309
+		class Item307
 		{
 			dataType="Group";
 			side="Civilian";
@@ -10440,7 +10415,7 @@ class Mission
 			};
 			id=491;
 		};
-		class Item310
+		class Item308
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10458,7 +10433,7 @@ class Mission
 			id=493;
 			type="Land_CashDesk_F";
 		};
-		class Item311
+		class Item309
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10475,7 +10450,7 @@ class Mission
 			id=494;
 			type="Box_NATO_Equip_F";
 		};
-		class Item312
+		class Item310
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10493,7 +10468,7 @@ class Mission
 			id=495;
 			type="Land_Research_house_V1_F";
 		};
-		class Item313
+		class Item311
 		{
 			dataType="Group";
 			side="Civilian";
@@ -10605,7 +10580,7 @@ class Mission
 			};
 			id=496;
 		};
-		class Item314
+		class Item312
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10623,7 +10598,7 @@ class Mission
 			id=498;
 			type="Land_CashDesk_F";
 		};
-		class Item315
+		class Item313
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10640,7 +10615,7 @@ class Mission
 			id=499;
 			type="Box_NATO_Equip_F";
 		};
-		class Item316
+		class Item314
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10659,7 +10634,7 @@ class Mission
 			type="Land_Research_house_V1_F";
 			atlOffset=-2.3841858e-007;
 		};
-		class Item317
+		class Item315
 		{
 			dataType="Group";
 			side="Civilian";
@@ -10771,7 +10746,7 @@ class Mission
 			};
 			id=501;
 		};
-		class Item318
+		class Item316
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10789,7 +10764,7 @@ class Mission
 			id=503;
 			type="Land_CashDesk_F";
 		};
-		class Item319
+		class Item317
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10806,7 +10781,7 @@ class Mission
 			id=504;
 			type="Box_NATO_Equip_F";
 		};
-		class Item320
+		class Item318
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10824,7 +10799,7 @@ class Mission
 			id=505;
 			type="Land_Research_house_V1_F";
 		};
-		class Item321
+		class Item319
 		{
 			dataType="Group";
 			side="Civilian";
@@ -10936,7 +10911,7 @@ class Mission
 			};
 			id=506;
 		};
-		class Item322
+		class Item320
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10954,7 +10929,7 @@ class Mission
 			id=508;
 			type="Land_CashDesk_F";
 		};
-		class Item323
+		class Item321
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10971,7 +10946,7 @@ class Mission
 			id=509;
 			type="Box_NATO_Equip_F";
 		};
-		class Item324
+		class Item322
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10989,7 +10964,7 @@ class Mission
 			id=510;
 			type="Land_Research_house_V1_F";
 		};
-		class Item325
+		class Item323
 		{
 			dataType="Group";
 			side="Civilian";
@@ -11101,7 +11076,7 @@ class Mission
 			};
 			id=511;
 		};
-		class Item326
+		class Item324
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11119,7 +11094,7 @@ class Mission
 			id=513;
 			type="Land_CashDesk_F";
 		};
-		class Item327
+		class Item325
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11136,7 +11111,7 @@ class Mission
 			id=514;
 			type="Box_NATO_Equip_F";
 		};
-		class Item328
+		class Item326
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11154,7 +11129,7 @@ class Mission
 			id=515;
 			type="Land_Research_house_V1_F";
 		};
-		class Item329
+		class Item327
 		{
 			dataType="Group";
 			side="Civilian";
@@ -11266,7 +11241,7 @@ class Mission
 			};
 			id=516;
 		};
-		class Item330
+		class Item328
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11284,7 +11259,7 @@ class Mission
 			id=518;
 			type="Land_CashDesk_F";
 		};
-		class Item331
+		class Item329
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11301,7 +11276,7 @@ class Mission
 			id=519;
 			type="Box_NATO_Equip_F";
 		};
-		class Item332
+		class Item330
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11319,7 +11294,7 @@ class Mission
 			id=520;
 			type="Land_Research_house_V1_F";
 		};
-		class Item333
+		class Item331
 		{
 			dataType="Group";
 			side="Civilian";
@@ -11431,7 +11406,7 @@ class Mission
 			};
 			id=521;
 		};
-		class Item334
+		class Item332
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11449,7 +11424,7 @@ class Mission
 			id=523;
 			type="Land_CashDesk_F";
 		};
-		class Item335
+		class Item333
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11466,7 +11441,7 @@ class Mission
 			id=524;
 			type="Box_NATO_Equip_F";
 		};
-		class Item336
+		class Item334
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11485,7 +11460,7 @@ class Mission
 			type="Land_Research_house_V1_F";
 			atlOffset=2.3841858e-007;
 		};
-		class Item337
+		class Item335
 		{
 			dataType="Group";
 			side="Civilian";
@@ -11597,7 +11572,7 @@ class Mission
 			};
 			id=526;
 		};
-		class Item338
+		class Item336
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11615,7 +11590,7 @@ class Mission
 			type="Land_CashDesk_F";
 			atlOffset=0.28099298;
 		};
-		class Item339
+		class Item337
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11632,7 +11607,7 @@ class Mission
 			type="Box_NATO_Equip_F";
 			atlOffset=0.44713068;
 		};
-		class Item340
+		class Item338
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11650,7 +11625,7 @@ class Mission
 			id=530;
 			type="Land_Research_house_V1_F";
 		};
-		class Item341
+		class Item339
 		{
 			dataType="Group";
 			side="Civilian";
@@ -11762,7 +11737,7 @@ class Mission
 			};
 			id=531;
 		};
-		class Item342
+		class Item340
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11780,7 +11755,7 @@ class Mission
 			type="Land_CashDesk_F";
 			atlOffset=0.74506283;
 		};
-		class Item343
+		class Item341
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11797,7 +11772,7 @@ class Mission
 			type="Box_NATO_Equip_F";
 			atlOffset=0.96745443;
 		};
-		class Item344
+		class Item342
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11815,7 +11790,7 @@ class Mission
 			id=535;
 			type="Land_Research_house_V1_F";
 		};
-		class Item345
+		class Item343
 		{
 			dataType="Group";
 			side="Civilian";
@@ -11927,7 +11902,7 @@ class Mission
 			};
 			id=536;
 		};
-		class Item346
+		class Item344
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11945,7 +11920,7 @@ class Mission
 			id=538;
 			type="Land_CashDesk_F";
 		};
-		class Item347
+		class Item345
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11962,7 +11937,7 @@ class Mission
 			id=539;
 			type="Box_NATO_Equip_F";
 		};
-		class Item348
+		class Item346
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11980,7 +11955,7 @@ class Mission
 			id=540;
 			type="Land_Research_house_V1_F";
 		};
-		class Item349
+		class Item347
 		{
 			dataType="Group";
 			side="Civilian";
@@ -12092,7 +12067,7 @@ class Mission
 			};
 			id=541;
 		};
-		class Item350
+		class Item348
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12110,7 +12085,7 @@ class Mission
 			id=543;
 			type="Land_CashDesk_F";
 		};
-		class Item351
+		class Item349
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12127,7 +12102,7 @@ class Mission
 			id=544;
 			type="Box_NATO_Equip_F";
 		};
-		class Item352
+		class Item350
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12145,7 +12120,7 @@ class Mission
 			id=545;
 			type="Land_Research_house_V1_F";
 		};
-		class Item353
+		class Item351
 		{
 			dataType="Group";
 			side="Civilian";
@@ -12259,7 +12234,7 @@ class Mission
 			id=546;
 			atlOffset=0.015619755;
 		};
-		class Item354
+		class Item352
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12277,7 +12252,7 @@ class Mission
 			type="Land_CashDesk_F";
 			atlOffset=0.71596384;
 		};
-		class Item355
+		class Item353
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12294,7 +12269,7 @@ class Mission
 			type="Box_NATO_Equip_F";
 			atlOffset=0.75649858;
 		};
-		class Item356
+		class Item354
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12312,7 +12287,7 @@ class Mission
 			id=550;
 			type="Land_Research_house_V1_F";
 		};
-		class Item357
+		class Item355
 		{
 			dataType="Group";
 			side="Civilian";
@@ -12426,7 +12401,7 @@ class Mission
 			id=551;
 			atlOffset=0.010571957;
 		};
-		class Item358
+		class Item356
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12445,7 +12420,7 @@ class Mission
 			type="Land_CashDesk_F";
 			atlOffset=4.7683716e-007;
 		};
-		class Item359
+		class Item357
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12463,7 +12438,7 @@ class Mission
 			type="Box_NATO_Equip_F";
 			atlOffset=4.7683716e-007;
 		};
-		class Item360
+		class Item358
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12482,7 +12457,7 @@ class Mission
 			type="Land_Research_house_V1_F";
 			atlOffset=-2.3841858e-007;
 		};
-		class Item361
+		class Item359
 		{
 			dataType="Group";
 			side="Civilian";
@@ -12594,7 +12569,7 @@ class Mission
 			};
 			id=556;
 		};
-		class Item362
+		class Item360
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12612,7 +12587,7 @@ class Mission
 			id=558;
 			type="Land_CashDesk_F";
 		};
-		class Item363
+		class Item361
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12629,7 +12604,7 @@ class Mission
 			id=559;
 			type="Box_NATO_Equip_F";
 		};
-		class Item364
+		class Item362
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12647,7 +12622,7 @@ class Mission
 			id=560;
 			type="Land_Research_house_V1_F";
 		};
-		class Item365
+		class Item363
 		{
 			dataType="Group";
 			side="Civilian";
@@ -12761,7 +12736,7 @@ class Mission
 			id=561;
 			atlOffset=0.085900307;
 		};
-		class Item366
+		class Item364
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12779,7 +12754,7 @@ class Mission
 			id=563;
 			type="Land_CashDesk_F";
 		};
-		class Item367
+		class Item365
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12796,7 +12771,7 @@ class Mission
 			id=564;
 			type="Box_NATO_Equip_F";
 		};
-		class Item368
+		class Item366
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12814,7 +12789,7 @@ class Mission
 			id=565;
 			type="Land_Research_house_V1_F";
 		};
-		class Item369
+		class Item367
 		{
 			dataType="Group";
 			side="Civilian";
@@ -12926,7 +12901,7 @@ class Mission
 			};
 			id=566;
 		};
-		class Item370
+		class Item368
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12944,7 +12919,7 @@ class Mission
 			id=568;
 			type="Land_CashDesk_F";
 		};
-		class Item371
+		class Item369
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12962,7 +12937,7 @@ class Mission
 			type="Box_NATO_Equip_F";
 			atlOffset=4.7683716e-007;
 		};
-		class Item372
+		class Item370
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12981,7 +12956,7 @@ class Mission
 			type="Land_Research_house_V1_F";
 			atlOffset=4.7683716e-007;
 		};
-		class Item373
+		class Item371
 		{
 			dataType="Group";
 			side="Civilian";
@@ -13095,7 +13070,7 @@ class Mission
 			id=571;
 			atlOffset=1.069849;
 		};
-		class Item374
+		class Item372
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13113,7 +13088,7 @@ class Mission
 			id=573;
 			type="Land_CashDesk_F";
 		};
-		class Item375
+		class Item373
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13130,7 +13105,7 @@ class Mission
 			id=574;
 			type="Box_NATO_Equip_F";
 		};
-		class Item376
+		class Item374
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13148,7 +13123,7 @@ class Mission
 			id=575;
 			type="Land_Research_house_V1_F";
 		};
-		class Item377
+		class Item375
 		{
 			dataType="Group";
 			side="Civilian";
@@ -13262,7 +13237,7 @@ class Mission
 			id=576;
 			atlOffset=0.69584131;
 		};
-		class Item378
+		class Item376
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13280,7 +13255,7 @@ class Mission
 			id=578;
 			type="Land_CashDesk_F";
 		};
-		class Item379
+		class Item377
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13297,7 +13272,7 @@ class Mission
 			id=579;
 			type="Box_NATO_Equip_F";
 		};
-		class Item380
+		class Item378
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13315,7 +13290,7 @@ class Mission
 			id=580;
 			type="Land_Research_house_V1_F";
 		};
-		class Item381
+		class Item379
 		{
 			dataType="Group";
 			side="Civilian";
@@ -13427,7 +13402,7 @@ class Mission
 			};
 			id=581;
 		};
-		class Item382
+		class Item380
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13445,7 +13420,7 @@ class Mission
 			id=583;
 			type="Land_CashDesk_F";
 		};
-		class Item383
+		class Item381
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13462,7 +13437,7 @@ class Mission
 			id=584;
 			type="Box_NATO_Equip_F";
 		};
-		class Item384
+		class Item382
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13481,7 +13456,7 @@ class Mission
 			type="Land_Research_house_V1_F";
 			atlOffset=7.6293945e-006;
 		};
-		class Item385
+		class Item383
 		{
 			dataType="Group";
 			side="Civilian";
@@ -13593,7 +13568,7 @@ class Mission
 			};
 			id=586;
 		};
-		class Item386
+		class Item384
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13611,7 +13586,7 @@ class Mission
 			id=588;
 			type="Land_CashDesk_F";
 		};
-		class Item387
+		class Item385
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13628,7 +13603,7 @@ class Mission
 			id=589;
 			type="Box_NATO_Equip_F";
 		};
-		class Item388
+		class Item386
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13646,7 +13621,7 @@ class Mission
 			id=590;
 			type="Land_Research_house_V1_F";
 		};
-		class Item389
+		class Item387
 		{
 			dataType="Group";
 			side="Civilian";
@@ -13758,7 +13733,7 @@ class Mission
 			};
 			id=591;
 		};
-		class Item390
+		class Item388
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13776,7 +13751,7 @@ class Mission
 			id=593;
 			type="Land_CashDesk_F";
 		};
-		class Item391
+		class Item389
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13793,7 +13768,7 @@ class Mission
 			id=594;
 			type="Box_NATO_Equip_F";
 		};
-		class Item392
+		class Item390
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13811,7 +13786,7 @@ class Mission
 			id=595;
 			type="Land_Research_house_V1_F";
 		};
-		class Item393
+		class Item391
 		{
 			dataType="Group";
 			side="Civilian";
@@ -13923,7 +13898,7 @@ class Mission
 			};
 			id=596;
 		};
-		class Item394
+		class Item392
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13941,7 +13916,7 @@ class Mission
 			id=598;
 			type="Land_CashDesk_F";
 		};
-		class Item395
+		class Item393
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13958,7 +13933,7 @@ class Mission
 			id=599;
 			type="Box_NATO_Equip_F";
 		};
-		class Item396
+		class Item394
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13976,7 +13951,7 @@ class Mission
 			id=600;
 			type="Land_Research_house_V1_F";
 		};
-		class Item397
+		class Item395
 		{
 			dataType="Group";
 			side="Civilian";
@@ -14088,7 +14063,7 @@ class Mission
 			};
 			id=601;
 		};
-		class Item398
+		class Item396
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14106,7 +14081,7 @@ class Mission
 			id=603;
 			type="Land_CashDesk_F";
 		};
-		class Item399
+		class Item397
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14123,7 +14098,7 @@ class Mission
 			id=604;
 			type="Box_NATO_Equip_F";
 		};
-		class Item400
+		class Item398
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14142,7 +14117,7 @@ class Mission
 			type="Land_Research_house_V1_F";
 			atlOffset=-2.3841858e-007;
 		};
-		class Item401
+		class Item399
 		{
 			dataType="Group";
 			side="Civilian";
@@ -14254,7 +14229,7 @@ class Mission
 			};
 			id=606;
 		};
-		class Item402
+		class Item400
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14272,7 +14247,7 @@ class Mission
 			id=608;
 			type="Land_CashDesk_F";
 		};
-		class Item403
+		class Item401
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14290,7 +14265,7 @@ class Mission
 			type="Box_NATO_Equip_F";
 			atlOffset=2.3841858e-007;
 		};
-		class Item404
+		class Item402
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14308,7 +14283,7 @@ class Mission
 			id=610;
 			type="Land_Research_house_V1_F";
 		};
-		class Item405
+		class Item403
 		{
 			dataType="Group";
 			side="Civilian";
@@ -14420,7 +14395,7 @@ class Mission
 			};
 			id=611;
 		};
-		class Item406
+		class Item404
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14438,7 +14413,7 @@ class Mission
 			id=613;
 			type="Land_CashDesk_F";
 		};
-		class Item407
+		class Item405
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14455,7 +14430,7 @@ class Mission
 			id=614;
 			type="Box_NATO_Equip_F";
 		};
-		class Item408
+		class Item406
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14473,7 +14448,7 @@ class Mission
 			id=615;
 			type="Land_Research_house_V1_F";
 		};
-		class Item409
+		class Item407
 		{
 			dataType="Group";
 			side="Civilian";
@@ -14587,7 +14562,7 @@ class Mission
 			id=616;
 			atlOffset=9.5367432e-007;
 		};
-		class Item410
+		class Item408
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14605,7 +14580,7 @@ class Mission
 			id=618;
 			type="Land_CashDesk_F";
 		};
-		class Item411
+		class Item409
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14622,7 +14597,7 @@ class Mission
 			id=619;
 			type="Box_NATO_Equip_F";
 		};
-		class Item412
+		class Item410
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14641,7 +14616,7 @@ class Mission
 			type="Land_Research_house_V1_F";
 			atlOffset=4.7683716e-007;
 		};
-		class Item413
+		class Item411
 		{
 			dataType="Group";
 			side="Civilian";
@@ -14753,7 +14728,7 @@ class Mission
 			};
 			id=621;
 		};
-		class Item414
+		class Item412
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14771,7 +14746,7 @@ class Mission
 			id=623;
 			type="Land_CashDesk_F";
 		};
-		class Item415
+		class Item413
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14788,7 +14763,7 @@ class Mission
 			id=624;
 			type="Box_NATO_Equip_F";
 		};
-		class Item416
+		class Item414
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14806,7 +14781,7 @@ class Mission
 			id=625;
 			type="Land_Research_house_V1_F";
 		};
-		class Item417
+		class Item415
 		{
 			dataType="Group";
 			side="Civilian";
@@ -14918,7 +14893,7 @@ class Mission
 			};
 			id=626;
 		};
-		class Item418
+		class Item416
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14936,7 +14911,7 @@ class Mission
 			id=628;
 			type="Land_CashDesk_F";
 		};
-		class Item419
+		class Item417
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14953,7 +14928,7 @@ class Mission
 			id=629;
 			type="Box_NATO_Equip_F";
 		};
-		class Item420
+		class Item418
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14972,7 +14947,7 @@ class Mission
 			type="Land_Research_house_V1_F";
 			atlOffset=-4.7683716e-007;
 		};
-		class Item421
+		class Item419
 		{
 			dataType="Group";
 			side="Civilian";
@@ -15084,7 +15059,7 @@ class Mission
 			};
 			id=631;
 		};
-		class Item422
+		class Item420
 		{
 			dataType="Object";
 			class PositionInfo
@@ -15102,7 +15077,7 @@ class Mission
 			id=633;
 			type="Land_CashDesk_F";
 		};
-		class Item423
+		class Item421
 		{
 			dataType="Object";
 			class PositionInfo
@@ -15119,7 +15094,7 @@ class Mission
 			id=634;
 			type="Box_NATO_Equip_F";
 		};
-		class Item424
+		class Item422
 		{
 			dataType="Object";
 			class PositionInfo
@@ -15137,7 +15112,7 @@ class Mission
 			id=635;
 			type="Land_Research_house_V1_F";
 		};
-		class Item425
+		class Item423
 		{
 			dataType="Group";
 			side="Civilian";
@@ -15249,7 +15224,7 @@ class Mission
 			};
 			id=636;
 		};
-		class Item426
+		class Item424
 		{
 			dataType="Object";
 			class PositionInfo
@@ -15267,7 +15242,7 @@ class Mission
 			type="Land_CashDesk_F";
 			atlOffset=0.72883606;
 		};
-		class Item427
+		class Item425
 		{
 			dataType="Object";
 			class PositionInfo
@@ -15285,7 +15260,7 @@ class Mission
 			type="Box_NATO_Equip_F";
 			atlOffset=7.6293945e-006;
 		};
-		class Item428
+		class Item426
 		{
 			dataType="Object";
 			class PositionInfo
@@ -15303,7 +15278,7 @@ class Mission
 			id=640;
 			type="Land_Research_house_V1_F";
 		};
-		class Item429
+		class Item427
 		{
 			dataType="Group";
 			side="Civilian";
@@ -15415,7 +15390,7 @@ class Mission
 			};
 			id=641;
 		};
-		class Item430
+		class Item428
 		{
 			dataType="Object";
 			class PositionInfo
@@ -15433,7 +15408,7 @@ class Mission
 			id=643;
 			type="Land_CashDesk_F";
 		};
-		class Item431
+		class Item429
 		{
 			dataType="Object";
 			class PositionInfo
@@ -15450,7 +15425,7 @@ class Mission
 			id=644;
 			type="Box_NATO_Equip_F";
 		};
-		class Item432
+		class Item430
 		{
 			dataType="Object";
 			class PositionInfo
@@ -15468,7 +15443,7 @@ class Mission
 			id=645;
 			type="Land_Research_house_V1_F";
 		};
-		class Item433
+		class Item431
 		{
 			dataType="Group";
 			side="Civilian";
@@ -15580,7 +15555,7 @@ class Mission
 			};
 			id=646;
 		};
-		class Item434
+		class Item432
 		{
 			dataType="Object";
 			class PositionInfo
@@ -15598,7 +15573,7 @@ class Mission
 			id=648;
 			type="Land_CashDesk_F";
 		};
-		class Item435
+		class Item433
 		{
 			dataType="Object";
 			class PositionInfo
@@ -15615,7 +15590,7 @@ class Mission
 			id=649;
 			type="Box_NATO_Equip_F";
 		};
-		class Item436
+		class Item434
 		{
 			dataType="Object";
 			class PositionInfo
@@ -15633,7 +15608,7 @@ class Mission
 			id=650;
 			type="Land_Research_house_V1_F";
 		};
-		class Item437
+		class Item435
 		{
 			dataType="Group";
 			side="Civilian";
@@ -15745,7 +15720,7 @@ class Mission
 			};
 			id=651;
 		};
-		class Item438
+		class Item436
 		{
 			dataType="Object";
 			class PositionInfo
@@ -15763,7 +15738,7 @@ class Mission
 			id=653;
 			type="Land_CashDesk_F";
 		};
-		class Item439
+		class Item437
 		{
 			dataType="Object";
 			class PositionInfo
@@ -15780,7 +15755,7 @@ class Mission
 			id=654;
 			type="Box_NATO_Equip_F";
 		};
-		class Item440
+		class Item438
 		{
 			dataType="Object";
 			class PositionInfo
@@ -15798,7 +15773,7 @@ class Mission
 			id=655;
 			type="Land_Research_house_V1_F";
 		};
-		class Item441
+		class Item439
 		{
 			dataType="Group";
 			side="Civilian";
@@ -15910,7 +15885,7 @@ class Mission
 			};
 			id=656;
 		};
-		class Item442
+		class Item440
 		{
 			dataType="Object";
 			class PositionInfo
@@ -15929,7 +15904,7 @@ class Mission
 			type="Land_CashDesk_F";
 			atlOffset=7.6293945e-006;
 		};
-		class Item443
+		class Item441
 		{
 			dataType="Object";
 			class PositionInfo
@@ -15946,7 +15921,7 @@ class Mission
 			id=659;
 			type="Box_NATO_Equip_F";
 		};
-		class Item444
+		class Item442
 		{
 			dataType="Object";
 			class PositionInfo
@@ -15964,7 +15939,7 @@ class Mission
 			id=660;
 			type="Land_Research_house_V1_F";
 		};
-		class Item445
+		class Item443
 		{
 			dataType="Group";
 			side="Civilian";
@@ -16076,7 +16051,7 @@ class Mission
 			};
 			id=661;
 		};
-		class Item446
+		class Item444
 		{
 			dataType="Object";
 			class PositionInfo
@@ -16094,7 +16069,7 @@ class Mission
 			id=663;
 			type="Land_CashDesk_F";
 		};
-		class Item447
+		class Item445
 		{
 			dataType="Object";
 			class PositionInfo
@@ -16111,7 +16086,7 @@ class Mission
 			id=664;
 			type="Box_NATO_Equip_F";
 		};
-		class Item448
+		class Item446
 		{
 			dataType="Object";
 			class PositionInfo
@@ -16129,7 +16104,7 @@ class Mission
 			id=665;
 			type="Land_Research_house_V1_F";
 		};
-		class Item449
+		class Item447
 		{
 			dataType="Group";
 			side="Civilian";
@@ -16241,7 +16216,7 @@ class Mission
 			};
 			id=666;
 		};
-		class Item450
+		class Item448
 		{
 			dataType="Object";
 			class PositionInfo
@@ -16259,7 +16234,7 @@ class Mission
 			id=668;
 			type="Land_CashDesk_F";
 		};
-		class Item451
+		class Item449
 		{
 			dataType="Object";
 			class PositionInfo
@@ -16276,7 +16251,7 @@ class Mission
 			id=669;
 			type="Box_NATO_Equip_F";
 		};
-		class Item452
+		class Item450
 		{
 			dataType="Object";
 			class PositionInfo
@@ -16294,7 +16269,7 @@ class Mission
 			id=670;
 			type="Land_Research_house_V1_F";
 		};
-		class Item453
+		class Item451
 		{
 			dataType="Group";
 			side="Civilian";
@@ -16406,7 +16381,7 @@ class Mission
 			};
 			id=671;
 		};
-		class Item454
+		class Item452
 		{
 			dataType="Object";
 			class PositionInfo
@@ -16424,7 +16399,7 @@ class Mission
 			id=673;
 			type="Land_CashDesk_F";
 		};
-		class Item455
+		class Item453
 		{
 			dataType="Object";
 			class PositionInfo
@@ -16441,7 +16416,7 @@ class Mission
 			id=674;
 			type="Box_NATO_Equip_F";
 		};
-		class Item456
+		class Item454
 		{
 			dataType="Object";
 			class PositionInfo
@@ -16459,7 +16434,7 @@ class Mission
 			id=675;
 			type="Land_Research_house_V1_F";
 		};
-		class Item457
+		class Item455
 		{
 			dataType="Group";
 			side="Civilian";
@@ -16471,8 +16446,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9926.1279,3.1542115,13684.649};
-						angles[]={0,1.698873,0};
+						position[]={9818.167,3.6146884,13482.994};
+						angles[]={0,1.4370751,0};
 					};
 					side="Civilian";
 					flags=6;
@@ -16571,13 +16546,13 @@ class Mission
 			};
 			id=676;
 		};
-		class Item458
+		class Item456
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={9926.8428,3.1527727,13684.443};
-				angles[]={0,4.8869252,0};
+				position[]={9818.8984,3.6132495,13482.978};
+				angles[]={0,4.6251273,0};
 			};
 			side="Empty";
 			flags=4;
@@ -16589,13 +16564,13 @@ class Mission
 			id=678;
 			type="Land_CashDesk_F";
 		};
-		class Item459
+		class Item457
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={9926.8262,3.5343015,13682.932};
-				angles[]={0,0.17453808,0};
+				position[]={9819.2734,3.9947784,13481.514};
+				angles[]={0,6.1959257,0};
 			};
 			side="Empty";
 			flags=4;
@@ -16605,14 +16580,15 @@ class Mission
 			};
 			id=679;
 			type="Box_NATO_Equip_F";
+			atlOffset=4.863739e-005;
 		};
-		class Item460
+		class Item458
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={9929.2314,3.123925,13682.648};
-				angles[]={0,4.8869252,0};
+				position[]={9821.6699,3.5844018,13481.862};
+				angles[]={0,4.6251273,0};
 			};
 			side="Empty";
 			flags=5;
@@ -16624,7 +16600,7 @@ class Mission
 			id=680;
 			type="Land_Research_house_V1_F";
 		};
-		class Item461
+		class Item459
 		{
 			dataType="Group";
 			side="Civilian";
@@ -16736,7 +16712,7 @@ class Mission
 			};
 			id=681;
 		};
-		class Item462
+		class Item460
 		{
 			dataType="Object";
 			class PositionInfo
@@ -16754,7 +16730,7 @@ class Mission
 			id=683;
 			type="Land_CashDesk_F";
 		};
-		class Item463
+		class Item461
 		{
 			dataType="Object";
 			class PositionInfo
@@ -16771,7 +16747,7 @@ class Mission
 			id=684;
 			type="Box_NATO_Equip_F";
 		};
-		class Item464
+		class Item462
 		{
 			dataType="Object";
 			class PositionInfo
@@ -16789,7 +16765,7 @@ class Mission
 			id=685;
 			type="Land_Research_house_V1_F";
 		};
-		class Item465
+		class Item463
 		{
 			dataType="Group";
 			side="Civilian";
@@ -16901,7 +16877,7 @@ class Mission
 			};
 			id=686;
 		};
-		class Item466
+		class Item464
 		{
 			dataType="Object";
 			class PositionInfo
@@ -16919,7 +16895,7 @@ class Mission
 			id=688;
 			type="Land_CashDesk_F";
 		};
-		class Item467
+		class Item465
 		{
 			dataType="Object";
 			class PositionInfo
@@ -16936,7 +16912,7 @@ class Mission
 			id=689;
 			type="Box_NATO_Equip_F";
 		};
-		class Item468
+		class Item466
 		{
 			dataType="Object";
 			class PositionInfo
@@ -16954,7 +16930,7 @@ class Mission
 			id=690;
 			type="Land_Research_house_V1_F";
 		};
-		class Item469
+		class Item467
 		{
 			dataType="Group";
 			side="Civilian";
@@ -17066,7 +17042,7 @@ class Mission
 			};
 			id=691;
 		};
-		class Item470
+		class Item468
 		{
 			dataType="Object";
 			class PositionInfo
@@ -17084,7 +17060,7 @@ class Mission
 			id=693;
 			type="Land_CashDesk_F";
 		};
-		class Item471
+		class Item469
 		{
 			dataType="Object";
 			class PositionInfo
@@ -17101,7 +17077,7 @@ class Mission
 			id=694;
 			type="Box_NATO_Equip_F";
 		};
-		class Item472
+		class Item470
 		{
 			dataType="Object";
 			class PositionInfo
@@ -17119,7 +17095,7 @@ class Mission
 			id=695;
 			type="Land_Research_house_V1_F";
 		};
-		class Item473
+		class Item471
 		{
 			dataType="Group";
 			side="Civilian";
@@ -17231,7 +17207,7 @@ class Mission
 			};
 			id=696;
 		};
-		class Item474
+		class Item472
 		{
 			dataType="Object";
 			class PositionInfo
@@ -17249,7 +17225,7 @@ class Mission
 			id=698;
 			type="Land_CashDesk_F";
 		};
-		class Item475
+		class Item473
 		{
 			dataType="Object";
 			class PositionInfo
@@ -17266,7 +17242,7 @@ class Mission
 			id=699;
 			type="Box_NATO_Equip_F";
 		};
-		class Item476
+		class Item474
 		{
 			dataType="Object";
 			class PositionInfo
@@ -17285,7 +17261,7 @@ class Mission
 			type="Land_Research_house_V1_F";
 			atlOffset=4.7683716e-007;
 		};
-		class Item477
+		class Item475
 		{
 			dataType="Group";
 			side="Civilian";
@@ -17397,7 +17373,7 @@ class Mission
 			};
 			id=701;
 		};
-		class Item478
+		class Item476
 		{
 			dataType="Object";
 			class PositionInfo
@@ -17415,7 +17391,7 @@ class Mission
 			id=703;
 			type="Land_CashDesk_F";
 		};
-		class Item479
+		class Item477
 		{
 			dataType="Object";
 			class PositionInfo
@@ -17432,7 +17408,7 @@ class Mission
 			id=704;
 			type="Box_NATO_Equip_F";
 		};
-		class Item480
+		class Item478
 		{
 			dataType="Object";
 			class PositionInfo
@@ -17450,7 +17426,7 @@ class Mission
 			id=705;
 			type="Land_Research_house_V1_F";
 		};
-		class Item481
+		class Item479
 		{
 			dataType="Group";
 			side="Civilian";
@@ -17562,7 +17538,7 @@ class Mission
 			};
 			id=706;
 		};
-		class Item482
+		class Item480
 		{
 			dataType="Object";
 			class PositionInfo
@@ -17580,7 +17556,7 @@ class Mission
 			id=708;
 			type="Land_CashDesk_F";
 		};
-		class Item483
+		class Item481
 		{
 			dataType="Object";
 			class PositionInfo
@@ -17597,7 +17573,7 @@ class Mission
 			id=709;
 			type="Box_NATO_Equip_F";
 		};
-		class Item484
+		class Item482
 		{
 			dataType="Object";
 			class PositionInfo
@@ -17616,7 +17592,7 @@ class Mission
 			type="Land_Research_house_V1_F";
 			atlOffset=-2.3841858e-007;
 		};
-		class Item485
+		class Item483
 		{
 			dataType="Group";
 			side="Civilian";
@@ -17728,7 +17704,7 @@ class Mission
 			};
 			id=711;
 		};
-		class Item486
+		class Item484
 		{
 			dataType="Object";
 			class PositionInfo
@@ -17746,7 +17722,7 @@ class Mission
 			id=713;
 			type="Land_CashDesk_F";
 		};
-		class Item487
+		class Item485
 		{
 			dataType="Object";
 			class PositionInfo
@@ -17763,7 +17739,7 @@ class Mission
 			id=714;
 			type="Box_NATO_Equip_F";
 		};
-		class Item488
+		class Item486
 		{
 			dataType="Object";
 			class PositionInfo
@@ -17781,7 +17757,7 @@ class Mission
 			id=715;
 			type="Land_Research_house_V1_F";
 		};
-		class Item489
+		class Item487
 		{
 			dataType="Group";
 			side="Civilian";
@@ -17893,7 +17869,7 @@ class Mission
 			};
 			id=716;
 		};
-		class Item490
+		class Item488
 		{
 			dataType="Object";
 			class PositionInfo
@@ -17911,7 +17887,7 @@ class Mission
 			id=718;
 			type="Land_CashDesk_F";
 		};
-		class Item491
+		class Item489
 		{
 			dataType="Object";
 			class PositionInfo
@@ -17928,7 +17904,7 @@ class Mission
 			id=719;
 			type="Box_NATO_Equip_F";
 		};
-		class Item492
+		class Item490
 		{
 			dataType="Object";
 			class PositionInfo
@@ -17946,7 +17922,7 @@ class Mission
 			id=720;
 			type="Land_Research_house_V1_F";
 		};
-		class Item493
+		class Item491
 		{
 			dataType="Group";
 			side="Civilian";
@@ -18058,7 +18034,7 @@ class Mission
 			};
 			id=721;
 		};
-		class Item494
+		class Item492
 		{
 			dataType="Object";
 			class PositionInfo
@@ -18076,7 +18052,7 @@ class Mission
 			id=723;
 			type="Land_CashDesk_F";
 		};
-		class Item495
+		class Item493
 		{
 			dataType="Object";
 			class PositionInfo
@@ -18093,7 +18069,7 @@ class Mission
 			id=724;
 			type="Box_NATO_Equip_F";
 		};
-		class Item496
+		class Item494
 		{
 			dataType="Object";
 			class PositionInfo
@@ -18111,7 +18087,7 @@ class Mission
 			id=725;
 			type="Land_Research_house_V1_F";
 		};
-		class Item497
+		class Item495
 		{
 			dataType="Group";
 			side="Civilian";
@@ -18223,7 +18199,7 @@ class Mission
 			};
 			id=726;
 		};
-		class Item498
+		class Item496
 		{
 			dataType="Object";
 			class PositionInfo
@@ -18241,7 +18217,7 @@ class Mission
 			id=728;
 			type="Land_CashDesk_F";
 		};
-		class Item499
+		class Item497
 		{
 			dataType="Object";
 			class PositionInfo
@@ -18258,7 +18234,7 @@ class Mission
 			type="Box_NATO_Equip_F";
 			atlOffset=0.67699528;
 		};
-		class Item500
+		class Item498
 		{
 			dataType="Object";
 			class PositionInfo
@@ -18276,7 +18252,7 @@ class Mission
 			id=730;
 			type="Land_Research_house_V1_F";
 		};
-		class Item501
+		class Item499
 		{
 			dataType="Group";
 			side="Civilian";
@@ -18388,7 +18364,7 @@ class Mission
 			};
 			id=731;
 		};
-		class Item502
+		class Item500
 		{
 			dataType="Object";
 			class PositionInfo
@@ -18406,7 +18382,7 @@ class Mission
 			id=733;
 			type="Land_CashDesk_F";
 		};
-		class Item503
+		class Item501
 		{
 			dataType="Object";
 			class PositionInfo
@@ -18423,7 +18399,7 @@ class Mission
 			id=734;
 			type="Box_NATO_Equip_F";
 		};
-		class Item504
+		class Item502
 		{
 			dataType="Object";
 			class PositionInfo
@@ -18441,16 +18417,16 @@ class Mission
 			id=735;
 			type="Land_Research_house_V1_F";
 		};
-		class Item505
+		class Item503
 		{
 			dataType="Marker";
 			position[]={2395.564,13.45,13443.746};
 			name="shop_vehicle_spawn_1";
 			type="Empty";
-			angle=223.99069;
+			angle=223.99062;
 			id=736;
 		};
-		class Item506
+		class Item504
 		{
 			dataType="Group";
 			side="Civilian";
@@ -18462,7 +18438,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2415.814,14.180286,13456.007};
+						position[]={2415.814,14.180439,13456.007};
 						angles[]={0,3.7344286,0};
 					};
 					side="Civilian";
@@ -18470,11 +18446,12 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{_this call SPMC_fnc_showVehicleMenu;},[""air"",[""shop_vehicle_spawn_1""]],0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
+						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""air"",[""shop_vehicle_spawn_1""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
 						name="shop_vehicle_1";
 					};
 					id=738;
 					type="C_scientist_F";
+					atlOffset=0.00015258789;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -18504,8 +18481,9 @@ class Mission
 			{
 			};
 			id=737;
+			atlOffset=0.00015258789;
 		};
-		class Item507
+		class Item505
 		{
 			dataType="Object";
 			class PositionInfo
@@ -18523,7 +18501,7 @@ class Mission
 			id=739;
 			type="Land_JumpTarget_F";
 		};
-		class Item508
+		class Item506
 		{
 			dataType="Object";
 			class PositionInfo
@@ -18541,7 +18519,7 @@ class Mission
 			id=740;
 			type="Land_CashDesk_F";
 		};
-		class Item509
+		class Item507
 		{
 			dataType="Object";
 			class PositionInfo
@@ -18559,7 +18537,7 @@ class Mission
 			id=741;
 			type="Land_Research_house_V1_F";
 		};
-		class Item510
+		class Item508
 		{
 			dataType="Marker";
 			position[]={2327.376,7.0588851,7960.8447};
@@ -18568,7 +18546,7 @@ class Mission
 			angle=323.99231;
 			id=742;
 		};
-		class Item511
+		class Item509
 		{
 			dataType="Group";
 			side="Civilian";
@@ -18580,19 +18558,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2341.3389,7.4135246,7933.543};
+						position[]={2341.3391,7.4134974,7933.543};
 						angles[]={0,5.4797583,0};
 					};
 					side="Civilian";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{_this call SPMC_fnc_showVehicleMenu;},[""air"",[""shop_vehicle_spawn_2""]],0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
+						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""air"",[""shop_vehicle_spawn_2""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
 						name="shop_vehicle_2";
 					};
 					id=744;
 					type="C_scientist_F";
+					atlOffset=0.8239994;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -18622,8 +18601,9 @@ class Mission
 			{
 			};
 			id=743;
+			atlOffset=0.8239994;
 		};
-		class Item512
+		class Item510
 		{
 			dataType="Object";
 			class PositionInfo
@@ -18641,7 +18621,7 @@ class Mission
 			id=745;
 			type="Land_JumpTarget_F";
 		};
-		class Item513
+		class Item511
 		{
 			dataType="Object";
 			class PositionInfo
@@ -18659,7 +18639,7 @@ class Mission
 			id=746;
 			type="Land_CashDesk_F";
 		};
-		class Item514
+		class Item512
 		{
 			dataType="Object";
 			class PositionInfo
@@ -18677,7 +18657,7 @@ class Mission
 			id=747;
 			type="Land_Research_house_V1_F";
 		};
-		class Item515
+		class Item513
 		{
 			dataType="Marker";
 			position[]={2501.373,12.95,3637.8936};
@@ -18686,7 +18666,7 @@ class Mission
 			angle=248.99232;
 			id=748;
 		};
-		class Item516
+		class Item514
 		{
 			dataType="Group";
 			side="Civilian";
@@ -18698,7 +18678,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2531.4072,13.682174,3644.3528};
+						position[]={2531.407,13.682439,3644.353};
 						angles[]={0,4.1707606,0};
 					};
 					side="Civilian";
@@ -18706,12 +18686,12 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{_this call SPMC_fnc_showVehicleMenu;},[""air"",[""shop_vehicle_spawn_3""]],0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
+						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""air"",[""shop_vehicle_spawn_3""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
 						name="shop_vehicle_3";
 					};
 					id=750;
 					type="C_scientist_F";
-					atlOffset=0.0018873215;
+					atlOffset=0.0021524429;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -18741,9 +18721,9 @@ class Mission
 			{
 			};
 			id=749;
-			atlOffset=0.0018873215;
+			atlOffset=0.0021524429;
 		};
-		class Item517
+		class Item515
 		{
 			dataType="Object";
 			class PositionInfo
@@ -18761,7 +18741,7 @@ class Mission
 			id=751;
 			type="Land_JumpTarget_F";
 		};
-		class Item518
+		class Item516
 		{
 			dataType="Object";
 			class PositionInfo
@@ -18779,7 +18759,7 @@ class Mission
 			id=752;
 			type="Land_CashDesk_F";
 		};
-		class Item519
+		class Item517
 		{
 			dataType="Object";
 			class PositionInfo
@@ -18797,7 +18777,7 @@ class Mission
 			id=753;
 			type="Land_Research_house_V1_F";
 		};
-		class Item520
+		class Item518
 		{
 			dataType="Marker";
 			position[]={11925.792,4.8600001,2927.9082};
@@ -18806,7 +18786,7 @@ class Mission
 			angle=298.99216;
 			id=754;
 		};
-		class Item521
+		class Item519
 		{
 			dataType="Group";
 			side="Civilian";
@@ -18818,19 +18798,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11949.712,5.5649834,2908.3958};
+						position[]={11949.712,5.564929,2908.396};
 						angles[]={0,5.043426,0};
 					};
 					side="Civilian";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{_this call SPMC_fnc_showVehicleMenu;},[""air"",[""shop_vehicle_spawn_4""]],0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
+						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""air"",[""shop_vehicle_spawn_4""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
 						name="shop_vehicle_4";
 					};
 					id=756;
 					type="C_scientist_F";
+					atlOffset=0.7319994;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -18860,8 +18841,9 @@ class Mission
 			{
 			};
 			id=755;
+			atlOffset=0.7319994;
 		};
-		class Item522
+		class Item520
 		{
 			dataType="Object";
 			class PositionInfo
@@ -18879,7 +18861,7 @@ class Mission
 			id=757;
 			type="Land_JumpTarget_F";
 		};
-		class Item523
+		class Item521
 		{
 			dataType="Object";
 			class PositionInfo
@@ -18897,7 +18879,7 @@ class Mission
 			id=758;
 			type="Land_CashDesk_F";
 		};
-		class Item524
+		class Item522
 		{
 			dataType="Object";
 			class PositionInfo
@@ -18915,7 +18897,7 @@ class Mission
 			id=759;
 			type="Land_Research_house_V1_F";
 		};
-		class Item525
+		class Item523
 		{
 			dataType="Marker";
 			position[]={7079.9395,2.6600001,7708.1182};
@@ -18924,7 +18906,7 @@ class Mission
 			angle=163.99242;
 			id=760;
 		};
-		class Item526
+		class Item524
 		{
 			dataType="Group";
 			side="Civilian";
@@ -18936,7 +18918,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7076.1719,3.3902867,7738.6445};
+						position[]={7076.1719,3.3904388,7738.645};
 						angles[]={0,2.6872311,0};
 					};
 					side="Civilian";
@@ -18944,11 +18926,12 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{_this call SPMC_fnc_showVehicleMenu;},[""air"",[""shop_vehicle_spawn_5""]],0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
+						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""air"",[""shop_vehicle_spawn_5""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
 						name="shop_vehicle_5";
 					};
 					id=762;
 					type="C_scientist_F";
+					atlOffset=0.00015211105;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -18978,8 +18961,9 @@ class Mission
 			{
 			};
 			id=761;
+			atlOffset=0.00015211105;
 		};
-		class Item527
+		class Item525
 		{
 			dataType="Object";
 			class PositionInfo
@@ -18997,7 +18981,7 @@ class Mission
 			id=763;
 			type="Land_JumpTarget_F";
 		};
-		class Item528
+		class Item526
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19015,7 +18999,7 @@ class Mission
 			id=764;
 			type="Land_CashDesk_F";
 		};
-		class Item529
+		class Item527
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19033,7 +19017,7 @@ class Mission
 			id=765;
 			type="Land_Research_house_V1_F";
 		};
-		class Item530
+		class Item528
 		{
 			dataType="Marker";
 			position[]={11494.995,6.9499998,13272.656};
@@ -19042,7 +19026,7 @@ class Mission
 			angle=98.992279;
 			id=766;
 		};
-		class Item531
+		class Item529
 		{
 			dataType="Group";
 			side="Civilian";
@@ -19054,7 +19038,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11465.78,7.6802864,13282.173};
+						position[]={11465.78,7.680439,13282.173};
 						angles[]={0,1.5527672,0};
 					};
 					side="Civilian";
@@ -19062,11 +19046,12 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{_this call SPMC_fnc_showVehicleMenu;},[""air"",[""shop_vehicle_spawn_6""]],0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
+						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""air"",[""shop_vehicle_spawn_6""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
 						name="shop_vehicle_6";
 					};
 					id=768;
 					type="C_scientist_F";
+					atlOffset=0.00015258789;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -19096,8 +19081,9 @@ class Mission
 			{
 			};
 			id=767;
+			atlOffset=0.00015258789;
 		};
-		class Item532
+		class Item530
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19115,7 +19101,7 @@ class Mission
 			id=769;
 			type="Land_JumpTarget_F";
 		};
-		class Item533
+		class Item531
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19133,7 +19119,7 @@ class Mission
 			id=770;
 			type="Land_CashDesk_F";
 		};
-		class Item534
+		class Item532
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19151,7 +19137,7 @@ class Mission
 			id=771;
 			type="Land_Research_house_V1_F";
 		};
-		class Item535
+		class Item533
 		{
 			dataType="Group";
 			side="Civilian";
@@ -19163,7 +19149,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1775.2051,5.8714333,12054.622};
+						position[]={1775.205,5.8716936,12054.622};
 						angles[]={0,5.8554921,0};
 					};
 					side="Civilian";
@@ -19171,12 +19157,12 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{_this call SPMC_fnc_showVehicleMenu;},[""ground"",[""shop_vehicle_spawn_7""]],0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
+						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_spawn_7""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
 						name="shop_vehicle_7";
 					};
 					id=773;
 					type="C_scientist_F";
-					atlOffset=0.73073483;
+					atlOffset=0.73099995;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -19206,9 +19192,9 @@ class Mission
 			{
 			};
 			id=772;
-			atlOffset=0.73073483;
+			atlOffset=0.73099995;
 		};
-		class Item536
+		class Item534
 		{
 			dataType="Marker";
 			position[]={1770.2361,5.6598749e+036,12076.443};
@@ -19218,7 +19204,7 @@ class Mission
 			id=774;
 			atlOffset=5.6598749e+036;
 		};
-		class Item537
+		class Item535
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19236,7 +19222,7 @@ class Mission
 			id=775;
 			type="Land_JumpTarget_F";
 		};
-		class Item538
+		class Item536
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19254,7 +19240,7 @@ class Mission
 			id=776;
 			type="Land_CashDesk_F";
 		};
-		class Item539
+		class Item537
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19272,7 +19258,7 @@ class Mission
 			id=777;
 			type="Land_Research_house_V1_F";
 		};
-		class Item540
+		class Item538
 		{
 			dataType="Group";
 			side="Civilian";
@@ -19284,7 +19270,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3081.48,9.9243126,11114.558};
+						position[]={3081.48,9.9243917,11114.558};
 						angles[]={0,5.4191599,0};
 					};
 					side="Civilian";
@@ -19292,11 +19278,12 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{_this call SPMC_fnc_showVehicleMenu;},[""ground"",[""shop_vehicle_spawn_8""]],0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
+						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_spawn_8""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
 						name="shop_vehicle_8";
 					};
 					id=779;
 					type="C_scientist_F";
+					atlOffset=7.9154968e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -19326,8 +19313,9 @@ class Mission
 			{
 			};
 			id=778;
+			atlOffset=7.9154968e-005;
 		};
-		class Item541
+		class Item539
 		{
 			dataType="Marker";
 			position[]={3068.0244,5.6598749e+036,11124.438};
@@ -19337,7 +19325,7 @@ class Mission
 			id=780;
 			atlOffset=5.6598749e+036;
 		};
-		class Item542
+		class Item540
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19355,7 +19343,7 @@ class Mission
 			id=781;
 			type="Land_JumpTarget_F";
 		};
-		class Item543
+		class Item541
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19373,7 +19361,7 @@ class Mission
 			id=782;
 			type="Land_CashDesk_F";
 		};
-		class Item544
+		class Item542
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19392,7 +19380,7 @@ class Mission
 			type="Land_Research_house_V1_F";
 			atlOffset=-9.5367432e-007;
 		};
-		class Item545
+		class Item543
 		{
 			dataType="Group";
 			side="Civilian";
@@ -19404,7 +19392,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={845.18945,3.5002866,7649.3691};
+						position[]={845.18903,3.5004389,7649.3687};
 						angles[]={0,0.61950457,0};
 					};
 					side="Civilian";
@@ -19412,11 +19400,12 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{_this call SPMC_fnc_showVehicleMenu;},[""ground"",[""shop_vehicle_spawn_9""]],0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
+						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_spawn_9""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
 						name="shop_vehicle_9";
 					};
 					id=785;
 					type="C_scientist_F";
+					atlOffset=0.00015234947;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -19446,8 +19435,9 @@ class Mission
 			{
 			};
 			id=784;
+			atlOffset=0.00015234947;
 		};
-		class Item546
+		class Item544
 		{
 			dataType="Marker";
 			position[]={857.14722,5.6598749e+036,7664.9961};
@@ -19457,7 +19447,7 @@ class Mission
 			id=786;
 			atlOffset=5.6598749e+036;
 		};
-		class Item547
+		class Item545
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19475,7 +19465,7 @@ class Mission
 			id=787;
 			type="Land_JumpTarget_F";
 		};
-		class Item548
+		class Item546
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19493,7 +19483,7 @@ class Mission
 			id=788;
 			type="Land_CashDesk_F";
 		};
-		class Item549
+		class Item547
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19511,7 +19501,7 @@ class Mission
 			id=789;
 			type="Land_Research_house_V1_F";
 		};
-		class Item550
+		class Item548
 		{
 			dataType="Group";
 			side="Civilian";
@@ -19523,7 +19513,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2432.3188,14.568423,7461.4316};
+						position[]={2432.3191,14.568931,7461.4316};
 						angles[]={0,2.8882754,0};
 					};
 					side="Civilian";
@@ -19531,12 +19521,12 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{_this call SPMC_fnc_showVehicleMenu;},[""ground"",[""shop_vehicle_spawn_10""]],0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
+						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_spawn_10""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
 						name="shop_vehicle_10";
 					};
 					id=791;
 					type="C_scientist_F";
-					atlOffset=9.5367432e-007;
+					atlOffset=0.00050830841;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -19566,19 +19556,19 @@ class Mission
 			{
 			};
 			id=790;
-			atlOffset=9.5367432e-007;
+			atlOffset=0.00050830841;
 		};
-		class Item551
+		class Item549
 		{
 			dataType="Marker";
 			position[]={2432.8955,5.6598749e+036,7442.3701};
 			name="shop_vehicle_spawn_10";
 			type="Empty";
-			angle=228.99399;
+			angle=228.99391;
 			id=792;
 			atlOffset=5.6598749e+036;
 		};
-		class Item552
+		class Item550
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19597,7 +19587,7 @@ class Mission
 			type="Land_JumpTarget_F";
 			atlOffset=-9.5367432e-007;
 		};
-		class Item553
+		class Item551
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19616,7 +19606,7 @@ class Mission
 			type="Land_CashDesk_F";
 			atlOffset=9.5367432e-007;
 		};
-		class Item554
+		class Item552
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19635,7 +19625,7 @@ class Mission
 			type="Land_Research_house_V1_F";
 			atlOffset=-9.5367432e-007;
 		};
-		class Item555
+		class Item553
 		{
 			dataType="Group";
 			side="Civilian";
@@ -19647,7 +19637,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2936.7456,19.602154,3410.9778};
+						position[]={2936.7461,19.602491,3410.978};
 						angles[]={0,4.6337619,0};
 					};
 					side="Civilian";
@@ -19655,11 +19645,12 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{_this call SPMC_fnc_showVehicleMenu;},[""ground"",[""shop_vehicle_spawn_11""]],0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
+						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_spawn_11""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
 						name="shop_vehicle_11";
 					};
 					id=797;
 					type="C_scientist_F";
+					atlOffset=0.00033760071;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -19689,8 +19680,9 @@ class Mission
 			{
 			};
 			id=796;
+			atlOffset=0.00033760071;
 		};
-		class Item556
+		class Item554
 		{
 			dataType="Marker";
 			position[]={2914.3501,5.6598749e+036,3413.8184};
@@ -19700,7 +19692,7 @@ class Mission
 			id=798;
 			atlOffset=5.6598749e+036;
 		};
-		class Item557
+		class Item555
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19718,7 +19710,7 @@ class Mission
 			id=799;
 			type="Land_JumpTarget_F";
 		};
-		class Item558
+		class Item556
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19736,7 +19728,7 @@ class Mission
 			id=800;
 			type="Land_CashDesk_F";
 		};
-		class Item559
+		class Item557
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19755,7 +19747,7 @@ class Mission
 			type="Land_Research_house_V1_F";
 			atlOffset=1.9073486e-006;
 		};
-		class Item560
+		class Item558
 		{
 			dataType="Group";
 			side="Civilian";
@@ -19767,7 +19759,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5400.6055,6.9340973,3963.7493};
+						position[]={5400.605,6.934319,3963.749};
 						angles[]={0,2.2775674,0};
 					};
 					side="Civilian";
@@ -19775,11 +19767,12 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{_this call SPMC_fnc_showVehicleMenu;},[""ground"",[""shop_vehicle_spawn_12""]],0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
+						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_spawn_12""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
 						name="shop_vehicle_12";
 					};
 					id=803;
 					type="C_scientist_F";
+					atlOffset=0.00022172928;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -19809,8 +19802,9 @@ class Mission
 			{
 			};
 			id=802;
+			atlOffset=0.00022172928;
 		};
-		class Item561
+		class Item559
 		{
 			dataType="Marker";
 			position[]={5406.2178,5.6598749e+036,3944.1836};
@@ -19820,7 +19814,7 @@ class Mission
 			id=804;
 			atlOffset=5.6598749e+036;
 		};
-		class Item562
+		class Item560
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19838,7 +19832,7 @@ class Mission
 			id=805;
 			type="Land_JumpTarget_F";
 		};
-		class Item563
+		class Item561
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19856,7 +19850,7 @@ class Mission
 			id=806;
 			type="Land_CashDesk_F";
 		};
-		class Item564
+		class Item562
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19874,7 +19868,7 @@ class Mission
 			id=807;
 			type="Land_Research_house_V1_F";
 		};
-		class Item565
+		class Item563
 		{
 			dataType="Group";
 			side="Civilian";
@@ -19886,7 +19880,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11747.464,7.9174151,2859.718};
+						position[]={11747.464,7.9174991,2859.718};
 						angles[]={0,3.0629654,0};
 					};
 					side="Civilian";
@@ -19894,11 +19888,12 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{_this call SPMC_fnc_showVehicleMenu;},[""ground"",[""shop_vehicle_spawn_13""]],0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
+						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_spawn_13""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
 						name="shop_vehicle_13";
 					};
 					id=809;
 					type="C_scientist_F";
+					atlOffset=8.392334e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -19928,8 +19923,9 @@ class Mission
 			{
 			};
 			id=808;
+			atlOffset=8.392334e-005;
 		};
-		class Item566
+		class Item564
 		{
 			dataType="Marker";
 			position[]={11744.653,5.6598749e+036,2837.417};
@@ -19939,7 +19935,7 @@ class Mission
 			id=810;
 			atlOffset=5.6598749e+036;
 		};
-		class Item567
+		class Item565
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19958,7 +19954,7 @@ class Mission
 			type="Land_JumpTarget_F";
 			atlOffset=4.7683716e-007;
 		};
-		class Item568
+		class Item566
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19976,7 +19972,7 @@ class Mission
 			id=812;
 			type="Land_CashDesk_F";
 		};
-		class Item569
+		class Item567
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19994,7 +19990,7 @@ class Mission
 			id=813;
 			type="Land_Research_house_V1_F";
 		};
-		class Item570
+		class Item568
 		{
 			dataType="Group";
 			side="Civilian";
@@ -20006,7 +20002,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11205.31,2.6702867,5380.8027};
+						position[]={11205.31,2.6703591,5380.8027};
 						angles[]={0,1.2303699,0};
 					};
 					side="Civilian";
@@ -20014,11 +20010,12 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{_this call SPMC_fnc_showVehicleMenu;},[""ground"",[""shop_vehicle_spawn_14""]],0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
+						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_spawn_14""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
 						name="shop_vehicle_14";
 					};
 					id=815;
 					type="C_scientist_F";
+					atlOffset=7.2479248e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -20048,8 +20045,9 @@ class Mission
 			{
 			};
 			id=814;
+			atlOffset=7.2479248e-005;
 		};
-		class Item571
+		class Item569
 		{
 			dataType="Marker";
 			position[]={11227.429,5.6598749e+036,5383.9111};
@@ -20059,7 +20057,7 @@ class Mission
 			id=816;
 			atlOffset=5.6598749e+036;
 		};
-		class Item572
+		class Item570
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20077,7 +20075,7 @@ class Mission
 			id=817;
 			type="Land_JumpTarget_F";
 		};
-		class Item573
+		class Item571
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20095,7 +20093,7 @@ class Mission
 			id=818;
 			type="Land_CashDesk_F";
 		};
-		class Item574
+		class Item572
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20113,7 +20111,7 @@ class Mission
 			id=819;
 			type="Land_Research_house_V1_F";
 		};
-		class Item575
+		class Item573
 		{
 			dataType="Group";
 			side="Civilian";
@@ -20125,19 +20123,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9315.6494,6.2211261,4014.76};
+						position[]={9315.6494,6.220665,4014.76};
 						angles[]={0,1.4049028,0};
 					};
 					side="Civilian";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{_this call SPMC_fnc_showVehicleMenu;},[""ground"",[""shop_vehicle_spawn_15""]],0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
+						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_spawn_15""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
 						name="shop_vehicle_15";
 					};
 					id=821;
 					type="C_scientist_F";
+					atlOffset=0.5866847;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -20167,8 +20166,9 @@ class Mission
 			{
 			};
 			id=820;
+			atlOffset=0.5866847;
 		};
-		class Item576
+		class Item574
 		{
 			dataType="Marker";
 			position[]={9334.9502,5.6598749e+036,4013.1289};
@@ -20178,7 +20178,7 @@ class Mission
 			id=822;
 			atlOffset=5.6598749e+036;
 		};
-		class Item577
+		class Item575
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20196,7 +20196,7 @@ class Mission
 			id=823;
 			type="Land_JumpTarget_F";
 		};
-		class Item578
+		class Item576
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20214,7 +20214,7 @@ class Mission
 			id=824;
 			type="Land_CashDesk_F";
 		};
-		class Item579
+		class Item577
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20232,7 +20232,7 @@ class Mission
 			id=825;
 			type="Land_Research_house_V1_F";
 		};
-		class Item580
+		class Item578
 		{
 			dataType="Group";
 			side="Civilian";
@@ -20244,19 +20244,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5632.1943,3.0009274,10188.29};
+						position[]={5632.1938,3.0007188,10188.29};
 						angles[]={0,4.7210283,0};
 					};
 					side="Civilian";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{_this call SPMC_fnc_showVehicleMenu;},[""ground"",[""shop_vehicle_spawn_16""]],0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
+						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_spawn_16""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
 						name="shop_vehicle_16";
 					};
 					id=827;
 					type="C_scientist_F";
+					atlOffset=0.68199992;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -20286,8 +20287,9 @@ class Mission
 			{
 			};
 			id=826;
+			atlOffset=0.68199992;
 		};
-		class Item581
+		class Item579
 		{
 			dataType="Marker";
 			position[]={5610.2725,5.6598749e+036,10192.98};
@@ -20297,7 +20299,7 @@ class Mission
 			id=828;
 			atlOffset=5.6598749e+036;
 		};
-		class Item582
+		class Item580
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20315,7 +20317,7 @@ class Mission
 			id=829;
 			type="Land_JumpTarget_F";
 		};
-		class Item583
+		class Item581
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20333,7 +20335,7 @@ class Mission
 			id=830;
 			type="Land_CashDesk_F";
 		};
-		class Item584
+		class Item582
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20351,7 +20353,7 @@ class Mission
 			id=831;
 			type="Land_Research_house_V1_F";
 		};
-		class Item585
+		class Item583
 		{
 			dataType="Group";
 			side="Civilian";
@@ -20363,7 +20365,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9992.7764,3.4615366,13453.421};
+						position[]={9992.7764,3.461802,13453.421};
 						angles[]={0,6.2045579,0};
 					};
 					side="Civilian";
@@ -20371,11 +20373,12 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{_this call SPMC_fnc_showVehicleMenu;},[""ground"",[""shop_vehicle_spawn_17""]],0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
+						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_spawn_17""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
 						name="shop_vehicle_17";
 					};
 					id=833;
 					type="C_scientist_F";
+					atlOffset=0.00026535988;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -20405,8 +20408,9 @@ class Mission
 			{
 			};
 			id=832;
+			atlOffset=0.00026535988;
 		};
-		class Item586
+		class Item584
 		{
 			dataType="Marker";
 			position[]={9995.5869,5.6598749e+036,13475.623};
@@ -20416,7 +20420,7 @@ class Mission
 			id=834;
 			atlOffset=5.6598749e+036;
 		};
-		class Item587
+		class Item585
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20435,7 +20439,7 @@ class Mission
 			type="Land_JumpTarget_F";
 			atlOffset=-2.3841858e-007;
 		};
-		class Item588
+		class Item586
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20453,7 +20457,7 @@ class Mission
 			id=836;
 			type="Land_CashDesk_F";
 		};
-		class Item589
+		class Item587
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20471,7 +20475,7 @@ class Mission
 			id=837;
 			type="Land_Research_house_V1_F";
 		};
-		class Item590
+		class Item588
 		{
 			dataType="Group";
 			side="Civilian";
@@ -20483,7 +20487,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={13755.663,3.2802866,11892.88};
+						position[]={13755.663,3.2804387,11892.88};
 						angles[]={0,3.4120314,0};
 					};
 					side="Civilian";
@@ -20491,11 +20495,12 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{_this call SPMC_fnc_showVehicleMenu;},[""ground"",[""shop_vehicle_spawn_18""]],0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
+						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_spawn_18""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
 						name="shop_vehicle_18";
 					};
 					id=839;
 					type="C_scientist_F";
+					atlOffset=0.00015211105;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -20525,8 +20530,9 @@ class Mission
 			{
 			};
 			id=838;
+			atlOffset=0.00015211105;
 		};
-		class Item591
+		class Item589
 		{
 			dataType="Marker";
 			position[]={13745.415,5.6598749e+036,11872.883};
@@ -20536,7 +20542,7 @@ class Mission
 			id=840;
 			atlOffset=5.6598749e+036;
 		};
-		class Item592
+		class Item590
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20554,7 +20560,7 @@ class Mission
 			id=841;
 			type="Land_JumpTarget_F";
 		};
-		class Item593
+		class Item591
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20572,7 +20578,7 @@ class Mission
 			id=842;
 			type="Land_CashDesk_F";
 		};
-		class Item594
+		class Item592
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20590,7 +20596,7 @@ class Mission
 			id=843;
 			type="Land_Research_house_V1_F";
 		};
-		class Item595
+		class Item593
 		{
 			dataType="Group";
 			side="Civilian";
@@ -20602,19 +20608,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8920.585,21.323784,10143.657};
+						position[]={8920.585,21.32333,10143.657};
 						angles[]={0,0.35770524,0};
 					};
 					side="Civilian";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{_this call SPMC_fnc_showVehicleMenu;},[""ground"",[""shop_vehicle_spawn_19""]],0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
+						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_spawn_19""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
 						name="shop_vehicle_19";
 					};
 					id=845;
 					type="C_scientist_F";
+					atlOffset=0.71999931;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -20644,8 +20651,9 @@ class Mission
 			{
 			};
 			id=844;
+			atlOffset=0.71999931;
 		};
-		class Item596
+		class Item594
 		{
 			dataType="Marker";
 			position[]={8932.5381,5.6598749e+036,10162.588};
@@ -20655,7 +20663,7 @@ class Mission
 			id=846;
 			atlOffset=5.6598749e+036;
 		};
-		class Item597
+		class Item595
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20673,7 +20681,7 @@ class Mission
 			id=847;
 			type="Land_JumpTarget_F";
 		};
-		class Item598
+		class Item596
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20691,7 +20699,7 @@ class Mission
 			id=848;
 			type="Land_CashDesk_F";
 		};
-		class Item599
+		class Item597
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20710,7 +20718,7 @@ class Mission
 			type="Land_Research_house_V1_F";
 			atlOffset=1.9073486e-006;
 		};
-		class Item600
+		class Item598
 		{
 			dataType="Group";
 			side="Civilian";
@@ -20722,19 +20730,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={6496.5303,3.2602866,12829.229};
+						position[]={6496.5298,3.2602773,12829.229};
 						angles[]={0,5.8554921,0};
 					};
 					side="Civilian";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{_this call SPMC_fnc_showVehicleMenu;},[""ground"",[""shop_vehicle_spawn_20""]],0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
+						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_spawn_20""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
 						name="shop_vehicle_20";
 					};
 					id=851;
 					type="C_scientist_F";
+					atlOffset=0.73699999;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -20764,8 +20773,9 @@ class Mission
 			{
 			};
 			id=850;
+			atlOffset=0.73699999;
 		};
-		class Item601
+		class Item599
 		{
 			dataType="Marker";
 			position[]={6491.5605,5.6598749e+036,12851.051};
@@ -20775,7 +20785,7 @@ class Mission
 			id=852;
 			atlOffset=5.6598749e+036;
 		};
-		class Item602
+		class Item600
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20794,7 +20804,7 @@ class Mission
 			type="Land_JumpTarget_F";
 			atlOffset=2.3841858e-007;
 		};
-		class Item603
+		class Item601
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20812,7 +20822,7 @@ class Mission
 			id=854;
 			type="Land_CashDesk_F";
 		};
-		class Item604
+		class Item602
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20830,7 +20840,7 @@ class Mission
 			id=855;
 			type="Land_Research_house_V1_F";
 		};
-		class Item605
+		class Item603
 		{
 			dataType="Group";
 			side="Civilian";
@@ -20842,7 +20852,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7431.1973,8.2202864,8609.4131};
+						position[]={7431.1968,8.220439,8609.4131};
 						angles[]={0,2.1903009,0};
 					};
 					side="Civilian";
@@ -20850,11 +20860,12 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{_this call SPMC_fnc_showVehicleMenu;},[""ground"",[""shop_vehicle_spawn_21""]],0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
+						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_spawn_21""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
 						name="shop_vehicle_21";
 					};
 					id=857;
 					type="C_scientist_F";
+					atlOffset=0.00015258789;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -20884,8 +20895,9 @@ class Mission
 			{
 			};
 			id=856;
+			atlOffset=0.00015258789;
 		};
-		class Item606
+		class Item604
 		{
 			dataType="Marker";
 			position[]={7446.4365,5.6598749e+036,8592.9063};
@@ -20895,7 +20907,7 @@ class Mission
 			id=858;
 			atlOffset=5.6598749e+036;
 		};
-		class Item607
+		class Item605
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20913,7 +20925,7 @@ class Mission
 			id=859;
 			type="Land_JumpTarget_F";
 		};
-		class Item608
+		class Item606
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20931,7 +20943,7 @@ class Mission
 			id=860;
 			type="Land_CashDesk_F";
 		};
-		class Item609
+		class Item607
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20949,7 +20961,7 @@ class Mission
 			id=861;
 			type="Land_Research_house_V1_F";
 		};
-		class Item610
+		class Item608
 		{
 			dataType="Group";
 			side="Civilian";
@@ -20961,20 +20973,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10804.841,4.6302862,6503.2813};
+						position[]={10804.84,4.6304388,6503.2808};
 						angles[]={0,1.0558369,0};
 					};
 					side="Civilian";
-					flags=2;
+					flags=6;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{_this call SPMC_fnc_showVehicleMenu;},[""ground"",[""shop_vehicle_spawn_22""]],0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
+						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_spawn_22""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
 						name="shop_vehicle_22";
 					};
 					id=863;
 					type="C_scientist_F";
-					atlOffset=0.72884703;
+					atlOffset=0.00015211105;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -21004,9 +21016,9 @@ class Mission
 			{
 			};
 			id=862;
-			atlOffset=0.72884703;
+			atlOffset=0.00015211105;
 		};
-		class Item611
+		class Item609
 		{
 			dataType="Marker";
 			position[]={10818.517,5.6598749e+036,6515.085};
@@ -21016,7 +21028,7 @@ class Mission
 			id=864;
 			atlOffset=5.6598749e+036;
 		};
-		class Item612
+		class Item610
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21034,7 +21046,7 @@ class Mission
 			id=865;
 			type="Land_JumpTarget_F";
 		};
-		class Item613
+		class Item611
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21052,7 +21064,7 @@ class Mission
 			id=866;
 			type="Land_CashDesk_F";
 		};
-		class Item614
+		class Item612
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21071,7 +21083,7 @@ class Mission
 			type="Land_Research_house_V1_F";
 			atlOffset=-2.3841858e-007;
 		};
-		class Item615
+		class Item613
 		{
 			dataType="Group";
 			side="Civilian";
@@ -21083,7 +21095,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11115.769,104.34841,9605.0674};
+						position[]={11115.769,104.34853,9605.0674};
 						angles[]={0,3.0629654,0};
 					};
 					side="Civilian";
@@ -21091,11 +21103,12 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{_this call SPMC_fnc_showVehicleMenu;},[""ground"",[""shop_vehicle_spawn_23""]],0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
+						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""ground"",[""shop_vehicle_spawn_23""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
 						name="shop_vehicle_23";
 					};
 					id=869;
 					type="C_scientist_F";
+					atlOffset=0.00012207031;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -21125,8 +21138,9 @@ class Mission
 			{
 			};
 			id=868;
+			atlOffset=0.00012207031;
 		};
-		class Item616
+		class Item614
 		{
 			dataType="Marker";
 			position[]={11112.96,5.6598749e+036,9582.7676};
@@ -21136,7 +21150,7 @@ class Mission
 			id=870;
 			atlOffset=5.6598749e+036;
 		};
-		class Item617
+		class Item615
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21154,7 +21168,7 @@ class Mission
 			id=871;
 			type="Land_JumpTarget_F";
 		};
-		class Item618
+		class Item616
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21172,7 +21186,7 @@ class Mission
 			id=872;
 			type="Land_CashDesk_F";
 		};
-		class Item619
+		class Item617
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21191,7 +21205,7 @@ class Mission
 			type="Land_Research_house_V1_F";
 			atlOffset=-7.6293945e-006;
 		};
-		class Item620
+		class Item618
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21231,6 +21245,1112 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item619
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11851.583,3.9209831,2618.9221};
+						angles[]={0,5.3318934,0};
+					};
+					side="Civilian";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""water"",[""shop_vehicle_spawn_24""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
+						name="shop_vehicle_24";
+					};
+					id=878;
+					type="C_scientist_F";
+					atlOffset=0.11098313;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=877;
+			atlOffset=0.11098313;
+		};
+		class Item620
+		{
+			dataType="Marker";
+			position[]={11835.698,5.6598749e+036,2628.6587};
+			name="shop_vehicle_spawn_24";
+			type="Empty";
+			angle=28.99407;
+			id=879;
+			atlOffset=5.6598749e+036;
+		};
+		class Item621
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11835.392,1.6748939,2628.6914};
+				angles[]={0,1.4837184,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="this enableSimulation false; " \n "this allowDamage false;" \n "";
+				name="shop_vehicle_marker_24";
+			};
+			id=880;
+			type="Land_JumpTarget_F";
+			atlOffset=5.830584;
+		};
+		class Item622
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11850.938,3.9830179,2619.4465};
+				angles[]={0,2.2689283,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="this enableSimulation false; " \n "this allowDamage false;" \n "";
+				name="shop_vehicle_desk_24";
+			};
+			id=881;
+			type="Land_CashDesk_F";
+			atlOffset=0.17445683;
+		};
+		class Item623
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11849.771,3.7797134,2622.2002};
+				angles[]={0,2.2689283,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="this enableSimulation false; " \n "this allowDamage false;" \n "";
+				name="shop_vehicle_house_24";
+			};
+			id=882;
+			type="Land_Research_house_V1_F";
+		};
+		class Item624
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5595.1011,3.540463,3974.542};
+						angles[]={0,2.1903009,0};
+					};
+					side="Civilian";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""water"",[""shop_vehicle_spawn_25""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
+						name="shop_vehicle_25";
+					};
+					id=884;
+					type="C_scientist_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=883;
+		};
+		class Item625
+		{
+			dataType="Marker";
+			position[]={5611.6572,5.6598749e+036,3959.1282};
+			name="shop_vehicle_spawn_25";
+			type="Empty";
+			angle=233.99405;
+			id=885;
+			atlOffset=5.6598749e+036;
+		};
+		class Item626
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5611.9639,1.2361993,3959.0955};
+				angles[]={0,4.6253114,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="this enableSimulation false; " \n "this allowDamage false;" \n "";
+				name="shop_vehicle_marker_25";
+			};
+			id=886;
+			type="Land_JumpTarget_F";
+			atlOffset=6.0940213;
+		};
+		class Item627
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5595.7451,3.5390241,3973.9172};
+				angles[]={0,5.4105215,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="this enableSimulation false; " \n "this allowDamage false;" \n "";
+				name="shop_vehicle_desk_25";
+			};
+			id=887;
+			type="Land_CashDesk_F";
+		};
+		class Item628
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5596.9121,3.5101764,3971.1636};
+				angles[]={0,5.4105215,0};
+			};
+			side="Empty";
+			flags=1;
+			class Attributes
+			{
+				init="this enableSimulation false; " \n "this allowDamage false;" \n "";
+				name="shop_vehicle_house_25";
+			};
+			id=888;
+			type="Land_Research_house_V1_F";
+			atlOffset=1.4201764;
+		};
+		class Item629
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3454.0081,2.4553401,6771.6758};
+						angles[]={0,0.35770524,0};
+					};
+					side="Civilian";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""water"",[""shop_vehicle_spawn_26""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
+						name="shop_vehicle_26";
+					};
+					id=908;
+					type="C_scientist_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=907;
+		};
+		class Item630
+		{
+			dataType="Marker";
+			position[]={3463.0952,5.6598749e+036,6793.792};
+			name="shop_vehicle_spawn_26";
+			type="Empty";
+			angle=338.99414;
+			id=909;
+			atlOffset=5.6598749e+036;
+		};
+		class Item631
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3463.0471,0,6794.0962};
+				angles[]={0,2.792716,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="this enableSimulation false; " \n "this allowDamage false;" \n "";
+				name="shop_vehicle_marker_26";
+			};
+			id=910;
+			type="Land_JumpTarget_F";
+			atlOffset=4.2137127;
+		};
+		class Item632
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3454.3965,2.4539013,6772.397};
+				angles[]={0,3.5779262,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="this enableSimulation false; " \n "this allowDamage false;" \n "";
+				name="shop_vehicle_desk_26";
+			};
+			id=911;
+			type="Land_CashDesk_F";
+		};
+		class Item633
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3456.7539,2.4250536,6774.2368};
+				angles[]={0,3.5779262,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="this enableSimulation false; " \n "this allowDamage false;" \n "";
+				name="shop_vehicle_house_26";
+			};
+			id=912;
+			type="Land_Research_house_V1_F";
+			atlOffset=-1.1920929e-007;
+		};
+		class Item634
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3157.7109,1.8858476,11027.774};
+						angles[]={0,2.8011663,0};
+					};
+					side="Civilian";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""water"",[""shop_vehicle_spawn_27""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
+						name="shop_vehicle_27";
+					};
+					id=914;
+					type="C_scientist_F";
+					atlOffset=0.00026750565;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=913;
+			atlOffset=0.00026750565;
+		};
+		class Item635
+		{
+			dataType="Marker";
+			position[]={3166.5544,5.6598749e+036,10996.481};
+			name="shop_vehicle_spawn_27";
+			type="Empty";
+			angle=163.99414;
+			id=915;
+			atlOffset=5.6598749e+036;
+		};
+		class Item636
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3166.7866,0,10996.28};
+				angles[]={0,5.2361774,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="this enableSimulation false; " \n "this allowDamage false;" \n "";
+				name="shop_vehicle_marker_27";
+			};
+			id=916;
+			type="Land_JumpTarget_F";
+			atlOffset=4.5779676;
+		};
+		class Item637
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3157.9097,1.8841412,11026.884};
+				angles[]={0,6.0213871,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="this enableSimulation false; " \n "this allowDamage false;" \n "";
+				name="shop_vehicle_desk_27";
+			};
+			id=917;
+			type="Land_CashDesk_F";
+		};
+		class Item638
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3157.2864,1.8552935,11023.959};
+				angles[]={0,6.0213871,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="this enableSimulation false; " \n "this allowDamage false;" \n "";
+				name="shop_vehicle_house_27";
+			};
+			id=918;
+			type="Land_Research_house_V1_F";
+			atlOffset=-1.1920929e-007;
+		};
+		class Item639
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1760.646,2.2961669,11870.271};
+						angles[]={0,4.2846961,0};
+					};
+					side="Civilian";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""water"",[""shop_vehicle_spawn_28""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
+						name="shop_vehicle_28";
+					};
+					id=920;
+					type="C_scientist_F";
+					atlOffset=0.00023293495;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=919;
+			atlOffset=0.00023293495;
+		};
+		class Item640
+		{
+			dataType="Marker";
+			position[]={1734.765,5.6598749e+036,11868.858};
+			name="shop_vehicle_spawn_28";
+			type="Empty";
+			angle=288.99414;
+			id=921;
+			atlOffset=5.6598749e+036;
+		};
+		class Item641
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1734.5848,7.8027372,11868.609};
+				angles[]={0,0.43652201,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="this enableSimulation false; " \n "this allowDamage false;" \n "";
+				name="shop_vehicle_marker_28";
+			};
+			id=922;
+			type="Land_JumpTarget_F";
+			atlOffset=9.8527374;
+		};
+		class Item642
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1759.8252,2.2944951,11869.95};
+				angles[]={0,1.2217317,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="this enableSimulation false; " \n "this allowDamage false;" \n "";
+				name="shop_vehicle_desk_28";
+			};
+			id=923;
+			type="Land_CashDesk_F";
+		};
+		class Item643
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1756.8572,2.2656474,11870.316};
+				angles[]={0,1.2217317,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="this enableSimulation false; " \n "this allowDamage false;" \n "";
+				name="shop_vehicle_house_28";
+			};
+			id=924;
+			type="Land_Research_house_V1_F";
+		};
+		class Item644
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5396.7241,2.9402866,10131.864};
+						angles[]={0,6.2045584,0};
+					};
+					side="Civilian";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""water"",[""shop_vehicle_spawn_29""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
+						name="shop_vehicle_29";
+					};
+					id=926;
+					type="C_scientist_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=925;
+		};
+		class Item645
+		{
+			dataType="Marker";
+			position[]={5399.6724,5.6598749e+036,10159.256};
+			name="shop_vehicle_spawn_29";
+			type="Empty";
+			angle=353.99411;
+			id=927;
+			atlOffset=5.6598749e+036;
+		};
+		class Item646
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5399.5,-0.3579852,10159.511};
+				angles[]={0,2.3563843,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="this enableSimulation false; " \n "this allowDamage false;" \n "";
+				name="shop_vehicle_marker_29";
+			};
+			id=928;
+			type="Land_JumpTarget_F";
+			atlOffset=4.8111901;
+		};
+		class Item647
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5396.7495,2.9388478,10132.678};
+				angles[]={0,3.1415939,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="this enableSimulation false; " \n "this allowDamage false;" \n "";
+				name="shop_vehicle_desk_29";
+			};
+			id=929;
+			type="Land_CashDesk_F";
+		};
+		class Item648
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5398.1084,2.9100001,10135.342};
+				angles[]={0,3.1415939,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="this enableSimulation false; " \n "this allowDamage false;" \n "";
+				name="shop_vehicle_house_29";
+			};
+			id=930;
+			type="Land_Research_house_V1_F";
+		};
+		class Item649
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13685.066,3.2804387,11820.8};
+						angles[]={0,0.27043876,0};
+					};
+					side="Civilian";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""water"",[""shop_vehicle_spawn_30""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
+						name="shop_vehicle_30";
+					};
+					id=951;
+					type="C_scientist_F";
+					atlOffset=0.00015211105;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=950;
+			atlOffset=0.00015211105;
+		};
+		class Item650
+		{
+			dataType="Marker";
+			position[]={13686.643,5.6598749e+036,11860.706};
+			name="shop_vehicle_spawn_30";
+			type="Empty";
+			angle=18.994223;
+			id=952;
+			atlOffset=5.6598749e+036;
+		};
+		class Item651
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13686.567,-8.0299997,11861.004};
+				angles[]={0,2.705451,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="this enableSimulation false; " \n "this allowDamage false;" \n "";
+				name="shop_vehicle_marker_30";
+			};
+			id=953;
+			type="Land_JumpTarget_F";
+		};
+		class Item652
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13685.385,3.2788477,11821.553};
+				angles[]={0,3.4906607,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="this enableSimulation false; " \n "this allowDamage false;" \n "";
+				name="shop_vehicle_desk_30";
+			};
+			id=954;
+			type="Land_CashDesk_F";
+		};
+		class Item653
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13687.574,3.25,11823.591};
+				angles[]={0,3.4906607,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="this enableSimulation false; " \n "this allowDamage false;" \n "";
+				name="shop_vehicle_house_30";
+			};
+			id=955;
+			type="Land_Research_house_V1_F";
+		};
+		class Item654
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9925.4336,3.1537201,13685.441};
+						angles[]={0,1.7539687,0};
+					};
+					side="Civilian";
+					flags=2;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="removeallWeapons this;  removeBackpack this;  this enableSimulation false;  this allowDamage false;  this addAction[""<t color='#00A6FF'>Vehicle Shop</t>"",{[""water"",[""shop_vehicle_spawn_31""]] call SPMC_fnc_showVehicleMenu;},"""",0,false,true,"""",'(alive player) && (vehicle player == player) && player distance _target <= 5'];";
+						name="shop_vehicle_31";
+					};
+					id=976;
+					type="C_scientist_F";
+					atlOffset=0.72835636;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=975;
+			atlOffset=0.72835636;
+		};
+		class Item655
+		{
+			dataType="Marker";
+			position[]={9930.373,5.6598749e+036,13663.381};
+			name="shop_vehicle_spawn_31";
+			type="Empty";
+			angle=283.99408;
+			id=977;
+			atlOffset=5.6598749e+036;
+		};
+		class Item656
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9930.6631,6.5913215,13663.48};
+				angles[]={0,4.1889801,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="this enableSimulation false; " \n "this allowDamage false;" \n "";
+				name="shop_vehicle_marker_31";
+			};
+			id=978;
+			type="Land_JumpTarget_F";
+			atlOffset=12.865335;
+		};
+		class Item657
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9926.2607,3.1527727,13685.144};
+				angles[]={0,4.9741898,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="this enableSimulation false; " \n "this allowDamage false;" \n "";
+				name="shop_vehicle_desk_31";
+			};
+			id=979;
+			type="Land_CashDesk_F";
+		};
+		class Item658
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9928.4824,3.123925,13683.142};
+				angles[]={0,4.9741898,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="this enableSimulation false; " \n "this allowDamage false;" \n "";
+				name="shop_vehicle_house_31";
+			};
+			id=980;
+			type="Land_Research_house_V1_F";
+		};
+		class Item659
+		{
+			dataType="Marker";
+			position[]={9848.5303,8.9342842e+035,7206.354};
+			name="drop_zone_31";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorBlue";
+			fillName="DiagGrid";
+			a=750;
+			b=750;
+			id=474;
+			atlOffset=8.9342842e+035;
+		};
+		class Item660
+		{
+			dataType="Marker";
+			position[]={8623.3096,8.9342842e+035,7109.2622};
+			name="drop_zone_32";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorBlue";
+			fillName="DiagGrid";
+			a=500;
+			b=500;
+			id=475;
+			atlOffset=8.9342842e+035;
+		};
+		class Item661
+		{
+			dataType="Marker";
+			position[]={13124.824,0,10663.983};
+			name="drop_zone_36";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorBlue";
+			fillName="DiagGrid";
+			a=1500;
+			b=1500;
+			id=981;
+			atlOffset=-87.374901;
+		};
+		class Item662
+		{
+			dataType="Marker";
+			position[]={12810.497,9.223055e+035,8699.4404};
+			name="drop_zone_37";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorBlue";
+			fillName="DiagGrid";
+			a=1200;
+			b=1200;
+			id=982;
+			atlOffset=9.223055e+035;
+		};
+		class Item663
+		{
+			dataType="Marker";
+			position[]={11448.416,9.223055e+035,7494.5244};
+			name="drop_zone_38";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorBlue";
+			fillName="DiagGrid";
+			a=1000;
+			b=1000;
+			id=983;
+			atlOffset=9.223055e+035;
+		};
+		class Item664
+		{
+			dataType="Marker";
+			position[]={6825.1929,9.223055e+035,8044.5947};
+			name="drop_zone_39";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorBlue";
+			fillName="DiagGrid";
+			a=1000;
+			b=1000;
+			id=984;
+			atlOffset=9.223055e+035;
+		};
+		class Item665
+		{
+			dataType="Marker";
+			position[]={7901.7891,8.9342842e+035,7324.0786};
+			name="drop_zone_40";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorBlue";
+			fillName="DiagGrid";
+			a=500;
+			b=500;
+			id=985;
+			atlOffset=8.9342842e+035;
+		};
+		class Item666
+		{
+			dataType="Marker";
+			position[]={5703.4604,8.9342842e+035,11494.754};
+			name="drop_zone_41";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorBlue";
+			fillName="DiagGrid";
+			a=500;
+			b=500;
+			id=986;
+			atlOffset=8.9342842e+035;
+		};
+		class Item667
+		{
+			dataType="Marker";
+			position[]={6126.1792,8.9342842e+035,12266.384};
+			name="drop_zone_42";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorBlue";
+			fillName="DiagGrid";
+			a=500;
+			b=500;
+			id=987;
+			atlOffset=8.9342842e+035;
+		};
+		class Item668
+		{
+			dataType="Marker";
+			position[]={14122.03,8.9342842e+035,9394.4688};
+			name="drop_zone_43";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorBlue";
+			fillName="DiagGrid";
+			a=500;
+			b=500;
+			id=988;
+			atlOffset=8.9342842e+035;
 		};
 	};
 };

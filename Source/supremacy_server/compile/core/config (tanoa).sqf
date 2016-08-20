@@ -41,7 +41,7 @@ switch (_this select 0) do {
      * @return boolean
      */
     case "fatigue_enabled": {
-        true;
+        false;
     };
     
     /**
@@ -57,7 +57,7 @@ switch (_this select 0) do {
      * @return integer
      */
     case "house_loot_percent": {
-        5;
+        0;
     };
     
     /**
@@ -109,7 +109,7 @@ switch (_this select 0) do {
      * @return integer
      */
     case "spawn_ground_shops": {
-        9;
+        4;
     };
 
     /**
@@ -117,7 +117,15 @@ switch (_this select 0) do {
      * @return integer
      */
     case "spawn_air_shops": {
-        3;
+        2;
+    };
+
+    /**
+     * The number of water vehicle shops to have in the map (cannot exceed the number of shops placed in the map).
+     * @return integer
+     */
+    case "spawn_water_shops": {
+        2;
     };
     
     /**
@@ -133,7 +141,7 @@ switch (_this select 0) do {
      * @return integer
      */
     case "loot_crate_limit": {
-        30;
+        100;
     };
 
     /**
@@ -141,7 +149,7 @@ switch (_this select 0) do {
      * @return integer
      */
     case "loot_vehicle_limit": {
-        30;
+        80;
     };
 
     /**
@@ -157,7 +165,7 @@ switch (_this select 0) do {
      * @return integer
      */
     case "airdrop_interval": {
-        30;
+        10;
     };
 
     /**
@@ -304,6 +312,23 @@ switch (_this select 0) do {
             "shop_vehicle_4",
             "shop_vehicle_5",
             "shop_vehicle_6"
+        ];
+    };
+
+    /**
+     * Water vehicle shop NPC list
+     * @return array
+     */
+    case "shop_water_vehicle_npc_list": {
+        [
+            "shop_vehicle_24",
+            "shop_vehicle_25",
+            "shop_vehicle_26",
+            "shop_vehicle_27",
+            "shop_vehicle_28",
+            "shop_vehicle_29",
+            "shop_vehicle_30",
+            "shop_vehicle_31"
         ];
     };
 
@@ -564,7 +589,15 @@ switch (_this select 0) do {
             "drop_zone_32",
             "drop_zone_33",
             "drop_zone_34",
-            "drop_zone_35"
+            "drop_zone_35",
+            "drop_zone_36",
+            "drop_zone_37",
+            "drop_zone_38",
+            "drop_zone_39",
+            "drop_zone_40",
+            "drop_zone_41",
+            "drop_zone_42",
+            "drop_zone_43"
         ];
     };
 
