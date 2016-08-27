@@ -17,6 +17,11 @@ if (debugMode) then {
     diag_log (["spawn_type"] call SPMC_fnc_config);;
 };
 
+if (count SPMC_gbl_lastLoc > 0) exitWith {
+    [SPMC_gbl_lastLoc] spawn SPMC_fnc_spawnPlayer;
+    SPMC_gbl_lastLoc = [];
+};
+
 switch ((["spawn_type"] call SPMC_fnc_config)) do {
     case "random_city": {
         _spawnZone = ((["spawn_points"] call SPMC_fnc_config) call bis_fnc_selectRandom) select 0;

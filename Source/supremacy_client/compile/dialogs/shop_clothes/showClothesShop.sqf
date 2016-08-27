@@ -41,32 +41,54 @@ _shopLists = [
 ];
 
 {
-    [_plist,_x,_skillDiscount] spawn {
-        private["_pricelist","_y","_list","_pricelist","_skillDiscount"];
-        _pricelist = [_this,0,[],[[]]] call BIS_fnc_param;
-        _y = [_this,1,[],[[]]] call BIS_fnc_param;
-        _skillDiscount = [_this,2,1.0,[1.0]] call BIS_fnc_param;
-        disableSerialization;
-
-        _list = (findDisplay 2700) displayCtrl (_y select 0);
-        lbClear _list;
-
-        {
-            private ["_itemInfo","_index","_value"];
-            _itemInfo = [_x] call SPMC_fnc_getItemCfgDetails;
-            _index = [_x, _pricelist] call SPMC_fnc_findIndex;
-            _value = 0;
-
-            if (_index != -1) then {
-                _value = ((_pricelist select _index) select 1) * _skillDiscount;
+    if (_forEachIndex == 0) then {
+        switch (side player) do { 
+            case WEST : {
+                _x set [1, ((_x select 1) select 0)];
             };
 
-            _list lbAdd (_itemInfo select 1);
-            _list lbSetData[(lbSize _list) - 1, _x];
-            _list lbSetValue[(lbSize _list) - 1, _value];
-            _list lbSetPicture[(lbSize _list) - 1, (_itemInfo select 3)];
+            case EAST : {
+                _x set [1, ((_x select 1) select 1)];
+            };
 
-        } foreach (_y select 1);
+            case GUER : {
+                _x set [1, ((_x select 1) select 2)];
+            };
+
+            default {
+                _x set [1, []];
+            }; 
+        };
+    };
+
+    if (count (_x select 1) > 0) then {
+        [_plist,_x,_skillDiscount] spawn {
+            private["_pricelist","_y","_list","_pricelist","_skillDiscount"];
+            _pricelist = [_this,0,[],[[]]] call BIS_fnc_param;
+            _y = [_this,1,[],[[]]] call BIS_fnc_param;
+            _skillDiscount = [_this,2,1.0,[1.0]] call BIS_fnc_param;
+            disableSerialization;
+
+            _list = (findDisplay 2700) displayCtrl (_y select 0);
+            lbClear _list;
+
+            {
+                private ["_itemInfo","_index","_value"];
+                _itemInfo = [_x] call SPMC_fnc_getItemCfgDetails;
+                _index = [_x, _pricelist] call SPMC_fnc_findIndex;
+                _value = 0;
+
+                if (_index != -1) then {
+                    _value = ((_pricelist select _index) select 1) * _skillDiscount;
+                };
+
+                _list lbAdd (_itemInfo select 1);
+                _list lbSetData[(lbSize _list) - 1, _x];
+                _list lbSetValue[(lbSize _list) - 1, _value];
+                _list lbSetPicture[(lbSize _list) - 1, (_itemInfo select 3)];
+
+            } foreach (_y select 1);
+        };
     };
 } foreach _shopLists;
 

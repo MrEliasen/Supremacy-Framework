@@ -11,18 +11,20 @@
  * @link       https://github.com/MrEliasen/SupremacyFramework
  */
 
-private["_money","_stats","_equipment","_weapons","_weaponsData"];
+private["_money","_stats","_equipment","_weapons","_weaponsData","_lastLoc"];
 _money = [_this,0,0,[0]] call BIS_fnc_param;
 _stats = [_this,1,[],[[]]] call BIS_fnc_param;
 _equipment = [_this,2,[],[[]]] call BIS_fnc_param;
 _experience = [_this,3,0,[0]] call BIS_fnc_param;
 _skills = [_this,4,[],[[]]] call BIS_fnc_param;
+_lastLoc = [_this,5,[],[[]]] call BIS_fnc_param;
 _weapons = [];
 _weaponsData = [];
 
 SPMC_gbl_experience = _experience;
 SPMC_gbl_learnedSkills = _skills;
 SPMC_gbl_money = _money;
+SPMC_gbl_lastLoc = [];
 
 if (count _stats != 2) exitwith {
     [] call SPMC_fnc_playerSetupBambiGear;
@@ -30,7 +32,11 @@ if (count _stats != 2) exitwith {
 
 if ((_stats select 0) >= 1) exitWith {
     [] call SPMC_fnc_playerSetupBambiGear;
-}; 
+};
+
+if (count _lastLoc > 0) then {
+    SPMC_gbl_lastLoc = _lastLoc;
+};
 
 // only process the player data if they are actually still alive.
 player setDamage (_stats select 0);
@@ -91,7 +97,10 @@ if (count _equipment > 0) then {
     _weapons = (_equipment select 0);
     _weaponsData = (_equipment select 1);
 
-    diag_log _equipment;
+    if (debugMode) then {
+        diag_log "Processing Equipment:";
+        diag_log _equipment;
+    };
 
     if (count _weaponsData > 0) then {
         {

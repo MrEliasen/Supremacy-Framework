@@ -16,8 +16,8 @@ _unit = _this;
 if (!(isPlayer _unit)) exitWith {diag_log "NOT PLAYER!";};
 
 if (alive _unit) then {
-    _unit setDamage 0;
-    _unit setCaptive true;
+    //_unit setDamage 0;
+    //_unit setCaptive true;
     _unit setUnconscious true;
     _unit allowDamage false;
 
@@ -25,6 +25,7 @@ if (alive _unit) then {
     if (visibleMap) then {
         openMap false
     };
+
     closeDialog 0;
 
     _unit setVariable ["beingRevived", "", true];
@@ -37,12 +38,17 @@ if (alive _unit) then {
         _unit action ["eject", (vehicle _unit)];
 
         waitUntil{((vehicle _unit) == _unit)};
-        sleep 0.5;
     };
 
-    _unit spawn {
+    /*_unit spawn {
         [[_this, "AinjPpneMstpSnonWnonDnon", "switchMove"],"SPMC_fnc_syncAnimation",true] call BIS_fnc_MP;
         sleep 3;
+        _this allowDamage true;
+        _this setVariable["executable", true];
+    };*/
+
+    _unit spawn {
+        sleep 2;
         _this allowDamage true;
         _this setVariable["executable", true];
     };
@@ -50,34 +56,32 @@ if (alive _unit) then {
 
 ["stats"] call SPMC_fnc_syncPlayerData;
 
-if (alive _unit) then {
-    // only grant the killer experience if its a player and if the player killed was not recently revived (within the past 2 minutes).
-    if (isPlayer _killer && ((_unit getVariable ["recentlyRevived", 0]) == 0 OR (time - (_unit getVariable ["recentlyRevived", 0]) >= 120))) then {
-        [[_killer, "kill", _unit],"SPMC_fnc_svrGrantExperience",false,false] spawn BIS_fnc_MP;
-    };
-} else {
-    if (isPlayer _killer) then {
-        [[_killer, "kill", _unit],"SPMC_fnc_svrGrantExperience",false,false] spawn BIS_fnc_MP;
-    };
+// only grant the killer experience if its a player and if the player killed was not recently revived (within the past 2 minutes).
+if (isPlayer _killer && ((_unit getVariable ["recentlyRevived", 0]) == 0 OR (time - (_unit getVariable ["recentlyRevived", 0]) >= 120))) then {
+    [[_killer, "kill", _unit],"SPMC_fnc_svrGrantExperience",false,false] spawn BIS_fnc_MP;
+};
+
+if (isPlayer _unit && isPlayer _killer) then {
+    [[_killer, _unit],"SPMC_fnc_svrSystemMessage",false,false] spawn BIS_fnc_MP;
 };
 
 disableSerialization;
 createDialog "SPMC_death_screen";
 
 // Create death cam
-SPMC_gbl_camera  = "CAMERA" camCreate (getPosATL _unit);
+/*SPMC_gbl_camera  = "CAMERA" camCreate (getPosATL _unit);
 showCinemaBorder true;
 SPMC_gbl_camera cameraEffect ["Internal","Back"];
 SPMC_gbl_camera camSetTarget _unit;
 SPMC_gbl_camera camSetRelPos [0,3.5,4.5];
 SPMC_gbl_camera camSetFOV .5;
 SPMC_gbl_camera camSetFocus [50,0];
-SPMC_gbl_camera camCommit 0;
+SPMC_gbl_camera camCommit 0;*/
 
 _unit spawn {
     waitUntil {sleep 0.1; !isNull (findDisplay 3100)};
     // disable "esc" key.
-    (findDisplay 3100) displayAddEventHandler ["KeyDown", "if ((_this select 1) == 1) then { true }"];
+    // (findDisplay 3100) displayAddEventHandler ["KeyDown", "if ((_this select 1) == 1) then { true }"];
 
     while {(alive _this)} do {
         // If the player was revived, end the loop.
@@ -132,14 +136,14 @@ _unit spawn {
         [] call SPMC_fnc_resetMedicalVars;
         ["stats"] call SPMC_fnc_syncPlayerData;
 
-        if (!(isNull SPMC_gbl_camera)) then {
+        /*if (!(isNull SPMC_gbl_camera)) then {
             SPMC_gbl_camera cameraEffect ["TERMINATE","BACK"];
             camDestroy SPMC_gbl_camera;
-        };
+        };*/
 
-        [[_this, "amovppnemstpsraswrfldnon", "switchMove"],"SPMC_fnc_syncAnimation",true] call BIS_fnc_MP;
+        //[[_this, "amovppnemstpsraswrfldnon", "switchMove"],"SPMC_fnc_syncAnimation",true] call BIS_fnc_MP;
     };
 
-    (findDisplay 3100) displayRemoveAllEventHandlers "KeyDown";
+    //(findDisplay 3100) displayRemoveAllEventHandlers "KeyDown";
     closeDialog 0;
 };

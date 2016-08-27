@@ -17,17 +17,6 @@ if (debugMode) then {
     diag_log serverStatus;
 };
 
-// create safe spawn by encapsulating it with 2 hangars
-_spawnBlock = createVehicle ["Land_Hangar_F", [0,0,0], [], 0, "NONE"];
-_spawnBlock setDir (markerDir "spawn_block_left");
-_spawnBlock setPosATL (getMarkerPos "spawn_block_left");
-_spawnBlock allowDamage false;
-
-_spawnBlock = createVehicle ["Land_Hangar_F", [0,0,0], [], 0, "NONE"];
-_spawnBlock setDir (markerDir "spawn_block_right");
-_spawnBlock setPosATL (getMarkerPos "spawn_block_right");
-_spawnBlock allowDamage false;
-
 [] spawn {
     private ["_complete"];
     _complete = false;
@@ -43,16 +32,18 @@ _spawnBlock allowDamage false;
         };
     };
 
-    serverStatus = "SERVER: Initiating air drop timer";
-    publicVariable "serverStatus";
+    if ((["airdrop_interval"] call SPMC_fnc_config) > 0) then {
+        serverStatus = "SERVER: Initiating air drop timer";
+        publicVariable "serverStatus";
 
-    if (debugMode) then {
-        diag_log serverStatus;
+        if (debugMode) then {
+            diag_log serverStatus;
+        };
+
+        // Init air drops
+        [] call SPMC_fnc_initAirDropTimer;
     };
 
-    // Init air drops
-    [] call SPMC_fnc_initAirDropTimer;
-    
     diag_log "SERVER: Ready!";
     serverIsReady = true;
     publicVariable "serverIsReady";
@@ -62,37 +53,46 @@ _spawnBlock allowDamage false;
     private ["_limit","_percent"];
     // Spawn world loot boxes
     _limit = (["loot_crate_limit"] call SPMC_fnc_config);
-    _percent = (100/_limit);
 
-    if (debugMode) then {
-        diag_log format["SERVER: Spawning %1 world loot", _limit];
-    };
-
-    for "_i" from 1 to _limit do
-    {
-        private["_m","_pos","_holder"];
-
-        _pos = ["world_item_spawn",0,["system_safezone"],450] call SHK_pos;
-        _holder = createVehicle ["IG_supplyCrate_F",[(_pos select 0),(_pos select 1),(_pos select 2)+0.2], [], 0, "can_Collide"];
-        _holder allowDamage false;
-        sleep 0.1;
-
-        [_holder] call SPMC_fnc_setupWorldLootCrate;
+    if (_limit > 0) then {
+        _percent = (100/_limit);
 
         if (debugMode) then {
-            _m = createMarker [format["mPos%1%2",(getPos _holder) select 0, (getPos _holder) select 1],(getPos _holder)];
-            _m setmarkerColor "ColorRed";
-            _m setMarkerShape "Icon";
-            _m setMarkerType "mil_dot";
-            _m setMarkerText "Supply Crate";
+            diag_log format["SERVER: Spawning %1 world loot", _limit];
         };
 
-        serverStatusLootCrates = _percent * _i;
+        for "_i" from 1 to _limit do
+        {
+            private["_m","_pos","_holder"];
 
-        if(_i == _limit) exitWith {
-            serverStatusLootCrates = 100;
+            _pos = ["world_item_spawn",0,["system_safezone"],450] call SHK_pos;
+            _holder = createVehicle ["IG_supplyCrate_F",[(_pos select 0),(_pos select 1),(_pos select 2)+0.2], [], 0, "can_Collide"];
+            _holder allowDamage false;
+            sleep 0.1;
+
+            [_holder] call SPMC_fnc_setupWorldLootCrate;
+
+            if (debugMode) then {
+                _m = createMarker [format["mPos%1%2",(getPos _holder) select 0, (getPos _holder) select 1],(getPos _holder)];
+                _m setmarkerColor "ColorRed";
+                _m setMarkerShape "Icon";
+                _m setMarkerType "mil_dot";
+                _m setMarkerText "Supply Crate";
+            };
+
+            serverStatusLootCrates = _percent * _i;
+
+            if(_i == _limit) exitWith {
+                serverStatusLootCrates = 100;
+            };
+            
         };
-        
+    } else {
+        serverStatusLootCrates = 100;
+
+        if (debugMode) then {
+            diag_log format["SERVER: Loot crate spawn count: %1, skipping.", _limit];
+        };
     };
 };
 
@@ -100,53 +100,62 @@ _spawnBlock allowDamage false;
     private ["_limit","_percent"];
     // Spawn world vehicles
     _limit = (["loot_vehicle_limit"] call SPMC_fnc_config);
-    _percent = (100/_limit);
 
-    if (debugMode) then {
-        diag_log format["SERVER: Spawning %1 world vehicles", _limit];
-    };
-
-    for "_i" from 1 to _limit do
-    {
-        private["_m","_pos","_holder","_vehicle","_r"];
-        _r = random(100);
-
-        if (_r > 10) then {
-            _vehicle = (["ground_vehicles"] call SPMC_fnc_config) call bis_fnc_selectRandom;
-        } else {
-            _vehicle = (["air_vehicles"] call SPMC_fnc_config) call bis_fnc_selectRandom;
-        };
-        
-        _pos = ["world_item_spawn",0,["system_safezone"],450] call SHK_pos;
-        _holder = createVehicle [_vehicle,[(_pos select 0),(_pos select 1),(_pos select 2)+0.2], [], 0, "can_Collide"];
-        sleep 0.1;
-
-        // only place land vehicles at roads.
-        if (getText(configFile >> "CfgVehicles" >> (typeOf _holder) >> "vehicleClass") != "air") then {
-            _pos = [_holder,[0,300],random 360,0,[1,350]] call SHK_pos;
-            _holder setPosATL [(_pos select 0) + 10,(_pos select 1) + 10,(_pos select 2)-0.2];
-        };
-
-        clearBackpackCargoGlobal _holder;
-        clearWeaponCargoGlobal _holder;
-        clearMagazineCargoGlobal _holder;
-        clearItemCargoGlobal _holder;
-        [_holder] call SPMC_fnc_setupVehicleLoot;
+    if (_limit > 0) then {
+        _percent = (100/_limit);
 
         if (debugMode) then {
-            _m = createMarker [format["mPos%1%2",(getPos _holder) select 0, (getPos _holder) select 1],(getPos _holder)];
-            _m setmarkerColor "ColorBlue";
-            _m setMarkerShape "Icon";
-            _m setMarkerType "mil_dot";
-            _m setMarkerText _vehicle;
+            diag_log format["SERVER: Spawning %1 world vehicles", _limit];
         };
 
-        serverStatusLootVehicle = _percent * _i;
+        for "_i" from 1 to _limit do
+        {
+            private["_m","_pos","_holder","_vehicle","_r"];
+            _r = random(100);
 
-        if(_i == _limit) exitWith {
-            serverStatusLootVehicle = 100;
+            if (_r > 10) then {
+                _vehicle = (["ground_vehicles"] call SPMC_fnc_config) call bis_fnc_selectRandom;
+            } else {
+                _vehicle = (["air_vehicles"] call SPMC_fnc_config) call bis_fnc_selectRandom;
+            };
+            
+            _pos = ["world_item_spawn",0,["system_safezone"],450] call SHK_pos;
+            _holder = createVehicle [_vehicle,[(_pos select 0),(_pos select 1),(_pos select 2)+0.2], [], 0, "can_Collide"];
+            sleep 0.1;
+
+            // only place land vehicles at roads.
+            if (getText(configFile >> "CfgVehicles" >> (typeOf _holder) >> "vehicleClass") != "air") then {
+                _pos = [_holder,[0,300],random 360,0,[1,350]] call SHK_pos;
+                _holder setPosATL [(_pos select 0) + 10,(_pos select 1) + 10,(_pos select 2)-0.2];
+            };
+
+            clearBackpackCargoGlobal _holder;
+            clearWeaponCargoGlobal _holder;
+            clearMagazineCargoGlobal _holder;
+            clearItemCargoGlobal _holder;
+            [_holder] call SPMC_fnc_setupVehicleLoot;
+
+            if (debugMode) then {
+                _m = createMarker [format["mPos%1%2",(getPos _holder) select 0, (getPos _holder) select 1],(getPos _holder)];
+                _m setmarkerColor "ColorBlue";
+                _m setMarkerShape "Icon";
+                _m setMarkerType "mil_dot";
+                _m setMarkerText _vehicle;
+            };
+
+            serverStatusLootVehicle = _percent * _i;
+
+            if(_i == _limit) exitWith {
+                serverStatusLootVehicle = 100;
+            };
+            
         };
-        
+    } else {
+        serverStatusLootVehicle = 100;
+
+        if (debugMode) then {
+            diag_log format["SERVER: Vehicle spawn count: %1, skipping.", _limit];
+        };
     };
 };
 
@@ -154,35 +163,43 @@ _spawnBlock allowDamage false;
     private ["_limit","_percent"];
     // Spawn world stationaries
     _limit = (["loot_stationery_limit"] call SPMC_fnc_config);
-    _percent = (100/_limit);
 
-    if (debugMode) then {
-        diag_log format["SERVER: Spawning %1 world stationery items", _limit];
-    };
-
-    for "_i" from 1 to _limit do
-    {
-        private["_m","_pos","_holder","_vehicle"];
-        _vehicle = (["stationery_items"] call SPMC_fnc_config) call bis_fnc_selectRandom;
-        
-        _pos = ["world_item_spawn",0,["system_safezone"],450] call SHK_pos;
-        _holder = createVehicle [_vehicle,[(_pos select 0),(_pos select 1),(_pos select 2)], [], 0, "none"];
-        sleep 0.1;
+    if (_limit > 0) then {
+        _percent = (100/_limit);
 
         if (debugMode) then {
-            _m = createMarker [format["mPos%1%2",(getPos _holder) select 0, (getPos _holder) select 1],(getPos _holder)];
-            _m setmarkerColor "ColorBlack";
-            _m setMarkerShape "Icon";
-            _m setMarkerType "mil_dot";
-            _m setMarkerText _vehicle;
+            diag_log format["SERVER: Spawning %1 world stationery items", _limit];
         };
 
-        serverStatusLootStationery = _percent * _i;
+        for "_i" from 1 to _limit do
+        {
+            private["_m","_pos","_holder","_vehicle"];
+            _vehicle = (["stationery_items"] call SPMC_fnc_config) call bis_fnc_selectRandom;
+            
+            _pos = ["world_item_spawn",0,["system_safezone"],450] call SHK_pos;
+            _holder = createVehicle [_vehicle,[(_pos select 0),(_pos select 1),(_pos select 2)], [], 0, "none"];
+            sleep 0.1;
 
-        if(_i == _limit) exitWith {
-            serverStatusLootStationery = 100;
+            if (debugMode) then {
+                _m = createMarker [format["mPos%1%2",(getPos _holder) select 0, (getPos _holder) select 1],(getPos _holder)];
+                _m setmarkerColor "ColorBlack";
+                _m setMarkerShape "Icon";
+                _m setMarkerType "mil_dot";
+                _m setMarkerText _vehicle;
+            };
+
+            serverStatusLootStationery = _percent * _i;
+
+            if(_i == _limit) exitWith {
+                serverStatusLootStationery = 100;
+            };
         };
-        
+    } else {
+        serverStatusLootStationery = 100;
+
+        if (debugMode) then {
+            diag_log format["SERVER: Stationary spawn count: %1, skipping.", _limit];
+        };
     };
 };
 

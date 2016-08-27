@@ -135,15 +135,17 @@ class SPMC_player_menu
             h = 0.033 * safezoneH;
             onButtonClick = "closeDialog 0; findDisplay 46 createDisplay ""RscDisplayDynamicGroups""";
         };
-        /*class SPMC_player_menu_btnplaceholder2: RscButton
+        class SPMC_player_menu_repack: RscButton
         {
             idc = 1603;
+            text = "REPACK MAGS";
             x = 0.603125 * safezoneW + safezoneX;
             y = 0.412 * safezoneH + safezoneY;
             w = 0.0773437 * safezoneW;
             h = 0.033 * safezoneH;
+            onButtonClick = "[] spawn SPMC_fnc_svrRepack;";
         };
-        class SPMC_player_menu_btnplaceholder3: RscButton
+        /*class SPMC_player_menu_btnplaceholder3: RscButton
         {
             idc = 1605;
             x = 0.603125 * safezoneW + safezoneX;

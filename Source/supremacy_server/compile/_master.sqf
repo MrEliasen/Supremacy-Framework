@@ -17,6 +17,7 @@ SPMC_fnc_findIndex = compileFinal preprocessfilelinenumbers "\supremacy_server\c
 SPMC_fnc_getItemCfgDetails = compileFinal preprocessfilelinenumbers "\supremacy_server\compile\core\getItemCfgDetails.sqf";
 SPMC_fnc_spawnBuildings = compileFinal preprocessfilelinenumbers "\supremacy_server\compile\core\spawnBuildings.sqf";
 SPMC_fnc_initWorldLoot = compileFinal preprocessfilelinenumbers "\supremacy_server\compile\core\initWorldLoot.sqf";
+SPMC_fnc_svrSystemMessage = compileFinal preprocessfilelinenumbers "\supremacy_server\compile\core\systemMessage.sqf";
 publicVariable "SPMC_fnc_config";
 publicVariable "SPMC_fnc_findIndex";
 publicVariable "SPMC_fnc_getItemCfgDetails";
@@ -25,6 +26,8 @@ publicVariable "SPMC_fnc_spawnBuildings";
 // Player
 SPMC_fnc_svrRequestPlayerData = compileFinal preprocessfilelinenumbers "\supremacy_server\compile\player\svrRequestPlayerData.sqf";
 SPMC_fnc_svrSyncPlayerData = compileFinal preprocessfilelinenumbers "\supremacy_server\compile\player\svrSyncPlayerData.sqf";
+SPMC_fnc_svrRepack = compileFinal preprocessfilelinenumbers "\supremacy_server\compile\player\svrRepack.sqf";
+publicVariable "SPMC_fnc_svrRepack";
 
 // Economy
 SPMC_fnc_svrSyncSale = compileFinal preprocessfilelinenumbers "\supremacy_server\compile\economy\svrSyncSale.sqf";

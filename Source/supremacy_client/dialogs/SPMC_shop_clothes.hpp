@@ -109,7 +109,7 @@ class SPMC_shop_clothes
             x = 0.298906 * safezoneW + safezoneX;
             y = 0.456 * safezoneH + safezoneY;
             w = 0.0309375 * safezoneW;
-            h = 0.011 * safezoneH;
+            h = 0.013 * safezoneH;
         };
         class SPMC_shop_clothes_hats_pricelbl: RscText
         {
@@ -118,7 +118,7 @@ class SPMC_shop_clothes
             x = 0.438125 * safezoneW + safezoneX;
             y = 0.456 * safezoneH + safezoneY;
             w = 0.0309375 * safezoneW;
-            h = 0.011 * safezoneH;
+            h = 0.013 * safezoneH;
         };
         class SPMC_shop_clothes_glasses_pricelbl: RscText
         {
@@ -127,7 +127,7 @@ class SPMC_shop_clothes
             x = 0.572187 * safezoneW + safezoneX;
             y = 0.456 * safezoneH + safezoneY;
             w = 0.0309375 * safezoneW;
-            h = 0.011 * safezoneH;
+            h = 0.013 * safezoneH;
         };
         class SPMC_shop_clothes_vests_pricelbl: RscText
         {
@@ -267,7 +267,7 @@ class SPMC_shop_clothes
             x = 0.329844 * safezoneW + safezoneX;
             y = 0.456 * safezoneH + safezoneY;
             w = 0.103125 * safezoneW;
-            h = 0.011 * safezoneH;
+            h = 0.013 * safezoneH;
             colorText[] = {0.153,0.902,0.251,1};
         };
         class SPMC_shop_clothes_hats_price: RscText
@@ -277,7 +277,7 @@ class SPMC_shop_clothes
             x = 0.469062 * safezoneW + safezoneX;
             y = 0.456 * safezoneH + safezoneY;
             w = 0.0979687 * safezoneW;
-            h = 0.011 * safezoneH;
+            h = 0.013 * safezoneH;
             colorText[] = {0.153,0.902,0.251,1};
         };
         class SPMC_shop_clothes_glasses_price: RscText
@@ -287,7 +287,7 @@ class SPMC_shop_clothes
             x = 0.603125 * safezoneW + safezoneX;
             y = 0.456 * safezoneH + safezoneY;
             w = 0.0979687 * safezoneW;
-            h = 0.011 * safezoneH;
+            h = 0.013 * safezoneH;
             colorText[] = {0.153,0.902,0.251,1};
         };
         class SPMC_shop_clothes_vests_price: RscText

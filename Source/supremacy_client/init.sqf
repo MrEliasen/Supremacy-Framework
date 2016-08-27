@@ -88,6 +88,9 @@ if (!isDedicated) then {
     // Keeps track of when the player should respawn, in case they get executed.
     SPMC_gbl_respawnTimer = 0;
 
+    // Stores the last known location of the player.
+    SPMC_gbl_lastLoc = [];
+
     if(debugMode) then {
         diag_log "Loading briefing";
     };

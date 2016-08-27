@@ -18,6 +18,8 @@ I wanted to learn more about how ARMA 3 modding worked, and there is really no b
  * Skill & Experience system
  * Revival, heal, repair and other skills.
  * BIS Dynamic Groups
+ * Ammo repacking
+ 
 
 ## Maps
  * Altis
@@ -36,20 +38,27 @@ It uses strictly "vanilla" (including expansions) content. No client-side mods r
 You can modify the "\Source\supremacy_server\compile\core\config*.sqf" to make changes to a lot of the elements in the framework.
 There is no wiki yet, but I hope to get working on that soon(tm).
 
-## 0.5.2 (20-08-2016)
+## 0.6.0 (27-08-2016)
 
 Features/Changes:
 
- * Added Water vehicle shops (new configuration options).
- * Updated drop zone layout on Tanoa (config updated).
- * Updated ExtDB2 to extDB3-1010 (new ExtDB ini files).
+ * Updated configs to include all (hopefully) new vehicle, items and weapons from APEX.
+ * Updated price list, now include all (hopefully) items and vehicles from APEX.
+ * Updated clothing shops, so they only sell items for the faction of the player (Config updated).
+ * Added location saving and spawning. You can now choose players to spawn where the logged out (Config, DB and ExtDB ini - updated).
+ * Added magazine repacking (see player menu).
+ * Changed the air drop smoke duration from 10 to 5 minutes.
+ * Updated the unconscious system, removing animations and relying more on ARMA 3 official methods.
+ * Added "<player> was injured ny <player>" when becoming unconscious.
 
 Bugfixes:
 
- * Fixed map not completing the load when building loot is set to 0.
- * Fixed vehicles shop dialog not showing.
- * Fixed shops not removing the cash desk and NATO box.
- * Fixed attachements not spawning in world loot.
+ * Fixed various debug logging in files so they only log when debug mode is on.
+ * Fixed desk and nato crate not getting removed from unavailable shops.
+ * Fixed cloths menu prices being cut off.
+ * Fixed bug in playerUnconscious script, potentially breaking the script.
+ * Removed obsolete code for spawn protection buildings.
+ * Setting placeables, loot crates, vehicles etc to 0 in the config, will now properly skip it during server initialisation.
 
 Known Issues:
 

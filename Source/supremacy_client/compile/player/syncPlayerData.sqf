@@ -36,6 +36,11 @@ switch (_type) do {
         };
     };
 
+    case "location": {
+        // this is just to make it sync / get past the if statement at the bottom.
+        _data = [1];
+    };
+
     case "equipment": {
         private ["_mag"];
         _mag = primaryWeaponMagazine player;

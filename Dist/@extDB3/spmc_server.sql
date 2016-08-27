@@ -9,6 +9,7 @@ CREATE TABLE IF NOT EXISTS `spmc_players` (
   `p_experience` int(10) unsigned NOT NULL,
   `p_joindate` timestamp NOT NULL,
   `p_lastactive` timestamp NOT NULL,
+  `p_lastloc` varchar(100) NOT NULL DEFAULT '[]',
   PRIMARY KEY (`p_id`),
   UNIQUE KEY `p_steam64` (`p_steam64`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;

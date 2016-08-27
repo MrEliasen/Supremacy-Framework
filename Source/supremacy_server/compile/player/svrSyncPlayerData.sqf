@@ -27,11 +27,19 @@ _call = switch (_type) do {
     };
 
     case "equipment": {
+        _data set [count _data, (getPos _player)];
+
         "saveplayerequipment";
     };
 
     case "money" : {
         "savemoney";
+    };
+
+    case "location" : {
+        _data = [(getPos _player)];
+        
+        "savelocation";
     };
 
     case "experience" : {
@@ -62,6 +70,7 @@ _call = switch (_type) do {
         _data set [count _data, _money];
         _data set [count _data, _skills];
         _data set [count _data, _exp];
+        _data set [count _data, (getPos _player)];
 
         "savePlayerFull";
     };
