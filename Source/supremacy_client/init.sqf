@@ -69,6 +69,9 @@ if (!isDedicated) then {
     // Keep track of whether the player is trying to interrupt an action or not.
     SPMC_gbl_interrupt = false;
 
+    // For keeping track of post processing effects.
+    SPMC_gbl_postEffect = objNull;
+
     // Keep track of when the next automatic sync is happening (in seconds).
     // to aboiv all players syncing at same time when everyone joins, we spread it over 5 minutes.
     SPMC_gbl_nextSync = (random 300) + 600; // between 10 and 15 mins
@@ -78,9 +81,6 @@ if (!isDedicated) then {
 
     // Keep track of the skills the player have learned.
     SPMC_gbl_learnedSkills = [];
-
-    // keeps track of cams we setup
-    SPMC_gbl_camera = objNull;
 
     // Keeps track of the player corpse state (revival and respawn)
     SPMC_gbl_corpse = objNull;

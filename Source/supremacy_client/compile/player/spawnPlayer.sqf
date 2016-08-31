@@ -15,9 +15,9 @@ private["_pos"];
 _pos = (_this select 0);
 player enablesimulation true;
 
-if (!(isNull SPMC_gbl_camera)) then {
-    SPMC_gbl_camera cameraEffect ["TERMINATE","BACK"];
-    camDestroy SPMC_gbl_camera;
+if (!(isNull SPMC_gbl_postEffect)) then {
+    SPMC_gbl_postEffect ppEffectEnable false;
+    ppEffectDestroy SPMC_gbl_postEffect;
 };
 
 if (debugMode) then {

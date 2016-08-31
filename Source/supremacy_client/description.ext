@@ -69,6 +69,12 @@ class CfgSounds
         sound[] = {"\3rdparty\sounds\skill_learned.ogg", 1.0, 1};
         titles[] = {};
     };
+    class reward
+    {
+        name = "reward";
+        sound[] = {"\3rdparty\sounds\reward.ogg", 1.0, 1};
+        titles[] = {};
+    };
 };
 
 class CfgNotifications

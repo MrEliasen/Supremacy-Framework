@@ -17,7 +17,7 @@ switch (_this select 0) do {
      * @return boolean
      */
     case "debug_mode": {
-        true;
+        false;
     };
 
     /**
@@ -58,7 +58,7 @@ switch (_this select 0) do {
      * @return integer
      */
     case "house_loot_percent": {
-        0;
+        10;
     };
     
     /**
@@ -66,7 +66,15 @@ switch (_this select 0) do {
      * @return integer
      */
     case "unconscious_chance": {
-        15;
+        25;
+    };
+    
+    /**
+     * Whether unconcious players, who are waiting for a revive, can be executed or not.
+     * @return integer
+     */
+    case "executeable": {
+        true;
     };
 
     /**
@@ -78,7 +86,7 @@ switch (_this select 0) do {
      * @return string
      */
     case "spawn_type": {
-        "random_city";
+        "select_city";
     };
 
     /**
@@ -95,7 +103,7 @@ switch (_this select 0) do {
      * @return integer
      */
     case "start_money": {
-        5000;
+        10000;
     };
     
     /**
@@ -119,7 +127,7 @@ switch (_this select 0) do {
      * @return integer
      */
     case "spawn_ground_shops": {
-        4;
+        5;
     };
 
     /**
@@ -131,7 +139,7 @@ switch (_this select 0) do {
     };
 
     /**
-     * The number of air vehicle shops to have in the map (cannot exceed the number of shops placed in the map).
+     * The number of water vehicle shops to have in the map (cannot exceed the number of shops placed in the map).
      * @return integer
      */
     case "spawn_water_shops": {
@@ -147,7 +155,7 @@ switch (_this select 0) do {
     };
 
     /**
-     * How mant loot create to spawn on the island during startup. 
+     * How mant loot create to spawn during startup. 
      * 0 = disabled.
      * @return integer
      */
@@ -179,7 +187,7 @@ switch (_this select 0) do {
      * @return integer
      */
     case "airdrop_interval": {
-        0;
+        30;
     };
 
     /**
@@ -188,6 +196,31 @@ switch (_this select 0) do {
      */
     case "max_learned_skills": {
         10;
+    };
+
+    /**
+     * How much exp players get from killing another player
+     * @return integer
+     */
+    case "exp_reward_kills": {
+        1;
+    };
+
+    /**
+     * How much exp players get every "timed_rewards_interval", if enabled.
+     * @return integer
+     */
+    case "exp_reward_timed": {
+        1;
+    };
+
+    /**
+     * Duration between timed rewards, in seconds.
+     * 0 = diable timed rewards.
+     * @return integer
+     */
+    case "timed_rewards_interval": {
+        30;
     };
 
     /**

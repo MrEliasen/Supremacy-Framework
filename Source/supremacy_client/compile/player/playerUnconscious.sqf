@@ -16,10 +16,14 @@ _unit = _this;
 if (!(isPlayer _unit)) exitWith {diag_log "NOT PLAYER!";};
 
 if (alive _unit) then {
-    //_unit setDamage 0;
-    //_unit setCaptive true;
     _unit setUnconscious true;
     _unit allowDamage false;
+
+    // Add blur effect
+    SPMC_gbl_postEffect = ppEffectCreate ["dynamicBlur", 500];
+    SPMC_gbl_postEffect ppEffectEnable true; 
+    SPMC_gbl_postEffect ppEffectAdjust [5]; 
+    SPMC_gbl_postEffect ppEffectCommit 0;
 
     // Close map and dialog if open.
     if (visibleMap) then {
@@ -40,17 +44,12 @@ if (alive _unit) then {
         waitUntil{((vehicle _unit) == _unit)};
     };
 
-    /*_unit spawn {
-        [[_this, "AinjPpneMstpSnonWnonDnon", "switchMove"],"SPMC_fnc_syncAnimation",true] call BIS_fnc_MP;
-        sleep 3;
-        _this allowDamage true;
-        _this setVariable["executable", true];
-    };*/
-
-    _unit spawn {
-        sleep 2;
-        _this allowDamage true;
-        _this setVariable["executable", true];
+    if (["executeable"] call SPMC_fnc_config) then {
+        _unit spawn {
+            sleep 2;
+            _this allowDamage true;
+            _this setVariable["executable", true];
+        };
     };
 };
 
@@ -58,7 +57,7 @@ if (alive _unit) then {
 
 // only grant the killer experience if its a player and if the player killed was not recently revived (within the past 2 minutes).
 if (isPlayer _killer && ((_unit getVariable ["recentlyRevived", 0]) == 0 OR (time - (_unit getVariable ["recentlyRevived", 0]) >= 120))) then {
-    [[_killer, "kill", _unit],"SPMC_fnc_svrGrantExperience",false,false] spawn BIS_fnc_MP;
+    [[_killer, "kill", _unit],"SPMC_fnc_svrGiveExpReward",false,false] spawn BIS_fnc_MP;
 };
 
 if (isPlayer _unit && isPlayer _killer) then {
@@ -68,20 +67,8 @@ if (isPlayer _unit && isPlayer _killer) then {
 disableSerialization;
 createDialog "SPMC_death_screen";
 
-// Create death cam
-/*SPMC_gbl_camera  = "CAMERA" camCreate (getPosATL _unit);
-showCinemaBorder true;
-SPMC_gbl_camera cameraEffect ["Internal","Back"];
-SPMC_gbl_camera camSetTarget _unit;
-SPMC_gbl_camera camSetRelPos [0,3.5,4.5];
-SPMC_gbl_camera camSetFOV .5;
-SPMC_gbl_camera camSetFocus [50,0];
-SPMC_gbl_camera camCommit 0;*/
-
 _unit spawn {
     waitUntil {sleep 0.1; !isNull (findDisplay 3100)};
-    // disable "esc" key.
-    // (findDisplay 3100) displayAddEventHandler ["KeyDown", "if ((_this select 1) == 1) then { true }"];
 
     while {(alive _this)} do {
         // If the player was revived, end the loop.
@@ -99,6 +86,9 @@ _unit spawn {
 
     // If the player was executed, end the loop.
     if (!(alive _this)) then {
+        SPMC_gbl_postEffect ppEffectEnable false;
+        ppEffectDestroy SPMC_gbl_postEffect;
+        
         _this setVariable ["revivable", nil, true];
     };
 
@@ -135,15 +125,7 @@ _unit spawn {
 
         [] call SPMC_fnc_resetMedicalVars;
         ["stats"] call SPMC_fnc_syncPlayerData;
-
-        /*if (!(isNull SPMC_gbl_camera)) then {
-            SPMC_gbl_camera cameraEffect ["TERMINATE","BACK"];
-            camDestroy SPMC_gbl_camera;
-        };*/
-
-        //[[_this, "amovppnemstpsraswrfldnon", "switchMove"],"SPMC_fnc_syncAnimation",true] call BIS_fnc_MP;
     };
 
-    //(findDisplay 3100) displayRemoveAllEventHandlers "KeyDown";
     closeDialog 0;
 };

@@ -33,15 +33,21 @@ if (debugMode) then {
     };
 
     if ((["airdrop_interval"] call SPMC_fnc_config) > 0) then {
-        serverStatus = "SERVER: Initiating air drop timer";
-        publicVariable "serverStatus";
-
         if (debugMode) then {
-            diag_log serverStatus;
+            diag_log "SERVER: Initiating air drop timer";
         };
 
         // Init air drops
         [] call SPMC_fnc_initAirDropTimer;
+    };
+
+    if ((["timed_rewards_interval"] call SPMC_fnc_config) > 0) then {
+        if (debugMode) then {
+            diag_log "SERVER: Initiating timed rewards, timer";
+        };
+
+        // Init timed rewards
+        [] call SPMC_fnc_initTimedRewards;
     };
 
     diag_log "SERVER: Ready!";

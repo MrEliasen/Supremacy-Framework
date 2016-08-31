@@ -18,6 +18,7 @@ SPMC_fnc_getItemCfgDetails = compileFinal preprocessfilelinenumbers "\supremacy_
 SPMC_fnc_spawnBuildings = compileFinal preprocessfilelinenumbers "\supremacy_server\compile\core\spawnBuildings.sqf";
 SPMC_fnc_initWorldLoot = compileFinal preprocessfilelinenumbers "\supremacy_server\compile\core\initWorldLoot.sqf";
 SPMC_fnc_svrSystemMessage = compileFinal preprocessfilelinenumbers "\supremacy_server\compile\core\systemMessage.sqf";
+SPMC_fnc_initTimedRewards = compileFinal preprocessfilelinenumbers "\supremacy_server\compile\core\initTimedRewards.sqf";
 publicVariable "SPMC_fnc_config";
 publicVariable "SPMC_fnc_findIndex";
 publicVariable "SPMC_fnc_getItemCfgDetails";
@@ -52,6 +53,7 @@ SPMC_fnc_skillsList = compileFinal preprocessfilelinenumbers "\supremacy_server\
 SPMC_fnc_svrLearnSkill = compileFinal preprocessfilelinenumbers "\supremacy_server\compile\skills\svrLearnSkill.sqf";
 SPMC_fnc_svrResetSkills = compileFinal preprocessfilelinenumbers "\supremacy_server\compile\skills\svrResetSkills.sqf";
 SPMC_fnc_getSkillDetails = compileFinal preprocessfilelinenumbers "\supremacy_server\compile\skills\getSkillDetails.sqf";
-SPMC_fnc_svrGrantExperience = compileFinal preprocessfilelinenumbers "\supremacy_server\compile\skills\svrGrantExperience.sqf";
+SPMC_fnc_svrGiveExpReward = compileFinal preprocessfilelinenumbers "\supremacy_server\compile\skills\svrGiveExpReward.sqf";
+SPMC_fnc_grantExperience = compileFinal preprocessfilelinenumbers "\supremacy_server\compile\skills\grantExperience.sqf";
 publicVariable "SPMC_fnc_skillsList";
 publicVariable "SPMC_fnc_getSkillDetails";

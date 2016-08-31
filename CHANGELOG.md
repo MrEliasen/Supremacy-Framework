@@ -10,6 +10,10 @@ Features/Changes:
  * Changed the air drop smoke duration from 10 to 5 minutes.
  * Updated the unconscious system, removing animations and relying more on ARMA 3 official methods.
  * Added "<player> was injured ny <player>" when becoming unconscious.
+ * Added option to enable/disable the abillity to get executed while unconscious.
+ * Added blur effect to players who are unconcious.
+ * Added timed EXP rewards (EXP granting scipt updated, Config updated).
+ * Added "reward" sound, used for timed rewards.
 
 Bugfixes:
 
