@@ -1,19 +1,20 @@
-## 0.6.0 (27-08-2016)
+## 0.6.0 (31-08-2016)
 
 Features/Changes:
 
  * Updated configs to include all (hopefully) new vehicle, items and weapons from APEX.
  * Updated price list, now include all (hopefully) items and vehicles from APEX.
  * Updated clothing shops, so they only sell items for the faction of the player (Config updated).
+ * Updated the unconscious system, removing animations and relying more on ARMA 3 official methods.
  * Added location saving and spawning. You can now choose players to spawn where the logged out (Config, DB and ExtDB ini - updated).
  * Added magazine repacking (see player menu).
- * Changed the air drop smoke duration from 10 to 5 minutes.
- * Updated the unconscious system, removing animations and relying more on ARMA 3 official methods.
  * Added "<player> was injured ny <player>" when becoming unconscious.
  * Added option to enable/disable the abillity to get executed while unconscious.
  * Added blur effect to players who are unconcious.
  * Added timed EXP rewards (EXP granting scipt updated, Config updated).
  * Added "reward" sound, used for timed rewards.
+ * Added a Zeus menu detection (client side), with server logging.
+ * Changed the air drop smoke duration from 10 to 5 minutes.
 
 Bugfixes:
 
@@ -21,6 +22,7 @@ Bugfixes:
  * Fixed desk and nato crate not getting removed from unavailable shops.
  * Fixed cloths menu prices being cut off.
  * Fixed bug in playerUnconscious script, potentially breaking the script.
+ * Fixed an issue in dbCalls returning data without needing to.
  * Removed obsolete code for spawn protection buildings.
  * Setting placeables, loot crates, vehicles etc to 0 in the config, will now properly skip it during server initialisation.
 

@@ -43,6 +43,14 @@ switch (_this select 0) do {
     case "fatigue_enabled": {
         false;
     };
+
+    /**
+     * Whether to allow ZEUS mode or not. Client side script will detect ZEUS interface, log it server-side and close the display.
+     * @return boolean
+     */
+    case "allow_zeus": {
+        false;
+    };
     
     /**
      * Toggle player communication on/off

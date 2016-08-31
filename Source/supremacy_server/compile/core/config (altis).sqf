@@ -17,7 +17,7 @@ switch (_this select 0) do {
      * @return boolean
      */
     case "debug_mode": {
-        false;
+        true;
     };
 
     /**
@@ -43,6 +43,14 @@ switch (_this select 0) do {
     case "fatigue_enabled": {
         false;
     };
+
+    /**
+     * Whether to allow ZEUS mode or not. Client side script will detect ZEUS interface, log it server-side and close the display.
+     * @return boolean
+     */
+    case "allow_zeus": {
+        false;
+    };
     
     /**
      * Toggle player communication on/off
@@ -50,15 +58,6 @@ switch (_this select 0) do {
      */
     case "communication_enabled": {
         true;
-    };
-    
-    /**
-     * the % chance of loot spawning in a given building. 8 = ~1450 buildings.
-     * 0 = disabled.
-     * @return integer
-     */
-    case "house_loot_percent": {
-        10;
     };
     
     /**
@@ -153,6 +152,15 @@ switch (_this select 0) do {
     case "sell_percentage": {
         50;
     };
+    
+    /**
+     * the % chance of loot spawning in a given building. 8 = ~1450 buildings.
+     * 0 = disabled.
+     * @return integer
+     */
+    case "house_loot_percent": {
+        0;
+    };
 
     /**
      * How mant loot create to spawn during startup. 
@@ -220,7 +228,7 @@ switch (_this select 0) do {
      * @return integer
      */
     case "timed_rewards_interval": {
-        30;
+        10;
     };
 
     /**

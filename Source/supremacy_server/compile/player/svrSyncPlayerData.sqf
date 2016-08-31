@@ -82,7 +82,7 @@ _call = switch (_type) do {
 
 if (_call != "") then {
     _data set [count _data, (getPlayerUID _player)];
-    [_call,_data] call SPMC_fnc_dbCall;
+    [_call,_data,false] call SPMC_fnc_dbCall;
     _success = true;
 };
 

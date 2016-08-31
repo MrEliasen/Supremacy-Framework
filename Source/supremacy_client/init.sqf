@@ -155,4 +155,24 @@ if (!isDedicated) then {
             };
         };
     };
+
+    // Detect ZEUS mode
+    [] spawn {
+        private ["_allowed"];
+        _allowed = ["allow_zeus"] call SPMC_fnc_config;
+
+        if (!_allowed) then {
+            while {true} do {
+                sleep 1;
+
+                if (!(isNull (findDisplay 312))) then {
+                    // send a message back to the server
+                    [[player, "zeus"],"SPMC_fnc_svrDetection",false,false] spawn BIS_fnc_MP;
+                    
+                    // close the display
+                    findDisplay 312 closeDisplay 0;
+                };
+            };
+        };
+    };
 };

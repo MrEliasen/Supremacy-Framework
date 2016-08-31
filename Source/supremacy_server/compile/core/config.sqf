@@ -43,6 +43,14 @@ switch (_this select 0) do {
     case "fatigue_enabled": {
         false;
     };
+
+    /**
+     * Whether to allow ZEUS mode or not. Client side script will detect ZEUS interface, log it server-side and close the display.
+     * @return boolean
+     */
+    case "allow_zeus": {
+        false;
+    };
     
     /**
      * Toggle player communication on/off
@@ -53,7 +61,7 @@ switch (_this select 0) do {
     };
     
     /**
-     * the % chance of loot spawning in a given building. 8 = ~1450 buildings.
+     * the % chance of loot spawning in a given building. 8 = ~1450 buildings on altis.
      * 0 = disabled.
      * @return integer
      */
@@ -119,7 +127,7 @@ switch (_this select 0) do {
      * @return integer
      */
     case "spawn_arms_shops": {
-        4;
+        15;
     };
     
     /**
@@ -135,11 +143,11 @@ switch (_this select 0) do {
      * @return integer
      */
     case "spawn_air_shops": {
-        1;
+        2;
     };
 
     /**
-     * The number of air vehicle shops to have in the map (cannot exceed the number of shops placed in the map).
+     * The number of water vehicle shops to have in the map (cannot exceed the number of shops placed in the map).
      * @return integer
      */
     case "spawn_water_shops": {
@@ -155,7 +163,7 @@ switch (_this select 0) do {
     };
 
     /**
-     * How mant loot create to spawn on the island during startup. 
+     * How mant loot create to spawn during startup. 
      * 0 = disabled.
      * @return integer
      */
@@ -199,6 +207,31 @@ switch (_this select 0) do {
     };
 
     /**
+     * How much exp players get from killing another player
+     * @return integer
+     */
+    case "exp_reward_kills": {
+        1;
+    };
+
+    /**
+     * How much exp players get every "timed_rewards_interval", if enabled.
+     * @return integer
+     */
+    case "exp_reward_timed": {
+        1;
+    };
+
+    /**
+     * Duration between timed rewards, in seconds.
+     * 0 = diable timed rewards.
+     * @return integer
+     */
+    case "timed_rewards_interval": {
+        30;
+    };
+
+    /**
      * Markers (must be circle markers) in which players will not be able to spawn when "random_world" spawn type is selected
      * @return array
      */
@@ -210,7 +243,29 @@ switch (_this select 0) do {
             "spawn_exclude_3",
             "spawn_exclude_4",
             "spawn_exclude_5",
-            "spawn_exclude_6"
+            "spawn_exclude_6",
+            "spawn_exclude_7",
+            "spawn_exclude_8",
+            "spawn_exclude_9",
+            "spawn_exclude_10",
+            "spawn_exclude_11",
+            "spawn_exclude_12",
+            "spawn_exclude_13",
+            "spawn_exclude_14",
+            "spawn_exclude_15",
+            "spawn_exclude_16",
+            "spawn_exclude_17",
+            "spawn_exclude_18",
+            "spawn_exclude_19",
+            "spawn_exclude_20",
+            "spawn_exclude_21",
+            "spawn_exclude_22",
+            "spawn_exclude_23",
+            "spawn_exclude_24",
+            "spawn_exclude_25",
+            "spawn_exclude_26",
+            "spawn_exclude_27",
+            "spawn_exclude_28"
         ];
     };
 
@@ -252,7 +307,25 @@ switch (_this select 0) do {
             "shop_arms_30",
             "shop_arms_31",
             "shop_arms_32",
-            "shop_arms_33"
+            "shop_arms_33",
+            "shop_arms_34",
+            "shop_arms_35",
+            "shop_arms_36",
+            "shop_arms_37",
+            "shop_arms_38",
+            "shop_arms_39",
+            "shop_arms_40",
+            "shop_arms_41",
+            "shop_arms_42",
+            "shop_arms_43",
+            "shop_arms_44",
+            "shop_arms_45",
+            "shop_arms_46",
+            "shop_arms_47",
+            "shop_arms_48",
+            "shop_arms_49",
+            "shop_arms_50",
+            "shop_arms_51"
         ];
     };
 
@@ -262,7 +335,7 @@ switch (_this select 0) do {
      */
     case "shop_ground_vehicle_npc_list": {
         [
-            "shop_vehicle_1",
+            "shop_vehicle_7",
             "shop_vehicle_8",
             "shop_vehicle_9",
             "shop_vehicle_10",
@@ -278,14 +351,7 @@ switch (_this select 0) do {
             "shop_vehicle_20",
             "shop_vehicle_21",
             "shop_vehicle_22",
-            "shop_vehicle_23",
-            "shop_vehicle_24",
-            "shop_vehicle_25",
-            "shop_vehicle_26",
-            "shop_vehicle_27",
-            "shop_vehicle_28",
-            "shop_vehicle_29",
-            "shop_vehicle_30"
+            "shop_vehicle_23"
         ];
     };
 
@@ -295,12 +361,12 @@ switch (_this select 0) do {
      */
     case "shop_air_vehicle_npc_list": {
         [
-            "shop_vehicle_31",
-            "shop_vehicle_32",
-            "shop_vehicle_33",
-            "shop_vehicle_34",
-            "shop_vehicle_35",
-            "shop_vehicle_36"
+            "shop_vehicle_1",
+            "shop_vehicle_2",
+            "shop_vehicle_3",
+            "shop_vehicle_4",
+            "shop_vehicle_5",
+            "shop_vehicle_6"
         ];
     };
 
@@ -310,10 +376,14 @@ switch (_this select 0) do {
      */
     case "shop_water_vehicle_npc_list": {
         [
-            "shop_vehicle_37",
-            "shop_vehicle_38",
-            "shop_vehicle_39",
-            "shop_vehicle_40"
+            "shop_vehicle_24",
+            "shop_vehicle_25",
+            "shop_vehicle_26",
+            "shop_vehicle_27",
+            "shop_vehicle_28",
+            "shop_vehicle_29",
+            "shop_vehicle_30",
+            "shop_vehicle_31"
         ];
     };
 
@@ -329,127 +399,207 @@ switch (_this select 0) do {
         [
             [
                 "spawn_1",
-                "Molos"
+                "Tuvanaka"
             ],
             [
                 "spawn_2",
-                "Sofia"
+                "Belfort"
             ],
             [
                 "spawn_3",
-                "Paros/Kalochori"
+                "Nani"
             ],
             [
                 "spawn_4",
-                "Rodopoli"
+                "Tavu"
             ],
             [
                 "spawn_5",
-                "Charkia"
+                "Balavu"
             ],
             [
                 "spawn_6",
-                "Pyrgos"
+                "Laikoro"
             ],
             [
                 "spawn_7",
-                "Chalkela"
+                "Rautake"
             ],
             [
                 "spawn_8",
-                "Panagia"
+                "Namuvaka"
             ],
             [
                 "spawn_9",
-                "Feres"
+                "Cerebu"
             ],
             [
                 "spawn_10",
-                "Selakano"
+                "Yanukka"
             ],
             [
                 "spawn_11",
-                "Loannia/Delfinaki"
+                "Koumac"
             ],
             [
                 "spawn_12",
-                "Athira"
+                "Lailai"
             ],
             [
                 "spawn_13",
-                "Telos"
+                "Katkoula"
             ],
             [
                 "spawn_14",
-                "Frini"
+                "Savaka"
             ],
             [
                 "spawn_15",
-                "Gravia"
+                "Tobakoro"
             ],
             [
                 "spawn_16",
-                "Galati"
+                "Moddergat"
             ],
             [
                 "spawn_17",
-                "Agios Dionysios"
+                "La Foa"
             ],
             [
                 "spawn_18",
-                "Lakka/Stavros/Neochori"
+                "Lösi"
             ],
             [
                 "spawn_19",
-                "Alikampos/Poliakko/Katalaki"
+                "Harcourt"
             ],
             [
                 "spawn_20",
-                "Therisa"
+                "Doodstil"
             ],
             [
                 "spawn_21",
-                "Zaros"
+                "Port-Boisé"
             ],
             [
                 "spawn_22",
-                "Syrta"
+                "Bua Bua"
             ],
             [
                 "spawn_23",
-                "Kore"
+                "Rereki"
             ],
             [
                 "spawn_24",
-                "Negades"
+                "Taga"
             ],
             [
                 "spawn_25",
-                "Panochori"
+                "Lijnhaven"
             ],
             [
                 "spawn_26",
-                "Neri"
+                "Blerick"
             ],
             [
                 "spawn_27",
-                "Ifestiona"
+                "Regina"
             ],
             [
                 "spawn_28",
-                "Abdera"
+                "Lobaka"
             ],
             [
                 "spawn_29",
-                "Dorlda"
+                "Lifou"
             ],
             [
                 "spawn_30",
-                "Oreokastro"
+                "Lami"
             ],
             [
                 "spawn_31",
-                "Anthrakia"
+                "Kotomo"
+            ],
+            [
+                "spawn_32",
+                "Ouméré"
+            ],
+            [
+                "spawn_33",
+                "Luganville"
+            ],
+            [
+                "spawn_34",
+                "Nandai"
+            ],
+            [
+                "spawn_35",
+                "Blue Perl Industrial Port"
+            ],
+            [
+                "spawn_36",
+                "Ovau"
+            ],
+            [
+                "spawn_37",
+                "Pénélo"
+            ],
+            [
+                "spawn_38",
+                "La Rochelle"
+            ],
+            [
+                "spawn_39",
+                "Saint-Paul"
+            ],
+            [
+                "spawn_40",
+                "Petit Nicolet"
+            ],
+            [
+                "spawn_41",
+                "Nicolet"
+            ],
+            [
+                "spawn_42",
+                "Georgetown"
+            ],
+            [
+                "spawn_43",
+                "Nasua"
+            ],
+            [
+                "spawn_44",
+                "Vagalala"
+            ],
+            [
+                "spawn_45",
+                "Lakatoro"
+            ],
+            [
+                "spawn_46",
+                "Tanouka"
+            ],
+            [
+                "spawn_47",
+                "Galili"
+            ],
+            [
+                "spawn_48",
+                "Imone"
+            ],
+            [
+                "spawn_49",
+                "Vatukouloulo"
+            ],
+            [
+                "spawn_50",
+                "Ipota"
+            ],
+            [
+                "spawn_51",
+                "Sosovu"
             ]
         ];
     };
@@ -469,7 +619,40 @@ switch (_this select 0) do {
             "drop_zone_7",
             "drop_zone_8",
             "drop_zone_9",
-            "drop_zone_10"
+            "drop_zone_10",
+            "drop_zone_11",
+            "drop_zone_12",
+            "drop_zone_13",
+            "drop_zone_14",
+            "drop_zone_15",
+            "drop_zone_16",
+            "drop_zone_17",
+            "drop_zone_18",
+            "drop_zone_19",
+            "drop_zone_20",
+            "drop_zone_21",
+            "drop_zone_22",
+            "drop_zone_23",
+            "drop_zone_24",
+            "drop_zone_25",
+            "drop_zone_26",
+            "drop_zone_27",
+            "drop_zone_28",
+            "drop_zone_29",
+            "drop_zone_30",
+            "drop_zone_31",
+            "drop_zone_32",
+            "drop_zone_33",
+            "drop_zone_34",
+            "drop_zone_35",
+            "drop_zone_36",
+            "drop_zone_37",
+            "drop_zone_38",
+            "drop_zone_39",
+            "drop_zone_40",
+            "drop_zone_41",
+            "drop_zone_42",
+            "drop_zone_43"
         ];
     };
 
@@ -850,6 +1033,7 @@ switch (_this select 0) do {
 
     /**
      * Uniforms available in the shops and loot.
+     * 0: BLUEFOR, 1: OPFOR, 2: INDEPENDENT
      * @return array
      */
     case "equip_clothes": {
@@ -943,6 +1127,7 @@ switch (_this select 0) do {
             ]
         ];
     };
+
 
     /**
      * Hats available in the shops and loot.

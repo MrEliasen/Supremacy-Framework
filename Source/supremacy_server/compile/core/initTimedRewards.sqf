@@ -21,31 +21,36 @@
     while {true} do {
         sleep _interval;
 
-        {
-            if(debugMode) then {
-                diag_log "------------ Experience Request ------------";
-                diag_log format["Type: Timed, Amount: %1, Player: %2", _expReward, getPlayerUID _x];
-            };
-
-            _return = [_x, _expReward] call SPMC_fnc_grantExperience;
-
-            if (count _return < 3) exitWith {
+        if (serverIsReady) then {
+            {
+                private ["_return"];
+                
                 if(debugMode) then {
-                    diag_log "------------ Experience Request ------------";
-                    diag_log format["Status: DENIED, Player: %1", getPlayerUID _x];
+                    diag_log "------------ Timed Experience Request ------------";
+                    diag_log format["Type: Timed, Amount: %1, Player: %2", _expReward, getPlayerUID _x];
                 };
-            };
 
-            if(debugMode) then {
-                diag_log "------------ Experience Request ------------";
-                diag_log format["Status: APPROVED, Player: %1", getPlayerUID _x];
-            };
+                _return = [_x, _expReward] call SPMC_fnc_grantExperience;
 
-            [_x, "experience", [((_return select 0) + (_return select 1))], true] call SPMC_fnc_svrSyncPlayerData;
-            [[((_return select 0) + (_return select 1)), (_return select 2)],"SPMC_fnc_syncExperienceConfirm",(owner _x),false] spawn BIS_fnc_MP;
+                if (count _return < 3) exitWith {
+                    if(debugMode) then {
+                        diag_log "------------ Timed Experience Request ------------";
+                        diag_log format["Status: DENIED, Player: %1", getPlayerUID _x];
+                    };
+                };
 
-        } forEach (allPlayers - entities "HeadlessClient_F");
+                if(debugMode) then {
+                    diag_log "------------ Timed Experience Request ------------";
+                    diag_log format["Status: APPROVED, Player: %1", getPlayerUID _x];
+                    diag_log format["Return Data: %1", _return];
+                };
 
-        [format ["You have received %1 EXP for player on the server.", _expReward], "SPMC_fnc_serverNotification"] call BIS_fnc_mp;
+                [[((_return select 0) + (_return select 1)), (_return select 2)],"SPMC_fnc_syncExperienceConfirm",(owner _x),false] spawn BIS_fnc_MP;
+                [_x, "experience", [((_return select 0) + (_return select 1))], true] spawn SPMC_fnc_svrSyncPlayerData;
+
+            } forEach (allPlayers - entities "HeadlessClient_F");
+
+            [format ["You have received %1 EXP for player on the server.", _expReward], "SPMC_fnc_serverNotification"] call BIS_fnc_mp;
+        };
     };
 };
