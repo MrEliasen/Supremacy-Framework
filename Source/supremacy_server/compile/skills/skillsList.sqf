@@ -8,7 +8,7 @@
  * @author     Mark Eliasen <https://github.com/MrEliasen>
  * @copyright  2016 Mark Eliasen
  * @license    CC BY-NC 3.0 License
- * @link       https://github.com/MrEliasen/SupremacyFramework
+ * @link       https://github.com/MrEliasen/Supremacy-Framework
  */
 /*
     Each skill need a unique "KEY". If you change the KEY of a skills, people who have bought that skill will loose it.

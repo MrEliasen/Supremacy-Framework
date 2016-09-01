@@ -8,7 +8,7 @@
  * @author     Mark Eliasen <https://github.com/MrEliasen>
  * @copyright  2016 Mark Eliasen
  * @license    CC BY-NC 3.0 License
- * @link       https://github.com/MrEliasen/SupremacyFramework
+ * @link       https://github.com/MrEliasen/Supremacy-Framework
  */
 
 private["_vehicle","_empty"];
@@ -22,7 +22,7 @@ _veh = objNull;
     if (typeOf _x == (_vehicle select 0)) exitWith {
         _veh = _x;
     };
-} foreach (nearestObjects[player,(SPMC_gbl_vehicleShop select 2),10]);
+} foreach (nearestObjects[player,(SPMC_gbl_vehicleShop select 2),25]);
 
 if (isNull _veh) exitWith {
     ctrlEnable[2606, true];

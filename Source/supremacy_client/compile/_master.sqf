@@ -8,7 +8,7 @@
  * @author     Mark Eliasen <https://github.com/MrEliasen>
  * @copyright  2016 Mark Eliasen
  * @license    CC BY-NC 3.0 License
- * @link       https://github.com/MrEliasen/SupremacyFramework
+ * @link       https://github.com/MrEliasen/Supremacy-Framework
  */
 
 // Core
@@ -18,6 +18,7 @@ SPMC_fnc_initHUD = compileFinal preprocessfilelinenumbers "compile\core\initHUD.
 SPMC_fnc_playerJoined = compileFinal preprocessfilelinenumbers "compile\core\playerJoined.sqf";
 SPMC_fnc_syncAnimation = compileFinal preprocessFileLineNumbers "compile\core\syncAnimation.sqf";
 SPMC_fnc_keyHandler = compileFinal preprocessFileLineNumbers "compile\core\keyHandler.sqf";
+SPMC_fnc_serverNotification = compileFinal preprocessFileLineNumbers "compile\core\serverNotification.sqf";
 
 // Player
 SPMC_fnc_getPlayerSpawn = compileFinal preprocessfilelinenumbers "compile\player\getPlayerSpawn.sqf";

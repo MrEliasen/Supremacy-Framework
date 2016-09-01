@@ -8,10 +8,10 @@
  * @author     Mark Eliasen <https://github.com/MrEliasen>
  * @copyright  2016 Mark Eliasen
  * @license    CC BY-NC 3.0 License
- * @link       https://github.com/MrEliasen/SupremacyFramework
+ * @link       https://github.com/MrEliasen/Supremacy-Framework
  */
 
-private["_player","_index","_money","_stats","_skills","_experience"];
+private["_player","_index","_money","_stats","_skills","_experience","_lastLoc"];
 _player = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 _name = [_this,1,"",[""]] call BIS_fnc_param;
 _money = 0;
@@ -19,6 +19,7 @@ _skills = [];
 _stats = [];
 _experience = 0;
 _equipment = [];
+_lastLoc = [];
 
 if (isNull _player) exitWith {};
 
@@ -34,6 +35,7 @@ if (count _playerData == 0) then {
     _equipment = (_playerData select 2);
     _skills = (_playerData select 3);
     _experience = (_playerData select 4);
+    _lastLoc = (_playerData select 5);
 };
 
 // Because the player might be so cheeky to disconnect before a save can occure, we will overwrite what we get from the database with what the server currently tracks, since the server will be more accurate.
@@ -62,4 +64,4 @@ if (_index == -1) then {
     _experience = (_playerSkillData select 0);
 };
 
-[[_money,_stats,_equipment,_experience,_skills],"SPMC_fnc_processPlayerData",(owner _player),false] spawn BIS_fnc_MP;
+[[_money,_stats,_equipment,_experience,_skills,_lastLoc],"SPMC_fnc_processPlayerData",(owner _player),false] spawn BIS_fnc_MP;

@@ -8,16 +8,17 @@
  * @author     Mark Eliasen <https://github.com/MrEliasen>
  * @copyright  2016 Mark Eliasen
  * @license    CC BY-NC 3.0 License
- * @link       https://github.com/MrEliasen/SupremacyFramework
+ * @link       https://github.com/MrEliasen/Supremacy-Framework
  */
 
 private["_pos"];
 _pos = (_this select 0);
 player enablesimulation true;
 
-if (!(isNull SPMC_gbl_camera)) then {
-    SPMC_gbl_camera cameraEffect ["TERMINATE","BACK"];
-    camDestroy SPMC_gbl_camera;
+if (SPMC_gbl_postEffect != -1) then {
+    SPMC_gbl_postEffect ppEffectEnable false;
+    ppEffectDestroy SPMC_gbl_postEffect;
+    SPMC_gbl_postEffect = -1;
 };
 
 if (debugMode) then {

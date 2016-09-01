@@ -8,7 +8,7 @@
  * @author     Mark Eliasen <https://github.com/MrEliasen>
  * @copyright  2016 Mark Eliasen
  * @license    CC BY-NC 3.0 License
- * @link       https://github.com/MrEliasen/SupremacyFramework
+ * @link       https://github.com/MrEliasen/Supremacy-Framework
  */
 
 private ["_arms","_ground","_air","_shopCount"];
@@ -32,6 +32,8 @@ for "_i" from 1 to (["spawn_arms_shops"] call SPMC_fnc_config) do {
 {
     _y = (missionNamespace getVariable _x);
     deleteVehicle (nearestObject [_y, "Land_Research_house_V1_F"]);
+    deleteVehicle (nearestObject [_y, "Land_CashDesk_F"]);
+    deleteVehicle (nearestObject [_y, "Box_NATO_Equip_F"]);
     deleteVehicle _y;
 } forEach _list;
 
@@ -56,7 +58,6 @@ for "_i" from 1 to (["spawn_ground_shops"] call SPMC_fnc_config) do {
     _y = (missionNamespace getVariable _x);
     deleteVehicle (nearestObject [_y, "Land_Research_house_V1_F"]);
     deleteVehicle (nearestObject [_y, "Land_CashDesk_F"]);
-    deleteVehicle (nearestObject [_y, "Box_NATO_Equip_F"]);
     { deleteVehicle _x; } forEach (nearestObjects [_y, ["Land_JumpTarget_F"], 125]);
     deleteVehicle _y;
 } forEach _list;

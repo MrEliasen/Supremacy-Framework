@@ -8,25 +8,22 @@
  * @author     Mark Eliasen <https://github.com/MrEliasen>
  * @copyright  2016 Mark Eliasen
  * @license    CC BY-NC 3.0 License
- * @link       https://github.com/MrEliasen/SupremacyFramework
+ * @link       https://github.com/MrEliasen/Supremacy-Framework
  */
-private ["_unit"];
-_unit = _this;
+private ["_unit","_friendlyFire"];
+_unit = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
+_killer = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param;
+_friendlyFire = false;
 
-if (!(isPlayer _unit)) exitWith {diag_log "NOT PLAYER!";};
+if (!(isPlayer _unit)) exitWith {};
+
+if ([_killer] call SPMC_fnc_svrGetUnitSide == [_unit] call SPMC_fnc_svrGetUnitSide && [_killer] call SPMC_fnc_svrGetUnitSide != "GUER") then {
+    _friendlyFire = true;
+};
 
 if (alive _unit) then {
-    _unit setDamage 0;
-    _unit setCaptive true;
-    _unit setUnconscious true;
     _unit allowDamage false;
-
-    // Close map and dialog if open.
-    if (visibleMap) then {
-        openMap false
-    };
-    closeDialog 0;
-
+    _unit setDamage 0.89;
     _unit setVariable ["beingRevived", "", true];
     _unit setVariable ["revived", false, true];
     _unit setVariable ["revivable", true, true];
@@ -37,42 +34,55 @@ if (alive _unit) then {
         _unit action ["eject", (vehicle _unit)];
 
         waitUntil{((vehicle _unit) == _unit)};
-        sleep 0.5;
     };
 
-    _unit spawn {
-        [[_this, "AinjPpneMstpSnonWnonDnon", "switchMove"],"SPMC_fnc_syncAnimation",true] call BIS_fnc_MP;
-        sleep 3;
-        _this allowDamage true;
-        _this setVariable["executable", true];
+    _unit setUnconscious true;
+
+    ["stats"] call SPMC_fnc_syncPlayerData;
+
+    // Add blur effect
+    SPMC_gbl_postEffect = ppEffectCreate ["dynamicBlur", 950];
+    SPMC_gbl_postEffect ppEffectEnable true; 
+    SPMC_gbl_postEffect ppEffectAdjust [5]; 
+    SPMC_gbl_postEffect ppEffectCommit 0;
+
+    // Close map and dialog if open.
+    if (visibleMap) then {
+        openMap false
+    };
+
+    closeDialog 0;
+
+    if (isPlayer _unit && isPlayer _killer && _killer != _unit) then {
+        [[_unit, _killer, _friendlyFire],"SPMC_fnc_svrInjuryMessage",false,false] spawn BIS_fnc_MP;
+    };
+
+    if (["executeable"] call SPMC_fnc_config) then {
+        _unit spawn {
+            sleep 2;
+            _this allowDamage true;
+            _this setVariable["executable", true];
+        };
     };
 };
 
 ["stats"] call SPMC_fnc_syncPlayerData;
 
-if (alive _unit) then {
+if (_killer != _unit) then {
     // only grant the killer experience if its a player and if the player killed was not recently revived (within the past 2 minutes).
-    if (isPlayer _killer && ((_unit getVariable ["recentlyRevived", 0]) == 0 OR (time - (_unit getVariable ["recentlyRevived", 0]) >= 120))) then {
-        [[_killer, "kill", _unit],"SPMC_fnc_svrGrantExperience",false,false] spawn BIS_fnc_MP;
-    };
-} else {
-    if (isPlayer _killer) then {
-        [[_killer, "kill", _unit],"SPMC_fnc_svrGrantExperience",false,false] spawn BIS_fnc_MP;
+    if (isPlayer _killer && ((_unit getVariable ["killExpRewarded", 0]) == 0 || (time - (_unit getVariable ["killExpRewarded", 0]) >= ["kill_reward_cooldown"] call SPMC_fnc_config))) then {
+        diag_log " :::::::::::::: YOU CAN AWARD EXP! :::::::::::::: ";
+
+        if (!_friendlyFire) then {
+            diag_log " :::::::::::::: SENDING REQUEST! :::::::::::::: ";
+            _unit setVariable ["killExpRewarded", time];
+            [[_killer, "kill", _unit],"SPMC_fnc_svrGiveExpReward",false,false] spawn BIS_fnc_MP;
+        }
     };
 };
 
 disableSerialization;
 createDialog "SPMC_death_screen";
-
-// Create death cam
-SPMC_gbl_camera  = "CAMERA" camCreate (getPosATL _unit);
-showCinemaBorder true;
-SPMC_gbl_camera cameraEffect ["Internal","Back"];
-SPMC_gbl_camera camSetTarget _unit;
-SPMC_gbl_camera camSetRelPos [0,3.5,4.5];
-SPMC_gbl_camera camSetFOV .5;
-SPMC_gbl_camera camSetFocus [50,0];
-SPMC_gbl_camera camCommit 0;
 
 _unit spawn {
     waitUntil {sleep 0.1; !isNull (findDisplay 3100)};
@@ -96,6 +106,15 @@ _unit spawn {
     // If the player was executed, end the loop.
     if (!(alive _this)) then {
         _this setVariable ["revivable", nil, true];
+
+        0 cutText["YOU DIED","BLACK FADED"];
+        0 cutFadeOut 9999999;
+
+        if (SPMC_gbl_postEffect != -1) then {
+            SPMC_gbl_postEffect ppEffectEnable false;
+            ppEffectDestroy SPMC_gbl_postEffect;
+            SPMC_gbl_postEffect = -1;
+        }
     };
 
     // Check if the above loop ended because they got revived or not.
@@ -104,7 +123,7 @@ _unit spawn {
         SPMC_gbl_respawnTimer = time + (["respawn_time"] call SPMC_fnc_config);
         
         if (!(alive _this)) then {
-            setPlayerRespawnTime (["respawn_time"] call SPMC_fnc_config);
+            setPlayerRespawnTime ((["respawn_time"] call SPMC_fnc_config) + 10);
         };
 
         ctrlSetText [3103, ([30,"MM:SS.MS"] call BIS_fnc_secondsToString)];
@@ -116,7 +135,7 @@ _unit spawn {
             _t = (SPMC_gbl_respawnTimer - time);
 
             if (_t <= 0) exitWith {
-                setPlayerRespawnTime 1;
+                setPlayerRespawnTime 2;
             };
 
             ctrlSetText [3103, ([_t,"MM:SS.MS"] call BIS_fnc_secondsToString)];
@@ -126,18 +145,10 @@ _unit spawn {
         };
     } else {
         // They got revived, so we reset their medical stats and sync it.
-        _this setDamage 0.4;
-        _this setVariable["recentlyRevived", time];
+        _this setDamage 0.65;
 
         [] call SPMC_fnc_resetMedicalVars;
         ["stats"] call SPMC_fnc_syncPlayerData;
-
-        if (!(isNull SPMC_gbl_camera)) then {
-            SPMC_gbl_camera cameraEffect ["TERMINATE","BACK"];
-            camDestroy SPMC_gbl_camera;
-        };
-
-        [[_this, "amovppnemstpsraswrfldnon", "switchMove"],"SPMC_fnc_syncAnimation",true] call BIS_fnc_MP;
     };
 
     (findDisplay 3100) displayRemoveAllEventHandlers "KeyDown";

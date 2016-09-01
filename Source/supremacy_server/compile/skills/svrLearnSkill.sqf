@@ -8,7 +8,7 @@
  * @author     Mark Eliasen <https://github.com/MrEliasen>
  * @copyright  2016 Mark Eliasen
  * @license    CC BY-NC 3.0 License
- * @link       https://github.com/MrEliasen/SupremacyFramework
+ * @link       https://github.com/MrEliasen/Supremacy-Framework
  */
 private ["_skill","_player","_playerSkills","_playerExp","_skillDetails","_index","_newSkillArray","_c","_l"];
 _player = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;

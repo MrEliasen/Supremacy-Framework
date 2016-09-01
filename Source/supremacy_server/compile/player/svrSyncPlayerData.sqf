@@ -8,7 +8,7 @@
  * @author     Mark Eliasen <https://github.com/MrEliasen>
  * @copyright  2016 Mark Eliasen
  * @license    CC BY-NC 3.0 License
- * @link       https://github.com/MrEliasen/SupremacyFramework
+ * @link       https://github.com/MrEliasen/Supremacy-Framework
  */
 
 private["_player","_type","_data","_index","_money","_skills","_exp","_success","_silent","_call"];
@@ -27,11 +27,19 @@ _call = switch (_type) do {
     };
 
     case "equipment": {
+        _data set [count _data, (getPos _player)];
+
         "saveplayerequipment";
     };
 
     case "money" : {
         "savemoney";
+    };
+
+    case "location" : {
+        _data = [(getPos _player)];
+        
+        "savelocation";
     };
 
     case "experience" : {
@@ -62,6 +70,7 @@ _call = switch (_type) do {
         _data set [count _data, _money];
         _data set [count _data, _skills];
         _data set [count _data, _exp];
+        _data set [count _data, (getPos _player)];
 
         "savePlayerFull";
     };
@@ -73,7 +82,7 @@ _call = switch (_type) do {
 
 if (_call != "") then {
     _data set [count _data, (getPlayerUID _player)];
-    [_call,_data] call SPMC_fnc_dbCall;
+    [_call,_data,false] call SPMC_fnc_dbCall;
     _success = true;
 };
 

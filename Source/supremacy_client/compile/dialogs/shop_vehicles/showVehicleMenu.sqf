@@ -8,7 +8,7 @@
  * @author     Mark Eliasen <https://github.com/MrEliasen>
  * @copyright  2016 Mark Eliasen
  * @license    CC BY-NC 3.0 License
- * @link       https://github.com/MrEliasen/SupremacyFramework
+ * @link       https://github.com/MrEliasen/Supremacy-Framework
  */
 
 private["_type","_spawns","_pricelist","_typeList","_skillDiscount"];
@@ -101,7 +101,7 @@ lbClear _list;
         _list lbSetValue[(lbSize _list) - 1, _value];
         _list lbSetPicture[(lbSize _list) - 1, (_vehInfo select 3)];
     };
-} foreach (nearestObjects [player, (_typeList select 1), 10]);
+} foreach (nearestObjects [player, (_typeList select 1), 25]);
 
 SPMC_gbl_vehicleShop = [
     _type,

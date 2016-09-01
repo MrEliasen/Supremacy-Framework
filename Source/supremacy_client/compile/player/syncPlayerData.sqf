@@ -8,7 +8,7 @@
  * @author     Mark Eliasen <https://github.com/MrEliasen>
  * @copyright  2016 Mark Eliasen
  * @license    CC BY-NC 3.0 License
- * @link       https://github.com/MrEliasen/SupremacyFramework
+ * @link       https://github.com/MrEliasen/Supremacy-Framework
  */
 
 private["_type","_silent","_data"];
@@ -23,8 +23,16 @@ if (!isNull (findDisplay 1900)) then {
 
 switch (_type) do {
     case "stats": {
+        private ["_dmg"];
+        _dmg = damage player;
+
+        // if the player is unconsious, treat it as dead.
+        if (player getVariable ["revivable", false]) then {
+            _dmg = 1.0;
+        };
+
         _data = [[
-            damage player,
+            _dmg,
             getFatigue player
         ]];
         
@@ -34,6 +42,11 @@ switch (_type) do {
                 getFatigue player
             ]];
         };
+    };
+
+    case "location": {
+        // this is just to make it sync / get past the if statement at the bottom.
+        _data = [1];
     };
 
     case "equipment": {
@@ -48,16 +61,25 @@ switch (_type) do {
                 [(uniform player), (uniformItems player)],
                 [(vest player), (vestItems player)],
                 [(backpack player), (backPackItems player)],
-                (assignedItems player)
+                (assignedItems player),
+                (goggles player)
             ]
         ];
     };
 
     case "everything": {
+        private ["_dmg"];
+        _dmg = damage player;
+
+        // if the player is unconsious, treat it as dead.
+        if (player getVariable ["revivable", false]) then {
+            _dmg = 1.0;
+        };
+        
         _data = [
             profileName,
             [
-                damage player,
+                _dmg,
                 getFatigue player
             ],
             [
@@ -67,7 +89,8 @@ switch (_type) do {
                 [(uniform player), (uniformItems player)],
                 [(vest player), (vestItems player)],
                 [(backpack player), (backPackItems player)],
-                (assignedItems player)
+                (assignedItems player),
+                (goggles player)
             ]
         ];
     };

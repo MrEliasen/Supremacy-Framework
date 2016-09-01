@@ -8,9 +8,9 @@
  * @author     Mark Eliasen <https://github.com/MrEliasen>
  * @copyright  2016 Mark Eliasen
  * @license    CC BY-NC 3.0 License
- * @link       https://github.com/MrEliasen/SupremacyFramework
+ * @link       https://github.com/MrEliasen/Supremacy-Framework
  */
-if (isDedicated) then {
+if (isServer) then {
     private["_boxLogic","_logicCenter","_logicGroup"];
 
     [] call compile PreprocessFileLineNumbers "\supremacy_server\init.sqf";

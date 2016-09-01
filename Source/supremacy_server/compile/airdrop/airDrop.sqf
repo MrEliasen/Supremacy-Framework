@@ -66,7 +66,7 @@ _this attachTo [_para, [0,0,0]];
 
     _veh setVariable["airdrop",FALSE, true];
 
-    for "_i" from 1 to 10 do {
+    for "_i" from 1 to 5 do {
         createvehicle["SmokeShellPurple", (getPosATL _veh), [], 0, "NONE"];
         createvehicle["SmokeShellBlue", (getPosATL _veh), [], 0, "NONE"];
         sleep 50

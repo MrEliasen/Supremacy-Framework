@@ -8,7 +8,7 @@
  * @author     Mark Eliasen <https://github.com/MrEliasen>
  * @copyright  2016 Mark Eliasen
  * @license    CC BY-NC 3.0 License
- * @link       https://github.com/MrEliasen/SupremacyFramework
+ * @link       https://github.com/MrEliasen/Supremacy-Framework
  */
 private ["_unit","_part","_attacker","_projectile"];
 _unit = _this select 0;
@@ -30,13 +30,13 @@ if (SPMC_gbl_dmgTick == -1) then {
     };
 };
 
-if (!(_part in ["head", "body", "hand_l", "hand_r", "leg_l", "leg_r", ""])) exitWith {
+/*if (!(_part in ["head", "body", "hand_l", "hand_r", "leg_l", "leg_r", ""])) exitWith {
     0.001
-};
+};*/
 
 // if the unit is unconscious, they die when taking damage.
-if ((_unit getVariable ["revivable", FALSE]) && (_unit getVariable ["executable", FALSE])) then {
-    _damage = 1.0;
+if ((_unit getVariable ["revivable", FALSE]) && !(_unit getVariable ["executable", FALSE])) then {
+    _damage = 0.001;
 } else {
     if (_damage > 0.89 && (alive _unit)) then  {
         _unconsciousChance = (["unconscious_chance"] call SPMC_fnc_config);
@@ -52,8 +52,8 @@ if ((_unit getVariable ["revivable", FALSE]) && (_unit getVariable ["executable"
         };
 
         if ((random 100) <= _unconsciousChance) then {
-            _damage = 0.89;
-            _unit call SPMC_fnc_playerUnconscious;
+            _damage = 0.001;
+            [_unit,_attacker] call SPMC_fnc_playerUnconscious;
         };
     };
 };

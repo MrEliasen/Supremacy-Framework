@@ -8,13 +8,18 @@
  * @author     Mark Eliasen <https://github.com/MrEliasen>
  * @copyright  2016 Mark Eliasen
  * @license    CC BY-NC 3.0 License
- * @link       https://github.com/MrEliasen/SupremacyFramework
+ * @link       https://github.com/MrEliasen/Supremacy-Framework
  */
 
 private ["_spawnZone","_pos","_holder"];
 
 if (debugMode) then {
     diag_log (["spawn_type"] call SPMC_fnc_config);;
+};
+
+if (count SPMC_gbl_lastLoc > 0) exitWith {
+    [SPMC_gbl_lastLoc] spawn SPMC_fnc_spawnPlayer;
+    SPMC_gbl_lastLoc = [];
 };
 
 switch ((["spawn_type"] call SPMC_fnc_config)) do {
