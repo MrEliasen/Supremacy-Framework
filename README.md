@@ -41,7 +41,7 @@ There is no wiki yet.
 ## Using This Framework or some of it's Code?
 If you do not mind, please let me know! I would love to see what others have made using this framework or some of it's code!
 
-## 0.6.0 (31-08-2016)
+## 0.6.0 (02-09-2016)
 
 Features/Changes:
 
