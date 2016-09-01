@@ -8,7 +8,7 @@
  * @author     Mark Eliasen <https://github.com/MrEliasen>
  * @copyright  2016 Mark Eliasen
  * @license    CC BY-NC 3.0 License
- * @link       https://github.com/MrEliasen/SupremacyFramework
+ * @link       https://github.com/MrEliasen/Supremacy-Framework
  */
 
 switch (_this select 0) do {
@@ -69,7 +69,7 @@ switch (_this select 0) do {
     };
     
     /**
-     * Whether unconcious players, who are waiting for a revive, can be executed or not.
+     * Whether unconcious players, who are waiting for a revive, can be executed or not by taking damage.
      * @return integer
      */
     case "executeable": {
@@ -110,7 +110,7 @@ switch (_this select 0) do {
      * @return integer
      */
     case "respawn_time": {
-        30;
+        15;
     };
     
     /**
@@ -168,7 +168,7 @@ switch (_this select 0) do {
      * @return integer
      */
     case "loot_crate_limit": {
-        0;
+        10;
     };
 
     /**
@@ -177,7 +177,7 @@ switch (_this select 0) do {
      * @return integer
      */
     case "loot_vehicle_limit": {
-        0;
+        10;
     };
 
     /**
@@ -186,7 +186,7 @@ switch (_this select 0) do {
      * @return integer
      */
     case "loot_stationery_limit": {
-        0;
+        10;
     };
 
     /**
@@ -195,11 +195,11 @@ switch (_this select 0) do {
      * @return integer
      */
     case "airdrop_interval": {
-        30;
+        300;
     };
 
     /**
-     * The maximum number of skills a player can learn.
+     * The maximum number of skills a player can learn. This is to help keep things more balanced.
      * @return integer
      */
     case "max_learned_skills": {
@@ -211,7 +211,15 @@ switch (_this select 0) do {
      * @return integer
      */
     case "exp_reward_kills": {
-        1;
+        100;
+    };
+
+    /**
+     * How lond between getting killed (respawning resets the timer) the player will reward EXP when killed again (in seconds).
+     * @return integer
+     */
+    case "kill_reward_cooldown": {
+        60;
     };
 
     /**
@@ -228,282 +236,7 @@ switch (_this select 0) do {
      * @return integer
      */
     case "timed_rewards_interval": {
-        10;
-    };
-
-    /**
-     * Markers (must be circle markers) in which players will not be able to spawn when "random_world" spawn type is selected
-     * @return array
-     */
-    case "spawn_excludes": {
-        [
-            "system_safezone",
-            "spawn_exclude_1",
-            "spawn_exclude_2",
-            "spawn_exclude_3",
-            "spawn_exclude_4",
-            "spawn_exclude_5",
-            "spawn_exclude_6"
-        ];
-    };
-
-    /**
-     * Arms shop NPC list
-     * @return array
-     */
-    case "shop_arms_npc_list": {
-        [
-            "shop_arms_1",
-            "shop_arms_2",
-            "shop_arms_3",
-            "shop_arms_4",
-            "shop_arms_5",
-            "shop_arms_6",
-            "shop_arms_7",
-            "shop_arms_8",
-            "shop_arms_9",
-            "shop_arms_10",
-            "shop_arms_11",
-            "shop_arms_12",
-            "shop_arms_13",
-            "shop_arms_14",
-            "shop_arms_15",
-            "shop_arms_16",
-            "shop_arms_17",
-            "shop_arms_18",
-            "shop_arms_19",
-            "shop_arms_20",
-            "shop_arms_21",
-            "shop_arms_22",
-            "shop_arms_23",
-            "shop_arms_24",
-            "shop_arms_25",
-            "shop_arms_26",
-            "shop_arms_27",
-            "shop_arms_28",
-            "shop_arms_29",
-            "shop_arms_30",
-            "shop_arms_31",
-            "shop_arms_32",
-            "shop_arms_33"
-        ];
-    };
-
-    /**
-     * Ground vehicle shop NPC list
-     * @return array
-     */
-    case "shop_ground_vehicle_npc_list": {
-        [
-            "shop_vehicle_1",
-            "shop_vehicle_8",
-            "shop_vehicle_9",
-            "shop_vehicle_10",
-            "shop_vehicle_11",
-            "shop_vehicle_12",
-            "shop_vehicle_13",
-            "shop_vehicle_14",
-            "shop_vehicle_15",
-            "shop_vehicle_16",
-            "shop_vehicle_17",
-            "shop_vehicle_18",
-            "shop_vehicle_19",
-            "shop_vehicle_20",
-            "shop_vehicle_21",
-            "shop_vehicle_22",
-            "shop_vehicle_23",
-            "shop_vehicle_24",
-            "shop_vehicle_25",
-            "shop_vehicle_26",
-            "shop_vehicle_27",
-            "shop_vehicle_28",
-            "shop_vehicle_29",
-            "shop_vehicle_30"
-        ];
-    };
-
-    /**
-     * Air vehicle shop NPC list
-     * @return array
-     */
-    case "shop_air_vehicle_npc_list": {
-        [
-            "shop_vehicle_31",
-            "shop_vehicle_32",
-            "shop_vehicle_33",
-            "shop_vehicle_34",
-            "shop_vehicle_35",
-            "shop_vehicle_36"
-        ];
-    };
-
-    /**
-     * Water vehicle shop NPC list
-     * @return array
-     */
-    case "shop_water_vehicle_npc_list": {
-        [
-            "shop_vehicle_37",
-            "shop_vehicle_38",
-            "shop_vehicle_39",
-            "shop_vehicle_40"
-        ];
-    };
-
-    /**
-     * List of available spawn points (must be circles) and their name.
-        [
-           "marker_name",
-           "Spawn Point Name the player will see"
-        ]
-     * @return array
-     */
-    case "spawn_points": {
-        [
-            [
-                "spawn_1",
-                "Molos"
-            ],
-            [
-                "spawn_2",
-                "Sofia"
-            ],
-            [
-                "spawn_3",
-                "Paros/Kalochori"
-            ],
-            [
-                "spawn_4",
-                "Rodopoli"
-            ],
-            [
-                "spawn_5",
-                "Charkia"
-            ],
-            [
-                "spawn_6",
-                "Pyrgos"
-            ],
-            [
-                "spawn_7",
-                "Chalkela"
-            ],
-            [
-                "spawn_8",
-                "Panagia"
-            ],
-            [
-                "spawn_9",
-                "Feres"
-            ],
-            [
-                "spawn_10",
-                "Selakano"
-            ],
-            [
-                "spawn_11",
-                "Loannia/Delfinaki"
-            ],
-            [
-                "spawn_12",
-                "Athira"
-            ],
-            [
-                "spawn_13",
-                "Telos"
-            ],
-            [
-                "spawn_14",
-                "Frini"
-            ],
-            [
-                "spawn_15",
-                "Gravia"
-            ],
-            [
-                "spawn_16",
-                "Galati"
-            ],
-            [
-                "spawn_17",
-                "Agios Dionysios"
-            ],
-            [
-                "spawn_18",
-                "Lakka/Stavros/Neochori"
-            ],
-            [
-                "spawn_19",
-                "Alikampos/Poliakko/Katalaki"
-            ],
-            [
-                "spawn_20",
-                "Therisa"
-            ],
-            [
-                "spawn_21",
-                "Zaros"
-            ],
-            [
-                "spawn_22",
-                "Syrta"
-            ],
-            [
-                "spawn_23",
-                "Kore"
-            ],
-            [
-                "spawn_24",
-                "Negades"
-            ],
-            [
-                "spawn_25",
-                "Panochori"
-            ],
-            [
-                "spawn_26",
-                "Neri"
-            ],
-            [
-                "spawn_27",
-                "Ifestiona"
-            ],
-            [
-                "spawn_28",
-                "Abdera"
-            ],
-            [
-                "spawn_29",
-                "Dorlda"
-            ],
-            [
-                "spawn_30",
-                "Oreokastro"
-            ],
-            [
-                "spawn_31",
-                "Anthrakia"
-            ]
-        ];
-    };
-
-    /**
-     * Markers (must be circle markers) where the airdrop can spawn within.
-     * @return array
-     */
-    case "drop_zones": {
-        [
-            "drop_zone_1",
-            "drop_zone_2",
-            "drop_zone_3",
-            "drop_zone_4",
-            "drop_zone_5",
-            "drop_zone_6",
-            "drop_zone_7",
-            "drop_zone_8",
-            "drop_zone_9",
-            "drop_zone_10"
-        ];
+        300;
     };
 
     /**
@@ -624,7 +357,12 @@ switch (_this select 0) do {
             "ItemRadio",
             "ItemMap",
             "Rangefinder",
-            "NVGoggles"
+            "NVGoggles",
+            "NVGoggles_OPFOR",
+            "NVGoggles_INDEP",
+            "Laserdesignator",
+            "NVGogglesB_blk_F",
+            "NVGogglesB_grn_F"
         ];
     };
 
@@ -1121,7 +859,9 @@ switch (_this select 0) do {
             "H_HelmetSpecO_ghex_F",
             "H_HelmetLeaderO_ghex_F",
             "H_HelmetO_ghex_F",
-            "H_HelmetCrew_O_ghex_F"
+            "H_HelmetCrew_O_ghex_F",
+            "H_HelmetO_ViperSP_hex_F",
+            "H_HelmetO_ViperSP_ghex_F"
 
         ];
     };
@@ -2213,6 +1953,287 @@ switch (_this select 0) do {
             ["U_I_C_Soldier_Bandit_3_F",1000],
             ["U_I_C_Soldier_Bandit_5_F",1000],
             ["U_I_C_Soldier_Camo_F",1000]
+        ];
+    };
+
+    /**
+        ===========================================
+                   BELOW IS MAP-SPECIFIC!
+        ===========================================
+    **/
+
+    /**
+     * List of available spawn points (must be circles) and their name.
+        [
+           "marker_name",
+           "Spawn Point Name the player will see"
+        ]
+     * @return array
+     */
+    case "spawn_points": {
+        [
+            [
+                "spawn_1",
+                "Molos"
+            ],
+            [
+                "spawn_2",
+                "Sofia"
+            ],
+            [
+                "spawn_3",
+                "Paros/Kalochori"
+            ],
+            [
+                "spawn_4",
+                "Rodopoli"
+            ],
+            [
+                "spawn_5",
+                "Charkia"
+            ],
+            [
+                "spawn_6",
+                "Pyrgos"
+            ],
+            [
+                "spawn_7",
+                "Chalkela"
+            ],
+            [
+                "spawn_8",
+                "Panagia"
+            ],
+            [
+                "spawn_9",
+                "Feres"
+            ],
+            [
+                "spawn_10",
+                "Selakano"
+            ],
+            [
+                "spawn_11",
+                "Loannia/Delfinaki"
+            ],
+            [
+                "spawn_12",
+                "Athira"
+            ],
+            [
+                "spawn_13",
+                "Telos"
+            ],
+            [
+                "spawn_14",
+                "Frini"
+            ],
+            [
+                "spawn_15",
+                "Gravia"
+            ],
+            [
+                "spawn_16",
+                "Galati"
+            ],
+            [
+                "spawn_17",
+                "Agios Dionysios"
+            ],
+            [
+                "spawn_18",
+                "Lakka/Stavros/Neochori"
+            ],
+            [
+                "spawn_19",
+                "Alikampos/Poliakko/Katalaki"
+            ],
+            [
+                "spawn_20",
+                "Therisa"
+            ],
+            [
+                "spawn_21",
+                "Zaros"
+            ],
+            [
+                "spawn_22",
+                "Syrta"
+            ],
+            [
+                "spawn_23",
+                "Kore"
+            ],
+            [
+                "spawn_24",
+                "Negades"
+            ],
+            [
+                "spawn_25",
+                "Panochori"
+            ],
+            [
+                "spawn_26",
+                "Neri"
+            ],
+            [
+                "spawn_27",
+                "Ifestiona"
+            ],
+            [
+                "spawn_28",
+                "Abdera"
+            ],
+            [
+                "spawn_29",
+                "Dorlda"
+            ],
+            [
+                "spawn_30",
+                "Oreokastro"
+            ],
+            [
+                "spawn_31",
+                "Anthrakia"
+            ]
+        ];
+    };
+
+    /**
+     * Markers (must be circle markers) where the airdrop can spawn within.
+     * @return array
+     */
+    case "drop_zones": {
+        [
+            "drop_zone_1",
+            "drop_zone_2",
+            "drop_zone_3",
+            "drop_zone_4",
+            "drop_zone_5",
+            "drop_zone_6",
+            "drop_zone_7",
+            "drop_zone_8",
+            "drop_zone_9",
+            "drop_zone_10"
+        ];
+    };
+
+    /**
+     * Markers (must be circle markers) in which players will not be able to spawn when "random_world" spawn type is selected
+     * @return array
+     */
+    case "spawn_excludes": {
+        [
+            "system_safezone",
+            "spawn_exclude_1",
+            "spawn_exclude_2",
+            "spawn_exclude_3",
+            "spawn_exclude_4",
+            "spawn_exclude_5",
+            "spawn_exclude_6"
+        ];
+    };
+
+    /**
+     * Arms shop NPC list
+     * @return array
+     */
+    case "shop_arms_npc_list": {
+        [
+            "shop_arms_1",
+            "shop_arms_2",
+            "shop_arms_3",
+            "shop_arms_4",
+            "shop_arms_5",
+            "shop_arms_6",
+            "shop_arms_7",
+            "shop_arms_8",
+            "shop_arms_9",
+            "shop_arms_10",
+            "shop_arms_11",
+            "shop_arms_12",
+            "shop_arms_13",
+            "shop_arms_14",
+            "shop_arms_15",
+            "shop_arms_16",
+            "shop_arms_17",
+            "shop_arms_18",
+            "shop_arms_19",
+            "shop_arms_20",
+            "shop_arms_21",
+            "shop_arms_22",
+            "shop_arms_23",
+            "shop_arms_24",
+            "shop_arms_25",
+            "shop_arms_26",
+            "shop_arms_27",
+            "shop_arms_28",
+            "shop_arms_29",
+            "shop_arms_30",
+            "shop_arms_31",
+            "shop_arms_32",
+            "shop_arms_33"
+        ];
+    };
+
+    /**
+     * Ground vehicle shop NPC list
+     * @return array
+     */
+    case "shop_ground_vehicle_npc_list": {
+        [
+            "shop_vehicle_1",
+            "shop_vehicle_8",
+            "shop_vehicle_9",
+            "shop_vehicle_10",
+            "shop_vehicle_11",
+            "shop_vehicle_12",
+            "shop_vehicle_13",
+            "shop_vehicle_14",
+            "shop_vehicle_15",
+            "shop_vehicle_16",
+            "shop_vehicle_17",
+            "shop_vehicle_18",
+            "shop_vehicle_19",
+            "shop_vehicle_20",
+            "shop_vehicle_21",
+            "shop_vehicle_22",
+            "shop_vehicle_23",
+            "shop_vehicle_24",
+            "shop_vehicle_25",
+            "shop_vehicle_26",
+            "shop_vehicle_27",
+            "shop_vehicle_28",
+            "shop_vehicle_29",
+            "shop_vehicle_30"
+        ];
+    };
+
+    /**
+     * Air vehicle shop NPC list
+     * @return array
+     */
+    case "shop_air_vehicle_npc_list": {
+        [
+            "shop_vehicle_31",
+            "shop_vehicle_32",
+            "shop_vehicle_33",
+            "shop_vehicle_34",
+            "shop_vehicle_35",
+            "shop_vehicle_36"
+        ];
+    };
+
+    /**
+     * Water vehicle shop NPC list
+     * @return array
+     */
+    case "shop_water_vehicle_npc_list": {
+        [
+            "shop_vehicle_37",
+            "shop_vehicle_38",
+            "shop_vehicle_39",
+            "shop_vehicle_40"
         ];
     };
 

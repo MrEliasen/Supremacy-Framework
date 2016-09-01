@@ -11,7 +11,7 @@
  * @author     Bryan "Tonic" Boardwine <http://www.tonic.pw/>
  * @copyright  2016 Mark Eliasen
  * @license    CC BY-NC 3.0 License
- * @link       https://github.com/MrEliasen/SupremacyFramework
+ * @link       https://github.com/MrEliasen/Supremacy-Framework
  */
 
 private ["_call","_params","_key","_queryResult","_loop","_pipe"];

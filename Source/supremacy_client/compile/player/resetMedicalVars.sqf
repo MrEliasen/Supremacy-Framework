@@ -8,7 +8,7 @@
  * @author     Mark Eliasen <https://github.com/MrEliasen>
  * @copyright  2016 Mark Eliasen
  * @license    CC BY-NC 3.0 License
- * @link       https://github.com/MrEliasen/SupremacyFramework
+ * @link       https://github.com/MrEliasen/Supremacy-Framework
  */
 
 // Reset any medical variables.
@@ -17,7 +17,6 @@ player setVariable ["beingRevived", nil, true];
 player setVariable ["revived", nil, true];
 player setVariable ["revivable", nil, true];
 player setVariable ["executable", nil];
-//player setVariable ["recentlyRevived", nil];
 player setVariable ["isBusy", nil];
 player allowDamage true;
 player setCaptive false;
@@ -29,8 +28,10 @@ if (!(isNull SPMC_gbl_corpse)) then {
     SPMC_gbl_corpse setVariable ["beingRevived", nil, true];
     SPMC_gbl_corpse setVariable ["revived", nil, true];
     SPMC_gbl_corpse setVariable ["executable", nil];
-    SPMC_gbl_corpse setVariable ["recentlyRevived", nil];
     SPMC_gbl_corpse removeAllEventHandlers "Killed";
     SPMC_gbl_corpse removeAllEventHandlers "HandleDamage";
+    SPMC_gbl_corpse removeAllEventHandlers "Respawn";
+    SPMC_gbl_corpse removeAllEventHandlers "InventoryOpened";
+    SPMC_gbl_corpse removeAllEventHandlers "InventoryClosed";
     removeAllActions SPMC_gbl_corpse;
 };

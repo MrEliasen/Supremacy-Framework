@@ -8,7 +8,7 @@
  * @author     Mark Eliasen <https://github.com/MrEliasen>
  * @copyright  2016 Mark Eliasen
  * @license    CC BY-NC 3.0 License
- * @link       https://github.com/MrEliasen/SupremacyFramework
+ * @link       https://github.com/MrEliasen/Supremacy-Framework
  */
 
 // Framework Core scripts
@@ -17,12 +17,14 @@ SPMC_fnc_findIndex = compileFinal preprocessfilelinenumbers "\supremacy_server\c
 SPMC_fnc_getItemCfgDetails = compileFinal preprocessfilelinenumbers "\supremacy_server\compile\core\getItemCfgDetails.sqf";
 SPMC_fnc_spawnBuildings = compileFinal preprocessfilelinenumbers "\supremacy_server\compile\core\spawnBuildings.sqf";
 SPMC_fnc_initWorldLoot = compileFinal preprocessfilelinenumbers "\supremacy_server\compile\core\initWorldLoot.sqf";
-SPMC_fnc_svrSystemMessage = compileFinal preprocessfilelinenumbers "\supremacy_server\compile\core\systemMessage.sqf";
+SPMC_fnc_svrInjuryMessage = compileFinal preprocessfilelinenumbers "\supremacy_server\compile\core\injuryMessage.sqf";
 SPMC_fnc_initTimedRewards = compileFinal preprocessfilelinenumbers "\supremacy_server\compile\core\initTimedRewards.sqf";
+SPMC_fnc_svrGetUnitSide = compileFinal preprocessFileLineNumbers "\supremacy_server\compile\core\svrGetUnitSide.sqf";
 publicVariable "SPMC_fnc_config";
 publicVariable "SPMC_fnc_findIndex";
 publicVariable "SPMC_fnc_getItemCfgDetails";
 publicVariable "SPMC_fnc_spawnBuildings";
+publicVariable "SPMC_fnc_svrGetUnitSide";
 
 // Player
 SPMC_fnc_svrRequestPlayerData = compileFinal preprocessfilelinenumbers "\supremacy_server\compile\player\svrRequestPlayerData.sqf";

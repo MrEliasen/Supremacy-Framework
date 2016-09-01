@@ -8,7 +8,7 @@
  * @author     Mark Eliasen <https://github.com/MrEliasen>
  * @copyright  2016 Mark Eliasen
  * @license    CC BY-NC 3.0 License
- * @link       https://github.com/MrEliasen/SupremacyFramework
+ * @link       https://github.com/MrEliasen/Supremacy-Framework
  */
 
 private["_data","_pos"];
@@ -23,4 +23,4 @@ if (_data == "") exitWith {hint "You must select a place to spawn."};
 _pos = [_data, 0, [], (getMarkerSize _data) select 0, (typeof player)] call SHK_pos;
 closeDialog 0;
 
-[_pos] call SPMC_fnc_spawnPlayer;
+[_pos] spawn SPMC_fnc_spawnPlayer;

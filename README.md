@@ -17,8 +17,9 @@ I wanted to learn more about how ARMA 3 modding worked, and there is really no b
  * Loot spawn in buildings and world loot spawn (vehicles, crates and stationary)
  * Skill & Experience system
  * Revival, heal, repair and other skills.
- * BIS Dynamic Groups
+ * Air drop events
  * Ammo repacking
+ * Timed Rewards
  
 ## Maps
  * Altis
@@ -48,15 +49,23 @@ Features/Changes:
  * Updated price list, now include all (hopefully) items and vehicles from APEX.
  * Updated clothing shops, so they only sell items for the faction of the player (Config updated).
  * Updated the unconscious system, removing animations and relying more on ARMA 3 official methods.
+ * Updated the (long overdue) mission briefing.
+ * Updated the github url in all files.
+ * Updated all loot scripts.
+ * Updated vehicle sell distance from 10 to 25m.
  * Added location saving and spawning. You can now choose players to spawn where the logged out (Config, DB and ExtDB ini - updated).
  * Added magazine repacking (see player menu).
  * Added "<player> was injured ny <player>" when becoming unconscious.
  * Added option to enable/disable the abillity to get executed while unconscious.
  * Added blur effect to players who are unconcious.
+ * Added black out when killed.
  * Added timed EXP rewards (EXP granting scipt updated, Config updated).
  * Added "reward" sound, used for timed rewards.
  * Added a Zeus menu detection (client side), with server logging.
+ * Added a few extra items from APEX to the configs.
  * Changed the air drop smoke duration from 10 to 5 minutes.
+ * Changed the UI update interval from 0.25 sec to 1 second.
+ * Removed obsolete code from several files.
 
 Bugfixes:
 
@@ -65,8 +74,15 @@ Bugfixes:
  * Fixed cloths menu prices being cut off.
  * Fixed bug in playerUnconscious script, potentially breaking the script.
  * Fixed an issue in dbCalls returning data without needing to.
- * Removed obsolete code for spawn protection buildings.
- * Setting placeables, loot crates, vehicles etc to 0 in the config, will now properly skip it during server initialisation.
+ * Fixed some event handlers not getting removed from corpses.
+ * Fixed setting placeables, loot crates, vehicles etc to 0 in the config, will now properly skip it during server initialisation.
+ * Fixed "LineMarker" errors.
+ * Fixed relogging while unconsious would save your gear.
+ * Fixed issue where you would never die form grenades.
+ * Fixed bug where player would not eject from vehicle when unconsious.
+ * Fixed goggles not saving with gear.
+ * Fixed secondary weapon adding a rangefinder on certain occations.
+ * Fixed rangefinder not equipping on character load.
 
 Known Issues:
 
@@ -103,6 +119,9 @@ A special thanks to Kilzone_Kid and Tonic for inspiration and code/resources whi
 
 ###Extensions
  * [Torndeco](https://bitbucket.org/torndeco/extdb3) for ExtDB3.
+
+###Testing
+ * [Hallreaver](https://forums.bistudio.com/user/1131216-hallreaver/) for helping me test all the things!
  
 ####Sounds
  * [pierrecartoons1979](https://www.freesound.org/people/pierrecartoons1979/sounds/90121/) for the "purchase" sound.

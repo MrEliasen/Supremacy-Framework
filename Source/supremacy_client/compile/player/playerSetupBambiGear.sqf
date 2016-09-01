@@ -8,7 +8,7 @@
  * @author     Mark Eliasen <https://github.com/MrEliasen>
  * @copyright  2016 Mark Eliasen
  * @license    CC BY-NC 3.0 License
- * @link       https://github.com/MrEliasen/SupremacyFramework
+ * @link       https://github.com/MrEliasen/Supremacy-Framework
  */
 
 private["_spawn_items"];
@@ -22,7 +22,7 @@ removeHeadGear player;
 removeAllItems player;
 {player removeMagazine _x;} foreach (magazines player);
 
-_spawn_items = switch (format["%1", side player]) do { 
+_spawn_items = switch ([player] call SPMC_fnc_svrGetUnitSide) do { 
     case "GUER" : { (["spawn_items"] call SPMC_fnc_config) select 0; };
     case "WEST" : { (["spawn_items"] call SPMC_fnc_config) select 1; };
     case "EAST" : { (["spawn_items"] call SPMC_fnc_config) select 2; };

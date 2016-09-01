@@ -8,7 +8,7 @@
  * @author     Mark Eliasen <https://github.com/MrEliasen>
  * @copyright  2016 Mark Eliasen
  * @license    CC BY-NC 3.0 License
- * @link       https://github.com/MrEliasen/SupremacyFramework
+ * @link       https://github.com/MrEliasen/Supremacy-Framework
  */
 
 [] spawn
@@ -24,6 +24,6 @@
         (_display displayCtrl 2001) ctrlSetText format["%1", (round diag_fps)];
         (_display displayCtrl 2002) ctrlSetText format["%1", (round((1 - (damage player)) * 100))];
         (_display displayCtrl 2004) ctrlSetText format["%1", ([SPMC_gbl_money] call SPMC_fnc_numberToText)];
-        sleep 0.25;
+        sleep 1;
     };
 };

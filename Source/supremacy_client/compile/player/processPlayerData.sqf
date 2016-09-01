@@ -8,7 +8,7 @@
  * @author     Mark Eliasen <https://github.com/MrEliasen>
  * @copyright  2016 Mark Eliasen
  * @license    CC BY-NC 3.0 License
- * @link       https://github.com/MrEliasen/SupremacyFramework
+ * @link       https://github.com/MrEliasen/Supremacy-Framework
  */
 
 private["_money","_stats","_equipment","_weapons","_weaponsData","_lastLoc"];
@@ -72,12 +72,22 @@ if (count _equipment > 0) then {
         player addBackpack ((_equipment select 5) select 0);
     };
 
+    // Add glasses 
+    if ((_equipment select 7) != "") then {
+         player addItem (_equipment select 7);
+         player assignItem (_equipment select 7);
+    };
+
     // Add assigned items
     if (count (_equipment select 6) > 0) then {
         {
             if (_x != "") then {
-                 player addItem _x;
-                 player assignItem _x;
+                if (_x == "Rangefinder") then {
+                    player addWeapon "Rangefinder";
+                } else {
+                    player addItem _x;
+                    player assignItem _x;
+                };
             };
         } foreach (_equipment select 6);
     };
@@ -104,69 +114,72 @@ if (count _equipment > 0) then {
 
     if (count _weaponsData > 0) then {
         {
-            if (count (_x select 4) > 0) then {
-                if (((_x select 4) select 1) > 0) then {
-                    player addMagazine ((_x select 4) select 0);
-                };
-            };
-
-            player addWeapon (_x select 0);
-
-            // suppressor
-            if ((_x select 1) != "") then {
-                if ((_x select 0) == (_weapons select 0)) then {
-                    player addPrimaryWeaponItem (_x select 1);
-                } else {
-                    if ((_x select 0) == (_weapons select 1)) then {
-                        player addSecondaryWeaponItem (_x select 1);
-                    } else {
-                        player addHandgunItem (_x select 1);
+            // for some reason, if you have a rangefinder and no secondary, the rangefinder takes it place.
+            if ((_x select 0) != "" && (_x select 0) != "Rangefinder") then {
+                if (count (_x select 4) > 0) then {
+                    if (((_x select 4) select 1) > 0) then {
+                        player addMagazine [((_x select 4) select 0), ((_x select 4) select 1)];
                     };
                 };
-            };
 
-            // laser
-            if ((_x select 2) != "") then {
-                if ((_x select 0) == (_weapons select 0)) then {
-                    player addPrimaryWeaponItem (_x select 2);
-                } else {
-                    if ((_x select 0) == (_weapons select 1)) then {
-                        player addSecondaryWeaponItem (_x select 2);
+                player addWeapon (_x select 0);
+
+                // suppressor
+                if ((_x select 1) != "") then {
+                    if ((_x select 0) == (_weapons select 0)) then {
+                        player addPrimaryWeaponItem (_x select 1);
                     } else {
-                        player addHandgunItem (_x select 2);
+                        if ((_x select 0) == (_weapons select 1)) then {
+                            player addSecondaryWeaponItem (_x select 1);
+                        } else {
+                            player addHandgunItem (_x select 1);
+                        };
                     };
                 };
-            };
 
-            // optics
-            if ((_x select 3) != "") then {
-                if ((_x select 0) == (_weapons select 0)) then {
-                    player addPrimaryWeaponItem (_x select 3);
-                } else {
-                    if ((_x select 0) == (_weapons select 1)) then {
-                        player addSecondaryWeaponItem (_x select 3);
+                // laser
+                if ((_x select 2) != "") then {
+                    if ((_x select 0) == (_weapons select 0)) then {
+                        player addPrimaryWeaponItem (_x select 2);
                     } else {
-                        player addHandgunItem (_x select 3);
+                        if ((_x select 0) == (_weapons select 1)) then {
+                            player addSecondaryWeaponItem (_x select 2);
+                        } else {
+                            player addHandgunItem (_x select 2);
+                        };
                     };
                 };
-            };
 
-            // bipod
-            if ((_x select 5) != "") then {
-                if ((_x select 0) == (_weapons select 0)) then {
-                    player addPrimaryWeaponItem (_x select 5);
-                } else {
-                    if ((_x select 0) == (_weapons select 1)) then {
-                        player addSecondaryWeaponItem (_x select 5);
+                // optics
+                if ((_x select 3) != "") then {
+                    if ((_x select 0) == (_weapons select 0)) then {
+                        player addPrimaryWeaponItem (_x select 3);
                     } else {
-                        player addHandgunItem (_x select 5);
+                        if ((_x select 0) == (_weapons select 1)) then {
+                            player addSecondaryWeaponItem (_x select 3);
+                        } else {
+                            player addHandgunItem (_x select 3);
+                        };
                     };
                 };
-            };
 
-            // Select primary weapon or pistol if no primary
-            if (((_x select 0) == (_weapons select 0)) OR ((_x select 0) == (_weapons select 2) AND (_weapons select 0) == "")) then {
-                player selectWeapon (_x select 0);
+                // bipod
+                if ((_x select 5) != "") then {
+                    if ((_x select 0) == (_weapons select 0)) then {
+                        player addPrimaryWeaponItem (_x select 5);
+                    } else {
+                        if ((_x select 0) == (_weapons select 1)) then {
+                            player addSecondaryWeaponItem (_x select 5);
+                        } else {
+                            player addHandgunItem (_x select 5);
+                        };
+                    };
+                };
+
+                // Select primary weapon or pistol if no primary
+                if (((_x select 0) == (_weapons select 0)) OR ((_x select 0) == (_weapons select 2) AND (_weapons select 0) == "")) then {
+                    player selectWeapon (_x select 0);
+                };
             };
 
         } forEach _weaponsData;

@@ -7,6 +7,9 @@
 
 ###Extensions
  * [Torndeco](https://bitbucket.org/torndeco/extdb3) for ExtDB3.
+
+###Testing
+ * [Hallreaver](https://forums.bistudio.com/user/1131216-hallreaver/) for helping me test all the things!
  
 ####Sounds
  * [pierrecartoons1979](https://www.freesound.org/people/pierrecartoons1979/sounds/90121/) for the "purchase" sound.

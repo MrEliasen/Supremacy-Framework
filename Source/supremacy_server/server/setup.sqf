@@ -8,7 +8,7 @@
  * @author     Mark Eliasen <https://github.com/MrEliasen>
  * @copyright  2016 Mark Eliasen
  * @license    CC BY-NC 3.0 License
- * @link       https://github.com/MrEliasen/SupremacyFramework
+ * @link       https://github.com/MrEliasen/Supremacy-Framework
  */
 private ["_spawnBlock","_limit","_debug"];
 serverStatus = "SERVER: Generating safe spawn area";
@@ -50,7 +50,10 @@ if (debugMode) then {
         [] call SPMC_fnc_initTimedRewards;
     };
 
-    diag_log "SERVER: Ready!";
+    if (debugMode) then {
+        diag_log "SERVER: Ready!";
+    };
+    
     serverIsReady = true;
     publicVariable "serverIsReady";
 };

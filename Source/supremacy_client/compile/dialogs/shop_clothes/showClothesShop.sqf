@@ -8,7 +8,7 @@
  * @author     Mark Eliasen <https://github.com/MrEliasen>
  * @copyright  2016 Mark Eliasen
  * @license    CC BY-NC 3.0 License
- * @link       https://github.com/MrEliasen/SupremacyFramework
+ * @link       https://github.com/MrEliasen/Supremacy-Framework
  */
 
 private["_shopLists","_plist","_skillDiscount"];
@@ -42,16 +42,16 @@ _shopLists = [
 
 {
     if (_forEachIndex == 0) then {
-        switch (side player) do { 
-            case WEST : {
+        switch ([player] call SPMC_fnc_svrGetUnitSide) do { 
+            case "WEST" : {
                 _x set [1, ((_x select 1) select 0)];
             };
 
-            case EAST : {
+            case "EAST" : {
                 _x set [1, ((_x select 1) select 1)];
             };
 
-            case GUER : {
+            case "GUER" : {
                 _x set [1, ((_x select 1) select 2)];
             };
 

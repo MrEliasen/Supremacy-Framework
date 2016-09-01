@@ -8,7 +8,7 @@
  * @author     Mark Eliasen <https://github.com/MrEliasen>
  * @copyright  2016 Mark Eliasen
  * @license    CC BY-NC 3.0 License
- * @link       https://github.com/MrEliasen/SupremacyFramework
+ * @link       https://github.com/MrEliasen/Supremacy-Framework
  */
 
 private["_m","_pos","_crate","_reset"];
@@ -26,7 +26,7 @@ if(_reset) then
 
 _crate allowDamage false;
 
-_chance = floor(random(4))+1;
+_chance = floor(random(10))+1;
 for "_i" from 1 to _chance do
 {
     _weapon = ((["airdrop_weapons"] call SPMC_fnc_config) call BIS_fnc_arrayShuffle) call bis_fnc_selectRandom;
@@ -37,32 +37,18 @@ for "_i" from 1 to _chance do
     if(count _magazines > 0) then 
     {
         _magazineClass = _magazines call bis_fnc_selectRandom;
-        _crate addMagazineCargoGlobal [_magazineClass, floor(random 2)+1];
+        _crate addMagazineCargoGlobal [_magazineClass, floor(random 8)+1];
     };
 };
 
-_chance = floor(random(3))+1;
-for "_i" from 1 to _chance do
-{
-    _weapon = ((["equip_weapons"] call SPMC_fnc_config) call BIS_fnc_arrayShuffle) call bis_fnc_selectRandom;
-    _crate addWeaponCargoGlobal [_weapon, 1];
-    _magazines = getArray (configFile / "CfgWeapons" / _weapon / "magazines");
-
-    if(count _magazines > 0) then 
-    {
-        _magazineClass = _magazines call bis_fnc_selectRandom;
-        _crate addMagazineCargoGlobal [_magazineClass, floor(random 2)+1];
-    };
-};
-
-_chance = floor(random(4))+1;
+_chance = floor(random(6))+1;
 for "_i" from 1 to _chance do
 {
     _item = ((["equip_items"] call SPMC_fnc_config) call BIS_fnc_arrayShuffle) call bis_fnc_selectRandom;
     _crate addItemCargoGlobal [_item, 1];
 };
 
-_chance = floor(random(2)+1);
+_chance = floor(random(6)+1);
 for "_i" from 1 to _chance do
 {
     _item = ((["equip_attachments"] call SPMC_fnc_config) call BIS_fnc_arrayShuffle) call bis_fnc_selectRandom;
@@ -73,21 +59,22 @@ for "_i" from 1 to _chance do
 _chance = floor(random(4))+1;
 for "_i" from 1 to _chance do
 {
-    if(floor(random(2)) == 1) then
-    {
-        _backpack = ((["equip_backpacks"] call SPMC_fnc_config) call BIS_fnc_arrayShuffle) call bis_fnc_selectRandom;
-        _crate addBackpackCargoGlobal [_backpack, 1];
-    }
-    else
-    {
-        _vest = ((["equip_vests"] call SPMC_fnc_config) call BIS_fnc_arrayShuffle) call bis_fnc_selectRandom;
-        _crate addItemCargoGlobal [_vest, 1];
-    };
+    _backpack = ((["equip_backpacks"] call SPMC_fnc_config) call BIS_fnc_arrayShuffle) call bis_fnc_selectRandom;
+    _crate addBackpackCargoGlobal [_backpack, 1];
 };
 
-_chance = ceil(random(5))+1;
+_chance = floor(random(4))+1;
 for "_i" from 1 to _chance do
 {
-    _clothes = ((["equip_clothes"] call SPMC_fnc_config) call BIS_fnc_arrayShuffle) call bis_fnc_selectRandom;
-    _crate addItemCargoGlobal [_clothes, 1];
+    _vest = ((["equip_vests"] call SPMC_fnc_config) call BIS_fnc_arrayShuffle) call bis_fnc_selectRandom;
+    _crate addItemCargoGlobal [_vest, 1];
 };
+
+{
+    _chance = ceil(random(3))+1;
+    for "_i" from 1 to _chance do
+    {
+        _clothes = (_x call BIS_fnc_arrayShuffle) call bis_fnc_selectRandom;
+        _crate addItemCargoGlobal [_clothes, 1];
+    };
+} forEach (["equip_clothes"] call SPMC_fnc_config);

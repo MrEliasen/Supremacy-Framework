@@ -8,7 +8,7 @@
  * @author     Mark Eliasen <https://github.com/MrEliasen>
  * @copyright  2016 Mark Eliasen
  * @license    CC BY-NC 3.0 License
- * @link       https://github.com/MrEliasen/SupremacyFramework
+ * @link       https://github.com/MrEliasen/Supremacy-Framework
  */
 enableSaving [false, false];
 
@@ -43,11 +43,6 @@ if (!isDedicated) then {
     0 cutText["Client initiating, please wait..","BLACK FADED"];
     0 cutFadeOut 9999999;
 
-    // When looting clothes, we set this to the container the user is looting.
-    // This is needed so we can check if the container have the clothes they are tryinig to equip, and if something changed.
-    // 0: container, 1: current item array, 2: last changed
-    SPMC_gbl_container = [objNull, [], 0.0];
-
     // Keeps track of the current vehicle shop
     // 0: shop type (land, air, water), 1: spawn point marker names (array), 2: the list of supported vehicle types for this shop (array)
     SPMC_gbl_vehicleShop = ["", [], []];
@@ -56,7 +51,7 @@ if (!isDedicated) then {
     SPMC_gbl_armsShop = "";
 
     // Keeps track of the player's monneh! Do not change the initial value from -1.
-    // It's used to keep track of whether the play just joined or not.
+    // It's also used to keep track of whether the play just joined or not.
     SPMC_gbl_money = -1;
 
     // When a player takes damage, instead of saving their new health status to the database for each damage hit,
@@ -70,7 +65,7 @@ if (!isDedicated) then {
     SPMC_gbl_interrupt = false;
 
     // For keeping track of post processing effects.
-    SPMC_gbl_postEffect = objNull;
+    SPMC_gbl_postEffect = -1;
 
     // Keep track of when the next automatic sync is happening (in seconds).
     // to aboiv all players syncing at same time when everyone joins, we spread it over 5 minutes.
